@@ -17,7 +17,7 @@
       zoomControl: false
     });
 
-    let bounds = [[0,0], [4150,4150]];
+    let bounds = [[0, 0], [4150, 4150]];
     let image = L.imageOverlay(mapImage, bounds).addTo($map)
 
     L.control.zoom({
@@ -27,6 +27,7 @@
     layerControl = L.control.layers(null, {}, {position: 'bottomright'}).addTo($map)
 
     $map.fitBounds(bounds)
+    $map.setMaxBounds([[-3000, -3000],[7150, 7150]]);
   }
 
   layers.subscribe(layerObj => {
