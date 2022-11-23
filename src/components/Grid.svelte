@@ -9,7 +9,6 @@
   const xTiles = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
   const yTiles = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
-  let gridLayer
   let selectedSector
 
   function drawGrid() {
@@ -17,7 +16,7 @@
     const lines = drawLines()
     const labels = drawLabels()
     // Add lines to layerGroup
-    gridLayer = L.layerGroup([...labels, ...lines])
+    const gridLayer = L.layerGroup([...labels, ...lines])
     // Add layer to map
     $map.addLayer(gridLayer)
 
@@ -72,7 +71,9 @@
   onMount(drawGrid)
 </script>
 
-<h2>{selectedSector?.join("") || ""}</h2>
+{#if selectedSector?.length > 0}
+  <span>{selectedSector.join("")}</span>
+{/if}
 
 <style>
   /* TODO: work around the !important rules */
@@ -85,11 +86,16 @@
     box-shadow: none !important; 
   }
 
-  h2 {
+  span {
     z-index: 500;
     position: fixed;
     left: 50%;
     transform: translate(-50%);
+    background-color: rgba(19, 19, 22, 0.7);
     text-shadow: 0 0 2rem rgba(0, 0, 50, 20%);
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 0.2rem;
   }
 </style>
