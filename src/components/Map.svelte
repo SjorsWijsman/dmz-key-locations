@@ -1,8 +1,8 @@
 <script>
-  import { onMount } from 'svelte';
   import L from 'leaflet'
+  import { onMount } from 'svelte';
   import Grid from './Grid.svelte';
-  import POIs from './POIs.svelte'; 
+  import POIMarkers from './POIMarkers.svelte'; 
   import MousePos from './MousePos.svelte'; 
   import mapImage from '../assets/map.png';
   import { map, layers } from '../store';
@@ -42,7 +42,7 @@
 
 {#if $map}
   <Grid />
-  <POIs />
+  <POIMarkers />
   <MousePos />
 {/if}
 <section bind:this={mapContainer}></section>
