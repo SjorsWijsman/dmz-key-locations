@@ -9,7 +9,7 @@
       $map.addEventListener("mousemove", e => {
         const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
         const x = Math.round(clamp(e.latlng.lng, 0, 4150))
-        const y = Math.round(clamp(e.latlng.lat, 0, 4150))
+        const y = 4150 - Math.round(clamp(e.latlng.lat, 0, 4150))
         container.innerHTML = `
           <span class="mouse-position">
             x: ${x}m

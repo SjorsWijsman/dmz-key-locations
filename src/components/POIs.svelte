@@ -12,7 +12,7 @@
     const labelSettings = {direction: 'center', permanent: true, className: "poi-label"}
     POIs.forEach(poi => {
       markers.push(L.tooltip(labelSettings)
-        .setLatLng([poi.location.y, poi.location.x])
+        .setLatLng([4150 - poi.location.y, poi.location.x])
         .setContent(poi.title)
       )
     });
@@ -20,8 +20,8 @@
     // Add markers to layerGroup
     poiLayer = L.layerGroup(markers)
 
-    // Add layer to map
-    $map.addLayer(poiLayer)
+    // Add layer to map (commented out to default to off)
+    // $map.addLayer(poiLayer) 
 
     // Add to layers store
     $layers = { "Show POI markers": poiLayer, ...$layers}
