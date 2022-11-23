@@ -15,16 +15,13 @@
   function drawGrid() {
     // Create grid lines
     const lines = drawLines()
+    const labels = drawLabels()
     // Add lines to layerGroup
-    gridLayer = L.layerGroup(lines)
+    gridLayer = L.layerGroup([...labels, ...lines])
     // Add layer to map
     $map.addLayer(gridLayer)
 
-    $layers = {...$layers, "Show Grid": gridLayer}
-
-    var marker = L.marker([39.5, -77.3], { opacity: 0.01 }); //opacity may be set to zero
-    marker.bindTooltip("My Label", {permanent: true, className: "my-label", offset: [0, 0] });
-    marker.addTo($map);
+    $layers = {...$layers, "Show Sector Grid": gridLayer}
   }
 
   function drawLines() {
@@ -54,14 +51,38 @@
     return lines
   }
 
+  function drawLabels() {
+    const labels = []
+    const labelSettings = {direction: 'center', permanent: true, className: "sector-label"}
+    xTiles.forEach((xTile, x) => {
+      labels.push(L.tooltip(labelSettings)
+        .setLatLng([tileSize * tiles + 100, tileSize * x + tileSize / 2])
+        .setContent(xTile)
+      )
+    })
+    yTiles.forEach((yTile, y) => {
+      labels.push(L.tooltip(labelSettings)
+        .setLatLng([(tileSize * tiles) - (tileSize * y) - (tileSize / 2), -100])
+        .setContent(yTile)
+      )
+    })
+    return labels
+  }
+
   onMount(drawGrid)
 </script>
 
 <h2>{selectedSector?.join("") || ""}</h2>
 
 <style>
-  :global(.my-label) {
-    background-color: red;
+  /* TODO: work around the !important rules */
+  :global(.sector-label) {
+    opacity: 0.3 !important;
+    color: white !important;
+    font-size: 1.2rem !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important; 
   }
 
   h2 {
@@ -69,5 +90,6 @@
     position: fixed;
     left: 50%;
     transform: translate(-50%);
+    text-shadow: 0 0 2rem rgba(0, 0, 50, 20%);
   }
 </style>
