@@ -7,10 +7,13 @@
     onAdd: $map => {
       const container = L.DomUtil.create("div");
       $map.addEventListener("mousemove", e => {
+        const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+        const x = Math.round(clamp(e.latlng.lng, 0, 4150))
+        const y = Math.round(clamp(e.latlng.lat, 0, 4150))
         container.innerHTML = `
           <span class="mouse-position">
-            x: ${e.latlng.lng < 0 ? 0 : Math.floor(e.latlng.lng)}m
-            y: ${e.latlng.lat < 0 ? 0 : Math.floor(e.latlng.lat)}m
+            x: ${x}m
+            y: ${y}m
           </span>
         `;
       });
