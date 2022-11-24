@@ -1,11 +1,11 @@
 <script>
   import Map from "./components/map/Map.svelte";
-  import Keys from "./components/ui/Keys.svelte";
+  import SearchPanel from "./components/ui/SearchPanel.svelte";
   import "leaflet/dist/leaflet.css";
   import "./map.css";
 </script>
 
 <main>
-  <Keys />
+  <SearchPanel />
   <Map />
 </main>

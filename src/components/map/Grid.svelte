@@ -106,7 +106,7 @@
     text-shadow: 0 0 2rem rgba(0, 0, 50, 20%);
     font-size: 1rem;
     padding: 0.2rem 0.5rem;
-    margin-top: 0.5rem;
+    margin-top: 10px;
     border-radius: 0.2rem;
   }
 </style>
