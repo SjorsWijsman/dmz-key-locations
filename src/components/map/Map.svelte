@@ -2,10 +2,11 @@
   import L from 'leaflet'
   import { onMount } from 'svelte';
   import Grid from './Grid.svelte';
+  import KeyMarkers from './KeyMarkers.svelte';
   import POIMarkers from './POIMarkers.svelte'; 
   import MousePos from './MousePos.svelte'; 
-  import mapImage from '../assets/map.png';
-  import { map, layers } from '../store';
+  import mapImage from '../../assets/map.png';
+  import { map, layers } from '../../store';
 
   let mapContainer
   let layerControl
@@ -13,7 +14,8 @@
   function createMap() {
     $map = L.map(mapContainer, {
       crs: L.CRS.Simple,
-      minZoom: -3,
+      maxZoom: 5,
+      minZoom: -4,
       zoomControl: false
     });
 
@@ -41,8 +43,9 @@
 </script>
 
 {#if $map}
-  <Grid />
+  <KeyMarkers />
   <POIMarkers />
+  <Grid />
   <MousePos />
 {/if}
 <section bind:this={mapContainer}></section>

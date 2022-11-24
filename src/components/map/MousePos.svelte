@@ -1,6 +1,6 @@
 <script>
   import L from 'leaflet'
-  import { map } from "../store"
+  import { map } from "../../store"
 
   // @ts-ignore
   const Coordinates = L.Control.extend({

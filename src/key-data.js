@@ -3,8 +3,8 @@ export const keys = [
   {
     title: "Ahmed’s Grocery Store Office",
     location: {
-      x: 0,
-      y: 0,
+      x: 830,
+      y: 1245,
     },
   },
 ];

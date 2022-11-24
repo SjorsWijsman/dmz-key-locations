@@ -1,7 +1,7 @@
 <script>
   import L from 'leaflet'
   import { onMount } from 'svelte';
-  import { map, layers } from "../store"
+  import { map, layers } from "../../store"
 
   const tiles = 10
   const tileSize = 415
@@ -20,7 +20,7 @@
     // Add layer to map
     $map.addLayer(gridLayer)
 
-    $layers = {...$layers, "Show Sector Grid": gridLayer}
+    $layers = { ...$layers, "Show Sector Grid": gridLayer }
   }
 
   function drawLines() {
