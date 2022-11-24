@@ -1,6 +1,6 @@
 <script>
   import L from "leaflet";
-  import { map } from "../../store";
+  import { map, selectedSector, waypoint } from "../../store";
 
   let locationMarker;
 
@@ -14,20 +14,29 @@
       iconAnchor: [8, 8], // point of the icon which will correspond to marker's location
     });
 
-    if (locationMarker) locationMarker.remove($map);
+    if (locationMarker) {
+      locationMarker.remove($map);
+      $waypoint = null;
+    }
 
-    if (
-      e.latlng.lat >= 0 &&
-      e.latlng.lng >= 0 &&
-      e.latlng.lat <= 4150 &&
-      e.latlng.lng <= 4150
-    ) {
+    let { lat, lng } = e.latlng;
+
+    if (lat >= 0 && lng >= 0 && lat <= 4150 && lng <= 4150) {
       const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
-      const lat = Math.round(clamp(e.latlng.lat, 0, 4150));
-      const lng = Math.round(clamp(e.latlng.lng, 0, 4150));
+      lat = Math.round(clamp(lat, 0, 4150));
+      lng = Math.round(clamp(lng, 0, 4150));
 
       locationMarker = L.marker({ lat, lng }, { icon });
-      locationMarker.addTo($map).on("click", () => locationMarker.remove($map));
+      locationMarker.addTo($map).on("click", () => {
+        locationMarker.remove($map);
+        $waypoint = null;
+      });
+
+      $waypoint = {
+        lat,
+        lng,
+        sector: $selectedSector,
+      };
     }
   }
 </script>

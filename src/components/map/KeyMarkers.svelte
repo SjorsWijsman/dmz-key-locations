@@ -21,9 +21,9 @@
     keys.forEach((key) => {
       if (key.location) {
         markers.push(
-          L.marker([4150 - key.location.y, key.location.x], { icon }).bindPopup(
-            key.title
-          )
+          L.marker([4150 - key.location.y, key.location.x], { icon })
+            .bindPopup(key.title)
+            .on("click", () => goToKeyLocation(key))
         );
       }
     });
@@ -36,6 +36,15 @@
 
     // Add to layers store
     $layers = { ...$layers, "Show Key Locations": keyLayer };
+  }
+
+  function goToKeyLocation(key) {
+    $map.setView([4150 - key.location.y, key.location.x], -1, {
+      animate: true,
+      pan: {
+        duration: 0.3,
+      },
+    });
   }
 
   onMount(placePOIMarkers);

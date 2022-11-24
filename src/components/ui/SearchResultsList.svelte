@@ -2,6 +2,15 @@
   import SearchResult from "./SearchResult.svelte";
   import { keys } from "../../key-data";
 
+  console.log("Total keys: " + keys.length);
+  console.log(
+    "Found location keys: " +
+      keys.reduce((acc, key) => {
+        if (key.location) return (acc += 1);
+        return acc;
+      }, 0)
+  );
+
   export let searchTerm;
 
   let filteredKeys = [];
