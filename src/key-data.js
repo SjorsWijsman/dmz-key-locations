@@ -331,6 +331,20 @@ export const keys = [
     },
   },
   {
+    title: "Police Armory [1]",
+    location: {
+      x: 2415,
+      y: 1205,
+    },
+  },
+  {
+    title: "Police Armory [2]",
+    location: {
+      x: 2805,
+      y: 2090,
+    },
+  },
+  {
     title: "Police Academy Private Locker Room",
     location: {
       x: 2885,

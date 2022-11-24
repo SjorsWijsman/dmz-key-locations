@@ -82,6 +82,14 @@ a.leaflet-control-zoom-out span {
 /* Key Markers */
 .leaflet-marker-icon {
   filter: drop-shadow(0 0 0.5rem rgba(0, 0, 50, 20%));
+  transition: all 0.1s ease-out;
+}
+
+.leaflet-marker-icon.active-marker {
+  width: 26px !important;
+  height: 26px !important;
+  margin-left: -13px !important;
+  margin-top: -26px !important;
 }
 
 /* Key Popups */

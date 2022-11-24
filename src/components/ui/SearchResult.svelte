@@ -1,19 +1,31 @@
 <script>
-  import { map } from "../../store";
+  import { map, keyMarkers } from "../../store";
 
   export let key;
 
   function goToKeyLocation() {
-    $map.setView([4150 - key.location.y, key.location.x], 0, {
-      animate: true,
-      pan: {
-        duration: 0.3,
-      },
-    });
+    openMarkerPopup();
+  }
+
+  function openMarkerPopup() {
+    console.log("halsod");
+    for (const marker of $keyMarkers) {
+      if (marker.options.title === key.title) {
+        marker.openPopup();
+      }
+    }
+  }
+
+  function highlightMarker() {
+    // for (const marker of $keyMarkers) {
+    //   if (marker.options.title === key.title) {
+    //     marker.openPopup();
+    //   }
+    // }
   }
 </script>
 
-<li>
+<li on:mouseenter={highlightMarker}>
   {key.title}
   <button on:click={goToKeyLocation} disabled={!key.location}>
     {#if key.location}
