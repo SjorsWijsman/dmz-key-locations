@@ -48,34 +48,3 @@
   });
   $map.addControl(new Coordinates({ position: "bottomleft" }));
 </script>
-
-<style>
-  :global(.mouse-position) {
-    display: flex;
-    align-items: center;
-    color: white !important;
-    font-size: 1rem;
-    background-color: var(--color-black);
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-    border-radius: 0.5rem;
-    opacity: 0.9;
-    text-shadow: 0 0 2rem rgba(0, 0, 50, 20%);
-    padding: 0.2rem 0.5rem;
-  }
-
-  :global(.mouse-position > span) {
-    font-weight: bold;
-    color: white !important;
-    margin-right: 0.5rem;
-  }
-
-  :global(.mouse-position > img) {
-    width: 1rem;
-    height: 1rem;
-    margin-right: 0.5rem;
-  }
-
-  :global(.mouse-position > span:last-of-type) {
-    margin-right: 0;
-  }
-</style>

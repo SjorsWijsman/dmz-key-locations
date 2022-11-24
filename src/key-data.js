@@ -80,7 +80,7 @@ export const keys = [
     },
   },
   {
-    title: "B. C. Toolbox",
+    title: "B.C. Toolbox",
     location: {
       x: 2830,
       y: 2845,
