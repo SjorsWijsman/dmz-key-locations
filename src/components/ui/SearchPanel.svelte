@@ -13,6 +13,8 @@
 <style>
   section {
     position: fixed;
+    display: flex;
+    flex-direction: column;
     z-index: 1000;
     background-color: var(--color-black);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
@@ -22,6 +24,7 @@
     resize: vertical;
     width: 23rem;
     min-height: 10rem;
+    max-height: 80vh;
     height: 30rem;
     overflow-y: scroll;
   }

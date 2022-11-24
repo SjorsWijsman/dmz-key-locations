@@ -1,6 +1,7 @@
 <script>
   import SearchResult from "./SearchResult.svelte";
   import { keys } from "../../key-data";
+
   export let searchTerm;
 
   let filteredKeys = [];
