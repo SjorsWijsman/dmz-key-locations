@@ -286,6 +286,13 @@ export const keys = [
     },
   },
   {
+    title: "Mawizeh Resort Main Building",
+    location: {
+      x: 2538,
+      y: 2115,
+    },
+  },
+  {
     title: "Mawizah Slum Discarded Cache",
     location: {
       x: 2320,
