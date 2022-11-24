@@ -6,10 +6,16 @@
   let filteredKeys = [];
 
   function filterKeys(searchTerm) {
-    return keys.filter((key) => {
-      if (key.title.toLowerCase().includes(searchTerm.toLowerCase()))
-        return key;
-    });
+    return keys
+      .filter((key) => {
+        if (key.title.toLowerCase().includes(searchTerm.toLowerCase()))
+          return key;
+      })
+      .sort((a, b) => {
+        const titleA = a.title.toLowerCase();
+        const titleB = b.title.toLowerCase();
+        return titleA < titleB ? -1 : titleA > titleB ? 1 : 0;
+      });
   }
 
   $: filteredKeys = filterKeys(searchTerm);
@@ -25,7 +31,6 @@
   ul {
     list-style: none;
     padding-left: 0;
-    margin: 0;
-    margin-top: 1rem;
+    margin: 1rem 0;
   }
 </style>

@@ -4,6 +4,7 @@
   import Grid from "./Grid.svelte";
   import KeyMarkers from "./KeyMarkers.svelte";
   import POIMarkers from "./POIMarkers.svelte";
+  import LocationMarker from "./LocationMarker.svelte";
   import MousePos from "./MousePos.svelte";
   import mapImage from "../../assets/map.png";
   import { map, layers } from "../../store";
@@ -58,6 +59,7 @@
   <KeyMarkers />
   <POIMarkers />
   <Grid />
+  <LocationMarker />
   <MousePos />
 {/if}
 <section bind:this={mapContainer} />

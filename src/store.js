@@ -2,3 +2,5 @@ import { writable } from "svelte/store";
 
 export const map = writable(null);
 export const layers = writable({});
+
+export const selectedSector = writable(["A", "0"]);

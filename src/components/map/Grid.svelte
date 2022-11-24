@@ -1,15 +1,13 @@
 <script>
   import L from "leaflet";
   import { onMount } from "svelte";
-  import { map, layers } from "../../store";
+  import { map, layers, selectedSector } from "../../store";
 
   const tiles = 10;
   const tileSize = 415;
 
   const xTiles = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
   const yTiles = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-
-  let selectedSector;
 
   function drawGrid() {
     // Create grid lines
@@ -42,13 +40,12 @@
               [tileSize * (tiles - y - 1), tileSize * (x + 1)],
             ],
             gridStyle
-          )
-            .on("mouseover", (e) => {
-              selectedSector = [xTile, yTile];
-            })
-            .on("mouseout", (e) => {
-              selectedSector = [];
-            })
+          ).on("mouseover", (e) => {
+            $selectedSector = [xTile, yTile];
+          })
+          // .on("mouseout", (e) => {
+          //   $selectedSector = [];
+          // })
         );
       });
     });
@@ -81,32 +78,3 @@
 
   onMount(drawGrid);
 </script>
-
-{#if selectedSector?.length > 0}
-  <span>{selectedSector.join("")}</span>
-{/if}
-
-<style>
-  /* TODO: work around the !important rules */
-  :global(.sector-label) {
-    opacity: 0.3 !important;
-    color: white !important;
-    font-size: 1.2rem !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
-
-  span {
-    z-index: 500;
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%);
-    background-color: rgba(19, 19, 22, 0.7);
-    text-shadow: 0 0 2rem rgba(0, 0, 50, 20%);
-    font-size: 1rem;
-    padding: 0.2rem 0.5rem;
-    margin-top: 10px;
-    border-radius: 0.2rem;
-  }
-</style>

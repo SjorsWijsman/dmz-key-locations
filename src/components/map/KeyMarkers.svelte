@@ -19,11 +19,13 @@
     });
 
     keys.forEach((key) => {
-      markers.push(
-        L.marker([4150 - key.location.y, key.location.x], { icon }).bindPopup(
-          key.title
-        )
-      );
+      if (key.location) {
+        markers.push(
+          L.marker([4150 - key.location.y, key.location.x], { icon }).bindPopup(
+            key.title
+          )
+        );
+      }
     });
 
     // Add markers to layerGroup

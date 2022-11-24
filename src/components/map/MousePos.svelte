@@ -1,6 +1,6 @@
 <script>
   import L from "leaflet";
-  import { map } from "../../store";
+  import { map, selectedSector } from "../../store";
 
   // @ts-ignore
   const Coordinates = L.Control.extend({
@@ -12,8 +12,11 @@
         const y = 4150 - Math.round(clamp(e.latlng.lat, 0, 4150));
         container.innerHTML = `
           <span class="mouse-position">
-            x: ${x}m
-            y: ${y}m
+            <span>
+              ${$selectedSector?.join("")}
+            </span>
+            x: <span>${x}m</span>
+            y: <span>${y}m</span>
           </span>
         `;
       });
@@ -32,5 +35,15 @@
     text-shadow: 0 0 2rem rgba(0, 0, 50, 20%);
     padding: 0.2rem 0.5rem;
     border-radius: 0.2rem;
+  }
+
+  :global(.mouse-position > span) {
+    font-weight: bold;
+    color: white !important;
+    margin-right: 0.5rem;
+  }
+
+  :global(.mouse-position > span:last-of-type) {
+    margin-right: 0;
   }
 </style>

@@ -15,8 +15,12 @@
 
 <li>
   {key.title}
-  <button on:click={goToKeyLocation}>
-    <img src="./location-dot.svg" alt="" />
+  <button on:click={goToKeyLocation} disabled={!key.location}>
+    {#if key.location}
+      <img src="./location-dot.svg" alt="" />
+    {:else}
+      <img src="./question.svg" alt="" />
+    {/if}
   </button>
 </li>
 
@@ -38,7 +42,7 @@
     margin: 0;
   }
 
-  li:hover button {
+  li:hover button:not(:disabled) {
     background-color: var(--color-main);
     transform: scale(1.2);
   }
@@ -51,6 +55,11 @@
     transition: all 0.1s ease-out;
     cursor: pointer;
     user-select: none;
+  }
+
+  button:disabled {
+    opacity: 0.2;
+    cursor: default;
   }
 
   button img {

@@ -21,4 +21,7 @@ export const keys = [
       y: 1500,
     },
   },
+  {
+    title: "Test",
+  },
 ];
