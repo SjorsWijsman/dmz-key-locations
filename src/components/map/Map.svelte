@@ -6,7 +6,7 @@
   import POIMarkers from "./POIMarkers.svelte";
   import LocationMarker from "./LocationMarker.svelte";
   import MousePos from "./MousePos.svelte";
-  import mapImage from "../../assets/map.png";
+  import mapImage from "../../assets/map.jpg";
   import { map, layers } from "../../store";
 
   let mapContainer;
