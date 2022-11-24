@@ -39,7 +39,7 @@
   }
 
   function goToKeyLocation(key) {
-    $map.setView([4150 - key.location.y, key.location.x], -1, {
+    $map.setView([4150 - key.location.y, key.location.x], 0, {
       animate: true,
       pan: {
         duration: 0.3,

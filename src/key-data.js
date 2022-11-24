@@ -18,6 +18,10 @@ export const keys = [
   },
   {
     title: "Al-Bagra Barrack",
+    location: {
+      x: 2551,
+      y: 3465,
+    },
   },
   {
     title: "A.B.F. Antiquities Office",
@@ -28,6 +32,10 @@ export const keys = [
   },
   {
     title: "Al-Bagra Munitions Storeroom",
+    location: {
+      x: 2500,
+      y: 3445,
+    },
   },
   {
     title: "Al-Bagra Officers Quarters",
@@ -38,6 +46,10 @@ export const keys = [
   },
   {
     title: "Al-Bagra Underground",
+    location: {
+      x: 2535,
+      y: 3520,
+    },
   },
   {
     title: "Algae Covered Toolbox",
@@ -160,6 +172,10 @@ export const keys = [
   },
   {
     title: "Clock Repair Tools",
+    location: {
+      x: 2180,
+      y: 3040,
+    },
   },
   {
     title: "Control Tower",
@@ -200,9 +216,6 @@ export const keys = [
     },
   },
   {
-    title: "Fort Barrack",
-  },
-  {
     title: "Groundskeepers Building",
     location: {
       x: 1945,
@@ -225,6 +238,10 @@ export const keys = [
   },
   {
     title: "Hydro Island Computer",
+    location: {
+      x: 1840,
+      y: 1870,
+    },
   },
   {
     title: "IHTAQ Warehouse Supply Room",
@@ -276,7 +293,11 @@ export const keys = [
     },
   },
   {
-    title: "Mountain Top Spotter Shack",
+    title: "Mountaintop Spotter Shack",
+    location: {
+      x: 2632,
+      y: 2447,
+    },
   },
   {
     title: "North Canals Info Booth",
@@ -303,14 +324,18 @@ export const keys = [
     },
   },
   {
+    title: "Police Academy Private Locker Room",
+    location: {
+      x: 2885,
+      y: 1705,
+    },
+  },
+  {
     title: "Police Academy Server Admin",
     location: {
       x: 2895,
       y: 1700,
     },
-  },
-  {
-    title: "Police Locker Master Key",
   },
   {
     title: "Power Substation Toolbox",
@@ -327,7 +352,11 @@ export const keys = [
     },
   },
   {
-    title: "Relay Station",
+    title: "Special Ops Relay Station",
+    location: {
+      x: 808,
+      y: 2713,
+    },
   },
   {
     title: "Retro Fridge",
@@ -345,6 +374,10 @@ export const keys = [
   },
   {
     title: "Rohan Oil North Guard Shack",
+    location: {
+      x: 1460,
+      y: 1250,
+    },
   },
   {
     title: "Rohan Oil South Guard Shack",
@@ -357,6 +390,13 @@ export const keys = [
     title: "Sa'id Mall Security Room",
   },
   {
+    title: "Sattiq Guest Quarters",
+    location: {
+      x: 1383,
+      y: 2042,
+    },
+  },
+  {
     title: "Sattiq Poppy Farm House",
     location: {
       x: 1215,
@@ -365,6 +405,10 @@ export const keys = [
   },
   {
     title: "Sawah Crypto Mining Farm Key",
+    location: {
+      x: 1272,
+      y: 3307,
+    },
   },
   {
     title: "Sawah Hotel Room 302",
@@ -382,6 +426,10 @@ export const keys = [
   },
   {
     title: "Scientists Locker",
+    location: {
+      x: 2071,
+      y: 2342,
+    },
   },
   {
     title: "South Al-Bagra Top Floor Bedroom",
@@ -406,6 +454,10 @@ export const keys = [
   },
   {
     title: "Special Forces Dead Drop",
+    location: {
+      x: 2595,
+      y: 1090,
+    },
   },
   {
     title: "Supply Room",
@@ -433,6 +485,10 @@ export const keys = [
   },
   {
     title: "Tower Conference Room",
+    location: {
+      x: 2813,
+      y: 3115,
+    },
   },
   {
     title: "Traveller's Luggage",
@@ -457,6 +513,10 @@ export const keys = [
   },
   {
     title: "Weapons Repair Kit",
+    location: {
+      x: 1262,
+      y: 2108,
+    },
   },
   {
     title: "Yum Yum Burger Back Room",
@@ -466,12 +526,24 @@ export const keys = [
     },
   },
   {
-    title: "Zarqwa Market",
+    title: "Zarqwa Market Storage",
+    location: {
+      x: 1868,
+      y: 1913,
+    },
   },
   {
     title: "Zarqwa Red Village Appartment",
+    location: {
+      x: 1939,
+      y: 1898,
+    },
   },
   {
     title: "Zaya Radar Dome",
+    location: {
+      x: 2036,
+      y: 2363,
+    },
   },
 ];
