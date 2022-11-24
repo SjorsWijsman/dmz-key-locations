@@ -1,15 +1,15 @@
 <script>
-  import L from 'leaflet'
-  import { map } from "../../store"
+  import L from "leaflet";
+  import { map } from "../../store";
 
   // @ts-ignore
   const Coordinates = L.Control.extend({
-    onAdd: $map => {
+    onAdd: ($map) => {
       const container = L.DomUtil.create("div");
-      $map.addEventListener("mousemove", e => {
+      $map.addEventListener("mousemove", (e) => {
         const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
-        const x = Math.round(clamp(e.latlng.lng, 0, 4150))
-        const y = 4150 - Math.round(clamp(e.latlng.lat, 0, 4150))
+        const x = Math.round(clamp(e.latlng.lng, 0, 4150));
+        const y = 4150 - Math.round(clamp(e.latlng.lat, 0, 4150));
         container.innerHTML = `
           <span class="mouse-position">
             x: ${x}m
@@ -18,7 +18,7 @@
         `;
       });
       return container;
-    }
+    },
   });
   $map.addControl(new Coordinates({ position: "bottomleft" }));
 </script>

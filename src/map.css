@@ -1,3 +1,6 @@
+/* 
+  Control
+*/
 .leaflet-control-layers-overlays label {
   margin-top: 0;
 }
@@ -6,6 +9,9 @@
   user-select: none;
 }
 
+/* 
+  POI labels
+*/
 .map-label {
   display: flex;
   align-items: center;
@@ -26,6 +32,16 @@
   margin-right: 0.5rem;
 }
 
+/* 
+  Key Markers
+*/
+.leaflet-marker-icon {
+  filter: drop-shadow(0 0 0.5rem rgba(0, 0, 50, 20%));
+}
+
+/* 
+  Key Popups
+*/
 .leaflet-popup-content-wrapper {
   background-color: rgba(19, 19, 22, 0.7);
   padding: 0;
