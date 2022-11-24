@@ -24,6 +24,8 @@
 <ul>
   {#each filteredKeys as key}
     <SearchResult {key} />
+  {:else}
+    <li>No results found</li>
   {/each}
 </ul>
 
@@ -32,5 +34,11 @@
     list-style: none;
     padding-left: 0;
     margin: 1rem 0;
+  }
+
+  li {
+    padding: 1rem;
+    opacity: 0.4;
+    text-align: center;
   }
 </style>

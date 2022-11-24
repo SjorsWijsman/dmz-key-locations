@@ -28,13 +28,14 @@
 
 <style>
   :global(.mouse-position) {
-    opacity: 1;
     color: white !important;
     font-size: 1rem;
-    background-color: rgba(19, 19, 22, 0.7);
+    background-color: var(--color-black);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    opacity: 0.9;
     text-shadow: 0 0 2rem rgba(0, 0, 50, 20%);
     padding: 0.2rem 0.5rem;
-    border-radius: 0.2rem;
   }
 
   :global(.mouse-position > span) {
