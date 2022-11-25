@@ -2,6 +2,7 @@
   import { activePanel } from "../../store";
 
   export let panelTitle;
+  export let long = false;
 
   function openCloseSearchPanel() {
     if ($activePanel === panelTitle) {
@@ -12,12 +13,14 @@
   }
 </script>
 
-<button on:click={openCloseSearchPanel}>
+<button on:click={openCloseSearchPanel} class:long>
   <slot />
 </button>
 
 <style>
   button {
+    display: flex;
+    justify-content: center;
     position: relative;
     height: 3rem;
     width: 3rem;
@@ -27,6 +30,17 @@
     cursor: pointer;
     padding: 0.6rem;
     border-radius: 0 0.5rem 0.5rem 0;
+    transition: all 0.1s ease-out;
+  }
+
+  button.long {
+    justify-content: flex-end;
+    width: 3.75rem;
+  }
+
+  button.long:hover,
+  button.long:focus {
+    width: 4.5rem;
   }
 
   button:hover,

@@ -20,7 +20,7 @@
   </div>
 {:else if $activePanel === null}
   <div transition:fly={{ x: -50, delay: 1 }}>
-    <ClosePanel panelTitle={"search"}>
+    <ClosePanel panelTitle={"search"} long={true}>
       <img src="./key.svg" alt="Open Search Keys Panel" />
     </ClosePanel>
   </div>

@@ -57,7 +57,7 @@
   </div>
 {:else if $activePanel === null}
   <div transition:fly={{ x: -50, delay: 1 }} style:top={`${50}px`}>
-    <ClosePanel panelTitle={"info"}>
+    <ClosePanel panelTitle={"info"} long={true}>
       <img src="./heart.svg" alt="Open Info Panel" />
     </ClosePanel>
   </div>
