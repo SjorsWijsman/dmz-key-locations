@@ -58,7 +58,7 @@
 {:else if $activePanel === null}
   <div transition:fly={{ x: -50, delay: 1 }} style:top={`${50}px`}>
     <ClosePanel panelTitle={"info"}>
-      <img src="./question.svg" alt="Open Info Panel" />
+      <img src="./heart.svg" alt="Open Info Panel" />
     </ClosePanel>
   </div>
 {/if}
@@ -139,6 +139,10 @@
     background-color: var(--color-succes);
     font-weight: bold;
     font-size: 1.2rem;
+  }
+
+  footer > a:last-of-type:hover {
+    background-color: var(--color-succes-light);
   }
 
   footer > a:last-of-type img {

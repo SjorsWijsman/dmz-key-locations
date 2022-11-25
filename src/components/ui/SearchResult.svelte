@@ -8,7 +8,6 @@
   }
 
   function openMarkerPopup() {
-    console.log("halsod");
     for (const marker of $keyMarkers) {
       if (marker.options.title === key.title) {
         marker.openPopup();
@@ -75,7 +74,7 @@
   }
 
   button img {
-    width: 1rem;
+    width: 1.2rem;
     margin: 0.3rem;
   }
 </style>

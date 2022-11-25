@@ -31,7 +31,7 @@
     // Add markers to layerGroup
     keyLayer = L.layerGroup($keyMarkers);
 
-    // Add layer to map (commented out to default to off)
+    // Add layer to map
     $map.addLayer(keyLayer);
 
     // Add to layers store
@@ -50,7 +50,7 @@
   }
 
   function closePopup(key, marker) {
-    L.DomUtil.removeClass(marker._icon, "active-marker");
+    L.DomUtil.removeClass(marker?._icon, "active-marker");
   }
 
   onMount(placePOIMarkers);
