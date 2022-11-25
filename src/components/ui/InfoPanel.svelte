@@ -67,7 +67,7 @@
   div {
     position: fixed;
     display: flex;
-    z-index: 1000;
+    z-index: 10000;
     margin: 10px;
     margin-left: 0;
   }
