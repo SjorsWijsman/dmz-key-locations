@@ -264,8 +264,8 @@ export const keys = [
   {
     title: "Kushaak Construction Warehouse",
     location: {
-      x: 845,
-      y: 1750,
+      x: 826,
+      y: 1735,
     },
   },
   {
@@ -278,8 +278,8 @@ export const keys = [
   {
     title: "Mawizeh Cell Shop",
     location: {
-      x: 2200,
-      y: 2010,
+      x: 2263,
+      y: 2049,
     },
   },
   {
@@ -383,8 +383,8 @@ export const keys = [
   {
     title: "Quarry Worker's Lost Toolbox",
     location: {
-      x: 766,
-      y: 1700,
+      x: 768,
+      y: 1703,
     },
   },
   {
@@ -454,16 +454,16 @@ export const keys = [
   {
     title: "Sawah Hotel Room 302",
     location: {
-      x: 1375,
-      y: 3297,
+      x: 1370,
+      y: 3295,
     },
     mission: true,
   },
   {
     title: "Sawah Hotel Room 303",
     location: {
-      x: 1378,
-      y: 3309,
+      x: 1374,
+      y: 3314,
     },
   },
   {
