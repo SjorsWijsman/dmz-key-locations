@@ -12,18 +12,33 @@
         <p>
           Thanks for using my map! Please contact me through the Discord server
           (link below) if you find a key location that isn't on the map, found a
-          typo, bugs, suggestions, etc.
+          typo, bugs, suggestions, etc. I will also be using this Discord for
+          future update notes.
         </p>
         <p>If you enjoy using this map please consider donating!</p>
         <p style:opacity={0.5} style:margin-top={"30px"}>
           Inspired by <a
-            href="http://dmzintel.com/"
+            href="https://dmzintel.com/"
             target="_blank"
             rel="noreferrer"
           >
-            http://dmzintel.com/
+            dmzintel
+          </a>
+          and
+          <a href="https://www.dmzmap.com/" target="_blank" rel="noreferrer">
+            dmzmap
           </a>
         </p>
+        <p style:opacity={0.5}>
+          Map by <a
+            href="https://www.activision.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Activision Publishing, Inc.
+          </a>
+        </p>
+        <p style:opacity={0.5} />
       </header>
       <footer>
         <a
