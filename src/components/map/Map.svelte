@@ -7,10 +7,18 @@
   import LocationMarker from "./LocationMarker.svelte";
   import MousePos from "./MousePos.svelte";
   import mapImage from "../../assets/map.jpg";
+  import mapImageOld from "../../assets/map-old.jpg";
   import { map, layers } from "../../store";
 
   let mapContainer;
   let layerControl;
+
+  const bounds = [
+    [0, 0],
+    [4150, 4150],
+  ];
+  const image = L.imageOverlay(mapImage, bounds);
+  const imageOld = L.imageOverlay(mapImageOld, bounds);
 
   function createMap() {
     $map = L.map(mapContainer, {
@@ -20,12 +28,6 @@
       zoomControl: false,
     });
 
-    let bounds = [
-      [0, 0],
-      [4150, 4150],
-    ];
-    let image = L.imageOverlay(mapImage, bounds).addTo($map);
-
     L.control
       .zoom({
         position: "topright",
@@ -33,8 +35,14 @@
       .addTo($map);
 
     layerControl = L.control
-      .layers(null, {}, { position: "bottomright" })
+      .layers(
+        { "Al-Mazrah": image, "Al-Mazrah (legacy)": imageOld },
+        {},
+        { position: "bottomright" }
+      )
       .addTo($map);
+
+    image.addTo($map);
 
     $map.fitBounds(bounds);
     $map.setMaxBounds([
@@ -47,7 +55,11 @@
     if (layerObj && layerControl) {
       layerControl.remove($map);
       layerControl = L.control
-        .layers(null, { ...layerObj }, { position: "bottomright" })
+        .layers(
+          { "Al-Mazrah": image, "Al-Mazrah (legacy)": imageOld },
+          { ...layerObj },
+          { position: "bottomright" }
+        )
         .addTo($map);
     }
   });

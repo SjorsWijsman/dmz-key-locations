@@ -5,15 +5,15 @@ export const keys = [
   {
     title: "Ahmed Grocery Store",
     location: {
-      x: 3050,
-      y: 2225,
+      x: 3056,
+      y: 2220,
     },
   },
   {
     title: "Airport Maintenance",
     location: {
-      x: 2930,
-      y: 2860,
+      x: 2939,
+      y: 2870,
     },
   },
   {
@@ -54,29 +54,29 @@ export const keys = [
   {
     title: "Algae Covered Toolbox",
     location: {
-      x: 2355,
-      y: 1480,
+      x: 2359,
+      y: 1484,
     },
   },
   {
     title: "Al Sa'id Shopping Centre",
     location: {
-      x: 1440,
-      y: 2600,
+      x: 1445,
+      y: 2608,
     },
   },
   {
     title: "Al Shareem Elders Room",
     location: {
-      x: 2588,
-      y: 2480,
+      x: 2599,
+      y: 2488,
     },
   },
   {
     title: "Al-Safwa Stone Block Office",
     location: {
-      x: 905,
-      y: 1825,
+      x: 902,
+      y: 1834,
     },
   },
   {
@@ -89,29 +89,29 @@ export const keys = [
   {
     title: "B.C. Toolbox",
     location: {
-      x: 2830,
-      y: 2845,
+      x: 2836,
+      y: 2854,
     },
   },
   {
-    title: "Bank of Adel Top Story Office",
+    title: "Bank of Adal Top Story Office",
     location: {
-      x: 1310,
-      y: 3265,
+      x: 1281,
+      y: 3273,
     },
   },
   {
-    title: "Bank of Adel 2nd Story Office",
+    title: "Bank of Adal 2nd Story Office",
     location: {
-      x: 1325,
-      y: 3265,
+      x: 1274,
+      y: 3272,
     },
   },
   {
     title: "Canal Apartment 103",
     location: {
-      x: 2325,
-      y: 1395,
+      x: 2332,
+      y: 1401,
     },
   },
   {
@@ -124,15 +124,15 @@ export const keys = [
   {
     title: "Caretakers House",
     location: {
-      x: 1613,
-      y: 3105,
+      x: 1619,
+      y: 3115,
     },
   },
   {
     title: "Caretakers Toolbox",
     location: {
-      x: 1615,
-      y: 2970,
+      x: 1588,
+      y: 2994,
     },
   },
   {
@@ -145,15 +145,15 @@ export const keys = [
   {
     title: "Central Sa'id Top Floor Apartment",
     location: {
-      x: 1200,
-      y: 2665,
+      x: 1206,
+      y: 2673,
     },
   },
   {
     title: "Central Zaya Meeting Room",
     location: {
-      x: 1985,
-      y: 2485,
+      x: 1993,
+      y: 2491,
     },
   },
   {
@@ -173,29 +173,29 @@ export const keys = [
   {
     title: "Ch 7 Secure Records Room",
     location: {
-      x: 2485,
-      y: 1160,
+      x: 2487,
+      y: 1163,
     },
   },
   {
     title: "Clock Repair Tools",
     location: {
-      x: 2180,
-      y: 3040,
+      x: 2186,
+      y: 3046,
     },
   },
   {
     title: "Control Tower",
     location: {
-      x: 2830,
-      y: 3125,
+      x: 2840,
+      y: 3134,
     },
   },
   {
     title: "Crane Control Room",
     location: {
-      x: 790,
-      y: 1640,
+      x: 792,
+      y: 1643,
     },
   },
   {
@@ -215,22 +215,22 @@ export const keys = [
   {
     title: "Enfer Back Room",
     location: {
-      x: 1385,
-      y: 2595,
+      x: 1421,
+      y: 2634,
     },
   },
   {
     title: "Far South Eastern Storage Closet",
     location: {
-      x: 3090,
-      y: 2290,
+      x: 3101,
+      y: 2294,
     },
   },
   {
     title: "Groundskeepers Building",
     location: {
-      x: 1945,
-      y: 3260,
+      x: 1952,
+      y: 3266,
     },
   },
   {
@@ -257,8 +257,8 @@ export const keys = [
   {
     title: "IHTAQ Warehouse Supply Room",
     location: {
-      x: 933,
-      y: 2550,
+      x: 946,
+      y: 2556,
     },
   },
   {
@@ -285,8 +285,8 @@ export const keys = [
   {
     title: "Mawizeh Power Control Substation",
     location: {
-      x: 2515,
-      y: 1940,
+      x: 2522,
+      y: 1943,
     },
   },
   {
@@ -299,64 +299,64 @@ export const keys = [
   {
     title: "Mawizeh Resort Main Building",
     location: {
-      x: 2538,
-      y: 2115,
+      x: 2539,
+      y: 2106,
     },
   },
   {
     title: "Mawizah Slum Discarded Cache",
     location: {
-      x: 2320,
+      x: 2325,
       y: 2035,
     },
   },
   {
     title: "Mountaintop Spotter Shack",
     location: {
-      x: 2632,
-      y: 2447,
+      x: 2642,
+      y: 2455,
     },
   },
   {
     title: "North Canals Info Booth",
     location: {
-      x: 2295,
-      y: 1465,
+      x: 2299,
+      y: 1469,
     },
   },
   {
     title: "Old Lighthouse Citadel Room",
     location: {
-      x: 2100,
-      y: 3345,
+      x: 2108,
+      y: 3359,
     },
   },
   {
     title: "Omar's Auto Repair",
     location: {
-      x: 1252,
-      y: 3239,
+      x: 1251,
+      y: 3243,
     },
   },
   {
     title: "Police Academy",
     location: {
-      x: 2845,
+      x: 2848,
       y: 1605,
     },
   },
   {
     title: "Police Armory [1]",
     location: {
-      x: 2415,
-      y: 1205,
+      x: 2425,
+      y: 1211,
     },
   },
   {
     title: "Police Armory [2]",
     location: {
-      x: 2805,
-      y: 2090,
+      x: 2824,
+      y: 2086,
     },
   },
   {
@@ -377,7 +377,7 @@ export const keys = [
     title: "Power Substation Toolbox",
     location: {
       x: 1475,
-      y: 3120,
+      y: 3127,
     },
   },
   {
@@ -390,36 +390,36 @@ export const keys = [
   {
     title: "Special Ops Relay Station",
     location: {
-      x: 808,
-      y: 2713,
+      x: 809,
+      y: 2720,
     },
   },
   {
     title: "Retro Fridge",
     location: {
-      x: 3260,
-      y: 2895,
+      x: 3262,
+      y: 2902,
     },
   },
   {
     title: "Rohan Control Room Locker",
     location: {
-      x: 1405,
-      y: 1425,
+      x: 1411,
+      y: 1442,
     },
   },
   {
     title: "Rohan Oil North Guard Shack",
     location: {
-      x: 1460,
-      y: 1250,
+      x: 1470,
+      y: 1263,
     },
   },
   {
     title: "Rohan Oil South Guard Shack",
     location: {
-      x: 1644,
-      y: 1577,
+      x: 1650,
+      y: 1582,
     },
   },
   {
@@ -439,43 +439,45 @@ export const keys = [
   {
     title: "Sattiq Poppy Farm House",
     location: {
-      x: 1215,
-      y: 1965,
+      x: 1218,
+      y: 1968,
     },
+    quest: true,
   },
   {
     title: "Sawah Crypto Mining Farm Key",
     location: {
-      x: 1272,
-      y: 3307,
+      x: 1276,
+      y: 3321,
     },
   },
   {
     title: "Sawah Hotel Room 302",
     location: {
-      x: 1370,
-      y: 3290,
+      x: 1375,
+      y: 3297,
     },
+    mission: true,
   },
   {
     title: "Sawah Hotel Room 303",
     location: {
-      x: 1373,
-      y: 3297,
+      x: 1378,
+      y: 3309,
     },
   },
   {
     title: "Scientists Locker",
     location: {
       x: 2071,
-      y: 2342,
+      y: 2353,
     },
   },
   {
     title: "South Al-Bagra Top Floor Bedroom",
     location: {
-      x: 2638,
-      y: 3450,
+      x: 2650,
+      y: 3463,
     },
   },
   {
@@ -488,8 +490,8 @@ export const keys = [
   {
     title: "South Zaya Scientist Apartment",
     location: {
-      x: 2003,
-      y: 2650,
+      x: 2010,
+      y: 2654,
     },
   },
   {
@@ -512,7 +514,7 @@ export const keys = [
   {
     title: "Taraq Smuggler's Office",
     location: {
-      x: 1975,
+      x: 1981,
       y: 900,
     },
   },
@@ -526,22 +528,22 @@ export const keys = [
   {
     title: "Tower Conference Room",
     location: {
-      x: 2813,
-      y: 3115,
+      x: 2831,
+      y: 3137,
     },
   },
   {
     title: "Traveller's Luggage",
     location: {
-      x: 2825,
-      y: 2920,
+      x: 2836,
+      y: 2925,
     },
   },
   {
     title: "Under Freeway East Warehouse",
     location: {
-      x: 2855,
-      y: 1995,
+      x: 2866,
+      y: 2000,
     },
   },
   {
@@ -568,22 +570,22 @@ export const keys = [
   {
     title: "Zarqwa Market Storage",
     location: {
-      x: 1868,
-      y: 1913,
+      x: 1875,
+      y: 1918,
     },
   },
   {
     title: "Zarqwa Red Village Appartment",
     location: {
-      x: 1939,
-      y: 1898,
+      x: 1948,
+      y: 1902,
     },
   },
   {
     title: "Zaya Radar Dome",
     location: {
-      x: 2036,
-      y: 2363,
+      x: 2035,
+      y: 2371,
     },
   },
 ];

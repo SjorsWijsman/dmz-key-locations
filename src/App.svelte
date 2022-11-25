@@ -4,16 +4,6 @@
   import InfoPanel from "./components/ui/InfoPanel.svelte";
   import "leaflet/dist/leaflet.css";
   import "./map.css";
-  import { keys } from "./key-data";
-
-  console.log("Total keys: " + keys.length);
-  console.log("Keys without location:");
-  console.log(
-    keys.reduce((acc, key) => {
-      if (!key.location) return [key.title, ...acc];
-      return acc;
-    }, [])
-  );
 </script>
 
 <main>
