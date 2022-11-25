@@ -66,6 +66,13 @@ export const keys = [
     },
   },
   {
+    title: "Al Shareem Elders Room",
+    location: {
+      x: 2588,
+      y: 2480,
+    },
+  },
+  {
     title: "Al-Safwa Stone Block Office",
     location: {
       x: 905,
@@ -207,6 +214,10 @@ export const keys = [
   },
   {
     title: "Enfer Back Room",
+    location: {
+      x: 1385,
+      y: 2595,
+    },
   },
   {
     title: "Far South Eastern Storage Closet",
@@ -322,6 +333,10 @@ export const keys = [
   },
   {
     title: "Omar's Auto Repair",
+    location: {
+      x: 1252,
+      y: 3239,
+    },
   },
   {
     title: "Police Academy",
@@ -409,6 +424,10 @@ export const keys = [
   },
   {
     title: "Sa'id Mall Security Room",
+    location: {
+      x: 1428,
+      y: 2563,
+    },
   },
   {
     title: "Sattiq Guest Quarters",
