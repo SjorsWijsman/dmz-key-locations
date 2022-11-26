@@ -151,13 +151,13 @@
     margin-left: auto;
     width: 9rem;
     padding: 0.3rem 1rem;
-    background-color: var(--color-succes);
+    background-color: var(--color-contrast);
     font-weight: bold;
     font-size: 1.2rem;
   }
 
   footer > a:last-of-type:hover {
-    background-color: var(--color-succes-light);
+    background-color: var(--color-contrast-light);
   }
 
   footer > a:last-of-type img {

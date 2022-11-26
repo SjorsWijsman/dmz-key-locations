@@ -8,3 +8,4 @@ export const keyMarkers = writable([]);
 export const selectedSector = writable(["A", "0"]);
 
 export const activePanel = writable("search");
+export const searchTerm = writable("");

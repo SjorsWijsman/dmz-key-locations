@@ -5,9 +5,12 @@ html {
   --color-black: #1c1c21;
   --color-black-dark: #131316;
   --color-main: #69d1c5;
-  --color-succes: #a03188;
-  --color-succes-light: #cf53b4;
+  --color-contrast: #a03188;
+  --color-contrast-light: #cf53b4;
   --color-danger: #ff5154;
+  --color-warning: #eed202;
+  --font-main: "Alexandria", sans-serif;
+  --font-mono: "Space Mono", monospace;
 }
 
 :root {
@@ -16,7 +19,7 @@ html {
 
 * {
   color: var(--color-white);
-  font-family: sans-serif;
+  font-family: var(--font-main);
   font-size: 1rem;
   box-sizing: border-box;
 }

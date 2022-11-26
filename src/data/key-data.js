@@ -159,8 +159,8 @@ export const keys = [
   {
     title: "Chemical Storage Warehouse",
     location: {
-      x: 760,
-      y: 1965,
+      x: 763,
+      y: 1969,
     },
   },
   {
@@ -505,8 +505,8 @@ export const keys = [
   {
     title: "South Bank Apartment",
     location: {
-      x: 1395,
-      y: 2865,
+      x: 1346,
+      y: 2868,
     },
   },
   {

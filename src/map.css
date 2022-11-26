@@ -116,6 +116,7 @@ a.leaflet-control-zoom-out span {
 
 /* Sector Labels */
 .sector-label {
+  font-family: var(--font-mono);
   color: white !important;
   opacity: 0.3 !important;
   font-size: 1.2rem;
@@ -126,6 +127,7 @@ a.leaflet-control-zoom-out span {
 
 /* Mouse Position */
 .mouse-position {
+  font-family: var(--font-mono);
   display: flex;
   align-items: center;
   color: white !important;
@@ -139,6 +141,7 @@ a.leaflet-control-zoom-out span {
 }
 
 .mouse-position > span {
+  font-family: var(--font-mono);
   font-weight: bold;
   color: white !important;
   margin-right: 0.5rem;

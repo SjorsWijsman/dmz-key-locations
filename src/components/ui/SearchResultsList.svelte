@@ -1,16 +1,15 @@
 <script>
   import SearchResult from "./SearchResult.svelte";
   import { keys } from "../../data/key-data";
+  import { searchTerm } from "../../store";
 
-  export let searchTerm;
+  let filteredKeys = keys;
 
-  let filteredKeys = [];
-
-  function filterKeys(searchTerm) {
+  // Filter keys with search result
+  function filterKeys(string) {
     return keys
       .filter((key) => {
-        if (key.title.toLowerCase().includes(searchTerm.toLowerCase()))
-          return key;
+        if (key.title.toLowerCase().includes(string.toLowerCase())) return key;
       })
       .sort((a, b) => {
         const titleA = a.title.toLowerCase();
@@ -19,12 +18,15 @@
       });
   }
 
-  $: filteredKeys = filterKeys(searchTerm);
+  searchTerm.subscribe((value) => {
+    // Empty to clear result list - prevents some rendering issues
+    filteredKeys = [...filterKeys(value)];
+  });
 </script>
 
 <ul>
   {#each filteredKeys as key}
-    <SearchResult {key} />
+    <SearchResult {...key} />
   {:else}
     <li>No results found</li>
   {/each}

@@ -4,15 +4,13 @@
   import SearchResultsList from "./SearchResultsList.svelte";
   import { activePanel } from "../../store";
   import { fly } from "svelte/transition";
-
-  let searchTerm = "";
 </script>
 
 {#if $activePanel === "search"}
   <div transition:fly={{ x: -200 }}>
     <section>
-      <SearchBar bind:searchTerm />
-      <SearchResultsList {searchTerm} />
+      <SearchBar />
+      <SearchResultsList />
     </section>
     <ClosePanel panelTitle={"search"}>
       <img src="./icons/xmark.svg" alt="Close Search Keys Panel" />
@@ -49,5 +47,6 @@
     max-height: 80vh;
     height: 30rem;
     overflow-y: scroll;
+    padding-bottom: 10rem;
   }
 </style>

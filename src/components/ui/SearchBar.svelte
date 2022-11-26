@@ -1,12 +1,12 @@
 <script>
-  export let searchTerm;
+  import { searchTerm } from "../../store";
 </script>
 
 <nav>
   <input
     type="text"
     required
-    bind:value={searchTerm}
+    bind:value={$searchTerm}
     placeholder="Search for a key"
   />
 </nav>
