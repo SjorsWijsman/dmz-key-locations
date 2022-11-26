@@ -2,7 +2,7 @@
   import { activePanel } from "../../store";
 
   export let panelTitle;
-  export let long = false;
+  export let closed = false;
 
   function openCloseSearchPanel() {
     if ($activePanel === panelTitle) {
@@ -11,9 +11,24 @@
       $activePanel = panelTitle;
     }
   }
+
+  function iOS() {
+    return (
+      [
+        "iPad Simulator",
+        "iPhone Simulator",
+        "iPod Simulator",
+        "iPad",
+        "iPhone",
+        "iPod",
+      ].includes(navigator.platform) ||
+      // iPad on iOS 13 detection
+      (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+    );
+  }
 </script>
 
-<button on:click={openCloseSearchPanel} class:long>
+<button on:click={openCloseSearchPanel} class:closed class:scrollbar={!iOS()}>
   <slot />
 </button>
 
@@ -34,13 +49,13 @@
     pointer-events: all;
   }
 
-  button.long {
+  button.closed {
     justify-content: flex-end;
     width: 3.75rem;
   }
 
-  button.long:hover,
-  button.long:focus {
+  button.closed:hover,
+  button.closed:focus {
     width: 4.5rem;
   }
 
@@ -52,5 +67,22 @@
   button :global(img) {
     max-width: 100%;
     max-height: 100%;
+  }
+
+  @media only screen and (max-width: 30rem) {
+    button:not(.closed) {
+      position: absolute;
+      right: 1rem;
+      border-radius: 0.5rem;
+      background-color: var(--color-black-light);
+    }
+
+    button:not(.closed).scrollbar {
+      right: 2rem;
+    }
+
+    button:hover:not(.closed) {
+      background-color: var(--color-black-dark);
+    }
   }
 </style>

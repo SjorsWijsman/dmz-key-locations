@@ -28,5 +28,12 @@
     background-color: var(--color-black-dark);
     border: none;
     border-radius: 0.3rem;
+    max-width: 25rem;
+  }
+
+  @media only screen and (max-width: 30rem) {
+    input {
+      width: calc(100% - 4rem);
+    }
   }
 </style>
