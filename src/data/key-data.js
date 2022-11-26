@@ -504,9 +504,6 @@ export const keys = [
     },
   },
   {
-    title: "Supply Room",
-  },
-  {
     title: "Taraq River Supply Shack",
     location: {
       x: 2030,

@@ -2,12 +2,12 @@
   import L from "leaflet";
   import { onMount } from "svelte";
   import { layers, map, keyMarkers } from "../../store";
-  import { keys } from "../../key-data";
+  import { keys } from "../../data/key-data";
 
   let keyLayer = [];
 
   const icon = L.icon({
-    iconUrl: "location-dot.svg",
+    iconUrl: "icons/location-dot.svg",
 
     iconSize: [20, 20], // size of the icon
     iconAnchor: [10, 20], // point of the icon which will correspond to marker's location

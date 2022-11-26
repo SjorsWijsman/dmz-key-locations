@@ -1,7 +1,10 @@
 <script>
-  import { map, keyMarkers } from "../../store";
+  import { keyMarkers } from "../../store";
+  import { accordion } from "../../scripts/accordion";
 
   export let key;
+
+  let isOpen;
 
   function goToKeyLocation() {
     openMarkerPopup();
@@ -15,24 +18,41 @@
     }
   }
 
-  function highlightMarker() {
+  function openDetails() {
+    console.log("open");
+    isOpen = true;
     // for (const marker of $keyMarkers) {
     //   if (marker.options.title === key.title) {
     //     marker.openPopup();
     //   }
     // }
   }
+
+  function closeDetails() {
+    isOpen = false;
+  }
 </script>
 
-<li on:mouseenter={highlightMarker}>
+<li on:mouseenter={openDetails} on:mouseenter={closeDetails}>
   <div>
-    {key.title}
+    <p>
+      {key.title}
+    </p>
+    <!-- <div use:accordion={isOpen}>
+      <p>Description</p>
+      {#if key.missionRequirement}
+        <p>Required for mission</p>
+      {/if}
+      {#if key.description}
+        <p>{key.description}</p>
+      {/if}
+    </div> -->
   </div>
   <button on:click={goToKeyLocation} disabled={!key.location}>
     {#if key.location}
-      <img src="./location-dot.svg" alt="" />
+      <img src="./icons/location-dot.svg" alt="" />
     {:else}
-      <img src="./question.svg" alt="" />
+      <img src="./icons/question.svg" alt="" />
     {/if}
   </button>
 </li>

@@ -8,7 +8,7 @@
 
   function setLocationMarker(e) {
     const icon = L.icon({
-      iconUrl: "location-crosshairs.svg",
+      iconUrl: "./icons/location-crosshairs.svg",
 
       iconSize: [16, 16], // size of the icon
       iconAnchor: [8, 8], // point of the icon which will correspond to marker's location

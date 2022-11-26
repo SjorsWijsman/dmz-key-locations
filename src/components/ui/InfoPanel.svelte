@@ -46,34 +46,34 @@
           target="_blank"
           rel="noreferrer"
         >
-          <img src="./discord.svg" alt="Discord" />
+          <img src="./icons/discord.svg" alt="Discord" />
         </a>
         <a
           href="https://github.com/SjorsWijsman/dmz-key-locations"
           target="_blank"
           rel="noreferrer"
         >
-          <img src="./github.svg" alt="Github" />
+          <img src="./icons/github.svg" alt="Github" />
         </a>
         <a
           href="https://www.paypal.com/donate/?hosted_button_id=L599J6499CT5W"
           target="_blank"
           rel="noreferrer"
         >
-          <img src="./heart.svg" alt="Github" />
+          <img src="./icons/heart.svg" alt="Github" />
           Donate
         </a>
       </footer>
     </section>
 
     <ClosePanel panelTitle={"info"}>
-      <img src="./xmark.svg" alt="Close Info Panel" />
+      <img src="./icons/xmark.svg" alt="Close Info Panel" />
     </ClosePanel>
   </div>
 {:else if $activePanel === null}
   <div transition:fly={{ x: -50, delay: 1 }} style:top={`${50}px`}>
     <ClosePanel panelTitle={"info"} long={true}>
-      <img src="./heart.svg" alt="Open Info Panel" />
+      <img src="./icons/heart.svg" alt="Open Info Panel" />
     </ClosePanel>
   </div>
 {/if}

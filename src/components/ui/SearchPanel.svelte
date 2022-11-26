@@ -15,13 +15,13 @@
       <SearchResultsList {searchTerm} />
     </section>
     <ClosePanel panelTitle={"search"}>
-      <img src="./xmark.svg" alt="Close Search Keys Panel" />
+      <img src="./icons/xmark.svg" alt="Close Search Keys Panel" />
     </ClosePanel>
   </div>
 {:else if $activePanel === null}
   <div transition:fly={{ x: -50, delay: 1 }}>
     <ClosePanel panelTitle={"search"} long={true}>
-      <img src="./key.svg" alt="Open Search Keys Panel" />
+      <img src="./icons/key.svg" alt="Open Search Keys Panel" />
     </ClosePanel>
   </div>
 {/if}

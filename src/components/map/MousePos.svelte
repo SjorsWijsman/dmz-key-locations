@@ -30,7 +30,7 @@
         ) {
           container.innerHTML = `
           <span class="mouse-position">
-            ${$waypoint ? '<img src="./location-crosshairs.svg" />' : ""}
+            ${$waypoint ? '<img src="./icons/location-crosshairs.svg" />' : ""}
             <span>
               ${sector.join("")}
             </span>
