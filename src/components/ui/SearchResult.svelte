@@ -1,14 +1,12 @@
 <script>
-  import { keyMarkers } from "../../store";
+  import { keyMarkers, selectedMarker, openKeyInfo } from "../../store";
   import SearchResultInfo from "./SearchResultInfo.svelte";
 
-  export let title,
-    location,
+  export let title = "Untitled Location",
+    location = {},
     missionRequirement = false,
     description = "",
     loot = "";
-
-  let isOpen = false;
 
   function goToKeyLocation(event) {
     if (event) event.stopPropagation();
@@ -25,17 +23,29 @@
   }
 
   function toggleDetails() {
-    isOpen = !isOpen;
-    // if (isOpen) goToKeyLocation();
+    $openKeyInfo === title ? ($openKeyInfo = "") : ($openKeyInfo = title);
   }
+
+  selectedMarker.subscribe((selection) => {
+    if (selection.title === title) {
+      $openKeyInfo = title;
+    }
+  });
 </script>
 
-<li on:click={toggleDetails} on:keypress={toggleDetails} class:isOpen>
+<li
+  on:click={toggleDetails}
+  on:keypress={toggleDetails}
+  class:isOpen={$openKeyInfo === title}
+>
   <article>
     <h2>
       {title}
     </h2>
-    <SearchResultInfo {...{ missionRequirement, description, loot }} {isOpen} />
+    <SearchResultInfo
+      {...{ missionRequirement, description, loot }}
+      isOpen={$openKeyInfo === title}
+    />
     <img src="./icons/chevron-down.svg" alt="" />
   </article>
   <button on:click={goToKeyLocation} disabled={!location}>
@@ -59,9 +69,11 @@
     transition: all 0.1s ease-out;
     cursor: pointer;
     min-height: 4.3rem;
+    scroll-margin-top: 4.5rem;
   }
 
-  li:hover {
+  li:hover,
+  li.isOpen {
     background-color: var(--color-black-dark);
   }
 
@@ -71,7 +83,7 @@
 
   li.isOpen {
     padding-bottom: 3rem;
-    box-shadow: inset 0 -1rem 1rem -1rem var(--color-black-dark);
+    box-shadow: inset 0 -1rem 1.5rem -1rem rgba(0, 0, 10, 0.6);
   }
 
   article {
@@ -119,7 +131,8 @@
     margin: 0.3rem;
   }
 
-  li:hover button {
+  li:hover button,
+  li.isOpen button {
     background-color: var(--color-black);
   }
 

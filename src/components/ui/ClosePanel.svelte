@@ -31,6 +31,7 @@
     padding: 0.6rem;
     border-radius: 0 0.5rem 0.5rem 0;
     transition: all 0.1s ease-out;
+    pointer-events: all;
   }
 
   button.long {

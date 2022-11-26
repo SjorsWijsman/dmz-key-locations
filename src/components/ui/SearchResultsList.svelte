@@ -1,7 +1,7 @@
 <script>
   import SearchResult from "./SearchResult.svelte";
   import { keys } from "../../data/key-data";
-  import { searchTerm } from "../../store";
+  import { searchTerm, selectedMarker } from "../../store";
 
   let filteredKeys = keys;
 
@@ -25,11 +25,15 @@
 </script>
 
 <ul>
-  {#each filteredKeys as key}
-    <SearchResult {...key} />
+  {#if $selectedMarker.title && !$searchTerm}
+    <SearchResult {...$selectedMarker} />
   {:else}
-    <li>No results found</li>
-  {/each}
+    {#each filteredKeys as key}
+      <SearchResult {...key} />
+    {:else}
+      <li>No results found</li>
+    {/each}
+  {/if}
 </ul>
 
 <style>

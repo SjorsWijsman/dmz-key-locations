@@ -1,5 +1,5 @@
 <script>
-  import { searchTerm } from "../../store";
+  import { searchTerm, selectedMarker } from "../../store";
 </script>
 
 <nav>
@@ -7,7 +7,7 @@
     type="text"
     required
     bind:value={$searchTerm}
-    placeholder="Search for a key"
+    placeholder={$selectedMarker.title || "Search for a key"}
   />
 </nav>
 

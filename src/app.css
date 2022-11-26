@@ -22,6 +22,7 @@ html {
   font-family: var(--font-main);
   font-size: 1rem;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {

@@ -1,7 +1,13 @@
 <script>
   import L from "leaflet";
   import { onMount } from "svelte";
-  import { layers, map, keyMarkers } from "../../store";
+  import {
+    layers,
+    map,
+    keyMarkers,
+    selectedMarker,
+    searchTerm,
+  } from "../../store";
   import { keys } from "../../data/key-data";
 
   let keyLayer = [];
@@ -22,6 +28,7 @@
           icon,
         })
           .bindPopup(key.title)
+          .on("click", () => setSelectedMarker(key, marker))
           .on("popupopen", () => openPopup(key, marker))
           .on("popupclose", () => closePopup(key, marker));
         $keyMarkers.push(marker);
@@ -50,7 +57,15 @@
   }
 
   function closePopup(key, marker) {
+    $selectedMarker = { title: "" };
     L.DomUtil.removeClass(marker?._icon, "active-marker");
+  }
+
+  function setSelectedMarker(key, marker) {
+    if (L.DomUtil.hasClass(marker._icon, "active-marker")) {
+      $searchTerm = "";
+      $selectedMarker = key;
+    }
   }
 
   onMount(placePOIMarkers);

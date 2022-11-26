@@ -1,8 +1,8 @@
 <script>
   import { slide } from "svelte/transition";
 
-  export let isOpen;
   export let missionRequirement, description, loot;
+  export let isOpen = false;
 
   function fadeSlide(node, options) {
     const slideTrans = slide(node, options);
@@ -42,7 +42,6 @@
     margin: 0;
     padding-bottom: 1rem;
     font-weight: 350;
-    font-size: 0.95rem;
     opacity: 0.85;
   }
 

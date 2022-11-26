@@ -31,6 +31,7 @@
     z-index: 10000;
     margin: 10px;
     margin-left: 0;
+    pointer-events: none;
   }
 
   section {
@@ -48,5 +49,6 @@
     height: 30rem;
     overflow-y: scroll;
     padding-bottom: 10rem;
+    pointer-events: all;
   }
 </style>
