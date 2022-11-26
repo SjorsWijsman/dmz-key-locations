@@ -19,35 +19,35 @@ export const keys = [
   {
     title: "Al-Bagra Barrack",
     location: {
-      x: 2551,
-      y: 3465,
+      x: 2570,
+      y: 3439,
     },
   },
   {
     title: "A.B.F. Antiquities Office",
     location: {
-      x: 2530,
-      y: 3460,
+      x: 2532,
+      y: 3471,
     },
   },
   {
-    title: "Al-Bagra Munitions Storeroom",
+    title: "Al Bagra Munitions Storeroom",
     location: {
-      x: 2500,
-      y: 3445,
+      x: 2483,
+      y: 3453,
     },
   },
   {
-    title: "Al-Bagra Officers Quarters",
+    title: "Al Bagra Officers Quarters",
     location: {
-      x: 2545,
-      y: 3490,
+      x: 2560,
+      y: 3471,
     },
   },
   {
-    title: "Al-Bagra Underground",
+    title: "Al Bagra Underground",
     location: {
-      x: 2535,
+      x: 2548,
       y: 3520,
     },
   },
@@ -141,6 +141,7 @@ export const keys = [
       x: 1485,
       y: 2200,
     },
+    missionRequirement: true,
   },
   {
     title: "Central Sa'id Top Floor Apartment",
@@ -197,6 +198,7 @@ export const keys = [
       x: 792,
       y: 1643,
     },
+    missionRequirement: true,
   },
   {
     title: "Deckhand's Toolbox",
@@ -442,7 +444,7 @@ export const keys = [
       x: 1218,
       y: 1968,
     },
-    quest: true,
+    missionRequirement: true,
   },
   {
     title: "Sawah Crypto Mining Farm Key",
@@ -457,7 +459,7 @@ export const keys = [
       x: 1370,
       y: 3295,
     },
-    mission: true,
+    missionRequirement: true,
   },
   {
     title: "Sawah Hotel Room 303",

@@ -25,7 +25,9 @@
 </script>
 
 <li on:mouseenter={highlightMarker}>
-  {key.title}
+  <div>
+    {key.title}
+  </div>
   <button on:click={goToKeyLocation} disabled={!key.location}>
     {#if key.location}
       <img src="./location-dot.svg" alt="" />
