@@ -141,7 +141,6 @@ export const keys = [
       x: 1485,
       y: 2200,
     },
-    missionRequirement: true,
   },
   {
     title: "Central Sa'id Top Floor Apartment",
@@ -167,8 +166,8 @@ export const keys = [
   {
     title: "Ch 7 Editorial Department",
     location: {
-      x: 2435,
-      y: 1760,
+      x: 2418,
+      y: 1222,
     },
   },
   {
@@ -348,31 +347,52 @@ export const keys = [
     },
   },
   {
-    title: "Police Armory [1]",
+    title: "Police Armory [F2]",
     location: {
-      x: 2425,
-      y: 1211,
+      x: 2204,
+      y: 1233,
     },
   },
   {
-    title: "Police Armory [2]",
+    title: "Police Locker [F2]",
+    location: {
+      x: 2194,
+      y: 1227,
+    },
+  },
+  {
+    title: "Police Armory [G5]",
     location: {
       x: 2824,
       y: 2086,
     },
   },
   {
+    title: "Police Locker [G5]",
+    location: {
+      x: 2818,
+      y: 2099,
+    },
+  },
+  {
     title: "Police Academy Private Locker Room",
     location: {
       x: 2885,
-      y: 1705,
+      y: 1707,
+    },
+  },
+  {
+    title: "Police Locker [G4]",
+    location: {
+      x: 2892,
+      y: 1710,
     },
   },
   {
     title: "Police Academy Server Admin",
     location: {
-      x: 2895,
-      y: 1700,
+      x: 2900,
+      y: 1699,
     },
   },
   {
@@ -562,8 +582,8 @@ export const keys = [
   {
     title: "Yum Yum Burger Back Room",
     location: {
-      x: 2535,
-      y: 1415,
+      x: 2549,
+      y: 1418,
     },
   },
   {
