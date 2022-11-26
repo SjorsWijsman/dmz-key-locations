@@ -406,8 +406,8 @@ export const keys = [
   {
     title: "Rohan Control Room Locker",
     location: {
-      x: 1411,
-      y: 1442,
+      x: 1404,
+      y: 1431,
     },
   },
   {

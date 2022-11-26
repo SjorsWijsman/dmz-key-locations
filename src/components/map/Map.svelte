@@ -8,6 +8,7 @@
   import MousePos from "./MousePos.svelte";
   import mapImage from "../../assets/map.jpg";
   import mapImageOld from "../../assets/map-old.jpg";
+  import mapImageHighRes from "../../assets/map-high-res.png";
   import { map, layers } from "../../store";
 
   let mapContainer;
@@ -19,6 +20,7 @@
   ];
   const image = L.imageOverlay(mapImage, bounds);
   const imageOld = L.imageOverlay(mapImageOld, bounds);
+  const imageHighRes = L.imageOverlay(mapImageHighRes, bounds);
 
   function createMap() {
     $map = L.map(mapContainer, {
@@ -36,7 +38,11 @@
 
     layerControl = L.control
       .layers(
-        { "Al-Mazrah": image, "Al-Mazrah (legacy)": imageOld },
+        {
+          "Al-Mazrah": image,
+          "Al-Mazrah (High Res - 10MB)": imageHighRes,
+          "Al-Mazrah (Legacy)": imageOld,
+        },
         {},
         { position: "bottomright" }
       )
@@ -56,7 +62,11 @@
       layerControl.remove($map);
       layerControl = L.control
         .layers(
-          { "Al-Mazrah": image, "Al-Mazrah (legacy)": imageOld },
+          {
+            "Al-Mazrah": image,
+            "Al-Mazrah (High Res - 10MB)": imageHighRes,
+            "Al-Mazrah (Legacy)": imageOld,
+          },
           { ...layerObj },
           { position: "bottomright" }
         )
