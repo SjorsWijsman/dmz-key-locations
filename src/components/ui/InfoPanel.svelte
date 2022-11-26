@@ -1,5 +1,6 @@
 <script>
   import Panel from "./Panel.svelte";
+  import { iOS } from "../../scripts/platform-check.js";
 </script>
 
 <Panel panelTitle={"info"} openIcon={"./icons/heart.svg"} closeIconOffset={4}
@@ -36,7 +37,7 @@
     </p>
     <p style:opacity={0.5} />
   </header>
-  <footer>
+  <footer class:scrollbar={!iOS()}>
     <a href="https://discord.gg/vqCwgh8buH" target="_blank" rel="noreferrer">
       <img src="./icons/discord.svg" alt="Discord" />
     </a>
@@ -81,6 +82,10 @@
       width: calc(100% - 10px - 1rem);
       border-radius: 0;
       border-bottom-left-radius: 0.5rem;
+    }
+
+    footer:not(.scrollbar) {
+      width: calc(100% - 10px);
     }
   }
 
