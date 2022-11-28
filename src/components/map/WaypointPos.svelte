@@ -3,7 +3,7 @@
   import { map, waypoint } from "../../store";
 
   // @ts-ignore
-  const Coordinates = L.Control.extend({
+  const WaypointCoordinates = L.Control.extend({
     onAdd: ($map) => {
       const container = L.DomUtil.create("div");
 
@@ -35,5 +35,5 @@
     },
   });
 
-  $map.addControl(new Coordinates({ position: "bottomleft" }));
+  $map.addControl(new WaypointCoordinates({ position: "bottomleft" }));
 </script>

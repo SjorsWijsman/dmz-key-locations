@@ -3,7 +3,7 @@
   import { map, selectedSector } from "../../store";
 
   // @ts-ignore
-  const Coordinates = L.Control.extend({
+  const MouseCoordinates = L.Control.extend({
     onAdd: ($map) => {
       let previousLat, previousLng;
 
@@ -35,5 +35,5 @@
     },
   });
 
-  $map.addControl(new Coordinates({ position: "bottomleft" }));
+  $map.addControl(new MouseCoordinates({ position: "bottomleft" }));
 </script>

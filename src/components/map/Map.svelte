@@ -10,6 +10,7 @@
   import mapImage from "../../assets/map.jpg";
   import mapImageHighRes from "../../assets/map-high-res.png";
   import { map, layers } from "../../store";
+  import { isTouchDevice } from "../../scripts/platform-check";
 
   let mapContainer;
   let layerControl;
@@ -79,7 +80,9 @@
   <POIMarkers />
   <Grid />
   <LocationMarker />
-  <MousePos />
+  {#if !isTouchDevice()}
+    <MousePos />
+  {/if}
   <WaypointPos />
 {/if}
 <section bind:this={mapContainer} />

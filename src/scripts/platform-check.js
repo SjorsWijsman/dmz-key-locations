@@ -12,3 +12,7 @@ export function iOS() {
     (navigator.userAgent.includes("Mac") && "ontouchend" in document)
   );
 }
+
+export function isTouchDevice() {
+  return Boolean(window.matchMedia("(pointer: coarse)").matches);
+}
