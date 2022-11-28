@@ -20,3 +20,4 @@ export const openKeyInfo = writable("");
 // Persists in localStorage
 export const activePanel = persistStore("dmzkeys-user-activePanel", "search");
 export const searchTerm = persistStore("dmzkeys-user-searchTerm", "");
+export const favorites = persistStore("dmzkeys-user-favorites", []);

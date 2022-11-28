@@ -16,7 +16,7 @@
     <!-- General Meta Tags -->
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+      content="width=device-width, viewport-fit=cover, initial-scale=1.0, maximum-scale=1"
     />
     <meta name="title" content="DMZ Key Locations - Interactive Map" />
     <meta
@@ -59,8 +59,8 @@
     <meta name="language" content="English" />
     <meta name="author" content="Sjors Wijsman" />
     <title>DMZ Key Locations</title>
-    <script type="module" crossorigin src="/assets/index.9e52038d.js"></script>
-    <link rel="stylesheet" href="/assets/index.97837c8c.css">
+    <script type="module" crossorigin src="/assets/index.db76e907.js"></script>
+    <link rel="stylesheet" href="/assets/index.652a0758.css">
   </head>
 
   <!-- Google tag (gtag.js) -->
@@ -76,6 +76,14 @@
     gtag("js", new Date());
 
     gtag("config", "G-QXSWXBZQ7W");
+  </script>
+
+  <!-- HTTPS redirect -->
+  <script>
+    const host = "dmzkeys.com";
+    if (window.location.host == host && window.location.protocol != "https:") {
+      window.location.protocol = "https:";
+    }
   </script>
 
   <body id="app">

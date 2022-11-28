@@ -1,37 +1,47 @@
 <script>
-  import { slide } from "svelte/transition";
+  import { fadeSlide } from "../../scripts/fade-slide";
+  import { favorites } from "../../store";
 
-  export let missionRequirement, description, loot;
+  export let title, missionRequirement, description, loot;
   export let isOpen = false;
-
-  function fadeSlide(node, options) {
-    const slideTrans = slide(node, options);
-    return {
-      duration: options.duration,
-      css: (t, u) => `
-        ${slideTrans.css(t, u)}
-        opacity: ${t};
-      `,
-    };
-  }
 </script>
 
 {#if isOpen}
   <section transition:fadeSlide|local={{ duration: 200 }}>
+    {#if $favorites.includes(title)}
+      <p class="favorite" transition:fadeSlide|local={{ duration: 100 }}>
+        <img src="./icons/star-favorite.svg" alt="" />
+        Favorite
+      </p>
+    {/if}
     {#if missionRequirement}
-      <p class="warning">
+      <p class="mission">
         <img src="./icons/circle-exclamation.svg" alt="" />
         Mission Requirement
       </p>
     {/if}
+
     <h3>Description</h3>
-    <p>
-      {description || "WIP"}
-    </p>
+    {#if description?.length > 0}
+      {#each description as paragraph}
+        <p>
+          {paragraph}
+        </p>
+      {/each}
+    {:else}
+      <p>WIP</p>
+    {/if}
+
     <h3>Loot</h3>
-    <p>
-      {loot || "WIP"}
-    </p>
+    {#if loot?.length > 0}
+      {#each loot as item}
+        <p>
+          {item}
+        </p>
+      {/each}
+    {:else}
+      <p>WIP</p>
+    {/if}
   </section>
 {/if}
 
@@ -45,11 +55,18 @@
     opacity: 0.85;
   }
 
-  p.warning {
+  p.mission {
     position: relative;
-    color: var(--color-warning);
+    color: var(--color-mission);
+    padding: 0;
     padding-top: 0.1rem;
-    padding-bottom: 0.5rem;
+  }
+
+  p.favorite {
+    position: relative;
+    color: var(--color-favorite-light);
+    padding: 0;
+    padding-top: 0.1rem;
   }
 
   p img {

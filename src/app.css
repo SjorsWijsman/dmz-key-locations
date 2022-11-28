@@ -8,7 +8,10 @@ html {
   --color-contrast: #a03188;
   --color-contrast-light: #cf53b4;
   --color-danger: #ff5154;
-  --color-warning: #eed202;
+  --color-favorite: #e0a909;
+  --color-favorite-light: #f5db4d;
+  --color-mission: #3ac562;
+  --color-mission-light: #98e1ad;
   --font-main: "Alexandria", sans-serif;
   --font-mono: "Space Mono", monospace;
 }

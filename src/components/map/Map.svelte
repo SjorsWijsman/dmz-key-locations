@@ -6,6 +6,7 @@
   import POIMarkers from "./POIMarkers.svelte";
   import LocationMarker from "./LocationMarker.svelte";
   import MousePos from "./MousePos.svelte";
+  import WaypointPos from "./WaypointPos.svelte";
   import mapImage from "../../assets/map.jpg";
   import mapImageOld from "../../assets/map-old.jpg";
   import mapImageHighRes from "../../assets/map-high-res.png";
@@ -83,6 +84,7 @@
   <Grid />
   <LocationMarker />
   <MousePos />
+  <WaypointPos />
 {/if}
 <section bind:this={mapContainer} />
 

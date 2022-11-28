@@ -7,6 +7,7 @@
     type="text"
     required
     bind:value={$searchTerm}
+    on:click={() => ($selectedMarker = { title: "" })}
     placeholder={$selectedMarker.title || "Search for a key"}
   />
 </nav>

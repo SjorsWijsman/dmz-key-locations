@@ -1,8 +1,10 @@
 <script>
-  import { activePanel } from "../../store";
+  import { activePanel, selectedMarker } from "../../store";
   import { iOS } from "../../scripts/platform-check.js";
   export let panelTitle;
   export let closed = false;
+
+  let flash = false;
 
   function openCloseSearchPanel() {
     if ($activePanel === panelTitle) {
@@ -11,9 +13,20 @@
       $activePanel = panelTitle;
     }
   }
+
+  selectedMarker.subscribe((marker) => {
+    if (panelTitle === "search") {
+      marker?.title && $activePanel === null ? (flash = true) : (flash = false);
+    }
+  });
 </script>
 
-<button on:click={openCloseSearchPanel} class:closed class:scrollbar={!iOS()}>
+<button
+  on:click={openCloseSearchPanel}
+  class:closed
+  class:flash
+  class:scrollbar={!iOS()}
+>
   <slot />
 </button>
 
@@ -30,8 +43,12 @@
     cursor: pointer;
     padding: 0.6rem;
     border-radius: 0 0.5rem 0.5rem 0;
-    transition: all 0.1s ease-out;
+    transition: all 0.2s ease-out;
     pointer-events: all;
+  }
+
+  button.closed.flash {
+    background-color: var(--color-main);
   }
 
   button.closed {

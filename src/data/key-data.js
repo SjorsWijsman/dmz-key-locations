@@ -197,6 +197,7 @@ export const keys = [
       x: 792,
       y: 1643,
     },
+    description: ["Required for Unearthed, White Lotus tier 2."],
     missionRequirement: true,
   },
   {
@@ -345,7 +346,7 @@ export const keys = [
       x: 2848,
       y: 1605,
     },
-    description: "Major Stronghold.",
+    description: ["Major Stronghold."],
   },
   {
     title: "Police Armory [F2]",
@@ -353,8 +354,9 @@ export const keys = [
       x: 2204,
       y: 1233,
     },
-    description:
+    description: [
       "Contains Police Lockers. Police Locker Master Key required to open.",
+    ],
   },
   {
     title: "Police Locker [F2]",
@@ -362,7 +364,7 @@ export const keys = [
       x: 2194,
       y: 1227,
     },
-    description: "Inside Police Armory Room. Key required to get inside.",
+    description: ["Inside Police Armory Room. Key required to get inside."],
   },
   {
     title: "Police Armory [G5]",
@@ -370,8 +372,9 @@ export const keys = [
       x: 2824,
       y: 2086,
     },
-    description:
+    description: [
       "Contains Police Lockers. Police Locker Master Key required to open.",
+    ],
   },
   {
     title: "Police Locker [G5]",
@@ -379,7 +382,7 @@ export const keys = [
       x: 2818,
       y: 2099,
     },
-    description: "Inside Police Armory Room. Key required to get inside.",
+    description: ["Inside Police Armory Room. Key required to get inside."],
   },
   {
     title: "Police Academy Private Locker Room",
@@ -387,8 +390,9 @@ export const keys = [
       x: 2885,
       y: 1707,
     },
-    description:
+    description: [
       "Contains Police Lockers. Police Locker Master Key required to open.",
+    ],
   },
   {
     title: "Police Locker [G4]",
@@ -396,8 +400,9 @@ export const keys = [
       x: 2892,
       y: 1710,
     },
-    description:
+    description: [
       "Inside Police Academy Private Locker Room. Key required to get inside.",
+    ],
   },
   {
     title: "Police Academy Server Admin",
@@ -475,6 +480,7 @@ export const keys = [
       x: 1218,
       y: 1968,
     },
+    description: ["Required for Espionage, Black Mous tier 2."],
     missionRequirement: true,
   },
   {
@@ -490,6 +496,10 @@ export const keys = [
       x: 1370,
       y: 3295,
     },
+    description: [
+      "Required for Good Fortune, Legion Tier 3.",
+      "Entry without key is possible through the skylights.",
+    ],
     missionRequirement: true,
   },
   {
@@ -558,8 +568,8 @@ export const keys = [
   {
     title: "Tower Conference Room",
     location: {
-      x: 2831,
-      y: 3137,
+      x: 2846,
+      y: 3112,
     },
   },
   {

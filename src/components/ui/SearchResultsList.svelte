@@ -9,7 +9,7 @@
   function filterKeys(string) {
     return keys
       .filter((key) => {
-        if (key.title.toLowerCase().includes(string.toLowerCase())) return key;
+        if (sanitize(key.title).includes(sanitize(string))) return key;
       })
       .sort((a, b) => {
         const titleA = a.title.toLowerCase();
@@ -22,13 +22,21 @@
     // Empty to clear result list - prevents some rendering issues
     filteredKeys = [...filterKeys(value)];
   });
+
+  function sanitize(string) {
+    string = string.toLowerCase();
+    string = string.replaceAll("-", " ");
+    string = string.replaceAll(".", " ");
+    string = string.replaceAll(" ", "");
+    return string;
+  }
 </script>
 
 <ul>
   {#if $selectedMarker.title && !$searchTerm}
     <SearchResult {...$selectedMarker} />
   {:else}
-    {#each filteredKeys as key}
+    {#each filteredKeys as key (key.title)}
       <SearchResult {...key} />
     {:else}
       <li>No results found</li>

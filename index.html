@@ -16,7 +16,7 @@
     <!-- General Meta Tags -->
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+      content="width=device-width, viewport-fit=cover, initial-scale=1.0, maximum-scale=1"
     />
     <meta name="title" content="DMZ Key Locations - Interactive Map" />
     <meta
@@ -74,6 +74,14 @@
     gtag("js", new Date());
 
     gtag("config", "G-QXSWXBZQ7W");
+  </script>
+
+  <!-- HTTPS redirect -->
+  <script>
+    const host = "dmzkeys.com";
+    if (window.location.host == host && window.location.protocol != "https:") {
+      window.location.protocol = "https:";
+    }
   </script>
 
   <body id="app">
