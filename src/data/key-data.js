@@ -757,4 +757,10 @@ export const keys = [
       y: 2371,
     },
   },
+  {
+    title: "Control Room",
+  },
+  {
+    title: "Fort Barrack",
+  },
 ];

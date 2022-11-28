@@ -74,8 +74,8 @@
     <img src="./icons/chevron-down.svg" alt="" />
   </article>
   <div class="button-box">
-    <button on:click={goToKeyLocation} disabled={!location}>
-      {#if location}
+    <button on:click={goToKeyLocation} disabled={!location?.x || !location?.y}>
+      {#if location?.x && location?.y}
         {#if $favorites.includes(title)}
           <img
             transition:fadeSlide|local
