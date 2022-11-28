@@ -2,7 +2,7 @@
   import { fadeSlide } from "../../scripts/fade-slide";
   import { favorites } from "../../store";
 
-  export let title, missionRequirement, description, loot;
+  export let title, missionRequirement, fortress, description, loot;
   export let isOpen = false;
 </script>
 
@@ -18,6 +18,12 @@
       <p class="mission">
         <img src="./icons/circle-exclamation.svg" alt="" />
         Mission Requirement
+      </p>
+    {/if}
+    {#if fortress}
+      <p class="fortress">
+        <img src="./icons/fortress.svg" alt="" />
+        Fortress
       </p>
     {/if}
 
@@ -55,18 +61,24 @@
     opacity: 0.85;
   }
 
-  p.mission {
+  p.mission,
+  p.favorite,
+  p.fortress {
     position: relative;
-    color: var(--color-mission);
     padding: 0;
     padding-top: 0.1rem;
   }
 
+  p.mission {
+    color: var(--color-mission);
+  }
+
   p.favorite {
-    position: relative;
     color: var(--color-favorite-light);
-    padding: 0;
-    padding-top: 0.1rem;
+  }
+
+  p.fortress {
+    opacity: 0.75;
   }
 
   p img {

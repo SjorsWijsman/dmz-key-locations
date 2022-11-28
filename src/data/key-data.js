@@ -8,20 +8,17 @@ export const keys = [
       x: 3056,
       y: 2220,
     },
+    description: ["Easy to find, office room inside of the grocery store."],
   },
   {
     title: "Airport Maintenance",
     location: {
-      x: 2939,
-      y: 2870,
+      x: 2941,
+      y: 2874,
     },
-  },
-  {
-    title: "Al-Bagra Barrack",
-    location: {
-      x: 2570,
-      y: 3439,
-    },
+    description: [
+      "Multiple entrances on the ground floor on the inside and outside and another on top of the roof.",
+    ],
   },
   {
     title: "A.B.F. Antiquities Office",
@@ -29,6 +26,19 @@ export const keys = [
       x: 2532,
       y: 3471,
     },
+    description: [
+      "Inside the large hall in the middle of the fortress. Entrance is up the indoor balcony staircase on the west side of the hall.",
+    ],
+  },
+  {
+    title: "Al Bagra Barrack",
+    location: {
+      x: 2570,
+      y: 3439,
+    },
+    description: [
+      "Access to both doors from the ground floor on the east side of the fortress. Each room can be opened separately (multiple key uses).",
+    ],
   },
   {
     title: "Al Bagra Munitions Storeroom",
@@ -36,6 +46,9 @@ export const keys = [
       x: 2483,
       y: 3453,
     },
+    description: [
+      "Inside a possible stronghold location, so a keycard might be needed. Bottom floor has two rooms with metal bars that can each be opened separately (multiple key uses).",
+    ],
   },
   {
     title: "Al Bagra Officers Quarters",
@@ -43,6 +56,9 @@ export const keys = [
       x: 2560,
       y: 3471,
     },
+    description: [
+      "Located on the top floor of the eastern wing of the fortress. Includes two rooms that can each be opened separately (multiple key uses).",
+    ],
   },
   {
     title: "Al Bagra Underground",
@@ -50,6 +66,10 @@ export const keys = [
       x: 2548,
       y: 3520,
     },
+    description: [
+      "Entrance from the road down on the south side of the fortress.",
+    ],
+    fortress: true,
   },
   {
     title: "Algae Covered Toolbox",
@@ -57,20 +77,30 @@ export const keys = [
       x: 2359,
       y: 1484,
     },
+    description: [
+      "This toolbox can be found underwater between two bridges spanning over the canal in Al-Mazrah City. ",
+    ],
   },
   {
     title: "Al Sa'id Shopping Centre",
     location: {
-      x: 1445,
-      y: 2608,
+      x: 1459,
+      y: 2607,
     },
+    description: [
+      "Multiple entrances can be found around the Shopping Centre, including in the back just underneath the pinned location. Be warned, this location usually contains a lot of enemies.",
+    ],
+    fortress: true,
   },
   {
-    title: "Al Shareem Elders Room",
+    title: "Al Sharim Pass Elders Room",
     location: {
       x: 2599,
       y: 2488,
     },
+    description: [
+      "The locked room is located on the roof of the building on top of the mountain at Al Sharim Pass.",
+    ],
   },
   {
     title: "Al-Safwa Stone Block Office",
@@ -78,6 +108,9 @@ export const keys = [
       x: 902,
       y: 1834,
     },
+    description: [
+      "The Stone Block Office is located to the southeast of Al-Safwa Quarry. There are doors on both sides of the small building.",
+    ],
   },
   {
     title: "Art Museum",
@@ -85,6 +118,10 @@ export const keys = [
       x: 2175,
       y: 1485,
     },
+    description: [
+      "Multiple entrances around the large building to the west of Al-Mazrah City. As this location is a fortress it contains a lot of enemies.",
+    ],
+    fortress: true,
   },
   {
     title: "B.C. Toolbox",
@@ -92,6 +129,9 @@ export const keys = [
       x: 2836,
       y: 2854,
     },
+    description: [
+      "In the north of the large airport building there is a room behind the Border Control desks. The toolbox is located in this room near the conveyor belts.",
+    ],
   },
   {
     title: "Bank of Adal Top Story Office",
@@ -99,6 +139,9 @@ export const keys = [
       x: 1281,
       y: 3273,
     },
+    description: [
+      "Found on the top floor inside the bank in Sawah Village. The room is located in the southeast corner of the floor.",
+    ],
   },
   {
     title: "Bank of Adal 2nd Story Office",
@@ -106,6 +149,9 @@ export const keys = [
       x: 1274,
       y: 3272,
     },
+    description: [
+      "This locked door is located on the 2nd story of the Bank of Adal in Sawah Village. Going up the stairs you will find the door on your right.",
+    ],
   },
   {
     title: "Canal Apartment 103",
@@ -113,13 +159,19 @@ export const keys = [
       x: 2332,
       y: 1401,
     },
+    description: [
+      "Access to the apartment building can be found from the side of the road. The room is located on the west side of the ground floor.",
+    ],
   },
   {
     title: "Captain's Cache",
     location: {
       x: 1822,
-      y: 3560,
+      y: 3566,
     },
+    description: [
+      "Climbing up the shipwreck you will find a cabin. The cache is inside this cabin on the west side, just above the water that's flooded the cabin.",
+    ],
   },
   {
     title: "Caretakers House",
@@ -127,6 +179,9 @@ export const keys = [
       x: 1619,
       y: 3115,
     },
+    description: [
+      "The Caretakers House is located to the far south east of the Al Samman Cemetery.",
+    ],
   },
   {
     title: "Caretakers Toolbox",
@@ -134,6 +189,9 @@ export const keys = [
       x: 1588,
       y: 2994,
     },
+    description: [
+      "This toolbox can be a bit difficult to find. It is located between the graves in the Al Samman Cemetery, about 5-6 rows in from the north wall.",
+    ],
   },
   {
     title: "Cavern Boat Dock Shack",
@@ -141,6 +199,9 @@ export const keys = [
       x: 1485,
       y: 2200,
     },
+    description: [
+      "This small shack can be found next to the docks in the west side of the underground cave system. You can enter this cave by boat or through the various entrances around the mountain. Note that there are usually a lot of guards around, happy to defend their little pirate cove.",
+    ],
   },
   {
     title: "Central Sa'id Top Floor Apartment",
@@ -148,6 +209,9 @@ export const keys = [
       x: 1206,
       y: 2673,
     },
+    description: [
+      "The apartment is on the top floor of the second building from the southwest in Sa'id City.",
+    ],
   },
   {
     title: "Central Zaya Meeting Room",
@@ -155,6 +219,9 @@ export const keys = [
       x: 1993,
       y: 2491,
     },
+    description: [
+      "The building is located at the Zaya Observatory, it can spawn as a stronghold so a keycard might be needed. The Meeting Room is on the first floor right in front of the top of the staircase.",
+    ],
   },
   {
     title: "Chemical Storage Warehouse",
@@ -162,6 +229,9 @@ export const keys = [
       x: 763,
       y: 1969,
     },
+    description: [
+      "The West Al-Safwa Chemical Storage Warehouse is found to the far west of the map, just outside of Al-Safwa Quarry.",
+    ],
   },
   {
     title: "Ch 7 Editorial Department",
@@ -169,6 +239,9 @@ export const keys = [
       x: 2418,
       y: 1222,
     },
+    description: [
+      "Taking the elevator in the south corner up to the top floor, you will see the door right across the hall.",
+    ],
   },
   {
     title: "Ch 7 Secure Records Room",
@@ -176,6 +249,9 @@ export const keys = [
       x: 2487,
       y: 1163,
     },
+    description: [
+      "Entering the building from the south you will find the room right across the entrance.",
+    ],
   },
   {
     title: "Clock Repair Tools",
@@ -183,6 +259,9 @@ export const keys = [
       x: 2186,
       y: 3046,
     },
+    description: [
+      "The clock tower is easy to spot from a distance. Taking the ladder inside the building takes you to the roof. From the roof you can climb another ladder to the top of the tower where the toolbox is located.",
+    ],
   },
   {
     title: "Control Tower",
@@ -190,6 +269,10 @@ export const keys = [
       x: 2840,
       y: 3134,
     },
+    description: [
+      "The Control Tower fortress is marked by a large icon on the map. There are many entrances to get into the building, and plenty of angry airplane enthousiasts to fight around the area.",
+    ],
+    fortress: true,
   },
   {
     title: "Crane Control Room",
@@ -206,6 +289,20 @@ export const keys = [
       x: 1825,
       y: 3562,
     },
+    description: [
+      "Getting to the toolbox requires swimming underneath the shipwreck. Dive from the northwest side through the underwater doorway next to the staircase, into the shipwreck. Then take the first left into the main corridor and keep swimming forward until you get to the toolbox.",
+    ],
+  },
+  {
+    title: "Downtown Post Office",
+    location: {
+      x: 2342,
+      y: 1733,
+    },
+    description: [
+      "The Downtown Post Office is a fortress in Al-Mazrah City, as such it is marked by a large icon on the map. The building has lots of easy to find entrances. Enter to find out about the meaning of going postal.",
+    ],
+    fortress: true,
   },
   {
     title: "Downtown Post Office Secure Room",
@@ -213,6 +310,9 @@ export const keys = [
       x: 2325,
       y: 1730,
     },
+    description: [
+      "The Secure Room can be found on the top floor of the Downtown Post Office. As this location is a fortress, a separate key is needed to get to the door. The room will be the first door to your left exiting the southwest staircase.",
+    ],
   },
   {
     title: "Enfer Back Room",
@@ -220,6 +320,10 @@ export const keys = [
       x: 1421,
       y: 2634,
     },
+    description: [
+      "Noclip out of bounds to access the enfer backrooms.",
+      "The Enfer Back Room is located inside the Sa'id City mall. Entrance into the mall through the roof is possible to bypass the extra key requirement.",
+    ],
   },
   {
     title: "Far South Eastern Storage Closet",
@@ -227,6 +331,9 @@ export const keys = [
       x: 3101,
       y: 2294,
     },
+    description: [
+      "On the ground floor of the north side of the marked building you will find the Far South Eastern Storage Closet.",
+    ],
   },
   {
     title: "Groundskeepers Building",
@@ -234,6 +341,9 @@ export const keys = [
       x: 1952,
       y: 3266,
     },
+    description: [
+      "Small building in the west of Sarrif Bay. Entry from the far side of the road.",
+    ],
   },
   {
     title: "Hafid Ship Bridge Cache",
@@ -241,6 +351,9 @@ export const keys = [
       x: 585,
       y: 2575,
     },
+    description: [
+      "Climb up three staircases from the deck of the Hafid Ship to get to the fourth floor overlooking the deck. You will find the toolbox on your right.",
+    ],
   },
   {
     title: "Hafid Ship First Mate Cache",
@@ -248,13 +361,19 @@ export const keys = [
       x: 580,
       y: 2574,
     },
+    description: [
+      "The Hafid Ship First Mate Cache can be found in the small room in the back of the third floor of the Hafid Ship.",
+    ],
   },
   {
-    title: "Hydro Island Computer",
+    title: "Zarqwa Hydro Island Computer",
     location: {
-      x: 1840,
-      y: 1870,
+      x: 1845,
+      y: 1876,
     },
+    description: [
+      "This computer can be found in the red power house in the center of the hydroelectric facility. The computer is located in the small room on the ground floor.",
+    ],
   },
   {
     title: "IHTAQ Warehouse Supply Room",
@@ -269,6 +388,7 @@ export const keys = [
       x: 826,
       y: 1735,
     },
+    fortress: true,
   },
   {
     title: "Longshore Duffle Bag",
@@ -283,6 +403,7 @@ export const keys = [
       x: 2263,
       y: 2049,
     },
+    fortress: true,
   },
   {
     title: "Mawizeh Power Control Substation",
@@ -294,16 +415,17 @@ export const keys = [
   {
     title: "Mawizeh Resort Bungalow Room",
     location: {
-      x: 2400,
-      y: 2075,
+      x: 2411,
+      y: 2081,
     },
   },
   {
     title: "Mawizeh Resort Main Building",
     location: {
-      x: 2539,
-      y: 2106,
+      x: 2525,
+      y: 2095,
     },
+    fortress: true,
   },
   {
     title: "Mawizah Slum Discarded Cache",
@@ -346,7 +468,7 @@ export const keys = [
       x: 2848,
       y: 1605,
     },
-    description: ["Major Stronghold."],
+    fortress: true,
   },
   {
     title: "Police Armory [F2]",
@@ -522,6 +644,9 @@ export const keys = [
       x: 2650,
       y: 3463,
     },
+    description: [
+      "Unsurprisingly found on the top floor of the building in the southeast corner of the floor.",
+    ],
   },
   {
     title: "South Bank Apartment",
@@ -571,6 +696,9 @@ export const keys = [
       x: 2846,
       y: 3112,
     },
+    description: [
+      "The Tower Conference Room is located inside the Control Tower fortress, so you need the respective key to get to this room. The room itself is in the northeast corner of the first floor, just to the right of the top of the escalators.",
+    ],
   },
   {
     title: "Traveller's Luggage",
@@ -592,12 +720,13 @@ export const keys = [
       x: 2475,
       y: 1315,
     },
+    fortress: true,
   },
   {
     title: "Weapons Repair Kit",
     location: {
-      x: 1262,
-      y: 2108,
+      x: 1254,
+      y: 2103,
     },
   },
   {

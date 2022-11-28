@@ -11,6 +11,7 @@
   export let title = "Untitled Location",
     location = {},
     missionRequirement = false,
+    fortress = false,
     description = [],
     loot = [];
 
@@ -67,7 +68,7 @@
       {title}
     </h2>
     <SearchResultInfo
-      {...{ title, missionRequirement, description, loot }}
+      {...{ title, missionRequirement, fortress, description, loot }}
       isOpen={$openKeyInfo === title}
     />
     <img src="./icons/chevron-down.svg" alt="" />

@@ -56,7 +56,7 @@ export const POIs = [
     },
   },
   {
-    title: "Sa-id City",
+    title: "Sa'id City",
     location: {
       x: 1300,
       y: 2625,

@@ -8,7 +8,6 @@
   import MousePos from "./MousePos.svelte";
   import WaypointPos from "./WaypointPos.svelte";
   import mapImage from "../../assets/map.jpg";
-  import mapImageOld from "../../assets/map-old.jpg";
   import mapImageHighRes from "../../assets/map-high-res.png";
   import { map, layers } from "../../store";
 
@@ -20,7 +19,6 @@
     [4150, 4150],
   ];
   const image = L.imageOverlay(mapImage, bounds);
-  const imageOld = L.imageOverlay(mapImageOld, bounds);
   const imageHighRes = L.imageOverlay(mapImageHighRes, bounds);
 
   function createMap() {
@@ -42,7 +40,6 @@
         {
           "Al-Mazrah": image,
           "Al-Mazrah (High Res - 10MB)": imageHighRes,
-          "Al-Mazrah (Legacy)": imageOld,
         },
         {},
         { position: "bottomright" }
@@ -66,7 +63,6 @@
           {
             "Al-Mazrah": image,
             "Al-Mazrah (High Res - 10MB)": imageHighRes,
-            "Al-Mazrah (Legacy)": imageOld,
           },
           { ...layerObj },
           { position: "bottomright" }
