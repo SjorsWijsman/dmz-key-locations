@@ -38,7 +38,7 @@
     // $map.addLayer(deaddropLayer);
 
     // Add to layers store
-    $layers = { ...$layers, "Show Deaddrop Locations": deaddropLayer };
+    $layers = { ...$layers, "Show Dead Drop Locations": deaddropLayer };
   }
 
   onMount(placeDeaddropMarkers);
