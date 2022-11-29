@@ -25,7 +25,10 @@
             title: deaddrop.title,
             icon,
           }
-        ).bindPopup("Dead Drop - " + deaddrop.title);
+        )
+          .bindPopup("Dead Drop - " + deaddrop.title)
+          .on("popupopen", () => openPopup(marker))
+          .on("popupclose", () => closePopup(marker));
 
         deaddropMarkers = [...deaddropMarkers, marker];
       }
@@ -39,6 +42,14 @@
 
     // Add to layers store
     $layers = { ...$layers, "Show Dead Drop Locations": deaddropLayer };
+  }
+
+  function openPopup(marker) {
+    L.DomUtil.addClass(marker._icon, "active-marker");
+  }
+
+  function closePopup(marker) {
+    if (marker._icon) L.DomUtil.removeClass(marker._icon, "active-marker");
   }
 
   onMount(placeDeaddropMarkers);
