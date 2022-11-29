@@ -686,8 +686,8 @@ export const keys = [
   {
     title: "Taraq Tunnels Workbench Cache",
     location: {
-      x: 1815,
-      y: 1100,
+      x: 1900,
+      y: 1030,
     },
   },
   {
