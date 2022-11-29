@@ -119,7 +119,7 @@ export const keys = [
       y: 1485,
     },
     description: [
-      "Multiple entrances around the large building to the west of Al-Mazrah City. As this location is a fortress it contains a lot of enemies.",
+      "Multiple entrances around the large building to the west of Al-Mazrah City. As this location is a fortress it contains a lot of overzealous art fanatics.",
     ],
     fortress: true,
   },
@@ -230,7 +230,7 @@ export const keys = [
       y: 1969,
     },
     description: [
-      "The West Al-Safwa Chemical Storage Warehouse is found to the far west of the map, just outside of Al-Safwa Quarry.",
+      "The West Al-Safwa Chemical Storage Warehouse is found to the far west of the map, just outside of Al-Safwa Quarry. This location usually contains a lot of high value loot.",
     ],
   },
   {

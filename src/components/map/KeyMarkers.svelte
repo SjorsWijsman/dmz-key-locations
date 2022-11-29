@@ -21,7 +21,7 @@
     popupAnchor: [0, -15], // point from which the popup should open relative to the iconAnchor
   };
 
-  function placePOIMarkers() {
+  function placeKeyMarkers() {
     keys.forEach((key) => {
       if (key.location) {
         let isFavorite = $favorites.includes(key.title);
@@ -113,5 +113,5 @@
     }
   }
 
-  onMount(placePOIMarkers);
+  onMount(placeKeyMarkers);
 </script>

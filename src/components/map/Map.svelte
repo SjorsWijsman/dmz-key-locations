@@ -3,6 +3,7 @@
   import { onMount } from "svelte";
   import Grid from "./Grid.svelte";
   import KeyMarkers from "./KeyMarkers.svelte";
+  import DeaddropMarkers from "./DeaddropMarkers.svelte";
   import POIMarkers from "./POIMarkers.svelte";
   import LocationMarker from "./LocationMarker.svelte";
   import MousePos from "./MousePos.svelte";
@@ -77,6 +78,7 @@
 
 {#if $map}
   <KeyMarkers />
+  <DeaddropMarkers />
   <POIMarkers />
   <Grid />
   <LocationMarker />
