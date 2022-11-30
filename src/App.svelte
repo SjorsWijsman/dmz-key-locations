@@ -18,6 +18,9 @@
 
   const keysWithoutLoot = keys.filter((key) => !key.loot);
   console.log("Keys missing loot info: " + keysWithoutLoot.length);
+
+  const keysWithoutVideo = keys.filter((key) => !key.video);
+  console.log("Keys missing video: " + keysWithoutVideo.length);
 </script>
 
 <main class:video-disabled={!$showVideo}>

@@ -9,6 +9,7 @@ export const keys = [
       y: 2220,
     },
     description: ["Easy to find, office room inside of the grocery store."],
+    video: "xfyHNVdPqQs",
   },
   {
     title: "Airport Maintenance",
@@ -19,6 +20,7 @@ export const keys = [
     description: [
       "Multiple entrances on the ground floor on the inside and outside and another on top of the roof.",
     ],
+    video: "zu5eO6MpaOE",
   },
   {
     title: "A.B.F. Antiquities Office",
@@ -70,6 +72,7 @@ export const keys = [
     description: [
       "Entrance from the road down on the south side of the fortress.",
     ],
+    video: "qi_OlMLmp_A",
     fortress: true,
   },
   {
@@ -81,6 +84,7 @@ export const keys = [
     description: [
       "This toolbox can be found underwater between two bridges spanning over the canal in Al-Mazrah City. ",
     ],
+    video: "dyKZnctOtvA",
   },
   {
     title: "Al Sa'id Shopping Centre",
@@ -91,6 +95,7 @@ export const keys = [
     description: [
       "Multiple entrances can be found around the Shopping Centre, including in the back just underneath the pinned location. Be warned, this location usually contains a lot of enemies.",
     ],
+    video: "YmLZEqov-iE",
     fortress: true,
   },
   {
@@ -112,6 +117,7 @@ export const keys = [
     description: [
       "The Stone Block Office is located to the southeast of Al-Safwa Quarry. There are doors on both sides of the small building.",
     ],
+    video: "IjbsN4v810U",
   },
   {
     title: "Art Museum",
@@ -133,6 +139,7 @@ export const keys = [
     description: [
       "In the north of the large airport building there is a room behind the Border Control desks. The toolbox is located in this room near the conveyor belts.",
     ],
+    video: "ARSEpO4vBcE",
   },
   {
     title: "Bank of Adal Top Story Office",
@@ -153,6 +160,7 @@ export const keys = [
     description: [
       "This locked door is located on the 2nd story of the Bank of Adal in Sawah Village. Going up the stairs you will find the door on your right.",
     ],
+    video: "WkT4jwhecYU",
   },
   {
     title: "Canal Apartment 103",
@@ -163,6 +171,7 @@ export const keys = [
     description: [
       "Access to the apartment building can be found from the side of the road. The room is located on the west side of the ground floor.",
     ],
+    video: "at0B9x2A4w4",
   },
   {
     title: "Captain's Cache",
@@ -173,9 +182,10 @@ export const keys = [
     description: [
       "Climbing up the shipwreck you will find a cabin. The cache is inside this cabin on the west side, just above the water that's flooded the cabin.",
     ],
+    video: "hyUB1Aq3R1I",
   },
   {
-    title: "Caretakers House",
+    title: "Caretaker's House",
     location: {
       x: 1619,
       y: 3115,
@@ -183,9 +193,10 @@ export const keys = [
     description: [
       "The Caretakers House is located to the far south east of the Al Samman Cemetery.",
     ],
+    video: "L1SIzWnabRU",
   },
   {
-    title: "Caretakers Toolbox",
+    title: "Caretaker's Toolbox",
     location: {
       x: 1588,
       y: 2994,
@@ -193,6 +204,7 @@ export const keys = [
     description: [
       "This toolbox can be a bit difficult to find. It is located between the graves in the Al Samman Cemetery, about 5-6 rows in from the north wall.",
     ],
+    video: "pgUwvHx8S90",
   },
   {
     title: "Cavern Boat Dock Shack",
@@ -203,6 +215,7 @@ export const keys = [
     description: [
       "This small shack can be found next to the docks in the west side of the underground cave system. You can enter this cave by boat or through the various entrances around the mountain. Note that there are usually a lot of guards around, happy to defend their little pirate cove.",
     ],
+    video: "o3JWaK8UPIA",
   },
   {
     title: "Central Sa'id Top Floor Apartment",
@@ -213,6 +226,7 @@ export const keys = [
     description: [
       "The apartment is on the top floor of the second building from the southwest in Sa'id City.",
     ],
+    video: "LfLFurevylc",
   },
   {
     title: "Central Zaya Meeting Room",
@@ -243,6 +257,7 @@ export const keys = [
     description: [
       "Taking the elevator in the south corner up to the top floor, you will see the door right across the hall.",
     ],
+    video: "bVLUp0c7W5Q",
   },
   {
     title: "Ch 7 Secure Records Room",
@@ -253,6 +268,7 @@ export const keys = [
     description: [
       "Entering the building from the south you will find the room right across the entrance.",
     ],
+    video: "xieE3FJY838",
   },
   {
     title: "Clock Repair Tools",
@@ -263,6 +279,7 @@ export const keys = [
     description: [
       "The clock tower is easy to spot from a distance. Taking the ladder inside the building takes you to the roof. From the roof you can climb another ladder to the top of the tower where the toolbox is located.",
     ],
+    video: "wUa_RhgDWoo",
   },
   {
     title: "Control Tower",
@@ -273,6 +290,7 @@ export const keys = [
     description: [
       "The Control Tower fortress is marked by a large icon on the map. There are many entrances to get into the building, and plenty of angry airplane enthousiasts to fight around the area.",
     ],
+    video: "s71OBNU5YL4",
     fortress: true,
   },
   {
@@ -281,7 +299,11 @@ export const keys = [
       x: 792,
       y: 1643,
     },
-    description: ["Required for Unearthed, White Lotus tier 2."],
+    description: [
+      "Required for Unearthed, White Lotus tier 2.",
+      "The Crane Control Room is easy to spot as it's directly underneath a large crane at the Al-Safwa Quarry.",
+    ],
+    video: "0cHsa4jf3GQ",
     missionRequirement: true,
   },
   {
@@ -293,6 +315,7 @@ export const keys = [
     description: [
       "Getting to the toolbox requires swimming underneath the shipwreck. Dive from the northwest side through the underwater doorway next to the staircase, into the shipwreck. Then take the first left into the main corridor and keep swimming forward until you get to the toolbox.",
     ],
+    video: "EKw3PoOo99c",
   },
   {
     title: "Downtown Post Office",
@@ -303,6 +326,7 @@ export const keys = [
     description: [
       "The Downtown Post Office is a fortress in Al-Mazrah City, as such it is marked by a large icon on the map. The building has lots of easy to find entrances. Enter to find out about the meaning of going postal.",
     ],
+    video: "VTJJAmnRdnE",
     fortress: true,
   },
   {
@@ -335,6 +359,7 @@ export const keys = [
     description: [
       "On the ground floor of the north side of the marked building you will find the Far South Eastern Storage Closet.",
     ],
+    video: "yz-PSu27vYs",
   },
   {
     title: "Groundskeepers Building",
@@ -345,6 +370,7 @@ export const keys = [
     description: [
       "Small building in the west of Sarrif Bay. Entry from the far side of the road.",
     ],
+    video: "mjYdGa0glRQ",
   },
   {
     title: "Hafid Ship Bridge Cache",
@@ -355,6 +381,7 @@ export const keys = [
     description: [
       "Climb up three staircases from the deck of the Hafid Ship to get to the fourth floor overlooking the deck. You will find the toolbox on your right.",
     ],
+    video: "VvQP9wCP7Zw",
   },
   {
     title: "Hafid Ship First Mate Cache",
@@ -365,6 +392,7 @@ export const keys = [
     description: [
       "The Hafid Ship First Mate Cache can be found in the small room in the back of the third floor of the Hafid Ship.",
     ],
+    video: "V20sBkaZ-hg",
   },
   {
     title: "Zarqwa Hydro Island Computer",
@@ -375,6 +403,7 @@ export const keys = [
     description: [
       "This computer can be found in the red power house in the center of the hydroelectric facility. The computer is located in the small room on the ground floor.",
     ],
+    video: "-g5M4VcuLtE",
   },
   {
     title: "West Zarqwa Safe House",
@@ -385,6 +414,7 @@ export const keys = [
     description: [
       "The locked door is on the second floor of the marked building.",
     ],
+    video: "c6kZZpUnSF8",
   },
   {
     title: "IHTAQ Warehouse Supply Room",
@@ -392,6 +422,7 @@ export const keys = [
       x: 946,
       y: 2556,
     },
+    video: "Txook-IBuXo",
   },
   {
     title: "Kushaak Construction Warehouse",
@@ -399,6 +430,7 @@ export const keys = [
       x: 826,
       y: 1735,
     },
+    video: "cggyMST0Hb8",
     fortress: true,
   },
   {
@@ -407,6 +439,7 @@ export const keys = [
       x: 675,
       y: 2700,
     },
+    video: "ycwVZcG2LsI",
   },
   {
     title: "Mawizeh Cell Shop",
@@ -414,6 +447,7 @@ export const keys = [
       x: 2263,
       y: 2049,
     },
+    video: "QkKEd-BgRFU",
     fortress: true,
   },
   {
@@ -422,6 +456,7 @@ export const keys = [
       x: 2522,
       y: 1943,
     },
+    video: "BNxTrs1CjEE",
   },
   {
     title: "Mawizeh Resort Bungalow Room",
@@ -429,6 +464,7 @@ export const keys = [
       x: 2411,
       y: 2081,
     },
+    video: "bbGPxQVEu9g",
   },
   {
     title: "Mawizeh Resort Main Building",
@@ -436,6 +472,7 @@ export const keys = [
       x: 2525,
       y: 2095,
     },
+    video: "JMAehvF_uIM",
     fortress: true,
   },
   {
@@ -444,6 +481,7 @@ export const keys = [
       x: 2325,
       y: 2035,
     },
+    video: "j3qq7WN7-HA",
   },
   {
     title: "Mountaintop Spotter Shack",
@@ -451,6 +489,7 @@ export const keys = [
       x: 2642,
       y: 2455,
     },
+    video: "5zhNOSGTuiY",
   },
   {
     title: "North Canals Info Booth",
@@ -458,6 +497,7 @@ export const keys = [
       x: 2299,
       y: 1469,
     },
+    video: "n8TU8OBDeHk",
   },
   {
     title: "Old Lighthouse Citadel Room",
@@ -465,6 +505,7 @@ export const keys = [
       x: 2108,
       y: 3359,
     },
+    video: "MdYb5uV5aw0",
   },
   {
     title: "Omar's Auto Repair",
@@ -479,6 +520,7 @@ export const keys = [
       x: 2848,
       y: 1605,
     },
+    video: "ce19mYClMao",
     fortress: true,
   },
   {
@@ -550,6 +592,7 @@ export const keys = [
       x: 1475,
       y: 3127,
     },
+    video: "XFnwZRN84ng",
   },
   {
     title: "Quarry Worker's Lost Toolbox",
@@ -557,6 +600,7 @@ export const keys = [
       x: 768,
       y: 1703,
     },
+    video: "_alliZFxcZI",
   },
   {
     title: "Special Ops Relay Station",
@@ -564,13 +608,15 @@ export const keys = [
       x: 809,
       y: 2720,
     },
+    video: "bYneoNHg5bU",
   },
   {
-    title: "Retro Fridge",
+    title: "Retro Runway Fridge",
     location: {
       x: 3262,
       y: 2902,
     },
+    video: "0DvogRQ46h4",
   },
   {
     title: "Rohan Control Room Locker",
@@ -578,6 +624,7 @@ export const keys = [
       x: 1404,
       y: 1431,
     },
+    video: "SIJvnqZF5tA",
   },
   {
     title: "Rohan Oil North Guard Shack",
@@ -585,6 +632,7 @@ export const keys = [
       x: 1470,
       y: 1263,
     },
+    video: "Dc4zL9fBv4U",
   },
   {
     title: "Rohan Oil South Guard Shack",
@@ -592,6 +640,7 @@ export const keys = [
       x: 1650,
       y: 1582,
     },
+    video: "JEbusK_AiFE",
   },
   {
     title: "Rohan Utility Tunnel Locker",
@@ -602,6 +651,7 @@ export const keys = [
     description: [
       "This locker is underground, with the entrance in the marked building just north of the train tracks.",
     ],
+    video: "L4HcdGP1q4A",
   },
   {
     title: "Sa'id Mall Security Room",
@@ -632,6 +682,7 @@ export const keys = [
       x: 1276,
       y: 3321,
     },
+    video: "By_6_Y4WAWs",
   },
   {
     title: "Sawah Hotel Room 302",
@@ -644,6 +695,7 @@ export const keys = [
       "The door is located on the top floor of the hotel, right next to Sawah Hotel Room 303.",
       "<s>Entry without key is possible through the skylights.</s> Note: this has been patched, you now actually need the key to get into the room.",
     ],
+    video: "g6UGMlEvhMM",
     missionRequirement: true,
   },
   {
@@ -655,13 +707,15 @@ export const keys = [
     description: [
       "The door is located on the top floor of the hotel, right next to Sawah Hotel Room 302.",
     ],
+    video: "g6UGMlEvhMM",
   },
   {
-    title: "Scientists Locker",
+    title: "Scientist's Locker",
     location: {
       x: 2071,
       y: 2353,
     },
+    video: "iPEj1jqQMWM",
   },
   {
     title: "South Al-Bagra Top Floor Bedroom",
@@ -672,6 +726,7 @@ export const keys = [
     description: [
       "Unsurprisingly found on the top floor of the building in the southeast corner of the floor.",
     ],
+    video: "s3rW3NX1HqM",
   },
   {
     title: "South Bank Apartment",
@@ -679,6 +734,7 @@ export const keys = [
       x: 1346,
       y: 2868,
     },
+    video: "Jn3ihx9ArLE",
   },
   {
     title: "South Zaya Scientist Apartment",
@@ -686,6 +742,7 @@ export const keys = [
       x: 2010,
       y: 2654,
     },
+    video: "ISyC9NQPJEg",
   },
   {
     title: "Special Forces Dead Drop",
@@ -693,6 +750,7 @@ export const keys = [
       x: 2595,
       y: 1090,
     },
+    video: "bcImnQY-ks8",
   },
   {
     title: "Taraq River Supply Shack",
@@ -700,6 +758,7 @@ export const keys = [
       x: 2030,
       y: 910,
     },
+    video: "VPZIVFIWvyk",
   },
   {
     title: "Taraq Smuggler's Office",
@@ -707,6 +766,7 @@ export const keys = [
       x: 1981,
       y: 900,
     },
+    video: "WUUxiX0pMpQ",
   },
   {
     title: "Taraq Tunnels Workbench Cache",
@@ -714,6 +774,7 @@ export const keys = [
       x: 1900,
       y: 1030,
     },
+    video: "n2N8ZB6_YFk",
   },
   {
     title: "Tower Conference Room",
@@ -731,6 +792,7 @@ export const keys = [
       x: 2836,
       y: 2925,
     },
+    video: "q8DSYEJS6u4",
   },
   {
     title: "Under Freeway East Warehouse",
@@ -738,6 +800,7 @@ export const keys = [
       x: 2866,
       y: 2000,
     },
+    video: "mIXoneswWKQ",
   },
   {
     title: "U.S. Embassy",
@@ -753,6 +816,7 @@ export const keys = [
       x: 1254,
       y: 2103,
     },
+    video: "IH39322Yxtg",
   },
   {
     title: "Yum Yum Burger Back Room",
@@ -760,6 +824,7 @@ export const keys = [
       x: 2549,
       y: 1418,
     },
+    video: "K3xIASt5KwY",
   },
   {
     title: "Zarqwa Market Storage",
@@ -767,6 +832,7 @@ export const keys = [
       x: 1875,
       y: 1918,
     },
+    video: "90Rh-WTItAI",
   },
   {
     title: "Zarqwa Red Village Appartment",
@@ -774,6 +840,7 @@ export const keys = [
       x: 1948,
       y: 1902,
     },
+    video: "ircnrYJKUfM",
   },
   {
     title: "Zaya Radar Dome",
@@ -781,6 +848,7 @@ export const keys = [
       x: 2035,
       y: 2371,
     },
+    video: "LAaajr_4_QQ",
   },
   {
     title: "Sunken Ship Thief's Cache",
@@ -788,6 +856,7 @@ export const keys = [
       x: 1791,
       y: 3580,
     },
+    video: "Rx4L86BCsX8",
   },
   {
     title: "Control Room",
