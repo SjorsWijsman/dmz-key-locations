@@ -1,6 +1,6 @@
 <script>
   import L from "leaflet";
-  import { map, selectedSector, waypoint } from "../../store";
+  import { map, selectedSector, waypoint } from "$store";
 
   let locationMarker;
 

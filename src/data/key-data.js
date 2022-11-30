@@ -29,6 +29,7 @@ export const keys = [
     description: [
       "Inside the large hall in the middle of the fortress. Entrance is up the indoor balcony staircase on the west side of the hall.",
     ],
+    video: "qTZby0PqlEw",
   },
   {
     title: "Al Bagra Barrack",
@@ -321,7 +322,7 @@ export const keys = [
       y: 2634,
     },
     description: [
-      "Noclip out of bounds to access the enfer backrooms.",
+      "<s>Noclip out of bounds to access the enfer backrooms.</s>",
       "The Enfer Back Room is located inside the Sa'id City mall. Entrance into the mall through the roof is possible to bypass the extra key requirement.",
     ],
   },
@@ -599,8 +600,8 @@ export const keys = [
       y: 1324,
     },
     description: [
-        "This locker is underground, with the entrance in the marked building just north of the train tracks.",
-      ],  
+      "This locker is underground, with the entrance in the marked building just north of the train tracks.",
+    ],
   },
   {
     title: "Sa'id Mall Security Room",
@@ -640,7 +641,8 @@ export const keys = [
     },
     description: [
       "Required for Good Fortune, Legion Tier 3.",
-      "Entry without key is possible through the skylights.",
+      "The door is located on the top floor of the hotel, right next to Sawah Hotel Room 303.",
+      "<s>Entry without key is possible through the skylights.</s> Note: this has been patched, you now actually need the key to get into the room.",
     ],
     missionRequirement: true,
   },
@@ -650,6 +652,9 @@ export const keys = [
       x: 1374,
       y: 3314,
     },
+    description: [
+      "The door is located on the top floor of the hotel, right next to Sawah Hotel Room 302.",
+    ],
   },
   {
     title: "Scientists Locker",
@@ -775,6 +780,13 @@ export const keys = [
     location: {
       x: 2035,
       y: 2371,
+    },
+  },
+  {
+    title: "Sunken Ship Thief's Cache",
+    location: {
+      x: 1791,
+      y: 3580,
     },
   },
   {

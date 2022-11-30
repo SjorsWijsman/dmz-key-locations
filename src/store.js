@@ -21,3 +21,4 @@ export const openKeyInfo = writable("");
 export const activePanel = persistStore("dmzkeys-user-activePanel", "search");
 export const searchTerm = persistStore("dmzkeys-user-searchTerm", "");
 export const favorites = persistStore("dmzkeys-user-favorites", []);
+export const showVideo = persistStore("dmzkeys-user-showVideo", false);

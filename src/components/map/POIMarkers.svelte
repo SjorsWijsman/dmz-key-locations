@@ -1,8 +1,8 @@
 <script>
   import L from "leaflet";
   import { onMount } from "svelte";
-  import { layers } from "../../store";
-  import { POIs } from "../../data/map-data";
+  import { layers } from "$store";
+  import { POIs } from "$data/map-data";
 
   function placePOIMarkers() {
     let poiLayer = [];

@@ -1,8 +1,8 @@
 <script>
   import L from "leaflet";
   import { onMount } from "svelte";
-  import { layers } from "../../store";
-  import { deaddrops } from "../../data/map-data";
+  import { layers } from "$store";
+  import { deaddrops } from "$data/map-data";
 
   let deaddropLayer = [];
   let deaddropMarkers = [];

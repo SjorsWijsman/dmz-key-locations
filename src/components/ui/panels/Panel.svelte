@@ -1,6 +1,6 @@
 <script>
   import { fly } from "svelte/transition";
-  import { activePanel } from "../../store";
+  import { activePanel } from "$store";
   import OpenClosePanel from "./OpenClosePanel.svelte";
 
   export let panelTitle = "";
@@ -51,7 +51,7 @@
     resize: vertical;
     width: 23rem;
     min-height: 10rem;
-    max-height: 80vh;
+    max-height: 50vh;
     height: 30rem;
     overflow-y: scroll;
     pointer-events: all;

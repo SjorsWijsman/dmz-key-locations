@@ -1,6 +1,6 @@
 <script>
   import L from "leaflet";
-  import { map, waypoint } from "../../store";
+  import { map, waypoint } from "$store";
 
   // @ts-ignore
   const WaypointCoordinates = L.Control.extend({

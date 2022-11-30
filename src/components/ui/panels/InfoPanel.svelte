@@ -1,10 +1,10 @@
 <script>
   import Panel from "./Panel.svelte";
-  import { iOS } from "../../scripts/platform-check.js";
+  import { iOS } from "$scripts/platform-check";
 </script>
 
-<Panel panelTitle={"info"} openIcon={"./icons/heart.svg"} closeIconOffset={4}
-  ><header>
+<Panel panelTitle={"info"} openIcon={"./icons/heart.svg"} closeIconOffset={8}>
+  <header>
     <h2>DMZ Key Locations</h2>
     <p>
       Thanks for using my map! Please contact me through the Discord server

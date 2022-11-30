@@ -1,5 +1,5 @@
 <script>
-  import { searchTerm, selectedMarker } from "../../store";
+  import { searchTerm, selectedMarker } from "$store";
 </script>
 
 <nav>

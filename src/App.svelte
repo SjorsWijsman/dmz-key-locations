@@ -1,10 +1,12 @@
 <script>
-  import Map from "./components/map/Map.svelte";
-  import SearchPanel from "./components/ui/SearchPanel.svelte";
-  import InfoPanel from "./components/ui/InfoPanel.svelte";
   import "leaflet/dist/leaflet.css";
   import "./map.css";
-  import { keys } from "./data/key-data";
+  import Map from "$components/map/Map.svelte";
+  import SearchPanel from "$components/ui/panels/SearchPanel.svelte";
+  import UserPanel from "$components/ui/panels/UserPanel.svelte";
+  import InfoPanel from "$components/ui/panels/InfoPanel.svelte";
+  import { keys } from "$data/key-data";
+  import { showVideo } from "$store";
 
   console.log("Keys in total: " + keys.length);
 
@@ -18,8 +20,9 @@
   console.log("Keys missing loot info: " + keysWithoutLoot.length);
 </script>
 
-<main>
+<main class:video-disabled={!$showVideo}>
   <SearchPanel />
+  <UserPanel />
   <InfoPanel />
   <Map />
 </main>

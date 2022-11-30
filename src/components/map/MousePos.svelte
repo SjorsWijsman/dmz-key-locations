@@ -1,6 +1,6 @@
 <script>
   import L from "leaflet";
-  import { map, selectedSector } from "../../store";
+  import { map, selectedSector } from "$store";
 
   // @ts-ignore
   const MouseCoordinates = L.Control.extend({

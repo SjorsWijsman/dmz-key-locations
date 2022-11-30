@@ -1,11 +1,6 @@
 <script>
-  import {
-    keyMarkers,
-    selectedMarker,
-    openKeyInfo,
-    favorites,
-  } from "../../store";
-  import { fadeSlide } from "../../scripts/fade-slide";
+  import { keyMarkers, selectedMarker, openKeyInfo, favorites } from "$store";
+  import { fadeSlide } from "$scripts/fade-slide";
   import SearchResultInfo from "./SearchResultInfo.svelte";
 
   export let title = "Untitled Location",

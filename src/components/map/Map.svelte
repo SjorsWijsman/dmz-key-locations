@@ -8,10 +8,10 @@
   import LocationMarker from "./LocationMarker.svelte";
   import MousePos from "./MousePos.svelte";
   import WaypointPos from "./WaypointPos.svelte";
-  import mapImage from "../../assets/map.jpg";
-  import mapImageHighRes from "../../assets/map-high-res.png";
-  import { map, layers } from "../../store";
-  import { isTouchDevice } from "../../scripts/platform-check";
+  import mapImage from "$assets/map.jpg";
+  import mapImageHighRes from "$assets/map-high-res.png";
+  import { map, layers } from "$store";
+  import { isTouchDevice } from "$scripts/platform-check";
 
   let mapContainer;
   let layerControl;
@@ -80,12 +80,12 @@
   <KeyMarkers />
   <DeaddropMarkers />
   <POIMarkers />
-  <Grid />
   <LocationMarker />
   {#if !isTouchDevice()}
     <MousePos />
   {/if}
   <WaypointPos />
+  <Grid />
 {/if}
 <section bind:this={mapContainer} />
 

@@ -1,7 +1,7 @@
 <script>
   import L from "leaflet";
   import { onMount } from "svelte";
-  import { map, layers, selectedSector } from "../../store";
+  import { map, layers, selectedSector } from "$store";
 
   const tiles = 10;
   const tileSize = 415;

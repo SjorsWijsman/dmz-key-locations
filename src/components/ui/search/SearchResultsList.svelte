@@ -1,7 +1,7 @@
 <script>
   import SearchResult from "./SearchResult.svelte";
-  import { keys } from "../../data/key-data";
-  import { searchTerm, selectedMarker } from "../../store";
+  import { keys } from "$data/key-data";
+  import { searchTerm, selectedMarker } from "$store";
 
   let filteredKeys = keys;
 
@@ -39,7 +39,14 @@
     {#each filteredKeys as key (key.title)}
       <SearchResult {...key} />
     {:else}
-      <li>No results found</li>
+      <li>
+        No results found. Did you find a key that is not on the map? Please let
+        me know through <a
+          href="https://discord.gg/vqCwgh8buH"
+          target="_blank"
+          rel="noreferrer">Discord</a
+        >!
+      </li>
     {/each}
   {/if}
 </ul>

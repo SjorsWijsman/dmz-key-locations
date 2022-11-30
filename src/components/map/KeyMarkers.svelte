@@ -9,8 +9,9 @@
     searchTerm,
     favorites,
     openKeyInfo,
-  } from "../../store";
-  import { keys } from "../../data/key-data";
+  } from "$store";
+  import { keys } from "$data/key-data";
+  import { isTouchDevice } from "$scripts/platform-check";
 
   let keyLayer = [];
 
@@ -39,7 +40,7 @@
           title: key.title,
           icon,
         })
-          .bindPopup(key.title)
+          .bindPopup(setPopupContent(key))
           .on("click", () => setSelectedMarker(key, marker))
           .on("popupopen", () => openPopup(key, marker))
           .on("popupclose", () => closePopup(key, marker));
@@ -62,12 +63,16 @@
     L.DomUtil.addClass(marker._icon, "active-marker");
     $selectedMarker = key;
     // Go to location
-    $map.setView([4150 - key.location.y, key.location.x], 0, {
-      animate: true,
-      pan: {
-        duration: 0.3,
-      },
-    });
+    $map.setView(
+      [4150 - key.location.y + (isTouchDevice() ? 100 : 0), key.location.x],
+      0,
+      {
+        animate: true,
+        pan: {
+          duration: 0.3,
+        },
+      }
+    );
   }
 
   function closePopup(key, marker) {
@@ -111,6 +116,23 @@
         L.DomUtil.addClass(marker._icon, "active-marker");
       }
     }
+  }
+
+  function setPopupContent(key) {
+    let popup = L.popup({
+      className: key.video ? "has-video" : "",
+    });
+    if (key.video) {
+      popup.setContent(`
+        <iframe src="https://www.youtube.com/embed/${key.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>${key.title}</p>
+      `);
+    } else {
+      popup.setContent(`
+        <p>${key.title}</p>
+      `);
+    }
+    return popup;
   }
 
   onMount(placeKeyMarkers);

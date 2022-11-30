@@ -1,6 +1,6 @@
 <script>
-  import SearchBar from "./SearchBar.svelte";
-  import SearchResultsList from "./SearchResultsList.svelte";
+  import SearchBar from "$components/ui/search/SearchBar.svelte";
+  import SearchResultsList from "$components/ui/search/SearchResultsList.svelte";
   import Panel from "./Panel.svelte";
 </script>
 
