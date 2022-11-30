@@ -12,8 +12,20 @@
       typo, bugs, suggestions, etc. I will also be using this Discord for future
       update notes.
     </p>
-    <p>If you enjoy using this map please consider donating!</p>
-    <p style:opacity={0.5} style:margin-top={"30px"}>
+    <p style:margin-bottom={"2rem"}>
+      If you enjoy using this map please consider donating!
+    </p>
+    <p style:opacity={0.5}>
+      Huge thanks to <a
+        href="https://www.youtube.com/@TroubleChuteBasics"
+        target="_blank"
+        rel="noreferrer"
+      >
+        TroubleChute
+      </a>
+      for allowing his videos to be used for the project!
+    </p>
+    <p style:opacity={0.5}>
       Inspired by <a
         href="https://dmzintel.com/"
         target="_blank"
