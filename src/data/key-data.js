@@ -376,6 +376,16 @@ export const keys = [
     ],
   },
   {
+    title: "West Zarqwa Safe House",
+    location: {
+      x: 1736,
+      y: 1923,
+    },
+    description: [
+      "The locked door is on the second floor of the marked building.",
+    ],
+  },
+  {
     title: "IHTAQ Warehouse Supply Room",
     location: {
       x: 946,
@@ -581,6 +591,16 @@ export const keys = [
       x: 1650,
       y: 1582,
     },
+  },
+  {
+    title: "Rohan Utility Tunnel Locker",
+    location: {
+      x: 1463,
+      y: 1324,
+    },
+    description: [
+        "This locker is underground, with the entrance in the marked building just north of the train tracks.",
+      ],  
   },
   {
     title: "Sa'id Mall Security Room",
