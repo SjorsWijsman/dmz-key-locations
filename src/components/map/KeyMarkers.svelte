@@ -77,9 +77,10 @@
   }
 
   function closePopup(key, marker) {
+    if (marker._icon) L.DomUtil.removeClass(marker._icon, "active-marker");
+    window.location.hash = "";
     $selectedMarker = { title: "" };
     $openKeyInfo = "";
-    if (marker._icon) L.DomUtil.removeClass(marker._icon, "active-marker");
   }
 
   function setSelectedMarker(key, marker) {
