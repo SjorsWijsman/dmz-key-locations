@@ -2,17 +2,17 @@
   import { keyMarkers, selectedMarker, openKeyInfo, favorites } from "$store";
   import { fadeSlide } from "$scripts/fade-slide";
   import SearchResultInfo from "./SearchResultInfo.svelte";
-  import { keys } from "$data/key-data";
 
   export let title = "Untitled Location",
+    id = "untitled-location",
     location = {},
     missionRequirement = false,
     fortress = false,
-    copied = false,
     description = [],
     loot = [];
 
-  let element;
+  let element,
+    copied = false;
 
   function goToKeyLocation(event) {
     if (event) event.stopPropagation();
@@ -47,20 +47,12 @@
   }
 
   function copyClipboard(event) {
-    for (const marker of $keyMarkers) {
-      if (marker.options.title === title) {
-        keys.forEach((key) => {
-          if (key.title === title){
-            let url = "https://dmzkeys.com/#"
-            navigator.clipboard.writeText(url.concat(key.id));
-            copied = true;
-            setTimeout(function(){
-              copied = false;
-            }, 2000);
-          };
-        });
-      }
-    }
+    const url = window.location.href.split("#")[0];
+    navigator.clipboard.writeText(url.concat("#").concat(id));
+    copied = true;
+    setTimeout(function(){
+      copied = false;
+    }, 2000);
   }
 
   selectedMarker.subscribe((selection) => {
@@ -123,14 +115,16 @@
       >
       {#if copied}
         <img
+          transition:fadeSlide|local
           src="./icons/check.svg"
           alt="Copy to clipboard"
         />
       {:else}
-      <img
-        src="./icons/link.svg"
-        alt="Copy to clipboard"
-      />
+        <img
+          transition:fadeSlide|local
+          src="./icons/link.svg"
+          alt="Copy to clipboard"
+        />
       {/if}
       </button>
       {/if}
