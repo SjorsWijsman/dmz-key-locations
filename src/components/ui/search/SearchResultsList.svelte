@@ -27,13 +27,14 @@
     string = string.toLowerCase();
     string = string.replaceAll("-", " ");
     string = string.replaceAll(".", " ");
+    string = string.replaceAll("'", " ");
     string = string.replaceAll(" ", "");
     return string;
   }
 </script>
 
 <ul>
-  {#if $selectedMarker.title && !$searchTerm}
+  {#if $selectedMarker?.title && !$searchTerm}
     <SearchResult {...$selectedMarker} />
   {:else}
     {#each filteredKeys as key (key.title)}

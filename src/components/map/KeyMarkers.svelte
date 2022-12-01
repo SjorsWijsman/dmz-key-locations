@@ -61,6 +61,7 @@
 
   function openPopup(key, marker) {
     L.DomUtil.addClass(marker._icon, "active-marker");
+    window.location.hash = key.id;
     $selectedMarker = key;
     // Go to location
     $map.setView(
@@ -135,5 +136,18 @@
     return popup;
   }
 
-  onMount(placeKeyMarkers);
+  onMount(() => {
+    placeKeyMarkers();
+
+    if (window.location.hash) {
+      for (const marker of $keyMarkers) {
+        const title = keys.filter(
+          (key) => key.id === window.location.hash.replace("#", "")
+        )[0].title;
+        if (marker.options.title === title) {
+          marker.openPopup();
+        }
+      }
+    }
+  });
 </script>
