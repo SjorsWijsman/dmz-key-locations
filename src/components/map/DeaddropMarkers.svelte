@@ -26,7 +26,7 @@
             icon,
           }
         )
-          .bindPopup("Dead Drop - " + deaddrop.title)
+          .bindPopup(`<p>Dead Drop - ${deaddrop.title}</p>`)
           .on("popupopen", () => openPopup(marker))
           .on("popupclose", () => closePopup(marker));
 

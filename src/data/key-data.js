@@ -693,7 +693,7 @@ export const keys = [
     description: [
       "Required for Good Fortune, Legion Tier 3.",
       "The door is located on the top floor of the hotel, right next to Sawah Hotel Room 303.",
-      "<s>Entry without key is possible through the skylights.</s> Note: this has been patched, you now actually need the key to get into the room.",
+      "Entry without key is possible through the skylights if the hotel is not a stronghold.",
     ],
     video: "g6UGMlEvhMM",
     missionRequirement: true,
