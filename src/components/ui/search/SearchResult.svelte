@@ -8,6 +8,7 @@
     location = {},
     missionRequirement = false,
     fortress = false,
+    copied = false,
     description = [],
     loot = [];
 
@@ -52,6 +53,10 @@
           if (key.title === title){
             let url = "https://dmzkeys.com/#"
             navigator.clipboard.writeText(url.concat(key.id));
+            copied = true;
+            setTimeout(function(){
+              copied = false;
+            }, 2000);
           };
         });
       }
@@ -112,11 +117,21 @@
         <img src="./icons/star.svg" alt="" />
       </button>
       <button
-        on:click={copyClipboard}
+        on:click|stopPropagation={copyClipboard}
         class="link-button"
         transition:fadeSlide|local={{ duration: 200 }}
       >
-        <img src="./icons/link.svg" alt="" />
+      {#if copied}
+        <img
+          src="./icons/check.svg"
+          alt="Copy to clipboard"
+        />
+      {:else}
+      <img
+        src="./icons/link.svg"
+        alt="Copy to clipboard"
+      />
+      {/if}
       </button>
       {/if}
   </div>
