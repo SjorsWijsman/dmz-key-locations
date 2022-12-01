@@ -11,6 +11,8 @@
     missionRequirement = false,
     fortress = false;
 
+  export const video = "";
+
   let copied = false;
 
   function openMarkerPopup() {
