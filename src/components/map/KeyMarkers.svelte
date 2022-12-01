@@ -61,6 +61,7 @@
 
   function openPopup(key, marker) {
     L.DomUtil.addClass(marker._icon, "active-marker");
+    window.location.hash = key.id;
     $selectedMarker = key;
     // Go to location
     $map.setView(
@@ -84,21 +85,6 @@
   function setSelectedMarker(key, marker) {
     if (L.DomUtil.hasClass(marker._icon, "active-marker")) {
       $searchTerm = "";
-    }
-  }
-
-  function hashChange() {
-    if (window.location.hash) {
-      keys.forEach((key) => {
-        if (key.id == window.location.hash.substring(1)) {
-          $keyMarkers.forEach((marker) => {
-            console.log(marker);
-            if (key.title == marker.options.title) {
-              marker.openPopup();
-            }
-          });
-        }
-      });
     }
   }
 
@@ -152,9 +138,16 @@
 
   onMount(() => {
     placeKeyMarkers();
-    hashChange();
+
+    if (window.location.hash) {
+      for (const marker of $keyMarkers) {
+        const title = keys.filter(
+          (key) => key.id === window.location.hash.replace("#", "")
+        )[0].title;
+        if (marker.options.title === title) {
+          marker.openPopup();
+        }
+      }
+    }
   });
-
 </script>
-
-<svelte:window on:hashchange={hashChange} />

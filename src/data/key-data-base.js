@@ -8,7 +8,9 @@ export const keys = [
       x: 3056,
       y: 2220,
     },
-    description: ["Easy to find, office room inside of the grocery store."],
+    description: [
+      "Easy to find, this is the office room inside of the grocery store.",
+    ],
     video: "xfyHNVdPqQs",
   },
   {
@@ -560,6 +562,24 @@ export const keys = [
     description: ["Inside Police Armory Room. Key required to get inside."],
   },
   {
+    title: "Police Armory [D6]",
+    location: {
+      x: 1477,
+      y: 2693,
+    },
+    description: [
+      "Contains Police Lockers. Police Locker Master Key required to open.",
+    ],
+  },
+  {
+    title: "Police Locker [D6]",
+    location: {
+      x: 1491,
+      y: 2693,
+    },
+    description: ["Inside Police Armory Room. Key required to get inside."],
+  },
+  {
     title: "Police Academy Private Locker Room",
     location: {
       x: 2885,
@@ -863,5 +883,8 @@ export const keys = [
   },
   {
     title: "Fort Barrack",
+  },
+  {
+    title: "Storage",
   },
 ];

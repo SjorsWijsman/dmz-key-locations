@@ -3,21 +3,15 @@
   import { fadeSlide } from "$scripts/fade-slide";
   import SearchResultInfo from "./SearchResultInfo.svelte";
 
-  export let title = "Untitled Location",
-    id = "untitled-location",
+  export let id = "untitled-location",
+    title = "Untitled Location",
     location = {},
-    missionRequirement = false,
-    fortress = false,
     description = [],
-    loot = [];
+    loot = [],
+    missionRequirement = false,
+    fortress = false;
 
-  let element,
-    copied = false;
-
-  function goToKeyLocation(event) {
-    if (event) event.stopPropagation();
-    openMarkerPopup();
-  }
+  let copied = false;
 
   function openMarkerPopup() {
     for (const marker of $keyMarkers) {
@@ -37,8 +31,7 @@
     }
   }
 
-  function toggleFavorite(event) {
-    if (event) event.stopPropagation();
+  function toggleFavorite() {
     if ($favorites.includes(title)) {
       $favorites = $favorites.filter((item) => item !== title);
     } else {
@@ -46,17 +39,17 @@
     }
   }
 
-  function copyClipboard(event) {
+  function copyToClipboard() {
+    copied = true;
     const url = window.location.href.split("#")[0];
     navigator.clipboard.writeText(url.concat("#").concat(id));
-    copied = true;
-    setTimeout(function(){
+    setTimeout(() => {
       copied = false;
     }, 2000);
   }
 
   selectedMarker.subscribe((selection) => {
-    if (selection.title === title) {
+    if (selection?.title === title) {
       $openKeyInfo = title;
     }
   });
@@ -67,7 +60,6 @@
   on:keypress={toggleDetails}
   class:isOpen={$openKeyInfo === title}
   class:isFavorite={$favorites.includes(title)}
-  bind:this={element}
 >
   <article>
     <h2>
@@ -80,7 +72,10 @@
     <img src="./icons/chevron-down.svg" alt="" />
   </article>
   <div class="button-box">
-    <button on:click={goToKeyLocation} disabled={!location?.x || !location?.y}>
+    <button
+      on:click|stopPropagation={openMarkerPopup}
+      disabled={!location?.x || !location?.y}
+    >
       {#if location?.x && location?.y}
         {#if $favorites.includes(title)}
           <img
@@ -99,9 +94,9 @@
         <img src="./icons/question.svg" alt="" />
       {/if}
     </button>
-      {#if $openKeyInfo === title}
+    {#if $openKeyInfo === title}
       <button
-        on:click={toggleFavorite}
+        on:click|stopPropagation={toggleFavorite}
         class="favorite-button"
         disabled={!location}
         transition:fadeSlide|local={{ duration: 200 }}
@@ -109,25 +104,25 @@
         <img src="./icons/star.svg" alt="" />
       </button>
       <button
-        on:click|stopPropagation={copyClipboard}
+        on:click|stopPropagation={copyToClipboard}
         class="link-button"
         transition:fadeSlide|local={{ duration: 200 }}
       >
-      {#if copied}
-        <img
-          transition:fadeSlide|local
-          src="./icons/check.svg"
-          alt="Copy to clipboard"
-        />
-      {:else}
-        <img
-          transition:fadeSlide|local
-          src="./icons/link.svg"
-          alt="Copy to clipboard"
-        />
-      {/if}
+        {#if copied}
+          <img
+            transition:fadeSlide|local
+            src="./icons/check.svg"
+            alt="Copy to clipboard"
+          />
+        {:else}
+          <img
+            transition:fadeSlide|local
+            src="./icons/link.svg"
+            alt="Copy to clipboard"
+          />
+        {/if}
       </button>
-      {/if}
+    {/if}
   </div>
 </li>
 
@@ -241,10 +236,7 @@
     justify-content: center;
   }
 
-  .favorite-button {
-    margin-top: 1.5rem;
-  }
-
+  .favorite-button,
   .link-button {
     margin-top: 1.5rem;
   }
