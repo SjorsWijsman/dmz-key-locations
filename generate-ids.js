@@ -11,6 +11,8 @@ keys.forEach((key) => {
         location: key.location,
         description: key.description,
         fortress: key.fortress,
+        video: key.video,
+        missionRequirement: key.missionRequirement,
     };
     keys_ids.push(entry);
 });
