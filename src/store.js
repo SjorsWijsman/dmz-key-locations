@@ -1,5 +1,6 @@
 import { writable } from "svelte/store";
 import { persistStore } from "./scripts/persist-store";
+import { keys } from "./data/key-data";
 
 // Leaflet map, for global reference
 export const map = writable(null);
@@ -13,12 +14,22 @@ export const keyMarkers = writable([]);
 // Sector user is currently hovering over
 export const selectedSector = writable(["A", "0"]);
 // Marker user currently has selected
-export const selectedMarker = writable({ title: "" });
+export const selectedMarker = writable(
+  window.location.hash ? getHashKey() : { title: "" }
+);
 // Expanded key info block
-export const openKeyInfo = writable("");
+export const openKeyInfo = writable(
+  window.location.hash ? getHashKey().title : ""
+);
 
 // Persists in localStorage
 export const activePanel = persistStore("dmzkeys-user-activePanel", "search");
 export const searchTerm = persistStore("dmzkeys-user-searchTerm", "");
 export const favorites = persistStore("dmzkeys-user-favorites", []);
 export const showVideo = persistStore("dmzkeys-user-showVideo", false);
+
+function getHashKey() {
+  return keys.filter(
+    (key) => key.id === window.location.hash.replace("#", "")
+  )[0];
+}
