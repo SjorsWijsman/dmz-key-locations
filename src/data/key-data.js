@@ -78,8 +78,8 @@ export const keys = [
         "description": [
             "Entrance from the road down on the south side of the fortress."
         ],
-        "fortress": true,
-        "video": "qi_OlMLmp_A"
+        "video": "qi_OlMLmp_A",
+        "fortress": true
     },
     {
         "id": "algae-covered-toolbox",
@@ -103,8 +103,8 @@ export const keys = [
         "description": [
             "Multiple entrances can be found around the Shopping Centre, including in the back just underneath the pinned location. Be warned, this location usually contains a lot of enemies."
         ],
-        "fortress": true,
-        "video": "YmLZEqov-iE"
+        "video": "YmLZEqov-iE",
+        "fortress": true
     },
     {
         "id": "al-sharim-pass-elders-room",
@@ -316,8 +316,8 @@ export const keys = [
         "description": [
             "The Control Tower fortress is marked by a large icon on the map. There are many entrances to get into the building, and plenty of angry airplane enthousiasts to fight around the area."
         ],
-        "fortress": true,
-        "video": "s71OBNU5YL4"
+        "video": "s71OBNU5YL4",
+        "fortress": true
     },
     {
         "id": "crane-control-room",
@@ -355,8 +355,8 @@ export const keys = [
         "description": [
             "The Downtown Post Office is a fortress in Al-Mazrah City, as such it is marked by a large icon on the map. The building has lots of easy to find entrances. Enter to find out about the meaning of going postal."
         ],
-        "fortress": true,
-        "video": "VTJJAmnRdnE"
+        "video": "VTJJAmnRdnE",
+        "fortress": true
     },
     {
         "id": "downtown-post-office-secure-room",
@@ -469,8 +469,8 @@ export const keys = [
             "x": 826,
             "y": 1735
         },
-        "fortress": true,
-        "video": "cggyMST0Hb8"
+        "video": "cggyMST0Hb8",
+        "fortress": true
     },
     {
         "id": "longshore-duffle-bag",
@@ -488,8 +488,8 @@ export const keys = [
             "x": 2263,
             "y": 2049
         },
-        "fortress": true,
-        "video": "QkKEd-BgRFU"
+        "video": "QkKEd-BgRFU",
+        "fortress": true
     },
     {
         "id": "mawizeh-power-control-substation",
@@ -516,8 +516,8 @@ export const keys = [
             "x": 2525,
             "y": 2095
         },
-        "fortress": true,
-        "video": "JMAehvF_uIM"
+        "video": "JMAehvF_uIM",
+        "fortress": true
     },
     {
         "id": "mawizah-slum-discarded-cache",
@@ -570,8 +570,8 @@ export const keys = [
             "x": 2848,
             "y": 1605
         },
-        "fortress": true,
-        "video": "ce19mYClMao"
+        "video": "ce19mYClMao",
+        "fortress": true
     },
     {
         "id": "police-armory-f2",

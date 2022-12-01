@@ -57,30 +57,6 @@
 
     // Add to layers store
     $layers = { ...$layers, "Show Key Locations": keyLayer };
-
-    if (window.location.hash){
-      keys.forEach((key) => {
-        if (key.id == window.location.hash.substring(1)) {
-          $keyMarkers.forEach((marker) => {
-            console.log(marker);
-            if (key.title == marker.options.title){
-              L.DomUtil.addClass(marker._icon, "active-marker");
-              $selectedMarker = key;
-              // Go to location
-              $map.setView(
-                [4150 - key.location.y + (isTouchDevice() ? 100 : 0), key.location.x],
-                0,
-                {
-                  animate: true,
-                  pan: {duration: 0.3,},
-                }
-              );
-            };
-
-          });
-        };
-      });
-    };
   }
 
   function openPopup(key, marker) {
@@ -108,6 +84,21 @@
   function setSelectedMarker(key, marker) {
     if (L.DomUtil.hasClass(marker._icon, "active-marker")) {
       $searchTerm = "";
+    }
+  }
+
+  function hashChange() {
+    if (window.location.hash) {
+      keys.forEach((key) => {
+        if (key.id == window.location.hash.substring(1)) {
+          $keyMarkers.forEach((marker) => {
+            console.log(marker);
+            if (key.title == marker.options.title) {
+              marker.openPopup();
+            }
+          });
+        }
+      });
     }
   }
 
@@ -159,5 +150,11 @@
     return popup;
   }
 
-  onMount(placeKeyMarkers);
+  onMount(() => {
+    placeKeyMarkers();
+    hashChange();
+  });
+
 </script>
+
+<svelte:window on:hashchange={hashChange} />

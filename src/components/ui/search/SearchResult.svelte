@@ -2,6 +2,7 @@
   import { keyMarkers, selectedMarker, openKeyInfo, favorites } from "$store";
   import { fadeSlide } from "$scripts/fade-slide";
   import SearchResultInfo from "./SearchResultInfo.svelte";
+  import { keys } from "$data/key-data";
 
   export let title = "Untitled Location",
     location = {},
@@ -41,6 +42,19 @@
       $favorites = $favorites.filter((item) => item !== title);
     } else {
       $favorites = [...$favorites, title];
+    }
+  }
+
+  function copyClipboard(event) {
+    for (const marker of $keyMarkers) {
+      if (marker.options.title === title) {
+        keys.forEach((key) => {
+          if (key.title === title){
+            let url = "https://dmzkeys.com/#"
+            navigator.clipboard.writeText(url.concat(key.id));
+          };
+        });
+      }
     }
   }
 
@@ -88,7 +102,7 @@
         <img src="./icons/question.svg" alt="" />
       {/if}
     </button>
-    {#if $openKeyInfo === title}
+      {#if $openKeyInfo === title}
       <button
         on:click={toggleFavorite}
         class="favorite-button"
@@ -97,7 +111,14 @@
       >
         <img src="./icons/star.svg" alt="" />
       </button>
-    {/if}
+      <button
+        on:click={copyClipboard}
+        class="link-button"
+        transition:fadeSlide|local={{ duration: 200 }}
+      >
+        <img src="./icons/link.svg" alt="" />
+      </button>
+      {/if}
   </div>
 </li>
 
@@ -212,6 +233,10 @@
   }
 
   .favorite-button {
+    margin-top: 1.5rem;
+  }
+
+  .link-button {
     margin-top: 1.5rem;
   }
 
