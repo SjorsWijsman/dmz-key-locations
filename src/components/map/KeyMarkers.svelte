@@ -87,6 +87,21 @@
     }
   }
 
+  function hashChange() {
+    if (window.location.hash) {
+      keys.forEach((key) => {
+        if (key.id == window.location.hash.substring(1)) {
+          $keyMarkers.forEach((marker) => {
+            console.log(marker);
+            if (key.title == marker.options.title) {
+              marker.openPopup();
+            }
+          });
+        }
+      });
+    }
+  }
+
   favorites.subscribe((favoriteList) => favoriteMarker(favoriteList));
 
   // Replaces map marker with favorite marker / back to original marker
@@ -135,5 +150,11 @@
     return popup;
   }
 
-  onMount(placeKeyMarkers);
+  onMount(() => {
+    placeKeyMarkers();
+    hashChange();
+  });
+
 </script>
+
+<svelte:window on:hashchange={hashChange} />

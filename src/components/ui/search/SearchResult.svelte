@@ -4,13 +4,15 @@
   import SearchResultInfo from "./SearchResultInfo.svelte";
 
   export let title = "Untitled Location",
+    id = "untitled-location",
     location = {},
     missionRequirement = false,
     fortress = false,
     description = [],
     loot = [];
 
-  let element;
+  let element,
+    copied = false;
 
   function goToKeyLocation(event) {
     if (event) event.stopPropagation();
@@ -42,6 +44,15 @@
     } else {
       $favorites = [...$favorites, title];
     }
+  }
+
+  function copyClipboard(event) {
+    const url = window.location.href.split("#")[0];
+    navigator.clipboard.writeText(url.concat("#").concat(id));
+    copied = true;
+    setTimeout(function(){
+      copied = false;
+    }, 2000);
   }
 
   selectedMarker.subscribe((selection) => {
@@ -88,7 +99,7 @@
         <img src="./icons/question.svg" alt="" />
       {/if}
     </button>
-    {#if $openKeyInfo === title}
+      {#if $openKeyInfo === title}
       <button
         on:click={toggleFavorite}
         class="favorite-button"
@@ -97,7 +108,26 @@
       >
         <img src="./icons/star.svg" alt="" />
       </button>
-    {/if}
+      <button
+        on:click|stopPropagation={copyClipboard}
+        class="link-button"
+        transition:fadeSlide|local={{ duration: 200 }}
+      >
+      {#if copied}
+        <img
+          transition:fadeSlide|local
+          src="./icons/check.svg"
+          alt="Copy to clipboard"
+        />
+      {:else}
+        <img
+          transition:fadeSlide|local
+          src="./icons/link.svg"
+          alt="Copy to clipboard"
+        />
+      {/if}
+      </button>
+      {/if}
   </div>
 </li>
 
@@ -212,6 +242,10 @@
   }
 
   .favorite-button {
+    margin-top: 1.5rem;
+  }
+
+  .link-button {
     margin-top: 1.5rem;
   }
 
