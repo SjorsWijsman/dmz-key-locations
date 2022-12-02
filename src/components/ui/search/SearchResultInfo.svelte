@@ -1,12 +1,11 @@
 <script>
   import { fadeSlide } from "$scripts/fade-slide";
-  import { favorites } from "$store";
+  import { favorites, openKeyInfo } from "$store";
 
   export let title, missionRequirement, fortress, description, loot;
-  export let isOpen = false;
 </script>
 
-{#if isOpen}
+{#if $openKeyInfo === title}
   <section transition:fadeSlide|local={{ duration: 200 }}>
     {#if $favorites.includes(title)}
       <span class="favorite" transition:fadeSlide|local={{ duration: 100 }}>

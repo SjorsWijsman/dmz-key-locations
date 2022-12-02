@@ -44,7 +44,8 @@ export const keys = [
         },
         "description": [
             "Access to both doors from the ground floor on the east side of the fortress. Each room can be opened separately (multiple key uses)."
-        ]
+        ],
+        "video": "-eeyyCbW6j8"
     },
     {
         "id": "al-bagra-munitions-storeroom",
@@ -55,7 +56,8 @@ export const keys = [
         },
         "description": [
             "Inside a possible stronghold location, so a keycard might be needed. Bottom floor has two rooms with metal bars that can each be opened separately (multiple key uses)."
-        ]
+        ],
+        "video": "mJCOg4vLYwE"
     },
     {
         "id": "al-bagra-officers-quarters",
@@ -66,7 +68,8 @@ export const keys = [
         },
         "description": [
             "Located on the top floor of the eastern wing of the fortress. Includes two rooms that can each be opened separately (multiple key uses)."
-        ]
+        ],
+        "video": "viPRIk2N3xw"
     },
     {
         "id": "al-bagra-underground",
@@ -115,7 +118,8 @@ export const keys = [
         },
         "description": [
             "The locked room is located on the roof of the building on top of the mountain at Al Sharim Pass."
-        ]
+        ],
+        "video": "PoJimZ73oZA"
     },
     {
         "id": "al-safwa-stone-block-office",
@@ -139,6 +143,7 @@ export const keys = [
         "description": [
             "Multiple entrances around the large building to the west of Al-Mazrah City. As this location is a fortress it contains a lot of overzealous art fanatics."
         ],
+        "video": "U0QfE_-KQJA",
         "fortress": true
     },
     {
@@ -162,7 +167,8 @@ export const keys = [
         },
         "description": [
             "Found on the top floor inside the bank in Sawah Village. The room is located in the southeast corner of the floor."
-        ]
+        ],
+        "video": "ikdMfq1syeY"
     },
     {
         "id": "bank-of-adal-2nd-story-office",
@@ -268,7 +274,8 @@ export const keys = [
         },
         "description": [
             "The West Al-Safwa Chemical Storage Warehouse is found to the far west of the map, just outside of Al-Safwa Quarry. This location usually contains a lot of high value loot."
-        ]
+        ],
+        "video": "gxg4wNbfa8w"
     },
     {
         "id": "ch-7-editorial-department",
@@ -367,7 +374,8 @@ export const keys = [
         },
         "description": [
             "The Secure Room can be found on the top floor of the Downtown Post Office. As this location is a fortress, a separate key is needed to get to the door. The room will be the first door to your left exiting the southwest staircase."
-        ]
+        ],
+        "video": "QmiU_Lpus0I"
     },
     {
         "id": "enfer-back-room",
@@ -561,7 +569,8 @@ export const keys = [
         "location": {
             "x": 1251,
             "y": 3243
-        }
+        },
+        "video": "Zf2Z614ZEtw"
     },
     {
         "id": "police-academy",
@@ -582,7 +591,8 @@ export const keys = [
         },
         "description": [
             "Contains Police Lockers. Police Locker Master Key required to open."
-        ]
+        ],
+        "video": "32_9NKyg44g"
     },
     {
         "id": "police-locker-f2",
@@ -604,7 +614,8 @@ export const keys = [
         },
         "description": [
             "Contains Police Lockers. Police Locker Master Key required to open."
-        ]
+        ],
+        "video": "tNtirUj6nIQ"
     },
     {
         "id": "police-locker-g5",
@@ -626,7 +637,8 @@ export const keys = [
         },
         "description": [
             "Contains Police Lockers. Police Locker Master Key required to open."
-        ]
+        ],
+        "video": "bx3v2ZeghSc"
     },
     {
         "id": "police-locker-d6",
@@ -648,7 +660,8 @@ export const keys = [
         },
         "description": [
             "Contains Police Lockers. Police Locker Master Key required to open."
-        ]
+        ],
+        "video": "CA5ibOFOCCg"
     },
     {
         "id": "police-locker-g4",
@@ -667,7 +680,8 @@ export const keys = [
         "location": {
             "x": 2900,
             "y": 1699
-        }
+        },
+        "video": "OrK3UZ-b3wk"
     },
     {
         "id": "power-substation-toolbox",
@@ -758,7 +772,8 @@ export const keys = [
         "location": {
             "x": 1383,
             "y": 2042
-        }
+        },
+        "video": "fn9ytgMuMP8"
     },
     {
         "id": "sattiq-poppy-farm-house",
@@ -770,6 +785,7 @@ export const keys = [
         "description": [
             "Required for Espionage, Black Mous tier 2."
         ],
+        "video": "uaw5eT_RAC4",
         "missionRequirement": true
     },
     {
@@ -919,6 +935,7 @@ export const keys = [
             "x": 2475,
             "y": 1315
         },
+        "video": "4fl5saUVHKA",
         "fortress": true
     },
     {

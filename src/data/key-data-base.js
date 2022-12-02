@@ -44,6 +44,7 @@ export const keys = [
     description: [
       "Access to both doors from the ground floor on the east side of the fortress. Each room can be opened separately (multiple key uses).",
     ],
+    video: "-eeyyCbW6j8",
   },
   {
     title: "Al Bagra Munitions Storeroom",
@@ -54,6 +55,7 @@ export const keys = [
     description: [
       "Inside a possible stronghold location, so a keycard might be needed. Bottom floor has two rooms with metal bars that can each be opened separately (multiple key uses).",
     ],
+    video: "mJCOg4vLYwE",
   },
   {
     title: "Al Bagra Officers Quarters",
@@ -64,6 +66,7 @@ export const keys = [
     description: [
       "Located on the top floor of the eastern wing of the fortress. Includes two rooms that can each be opened separately (multiple key uses).",
     ],
+    video: "viPRIk2N3xw",
   },
   {
     title: "Al Bagra Underground",
@@ -109,6 +112,7 @@ export const keys = [
     description: [
       "The locked room is located on the roof of the building on top of the mountain at Al Sharim Pass.",
     ],
+    video: "PoJimZ73oZA",
   },
   {
     title: "Al-Safwa Stone Block Office",
@@ -130,6 +134,7 @@ export const keys = [
     description: [
       "Multiple entrances around the large building to the west of Al-Mazrah City. As this location is a fortress it contains a lot of overzealous art fanatics.",
     ],
+    video: "U0QfE_-KQJA",
     fortress: true,
   },
   {
@@ -152,6 +157,7 @@ export const keys = [
     description: [
       "Found on the top floor inside the bank in Sawah Village. The room is located in the southeast corner of the floor.",
     ],
+    video: "ikdMfq1syeY",
   },
   {
     title: "Bank of Adal 2nd Story Office",
@@ -249,6 +255,7 @@ export const keys = [
     description: [
       "The West Al-Safwa Chemical Storage Warehouse is found to the far west of the map, just outside of Al-Safwa Quarry. This location usually contains a lot of high value loot.",
     ],
+    video: "gxg4wNbfa8w",
   },
   {
     title: "Ch 7 Editorial Department",
@@ -340,6 +347,7 @@ export const keys = [
     description: [
       "The Secure Room can be found on the top floor of the Downtown Post Office. As this location is a fortress, a separate key is needed to get to the door. The room will be the first door to your left exiting the southwest staircase.",
     ],
+    video: "QmiU_Lpus0I",
   },
   {
     title: "Enfer Back Room",
@@ -424,6 +432,9 @@ export const keys = [
       x: 946,
       y: 2556,
     },
+    description: [
+      "This is a small room upstairs in one of the offices in the south side of the large hangar in Hafid Port.",
+    ],
     video: "Txook-IBuXo",
   },
   {
@@ -432,15 +443,21 @@ export const keys = [
       x: 826,
       y: 1735,
     },
+    description: [
+      "The Kushaak Construction Warehouse is a fortress right in the middle of Al-Safwa Quarry. Don't forget your hardhat.",
+    ],
     video: "cggyMST0Hb8",
     fortress: true,
   },
   {
-    title: "Longshore Duffle Bag",
+    title: "Longshoreman's Duffel Bag",
     location: {
       x: 675,
       y: 2700,
     },
+    description: [
+      "The Duffel Bag is located at the very end of the large (broken) pier in Hafid Port pointing south.",
+    ],
     video: "ycwVZcG2LsI",
   },
   {
@@ -449,6 +466,9 @@ export const keys = [
       x: 2263,
       y: 2049,
     },
+    description: [
+      "Near the Mawizeh Mashlands, following the large bridge going south are a few small buildings. The cell shop is located right next to the road heading northwest.",
+    ],
     video: "QkKEd-BgRFU",
     fortress: true,
   },
@@ -458,6 +478,9 @@ export const keys = [
       x: 2522,
       y: 1943,
     },
+    description: [
+      "The Mawizeh Power Control Substation is located across the Mashlands from the Mawizeh Resort. It's the small building next to the large white watertower.",
+    ],
     video: "BNxTrs1CjEE",
   },
   {
@@ -466,6 +489,9 @@ export const keys = [
       x: 2411,
       y: 2081,
     },
+    description: [
+      "The Bungalow Room is the third bungalow counting from the west of the large Mawizeh Marshland island.",
+    ],
     video: "bbGPxQVEu9g",
   },
   {
@@ -474,6 +500,9 @@ export const keys = [
       x: 2525,
       y: 2095,
     },
+    description: [
+      "The Mawizeh Resort Main Building is marked on the map with a large icon, because it's a fortress. The complex consists of both of the large buildings on the Mawizeh Marshlands island.",
+    ],
     video: "JMAehvF_uIM",
     fortress: true,
   },
@@ -483,6 +512,9 @@ export const keys = [
       x: 2325,
       y: 2035,
     },
+    description: [
+      "The Discarded Cache is located underneath the large bridge on the south side of the river, where it's laying on the ground next to a burned out car.",
+    ],
     video: "j3qq7WN7-HA",
   },
   {
@@ -491,6 +523,9 @@ export const keys = [
       x: 2642,
       y: 2455,
     },
+    description: [
+      "The Mountaintop, as the name implies, is located on top of the mountain at Al Sharim Pass. It's a small building at the northeastern edge of the mountain.",
+    ],
     video: "5zhNOSGTuiY",
   },
   {
@@ -499,6 +534,9 @@ export const keys = [
       x: 2299,
       y: 1469,
     },
+    description: [
+      "Along the canal running through Al-Mazrah City are multiple booths to the west. This booth (as the name implies) is the northernmost one.",
+    ],
     video: "n8TU8OBDeHk",
   },
   {
@@ -507,6 +545,7 @@ export const keys = [
       x: 2108,
       y: 3359,
     },
+    description: [""],
     video: "MdYb5uV5aw0",
   },
   {
@@ -515,6 +554,8 @@ export const keys = [
       x: 1251,
       y: 3243,
     },
+    description: [""],
+    video: "Zf2Z614ZEtw",
   },
   {
     title: "Police Academy",
@@ -522,6 +563,7 @@ export const keys = [
       x: 2848,
       y: 1605,
     },
+    description: [""],
     video: "ce19mYClMao",
     fortress: true,
   },
@@ -534,6 +576,7 @@ export const keys = [
     description: [
       "Contains Police Lockers. Police Locker Master Key required to open.",
     ],
+    video: "32_9NKyg44g",
   },
   {
     title: "Police Locker [F2]",
@@ -552,6 +595,7 @@ export const keys = [
     description: [
       "Contains Police Lockers. Police Locker Master Key required to open.",
     ],
+    video: "tNtirUj6nIQ",
   },
   {
     title: "Police Locker [G5]",
@@ -570,6 +614,7 @@ export const keys = [
     description: [
       "Contains Police Lockers. Police Locker Master Key required to open.",
     ],
+    video: "bx3v2ZeghSc",
   },
   {
     title: "Police Locker [D6]",
@@ -588,6 +633,7 @@ export const keys = [
     description: [
       "Contains Police Lockers. Police Locker Master Key required to open.",
     ],
+    video: "CA5ibOFOCCg",
   },
   {
     title: "Police Locker [G4]",
@@ -605,6 +651,8 @@ export const keys = [
       x: 2900,
       y: 1699,
     },
+    description: [""],
+    video: "OrK3UZ-b3wk",
   },
   {
     title: "Power Substation Toolbox",
@@ -612,6 +660,7 @@ export const keys = [
       x: 1475,
       y: 3127,
     },
+    description: [""],
     video: "XFnwZRN84ng",
   },
   {
@@ -620,6 +669,7 @@ export const keys = [
       x: 768,
       y: 1703,
     },
+    description: [""],
     video: "_alliZFxcZI",
   },
   {
@@ -628,6 +678,7 @@ export const keys = [
       x: 809,
       y: 2720,
     },
+    description: [""],
     video: "bYneoNHg5bU",
   },
   {
@@ -636,6 +687,7 @@ export const keys = [
       x: 3262,
       y: 2902,
     },
+    description: [""],
     video: "0DvogRQ46h4",
   },
   {
@@ -644,6 +696,7 @@ export const keys = [
       x: 1404,
       y: 1431,
     },
+    description: [""],
     video: "SIJvnqZF5tA",
   },
   {
@@ -652,6 +705,7 @@ export const keys = [
       x: 1470,
       y: 1263,
     },
+    description: [""],
     video: "Dc4zL9fBv4U",
   },
   {
@@ -660,6 +714,7 @@ export const keys = [
       x: 1650,
       y: 1582,
     },
+    description: [""],
     video: "JEbusK_AiFE",
   },
   {
@@ -679,6 +734,7 @@ export const keys = [
       x: 1428,
       y: 2563,
     },
+    description: [""],
   },
   {
     title: "Sattiq Guest Quarters",
@@ -686,6 +742,8 @@ export const keys = [
       x: 1383,
       y: 2042,
     },
+    description: [""],
+    video: "fn9ytgMuMP8",
   },
   {
     title: "Sattiq Poppy Farm House",
@@ -694,6 +752,7 @@ export const keys = [
       y: 1968,
     },
     description: ["Required for Espionage, Black Mous tier 2."],
+    video: "uaw5eT_RAC4",
     missionRequirement: true,
   },
   {
@@ -702,6 +761,7 @@ export const keys = [
       x: 1276,
       y: 3321,
     },
+    description: [""],
     video: "By_6_Y4WAWs",
   },
   {
@@ -735,6 +795,7 @@ export const keys = [
       x: 2071,
       y: 2353,
     },
+    description: [""],
     video: "iPEj1jqQMWM",
   },
   {
@@ -754,6 +815,7 @@ export const keys = [
       x: 1346,
       y: 2868,
     },
+    description: [""],
     video: "Jn3ihx9ArLE",
   },
   {
@@ -762,6 +824,7 @@ export const keys = [
       x: 2010,
       y: 2654,
     },
+    description: [""],
     video: "ISyC9NQPJEg",
   },
   {
@@ -770,6 +833,7 @@ export const keys = [
       x: 2595,
       y: 1090,
     },
+    description: [""],
     video: "bcImnQY-ks8",
   },
   {
@@ -778,6 +842,7 @@ export const keys = [
       x: 2030,
       y: 910,
     },
+    description: [""],
     video: "VPZIVFIWvyk",
   },
   {
@@ -786,6 +851,7 @@ export const keys = [
       x: 1981,
       y: 900,
     },
+    description: [""],
     video: "WUUxiX0pMpQ",
   },
   {
@@ -794,6 +860,7 @@ export const keys = [
       x: 1900,
       y: 1030,
     },
+    description: [""],
     video: "n2N8ZB6_YFk",
   },
   {
@@ -812,6 +879,7 @@ export const keys = [
       x: 2836,
       y: 2925,
     },
+    description: [""],
     video: "q8DSYEJS6u4",
   },
   {
@@ -820,6 +888,7 @@ export const keys = [
       x: 2866,
       y: 2000,
     },
+    description: [""],
     video: "mIXoneswWKQ",
   },
   {
@@ -828,6 +897,8 @@ export const keys = [
       x: 2475,
       y: 1315,
     },
+    description: [""],
+    video: "4fl5saUVHKA",
     fortress: true,
   },
   {
@@ -836,6 +907,7 @@ export const keys = [
       x: 1254,
       y: 2103,
     },
+    description: [""],
     video: "IH39322Yxtg",
   },
   {
@@ -844,6 +916,7 @@ export const keys = [
       x: 2549,
       y: 1418,
     },
+    description: [""],
     video: "K3xIASt5KwY",
   },
   {
@@ -852,6 +925,7 @@ export const keys = [
       x: 1875,
       y: 1918,
     },
+    description: [""],
     video: "90Rh-WTItAI",
   },
   {
@@ -860,6 +934,7 @@ export const keys = [
       x: 1948,
       y: 1902,
     },
+    description: [""],
     video: "ircnrYJKUfM",
   },
   {
@@ -868,6 +943,7 @@ export const keys = [
       x: 2035,
       y: 2371,
     },
+    description: [""],
     video: "LAaajr_4_QQ",
   },
   {
@@ -876,15 +952,28 @@ export const keys = [
       x: 1791,
       y: 3580,
     },
+    description: [""],
     video: "Rx4L86BCsX8",
   },
   {
     title: "Control Room",
+    description: [
+      "Unknown location for a key called Control Room Key.",
+      "If you find the location for this key, please contact me in Discord and I will add it to the map.",
+    ],
   },
   {
     title: "Fort Barrack",
+    description: [
+      "Unknown location for a key called Fort Barrack Key.",
+      "If you find the location for this key, please contact me in Discord and I will add it to the map.",
+    ],
   },
   {
     title: "Storage",
+    description: [
+      "Unknown location for a key called Storage Key.",
+      "If you find the location for this key, please contact me in Discord and I will add it to the map.",
+    ],
   },
 ];
