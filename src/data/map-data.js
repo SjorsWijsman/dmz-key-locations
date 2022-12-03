@@ -44,8 +44,8 @@ export const POIs = [
   {
     title: "Sattiq Cave Complex",
     location: {
-      x: 1375,
-      y: 2075,
+      x: 1435,
+      y: 2182,
     },
   },
   {

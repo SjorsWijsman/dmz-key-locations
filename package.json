@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node generate-ids.js",
     "build": "vite build",
     "preview": "vite preview",
     "generate-ids": "node generate-ids.js"

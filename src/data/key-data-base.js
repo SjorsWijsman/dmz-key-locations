@@ -545,7 +545,9 @@ export const keys = [
       x: 2108,
       y: 3359,
     },
-    description: [""],
+    description: [
+      "At the end of the island at Sarrif Bay is a small lighthouse. Going inside you will quickly find the door right in front of you.",
+    ],
     video: "MdYb5uV5aw0",
   },
   {
@@ -554,7 +556,9 @@ export const keys = [
       x: 1251,
       y: 3243,
     },
-    description: [""],
+    description: [
+      "Omar's Auto Repair is located inside of Sawah Village. Note that the village usually contains a lot of AI. The door is located in the back of the car garage building.",
+    ],
     video: "Zf2Z614ZEtw",
   },
   {
@@ -563,7 +567,9 @@ export const keys = [
       x: 2848,
       y: 1605,
     },
-    description: [""],
+    description: [
+      "The Police Academy is marked by a large icon in the east of the map. As this is a fortress it contains a lot of enemies. Note that the Academy has a lot of doors on both the inside and outside, recommended to prioritize opening the inside doors.",
+    ],
     video: "ce19mYClMao",
     fortress: true,
   },
@@ -574,7 +580,7 @@ export const keys = [
       y: 1233,
     },
     description: [
-      "Contains Police Lockers. Police Locker Master Key required to open.",
+      "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains Police Lockers which require a Police Locker Master Key to open, this key (usually?) spawns inside the room.",
     ],
     video: "32_9NKyg44g",
   },
@@ -584,7 +590,10 @@ export const keys = [
       x: 2194,
       y: 1227,
     },
-    description: ["Inside Police Armory Room. Key required to get inside."],
+    description: [
+      "Inside of the Police Armory in the same building. Key required for the room to get to the lockers.",
+    ],
+    video: "s0nVFQfdRUw",
   },
   {
     title: "Police Armory [G5]",
@@ -593,7 +602,7 @@ export const keys = [
       y: 2086,
     },
     description: [
-      "Contains Police Lockers. Police Locker Master Key required to open.",
+      "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains Police Lockers which require a Police Locker Master Key to open, this key (usually?) spawns inside the room.",
     ],
     video: "tNtirUj6nIQ",
   },
@@ -603,7 +612,10 @@ export const keys = [
       x: 2818,
       y: 2099,
     },
-    description: ["Inside Police Armory Room. Key required to get inside."],
+    description: [
+      "Inside of the Police Armory in the same building. Key required for the room to get to the lockers.",
+    ],
+    video: "Sl1bFtO9yFI",
   },
   {
     title: "Police Armory [D6]",
@@ -612,7 +624,7 @@ export const keys = [
       y: 2693,
     },
     description: [
-      "Contains Police Lockers. Police Locker Master Key required to open.",
+      "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains Police Lockers which require a Police Locker Master Key to open, this key (usually?) spawns inside the room.",
     ],
     video: "bx3v2ZeghSc",
   },
@@ -622,7 +634,9 @@ export const keys = [
       x: 1491,
       y: 2693,
     },
-    description: ["Inside Police Armory Room. Key required to get inside."],
+    description: [
+      "Inside of the Police Armory in the same building. Key required for the room to get to the lockers.",
+    ],
   },
   {
     title: "Police Academy Private Locker Room",
@@ -631,7 +645,7 @@ export const keys = [
       y: 1707,
     },
     description: [
-      "Contains Police Lockers. Police Locker Master Key required to open.",
+      "The Police Academy Private Locker Room is located upstairs inside the building to the south of the Police Academy parking lot. This room itself contains Police Lockers which require a Police Locker Master Key to open, this key (usually?) spawns inside the room.",
     ],
     video: "CA5ibOFOCCg",
   },
@@ -642,7 +656,7 @@ export const keys = [
       y: 1710,
     },
     description: [
-      "Inside Police Academy Private Locker Room. Key required to get inside.",
+      "Inside of the Police Academy Private Locker Room. Key required for the room to get to the lockers.",
     ],
   },
   {
@@ -651,7 +665,9 @@ export const keys = [
       x: 2900,
       y: 1699,
     },
-    description: [""],
+    description: [
+      "To the south of the large parking lot at the Police Academy is a smaller building. The room is on the ground floor in the north of the building.",
+    ],
     video: "OrK3UZ-b3wk",
   },
   {
@@ -660,7 +676,9 @@ export const keys = [
       x: 1475,
       y: 3127,
     },
-    description: [""],
+    description: [
+      "To the south of the Al Samman Cemetery is a small Power Substation. Climbing over the fence, the toolbox is located right in the middle of the station.",
+    ],
     video: "XFnwZRN84ng",
   },
   {
@@ -669,7 +687,9 @@ export const keys = [
       x: 768,
       y: 1703,
     },
-    description: [""],
+    description: [
+      "The Lost Toolbox is located underwater in the north of the Al-Safwa Quarry.",
+    ],
     video: "_alliZFxcZI",
   },
   {
@@ -678,7 +698,9 @@ export const keys = [
       x: 809,
       y: 2720,
     },
-    description: [""],
+    description: [
+      "Next to the T-shaped dock on the south of Hafid Port is a small building. This is the Special Ops Relay Station.",
+    ],
     video: "bYneoNHg5bU",
   },
   {
@@ -687,7 +709,9 @@ export const keys = [
       x: 3262,
       y: 2902,
     },
-    description: [""],
+    description: [
+      "The Retro Runway Fridge is a medium sized white box commonly used for cooling, located inside the crater at the eastern end of the Al Malik Airport runway.",
+    ],
     video: "0DvogRQ46h4",
   },
   {
@@ -696,7 +720,9 @@ export const keys = [
       x: 1404,
       y: 1431,
     },
-    description: [""],
+    description: [
+      "The Rohan Control Room Locker is a locker underground in the Rohan Oil Tunnels. There are multiple entrances to these tunnels around the facility.",
+    ],
     video: "SIJvnqZF5tA",
   },
   {
@@ -705,7 +731,9 @@ export const keys = [
       x: 1470,
       y: 1263,
     },
-    description: [""],
+    description: [
+      "This small guard shack is located next to the south gate at Rohan Oil.",
+    ],
     video: "Dc4zL9fBv4U",
   },
   {
@@ -714,7 +742,9 @@ export const keys = [
       x: 1650,
       y: 1582,
     },
-    description: [""],
+    description: [
+      "This small guard shack is located next to the south gate at Rohan Oil.",
+    ],
     video: "JEbusK_AiFE",
   },
   {
@@ -731,10 +761,12 @@ export const keys = [
   {
     title: "Sa'id Mall Security Room",
     location: {
-      x: 1428,
-      y: 2563,
+      x: 1374,
+      y: 2625,
     },
-    description: [""],
+    description: [
+      "The Security Room is inside of the Sa'id Mall in the east of the map. The room itself is located upstairs on the right side of the mall at the end of the hallway.",
+    ],
   },
   {
     title: "Sattiq Guest Quarters",
@@ -742,7 +774,9 @@ export const keys = [
       x: 1383,
       y: 2042,
     },
-    description: [""],
+    description: [
+      "This building is a little hard to find, as it's not marked on the map. It's a small door above ground in the side of a hill.",
+    ],
     video: "fn9ytgMuMP8",
   },
   {
@@ -751,7 +785,10 @@ export const keys = [
       x: 1218,
       y: 1968,
     },
-    description: ["Required for Espionage, Black Mous tier 2."],
+    description: [
+      "Required for Espionage, Black Mous tier 2.",
+      "The Sattiq Poppy Farm House is a small building in the north of the circular road at the Sattiq mountains. Note that you need to enter the room twice to complete the mission.",
+    ],
     video: "uaw5eT_RAC4",
     missionRequirement: true,
   },
@@ -761,7 +798,9 @@ export const keys = [
       x: 1276,
       y: 3321,
     },
-    description: [""],
+    description: [
+      "To the west of the Sawah Village square is a large building. Going up the large stairs and taking an immediate right in the hallway leaves you at the door.",
+    ],
     video: "By_6_Y4WAWs",
   },
   {
@@ -772,8 +811,7 @@ export const keys = [
     },
     description: [
       "Required for Good Fortune, Legion Tier 3.",
-      "The door is located on the top floor of the hotel, right next to Sawah Hotel Room 303.",
-      "<s>Entry without key is possible through the skylights.</s> Note: this has been patched, you now actually need the key to get into the room.",
+      "The door is located on the top floor of the hotel, right next to Sawah Hotel Room 303. Entry without key is possible through the skylights when the hotel is not a fortress.",
     ],
     video: "g6UGMlEvhMM",
     missionRequirement: true,
@@ -785,27 +823,29 @@ export const keys = [
       y: 3314,
     },
     description: [
-      "The door is located on the top floor of the hotel, right next to Sawah Hotel Room 302.",
+      "The door is located on the top floor of the hotel, right next to Sawah Hotel Room 302. Entry without key is possible through the skylights when the hotel is not a fortress.",
     ],
     video: "g6UGMlEvhMM",
   },
   {
     title: "Scientist's Locker",
     location: {
-      x: 2071,
-      y: 2353,
+      x: 2100,
+      y: 2350,
     },
-    description: [""],
+    description: [
+      "The Scientist's Locker is located at the Zaya Observatory, inside the bunker to the north of the complex. Following the tunnel east you will find the locker on your right about halfway through.",
+    ],
     video: "iPEj1jqQMWM",
   },
   {
-    title: "South Al-Bagra Top Floor Bedroom",
+    title: "South Al Bagra Top Floor Bedroom",
     location: {
       x: 2650,
       y: 3463,
     },
     description: [
-      "Unsurprisingly found on the top floor of the building in the southeast corner of the floor.",
+      "Unsurprisingly found on the top floor of the building, in the southwest corner of the floor.",
     ],
     video: "s3rW3NX1HqM",
   },
@@ -815,7 +855,9 @@ export const keys = [
       x: 1346,
       y: 2868,
     },
-    description: [""],
+    description: [
+      "On the other side of the river under Sa'id City is a small town. Entering the marked building from the roof, you will immediately find the door on the left.",
+    ],
     video: "Jn3ihx9ArLE",
   },
   {
@@ -824,7 +866,9 @@ export const keys = [
       x: 2010,
       y: 2654,
     },
-    description: [""],
+    description: [
+      "The Scientist Apartment is located in the south of the Zaya Observatory. Going up the central stairs in the marked building and taking a left there is a single door to the apartment.",
+    ],
     video: "ISyC9NQPJEg",
   },
   {
@@ -833,7 +877,9 @@ export const keys = [
       x: 2595,
       y: 1090,
     },
-    description: [""],
+    description: [
+      "The Special Forces Dead Drop is a lockbox located on the concrete platform underneath the large tower in the northeast of the map.",
+    ],
     video: "bcImnQY-ks8",
   },
   {
@@ -842,7 +888,9 @@ export const keys = [
       x: 2030,
       y: 910,
     },
-    description: [""],
+    description: [
+      "The Taraq River Supply Shack is located next to the river to the east of Taraq Village. The small building is not outlined on the map but easy to find as it stands out next to the river.",
+    ],
     video: "VPZIVFIWvyk",
   },
   {
@@ -851,7 +899,9 @@ export const keys = [
       x: 1981,
       y: 900,
     },
-    description: [""],
+    description: [
+      "Crossing the bridge heading to Taraq Village are three buildings on the right of the road. The Smuggler's Office is located inside the middle building on the ground floor.",
+    ],
     video: "WUUxiX0pMpQ",
   },
   {
@@ -860,7 +910,9 @@ export const keys = [
       x: 1900,
       y: 1030,
     },
-    description: [""],
+    description: [
+      "To the west of the building next to the marked location is a hole in the ground. Entering this hole and following the tunnel you will find the locked toolbox next to a workbench.",
+    ],
     video: "n2N8ZB6_YFk",
   },
   {
@@ -879,7 +931,9 @@ export const keys = [
       x: 2836,
       y: 2925,
     },
-    description: [""],
+    description: [
+      "The Traveller's Luggage is a duffel bag located in the small waiting area overlooking the Al Malik Airport.",
+    ],
     video: "q8DSYEJS6u4",
   },
   {
@@ -888,7 +942,9 @@ export const keys = [
       x: 2866,
       y: 2000,
     },
-    description: [""],
+    description: [
+      "The marked building is located right next to the road going under the highway. The door is on the outside of this building.",
+    ],
     video: "mIXoneswWKQ",
   },
   {
@@ -897,7 +953,9 @@ export const keys = [
       x: 2475,
       y: 1315,
     },
-    description: [""],
+    description: [
+      "The U.S. Embassy is a large building marked by an icon on the map inside of Al-Mazrah City. There are multiple entrances around the building. Expect a lot of enemies as this is a fortress.",
+    ],
     video: "4fl5saUVHKA",
     fortress: true,
   },
@@ -907,7 +965,9 @@ export const keys = [
       x: 1254,
       y: 2103,
     },
-    description: [""],
+    description: [
+      "The Weapons Repair Kit is located inside of a cave at the Sattiq Cave Complex. The cave entrance is to the north of the marker. Heading inside and going right you will find the toolbox on a table.",
+    ],
     video: "IH39322Yxtg",
   },
   {
@@ -916,7 +976,9 @@ export const keys = [
       x: 2549,
       y: 1418,
     },
-    description: [""],
+    description: [
+      "You will find the Back Room door right next to the staircase on the ground floor inside of the Yum Yum Burger building.",
+    ],
     video: "K3xIASt5KwY",
   },
   {
@@ -925,7 +987,9 @@ export const keys = [
       x: 1875,
       y: 1918,
     },
-    description: [""],
+    description: [
+      "The Market Storage is a small building next to the river running through the Zarqwa village. It's located inside of a small covered market area.",
+    ],
     video: "90Rh-WTItAI",
   },
   {
@@ -934,7 +998,9 @@ export const keys = [
       x: 1948,
       y: 1902,
     },
-    description: [""],
+    description: [
+      "The Zarqwa Red Village Apartment is a small apartment upstairs in the marked building in Zarqwa village.",
+    ],
     video: "ircnrYJKUfM",
   },
   {
@@ -943,7 +1009,9 @@ export const keys = [
       x: 2035,
       y: 2371,
     },
-    description: [""],
+    description: [
+      "The Zaya Radar Dome key leads to one of the large Radar buildings in Zaya Observatory. This one is located to the west of the bunker, with an easy to spot entrace at the ground floor coming from the east.",
+    ],
     video: "LAaajr_4_QQ",
   },
   {
@@ -952,7 +1020,9 @@ export const keys = [
       x: 1791,
       y: 3580,
     },
-    description: [""],
+    description: [
+      "The Thief's Cache is inside an underwater part of the sunken ship. Entering the hull from the front of the ship you will find the duffel bag on your immediate right.",
+    ],
     video: "Rx4L86BCsX8",
   },
   {
@@ -973,6 +1043,13 @@ export const keys = [
     title: "Storage",
     description: [
       "Unknown location for a key called Storage Key.",
+      "If you find the location for this key, please contact me in Discord and I will add it to the map.",
+    ],
+  },
+  {
+    title: "Foreman's Office",
+    description: [
+      "Unknown location for a key called Foreman's Office Key.",
       "If you find the location for this key, please contact me in Discord and I will add it to the map.",
     ],
   },
