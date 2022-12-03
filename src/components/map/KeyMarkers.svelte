@@ -9,11 +9,12 @@
     searchTerm,
     favorites,
     openKeyInfo,
+    showVideo,
   } from "$store";
   import { keys } from "$data/key-data";
   import { isTouchDevice } from "$scripts/platform-check";
 
-  let keyLayer = [];
+  let keyLayer = L.layerGroup();
 
   const iconSettings = {
     iconUrl: "icons/location-dot.svg",
@@ -23,6 +24,11 @@
   };
 
   function placeKeyMarkers() {
+    // Empty key markers first -> Allows for reloading key markers
+    $keyMarkers = [];
+    $map.removeLayer(keyLayer);
+
+    // Create new markers
     keys.forEach((key) => {
       if (key.location) {
         let isFavorite = $favorites.includes(key.title);
@@ -124,7 +130,7 @@
     let popup = L.popup({
       className: key.video ? "has-video" : "",
     });
-    if (key.video) {
+    if (key.video && $showVideo) {
       popup.setContent(`
         <iframe src="https://www.youtube.com/embed/${key.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p>${key.title}</p>
@@ -140,6 +146,7 @@
   onMount(() => {
     placeKeyMarkers();
 
+    // Opens the marker if window location has a hash
     if (window.location.hash) {
       for (const marker of $keyMarkers) {
         const title = keys.filter(
@@ -151,4 +158,7 @@
       }
     }
   });
+
+  // Rerender key markers on showVideo preference update
+  showVideo.subscribe(() => placeKeyMarkers());
 </script>

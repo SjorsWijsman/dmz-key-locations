@@ -8,10 +8,14 @@
     location = {},
     description = [],
     loot = [],
+    video = "",
     missionRequirement = false,
     fortress = false;
 
   let copied = false;
+
+  // Prevent unused variable warning - Remove when video gets used in searchresult.
+  $: video;
 
   function openMarkerPopup() {
     for (const marker of $keyMarkers) {
@@ -66,8 +70,7 @@
       {title}
     </h2>
     <SearchResultInfo
-      {...{ title, missionRequirement, fortress, description, loot }}
-      isOpen={$openKeyInfo === title}
+      {...{ title, description, loot, missionRequirement, fortress }}
     />
     <img src="./icons/chevron-down.svg" alt="" />
   </article>
