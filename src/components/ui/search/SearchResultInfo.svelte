@@ -2,7 +2,7 @@
   import { fadeSlide } from "$scripts/fade-slide";
   import { favorites, openKeyInfo } from "$store";
 
-  export let title, missionRequirement, fortress, description, loot;
+  export let title, description, loot, tags;
 </script>
 
 {#if $openKeyInfo === title}
@@ -14,21 +14,21 @@
       </span>
     {/if}
 
-    {#if missionRequirement}
+    {#if tags.includes("missionRequirement")}
       <span class="mission">
         <img src="./icons/circle-exclamation.svg" alt="" />
         Mission Requirement
       </span>
     {/if}
 
-    {#if fortress}
+    {#if tags.includes("fortress")}
       <span class="fortress">
         <img src="./icons/fortress.svg" alt="" />
         Fortress
       </span>
     {/if}
 
-    <div transition:fadeSlide|local={{ duration: 300 }}>
+    <div>
       <h3>Description</h3>
       {#if description?.length > 0}
         {#each description as paragraph}
