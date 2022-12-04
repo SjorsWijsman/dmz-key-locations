@@ -148,10 +148,10 @@
 
     // Opens the marker if window location has a hash
     if (window.location.hash) {
+      const title = keys.filter(
+        (key) => key.id === window.location.hash.replace("#", "")
+      )[0].title;
       for (const marker of $keyMarkers) {
-        const title = keys.filter(
-          (key) => key.id === window.location.hash.replace("#", "")
-        )[0].title;
         if (marker.options.title === title) {
           marker.openPopup();
         }

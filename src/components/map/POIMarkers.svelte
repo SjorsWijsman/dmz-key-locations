@@ -1,7 +1,7 @@
 <script>
   import L from "leaflet";
   import { onMount } from "svelte";
-  import { layers } from "$store";
+  import { map, layers } from "$store";
   import { POIs } from "$data/map-data";
 
   function placePOIMarkers() {
@@ -13,7 +13,12 @@
       direction: "center",
       permanent: true,
       className: "map-label",
+      pane: "locations",
     };
+
+    $map.createPane("locations");
+    $map.getPane("locations").style.zIndex = 650;
+    $map.getPane("locations").style.pointerEvents = "none";
 
     POIs.forEach((poi) => {
       markers.push(
@@ -27,7 +32,7 @@
     poiLayer = L.layerGroup(markers);
 
     // Add layer to map (commented out to default to off)
-    // $map.addLayer(poiLayer)
+    // $map.addLayer(poiLayer);
 
     // Add to layers store
     $layers = { ...$layers, "Show POI Labels": poiLayer };

@@ -20,7 +20,7 @@ export const keys = [
       y: 2874,
     },
     description: [
-      "Multiple entrances on the ground floor on the inside and outside and another on top of the roof.",
+      "The Airport Maintenance is a room on the northeast side of the Al Malik Airport. There are multiple entrances on the ground floor on the inside and outside and another on top of the roof.",
     ],
     video: "zu5eO6MpaOE",
   },
@@ -75,10 +75,11 @@ export const keys = [
       y: 3520,
     },
     description: [
+      "Required for Breaking and Entering, Black Mous tier 4.",
       "Entrance from the road down on the south side of the fortress.",
     ],
     video: "qi_OlMLmp_A",
-    tags: ["fortress"],
+    tags: ["fortress", "missionRequirement"],
   },
   {
     title: "Algae Covered Toolbox",
@@ -1036,6 +1037,7 @@ export const keys = [
     title: "Fort Barrack",
     description: [
       "Unknown location for a key called Fort Barrack Key.",
+      "Might work for Al Bagra Barrack location.",
       "If you find the location for this key, please contact me in Discord and I will add it to the map.",
     ],
   },
