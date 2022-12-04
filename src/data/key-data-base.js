@@ -1036,6 +1036,7 @@ export const keys = [
     title: "Fort Barrack",
     description: [
       "Unknown location for a key called Fort Barrack Key.",
+      "Might work for Al Bagra Barrack location.",
       "If you find the location for this key, please contact me in Discord and I will add it to the map.",
     ],
   },

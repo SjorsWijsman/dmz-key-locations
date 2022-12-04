@@ -174,6 +174,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     background-color: var(--color-black-dark);
     border: none;
     margin-left: 1rem;
