@@ -4,7 +4,7 @@
   export let panelTitle;
   export let closed = false;
 
-  let flash = false;
+  let highlight = false;
 
   function openCloseSearchPanel() {
     if ($activePanel === panelTitle) {
@@ -16,7 +16,9 @@
 
   selectedMarker.subscribe((marker) => {
     if (panelTitle === "search") {
-      marker?.title && $activePanel === null ? (flash = true) : (flash = false);
+      marker?.title && $activePanel === null
+        ? (highlight = true)
+        : (highlight = false);
     }
   });
 </script>
@@ -24,7 +26,7 @@
 <button
   on:click={openCloseSearchPanel}
   class:closed
-  class:flash
+  class:highlight
   class:scrollbar={!iOS()}
 >
   <slot />
@@ -47,7 +49,7 @@
     pointer-events: all;
   }
 
-  button.closed.flash {
+  button.closed.highlight {
     background-color: var(--color-main);
   }
 

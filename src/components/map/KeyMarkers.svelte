@@ -34,7 +34,7 @@
         let isFavorite = $favorites.includes(key.title);
         iconSettings.iconUrl = "icons/location-dot.svg";
 
-        if (key.missionRequirement)
+        if (key.tags?.includes("missionRequirement"))
           iconSettings.iconUrl = "icons/location-dot-mission.svg";
 
         if (isFavorite)
@@ -100,7 +100,7 @@
   // Replaces map marker with favorite marker / back to original marker
   function favoriteMarker(favoriteList) {
     const missionRequiredMarkers = keys
-      .filter((key) => key.missionRequirement)
+      .filter((key) => key.tags?.includes("missionRequirement"))
       .map((key) => key.title);
     for (const marker of $keyMarkers) {
       if (favoriteList.includes(marker.options.title)) {

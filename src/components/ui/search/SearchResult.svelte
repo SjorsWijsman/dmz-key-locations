@@ -9,8 +9,7 @@
     description = [],
     loot = [],
     video = "",
-    missionRequirement = false,
-    fortress = false;
+    tags = [];
 
   let copied = false;
 
@@ -69,9 +68,7 @@
     <h2>
       {title}
     </h2>
-    <SearchResultInfo
-      {...{ title, description, loot, missionRequirement, fortress }}
-    />
+    <SearchResultInfo {...{ title, description, loot, tags }} />
     <img src="./icons/chevron-down.svg" alt="" />
   </article>
   <div class="button-box">
@@ -136,7 +133,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0.4rem 1rem;
-    margin: 0 0;
+    margin: 0;
     transition: all 0.1s ease-out;
     cursor: pointer;
     min-height: 4.3rem;
@@ -149,7 +146,6 @@
   }
 
   li.isOpen {
-    margin: 0;
     padding-bottom: 3rem;
     box-shadow: inset 0 -1rem 1.5rem -1rem rgba(0, 0, 10, 0.6);
   }
@@ -173,11 +169,14 @@
     font-size: 1.1rem;
   }
 
+  .button-box {
+    margin: auto 0;
+  }
+
   button {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     background-color: var(--color-black-dark);
     border: none;
     margin-left: 1rem;
@@ -231,12 +230,6 @@
 
   li.isOpen > article > img {
     transform: rotate(-180deg);
-  }
-
-  .button-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .favorite-button,

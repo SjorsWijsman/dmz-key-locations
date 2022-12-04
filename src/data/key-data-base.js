@@ -78,7 +78,7 @@ export const keys = [
       "Entrance from the road down on the south side of the fortress.",
     ],
     video: "qi_OlMLmp_A",
-    fortress: true,
+    tags: ["fortress"],
   },
   {
     title: "Algae Covered Toolbox",
@@ -101,7 +101,7 @@ export const keys = [
       "Multiple entrances can be found around the Shopping Centre, including in the back just underneath the pinned location. Be warned, this location usually contains a lot of enemies.",
     ],
     video: "YmLZEqov-iE",
-    fortress: true,
+    tags: ["fortress"],
   },
   {
     title: "Al Sharim Pass Elders Room",
@@ -135,7 +135,7 @@ export const keys = [
       "Multiple entrances around the large building to the west of Al-Mazrah City. As this location is a fortress it contains a lot of overzealous art fanatics.",
     ],
     video: "U0QfE_-KQJA",
-    fortress: true,
+    tags: ["fortress"],
   },
   {
     title: "B.C. Toolbox",
@@ -245,6 +245,7 @@ export const keys = [
     description: [
       "The building is located at the Zaya Observatory, it can spawn as a stronghold so a keycard might be needed. The Meeting Room is on the first floor right in front of the top of the staircase.",
     ],
+    video: "FlR0jpT5uS8",
   },
   {
     title: "Chemical Storage Warehouse",
@@ -300,7 +301,7 @@ export const keys = [
       "The Control Tower fortress is marked by a large icon on the map. There are many entrances to get into the building, and plenty of angry airplane enthousiasts to fight around the area.",
     ],
     video: "s71OBNU5YL4",
-    fortress: true,
+    tags: ["fortress"],
   },
   {
     title: "Crane Control Room",
@@ -313,7 +314,7 @@ export const keys = [
       "The Crane Control Room is easy to spot as it's directly underneath a large crane at the Al-Safwa Quarry.",
     ],
     video: "0cHsa4jf3GQ",
-    missionRequirement: true,
+    tags: ["missionRequirement"],
   },
   {
     title: "Deckhand's Toolbox",
@@ -336,7 +337,7 @@ export const keys = [
       "The Downtown Post Office is a fortress in Al-Mazrah City, as such it is marked by a large icon on the map. The building has lots of easy to find entrances. Enter to find out about the meaning of going postal.",
     ],
     video: "VTJJAmnRdnE",
-    fortress: true,
+    tags: ["fortress"],
   },
   {
     title: "Downtown Post Office Secure Room",
@@ -359,6 +360,7 @@ export const keys = [
       "<s>Noclip out of bounds to access the enfer backrooms.</s>",
       "The Enfer Back Room is located inside the Sa'id City mall. Entrance into the mall through the roof is possible to bypass the extra key requirement.",
     ],
+    video: "f5qbD-snl38",
   },
   {
     title: "Far South Eastern Storage Closet",
@@ -447,7 +449,7 @@ export const keys = [
       "The Kushaak Construction Warehouse is a fortress right in the middle of Al-Safwa Quarry. Don't forget your hardhat.",
     ],
     video: "cggyMST0Hb8",
-    fortress: true,
+    tags: ["fortress"],
   },
   {
     title: "Longshoreman's Duffel Bag",
@@ -470,7 +472,7 @@ export const keys = [
       "Near the Mawizeh Mashlands, following the large bridge going south are a few small buildings. The cell shop is located right next to the road heading northwest.",
     ],
     video: "QkKEd-BgRFU",
-    fortress: true,
+    tags: ["fortress"],
   },
   {
     title: "Mawizeh Power Control Substation",
@@ -504,7 +506,7 @@ export const keys = [
       "The Mawizeh Resort Main Building is marked on the map with a large icon, because it's a fortress. The complex consists of both of the large buildings on the Mawizeh Marshlands island.",
     ],
     video: "JMAehvF_uIM",
-    fortress: true,
+    tags: ["fortress"],
   },
   {
     title: "Mawizah Slum Discarded Cache",
@@ -571,7 +573,7 @@ export const keys = [
       "The Police Academy is marked by a large icon in the east of the map. As this is a fortress it contains a lot of enemies. Note that the Academy has a lot of doors on both the inside and outside, recommended to prioritize opening the inside doors.",
     ],
     video: "ce19mYClMao",
-    fortress: true,
+    tags: ["fortress"],
   },
   {
     title: "Police Armory [F2]",
@@ -580,7 +582,8 @@ export const keys = [
       y: 1233,
     },
     description: [
-      "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains Police Lockers which require a Police Locker Master Key to open, this key (usually?) spawns inside the room.",
+      "One of three locations for the Police Armory Key.",
+      "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains Police Lockers which require a Police Locker Master Key to open, this key has a chance to spawn inside the room.",
     ],
     video: "32_9NKyg44g",
   },
@@ -591,6 +594,7 @@ export const keys = [
       y: 1227,
     },
     description: [
+      "One of three locations for the Police Locker Master Key.",
       "Inside of the Police Armory in the same building. Key required for the room to get to the lockers.",
     ],
     video: "s0nVFQfdRUw",
@@ -602,7 +606,8 @@ export const keys = [
       y: 2086,
     },
     description: [
-      "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains Police Lockers which require a Police Locker Master Key to open, this key (usually?) spawns inside the room.",
+      "One of three locations for the Police Armory Key.",
+      "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains Police Lockers which require a Police Locker Master Key to open, this key has a chance to spawn inside the room.",
     ],
     video: "tNtirUj6nIQ",
   },
@@ -613,6 +618,7 @@ export const keys = [
       y: 2099,
     },
     description: [
+      "One of three locations for the Police Locker Master Key.",
       "Inside of the Police Armory in the same building. Key required for the room to get to the lockers.",
     ],
     video: "Sl1bFtO9yFI",
@@ -624,7 +630,8 @@ export const keys = [
       y: 2693,
     },
     description: [
-      "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains Police Lockers which require a Police Locker Master Key to open, this key (usually?) spawns inside the room.",
+      "One of three locations for the Police Armory Key.",
+      "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains Police Lockers which require a Police Locker Master Key to open, this key has a chance to spawn inside the room.",
     ],
     video: "bx3v2ZeghSc",
   },
@@ -635,8 +642,10 @@ export const keys = [
       y: 2693,
     },
     description: [
+      "One of three locations for the Police Locker Master Key.",
       "Inside of the Police Armory in the same building. Key required for the room to get to the lockers.",
     ],
+    video: "72bSwO7tkG0",
   },
   {
     title: "Police Academy Private Locker Room",
@@ -645,19 +654,9 @@ export const keys = [
       y: 1707,
     },
     description: [
-      "The Police Academy Private Locker Room is located upstairs inside the building to the south of the Police Academy parking lot. This room itself contains Police Lockers which require a Police Locker Master Key to open, this key (usually?) spawns inside the room.",
+      "The Police Academy Private Locker Room is located downstairs inside the building to the south of the Police Academy parking lot.",
     ],
     video: "CA5ibOFOCCg",
-  },
-  {
-    title: "Police Locker [G4]",
-    location: {
-      x: 2892,
-      y: 1710,
-    },
-    description: [
-      "Inside of the Police Academy Private Locker Room. Key required for the room to get to the lockers.",
-    ],
   },
   {
     title: "Police Academy Server Admin",
@@ -767,6 +766,7 @@ export const keys = [
     description: [
       "The Security Room is inside of the Sa'id Mall in the east of the map. The room itself is located upstairs on the right side of the mall at the end of the hallway.",
     ],
+    video: "myYuLlmhSm8",
   },
   {
     title: "Sattiq Guest Quarters",
@@ -790,7 +790,7 @@ export const keys = [
       "The Sattiq Poppy Farm House is a small building in the north of the circular road at the Sattiq mountains. Note that you need to enter the room twice to complete the mission.",
     ],
     video: "uaw5eT_RAC4",
-    missionRequirement: true,
+    tags: ["missionRequirement"],
   },
   {
     title: "Sawah Crypto Mining Farm Key",
@@ -814,7 +814,7 @@ export const keys = [
       "The door is located on the top floor of the hotel, right next to Sawah Hotel Room 303. Entry without key is possible through the skylights when the hotel is not a fortress.",
     ],
     video: "g6UGMlEvhMM",
-    missionRequirement: true,
+    tags: ["missionRequirement"],
   },
   {
     title: "Sawah Hotel Room 303",
@@ -957,7 +957,7 @@ export const keys = [
       "The U.S. Embassy is a large building marked by an icon on the map inside of Al-Mazrah City. There are multiple entrances around the building. Expect a lot of enemies as this is a fortress.",
     ],
     video: "4fl5saUVHKA",
-    fortress: true,
+    tags: ["fortress"],
   },
   {
     title: "Weapons Repair Kit",
