@@ -583,7 +583,7 @@ export const keys = [
     },
     description: [
       "One of three locations for the Police Armory Key.",
-      "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains Police Lockers which require a Police Locker Master Key to open, this key has a chance to spawn inside the room.",
+      "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains 8 Police Lockers which require a Police Locker Master Key to open, this key has a chance to spawn inside the room.",
     ],
     video: "32_9NKyg44g",
   },
@@ -607,7 +607,7 @@ export const keys = [
     },
     description: [
       "One of three locations for the Police Armory Key.",
-      "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains Police Lockers which require a Police Locker Master Key to open, this key has a chance to spawn inside the room.",
+      "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains 8 Police Lockers which require a Police Locker Master Key to open, this key has a chance to spawn inside the room.",
     ],
     video: "tNtirUj6nIQ",
   },
@@ -631,7 +631,7 @@ export const keys = [
     },
     description: [
       "One of three locations for the Police Armory Key.",
-      "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains Police Lockers which require a Police Locker Master Key to open, this key has a chance to spawn inside the room.",
+      "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains 8 Police Lockers which require a Police Locker Master Key to open, this key has a chance to spawn inside the room.",
     ],
     video: "bx3v2ZeghSc",
   },

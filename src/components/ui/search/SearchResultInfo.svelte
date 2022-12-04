@@ -28,7 +28,7 @@
       </span>
     {/if}
 
-    <div transition:fadeSlide|local={{ duration: 300 }}>
+    <div>
       <h3>Description</h3>
       {#if description?.length > 0}
         {#each description as paragraph}

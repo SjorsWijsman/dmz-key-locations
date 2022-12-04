@@ -132,6 +132,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0.4rem 1rem;
     margin: 0;
     transition: all 0.1s ease-out;
@@ -167,10 +168,6 @@
   li.isOpen h2 {
     font-weight: 550;
     font-size: 1.1rem;
-  }
-
-  .button-box {
-    margin: auto 0;
   }
 
   button {
