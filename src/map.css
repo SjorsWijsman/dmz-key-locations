@@ -258,6 +258,13 @@ a.leaflet-control-zoom-out span {
   margin-right: 0.5rem;
 }
 
+.mouse-position > input:last-of-type {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0rem;
+}
+
 .mouse-position > span:last-of-type {
   margin-right: 0;
 }
