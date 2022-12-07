@@ -21,7 +21,7 @@
           container.innerHTML = `
           <span class="mouse-position">
             <span>
-              ${sector.join("")}
+              ${sector?.join("")}
             </span>
             x: <span>${x}m</span>
             y: <span>${y}m</span>
