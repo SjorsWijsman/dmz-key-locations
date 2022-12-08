@@ -79,7 +79,7 @@ export const keys = [
       "Entrance from the road down on the south side of the fortress.",
     ],
     video: "qi_OlMLmp_A",
-    tags: ["fortress", "missionRequirement"],
+    tags: ["fortress", "mission"],
   },
   {
     title: "Algae Covered Toolbox",
@@ -315,7 +315,7 @@ export const keys = [
       "The Crane Control Room is easy to spot as it's directly underneath a large crane at the Al-Safwa Quarry.",
     ],
     video: "0cHsa4jf3GQ",
-    tags: ["missionRequirement"],
+    tags: ["mission"],
   },
   {
     title: "Deckhand's Toolbox",
@@ -791,7 +791,7 @@ export const keys = [
       "The Sattiq Poppy Farm House is a small building in the north of the circular road at the Sattiq mountains. Note that you need to enter the room twice to complete the mission.",
     ],
     video: "uaw5eT_RAC4",
-    tags: ["missionRequirement"],
+    tags: ["mission"],
   },
   {
     title: "Sawah Crypto Mining Farm Key",
@@ -815,7 +815,7 @@ export const keys = [
       "The door is located on the top floor of the hotel, right next to Sawah Hotel Room 303. Entry without key is possible through the skylights when the hotel is not a fortress.",
     ],
     video: "g6UGMlEvhMM",
-    tags: ["missionRequirement"],
+    tags: ["mission"],
   },
   {
     title: "Sawah Hotel Room 303",
@@ -1052,6 +1052,14 @@ export const keys = [
     title: "Foreman's Office",
     description: [
       "Unknown location for a key called Foreman's Office Key.",
+      "If you find the location for this key, please contact me in Discord and I will add it to the map.",
+    ],
+  },
+  {
+    title: "Stronghold Interior",
+    description: [
+      "Unknown location for a key called Stronghold Interior Key.",
+      "Sometimes disappears from the inventory on extraction.",
       "If you find the location for this key, please contact me in Discord and I will add it to the map.",
     ],
   },

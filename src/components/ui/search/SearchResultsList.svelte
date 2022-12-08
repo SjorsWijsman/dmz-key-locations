@@ -1,15 +1,29 @@
 <script>
   import SearchResult from "./SearchResult.svelte";
   import { keys } from "$data/key-data";
-  import { searchTerm, selectedMarker } from "$store";
+  import { searchTerm, selectedMarker, favorites, filter } from "$store";
 
   let filteredKeys = keys;
+  let searchString = "";
 
   // Filter keys with search result
-  function filterKeys(string) {
+  function filterKeys() {
     return keys
       .filter((key) => {
-        if (sanitize(key.title).includes(sanitize(string))) return key;
+        // Filter by search
+        if (sanitize(key.title).includes(sanitize(searchString))) return key;
+      })
+      .filter((key) => {
+        // Filter by selected filter
+        if ($filter === "all") {
+          return key;
+        } else if ($filter === "favorite" && $favorites.includes(key.title)) {
+          return key;
+        } else if ($filter === "mission" && key.tags?.includes("mission")) {
+          return key;
+        } else if ($filter === "fortress" && key.tags?.includes("fortress")) {
+          return key;
+        }
       })
       .sort((a, b) => {
         const titleA = a.title.toLowerCase();
@@ -19,8 +33,13 @@
   }
 
   searchTerm.subscribe((value) => {
+    searchString = value;
     // Empty to clear result list - prevents some rendering issues
-    filteredKeys = [...filterKeys(value)];
+    filteredKeys = [...filterKeys()];
+  });
+
+  filter.subscribe(() => {
+    filteredKeys = [...filterKeys()];
   });
 
   function sanitize(string) {
@@ -40,7 +59,7 @@
     {#each filteredKeys as key (key.title)}
       <SearchResult {...key} />
     {:else}
-      <li>
+      <li class="empty">
         No results found. Did you find a key that is not on the map? Please let
         me know through <a
           href="https://discord.gg/vqCwgh8buH"
@@ -63,5 +82,9 @@
     padding: 1rem;
     opacity: 0.4;
     text-align: center;
+  }
+
+  li.empty {
+    padding-top: 2rem;
   }
 </style>

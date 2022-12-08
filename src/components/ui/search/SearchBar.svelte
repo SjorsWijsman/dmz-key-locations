@@ -1,19 +1,63 @@
 <script>
-  import { searchTerm, selectedMarker } from "$store";
+  import { fadeSlide } from "$scripts/fade-slide";
+  import { searchTerm, selectedMarker, filter, openKeyInfo } from "$store";
+  import SearchFilter from "./SearchFilter.svelte";
+
+  let openFilter = false;
+
+  openKeyInfo.subscribe(() => (openFilter = false));
 </script>
 
 <nav>
+  <button
+    class="filter"
+    class:openFilter
+    class:active={$filter !== "all"}
+    on:click={() => (openFilter = !openFilter)}
+  >
+    {#if $filter === "all"}
+      <img
+        src="./icons/filter.svg"
+        alt="Filter Keys"
+        transition:fadeSlide|local={{ duration: 200 }}
+      />
+    {:else if $filter === "favorite"}
+      <img
+        src="./icons/star-favorite.svg"
+        alt="Filtered Keys By Favorite"
+        transition:fadeSlide|local={{ duration: 200 }}
+      />
+    {:else if $filter === "mission"}
+      <img
+        src="./icons/circle-exclamation.svg"
+        alt="Filtered Keys By Mission"
+        transition:fadeSlide|local={{ duration: 200 }}
+      />
+    {:else if $filter === "fortress"}
+      <img
+        src="./icons/fortress.svg"
+        alt="Filtered Keys By Fortress"
+        transition:fadeSlide|local={{ duration: 200 }}
+      />
+    {/if}
+  </button>
   <input
     type="text"
     required
     bind:value={$searchTerm}
-    on:click={() => ($selectedMarker = { title: "" })}
+    on:click={() => {
+      $selectedMarker = { title: "" };
+      openFilter = false;
+    }}
     placeholder={$selectedMarker?.title || "Search for a key"}
   />
   {#if $searchTerm}
     <button class="close" on:click={() => ($searchTerm = "")}>
-      <img src="./icons/xmark.svg" alt="" />
+      <img src="./icons/xmark.svg" alt="Clear Search" />
     </button>
+  {/if}
+  {#if openFilter}
+    <SearchFilter />
   {/if}
 </nav>
 
@@ -33,9 +77,10 @@
   input {
     width: 100%;
     padding: 0.6rem;
+    padding-right: 2.5rem;
     background-color: var(--color-black-dark);
     border: none;
-    border-radius: 0.3rem;
+    border-radius: 0 0.3rem 0.3rem 0;
     max-width: 25rem;
   }
 
@@ -43,6 +88,48 @@
     nav {
       width: calc(100% - 4rem);
     }
+  }
+
+  button {
+    transition: all 0.1s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  button.filter {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--color-black-dark);
+    border: none;
+    border-radius: 0.3rem 0 0 0.3rem;
+    margin-right: 0.1rem;
+    cursor: pointer;
+  }
+
+  button.filter.active img {
+    opacity: 1;
+  }
+
+  button.filter img {
+    opacity: 0.6;
+    max-height: 1.6rem;
+    max-width: 2rem;
+    padding: 0.1rem;
+    user-select: none;
+  }
+
+  button.filter:hover img {
+    opacity: 0.9;
+  }
+
+  button.filter.openFilter {
+    background-color: var(--color-black-light);
+  }
+
+  button.filter.openFilter img {
+    opacity: 1;
   }
 
   button.close {
@@ -61,11 +148,12 @@
   }
 
   button.close:hover {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   img {
     width: 100%;
     height: 100%;
+    user-select: none;
   }
 </style>

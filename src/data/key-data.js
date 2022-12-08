@@ -85,7 +85,7 @@ export const keys = [
         "video": "qi_OlMLmp_A",
         "tags": [
             "fortress",
-            "missionRequirement"
+            "mission"
         ]
     },
     {
@@ -350,7 +350,7 @@ export const keys = [
         ],
         "video": "0cHsa4jf3GQ",
         "tags": [
-            "missionRequirement"
+            "mission"
         ]
     },
     {
@@ -880,7 +880,7 @@ export const keys = [
         ],
         "video": "uaw5eT_RAC4",
         "tags": [
-            "missionRequirement"
+            "mission"
         ]
     },
     {
@@ -908,7 +908,7 @@ export const keys = [
         ],
         "video": "g6UGMlEvhMM",
         "tags": [
-            "missionRequirement"
+            "mission"
         ]
     },
     {
@@ -1171,6 +1171,15 @@ export const keys = [
         "title": "Foreman's Office",
         "description": [
             "Unknown location for a key called Foreman's Office Key.",
+            "If you find the location for this key, please contact me in Discord and I will add it to the map."
+        ]
+    },
+    {
+        "id": "stronghold-interior",
+        "title": "Stronghold Interior",
+        "description": [
+            "Unknown location for a key called Stronghold Interior Key.",
+            "Sometimes disappears from the inventory on extraction.",
             "If you find the location for this key, please contact me in Discord and I will add it to the map."
         ]
     }

@@ -27,6 +27,7 @@ export const activePanel = persistStore("dmzkeys-user-activePanel", "search");
 export const searchTerm = persistStore("dmzkeys-user-searchTerm", "");
 export const favorites = persistStore("dmzkeys-user-favorites", []);
 export const showVideo = persistStore("dmzkeys-user-showVideo", true);
+export const filter = persistStore("dmzkeys-user-filter", "all");
 
 function getHashKey() {
   return keys.filter(

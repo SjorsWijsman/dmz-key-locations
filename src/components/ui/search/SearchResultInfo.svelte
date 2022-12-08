@@ -14,7 +14,7 @@
       </span>
     {/if}
 
-    {#if tags.includes("missionRequirement")}
+    {#if tags.includes("mission")}
       <span class="mission">
         <img src="./icons/circle-exclamation.svg" alt="" />
         Mission Requirement
@@ -55,6 +55,11 @@
 {/if}
 
 <style>
+  h3 {
+    padding-bottom: 0.2rem;
+    padding-top: 1rem;
+  }
+
   p {
     margin: 0;
     padding-bottom: 1rem;
@@ -95,14 +100,5 @@
 
   p:last-child {
     padding-bottom: 0;
-  }
-
-  h3 {
-    font-size: 1rem;
-    opacity: 0.5;
-    margin: 0;
-    padding-bottom: 0.1rem;
-    padding-top: 1rem;
-    font-weight: 350;
   }
 </style>

@@ -10,6 +10,7 @@
     favorites,
     openKeyInfo,
     showVideo,
+    filter,
   } from "$store";
   import { keys } from "$data/key-data";
   import { isTouchDevice } from "$scripts/platform-check";
@@ -30,29 +31,30 @@
 
     // Create new markers
     keys.forEach((key) => {
-      if (key.location) {
-        let isFavorite = $favorites.includes(key.title);
-        iconSettings.iconUrl = "icons/location-dot.svg";
+      if (!key.location || !filterKey(key)) return;
 
-        if (key.tags?.includes("missionRequirement"))
-          iconSettings.iconUrl = "icons/location-dot-mission.svg";
+      console.log(key);
 
-        if (isFavorite)
-          iconSettings.iconUrl = "icons/location-dot-favorite.svg";
+      let isFavorite = $favorites.includes(key.title);
+      iconSettings.iconUrl = "icons/location-dot.svg";
 
-        const icon = L.icon(iconSettings);
+      if (key.tags?.includes("mission"))
+        iconSettings.iconUrl = "icons/location-dot-mission.svg";
 
-        let marker = L.marker([4150 - key.location.y, key.location.x], {
-          title: key.title,
-          icon,
-        })
-          .bindPopup(setPopupContent(key))
-          .on("click", () => setSelectedMarker(key, marker))
-          .on("popupopen", () => openPopup(key, marker))
-          .on("popupclose", () => closePopup(key, marker));
+      if (isFavorite) iconSettings.iconUrl = "icons/location-dot-favorite.svg";
 
-        $keyMarkers = [...$keyMarkers, marker];
-      }
+      const icon = L.icon(iconSettings);
+
+      let marker = L.marker([4150 - key.location.y, key.location.x], {
+        title: key.title,
+        icon,
+      })
+        .bindPopup(setPopupContent(key))
+        .on("click", () => setSelectedMarker(key, marker))
+        .on("popupopen", () => openPopup(key, marker))
+        .on("popupclose", () => closePopup(key, marker));
+
+      $keyMarkers = [...$keyMarkers, marker];
     });
 
     // Add markers to layerGroup
@@ -63,6 +65,19 @@
 
     // Add to layers store
     $layers = { ...$layers, "Show Key Locations": keyLayer };
+  }
+
+  function filterKey(key) {
+    if ($filter === "all") {
+      return true;
+    } else if ($filter === "favorite" && $favorites.includes(key.title)) {
+      return true;
+    } else if ($filter === "mission" && key.tags?.includes("mission")) {
+      return true;
+    } else if ($filter === "fortress" && key.tags?.includes("fortress")) {
+      return true;
+    }
+    return false;
   }
 
   function openPopup(key, marker) {
@@ -100,7 +115,7 @@
   // Replaces map marker with favorite marker / back to original marker
   function favoriteMarker(favoriteList) {
     const missionRequiredMarkers = keys
-      .filter((key) => key.tags?.includes("missionRequirement"))
+      .filter((key) => key.tags?.includes("mission"))
       .map((key) => key.title);
     for (const marker of $keyMarkers) {
       if (favoriteList.includes(marker.options.title)) {
@@ -161,4 +176,6 @@
 
   // Rerender key markers on showVideo preference update
   showVideo.subscribe(() => placeKeyMarkers());
+
+  filter.subscribe(() => placeKeyMarkers());
 </script>
