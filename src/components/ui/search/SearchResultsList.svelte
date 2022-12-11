@@ -59,14 +59,21 @@
     {#each filteredKeys as key (key.title)}
       <SearchResult {...key} />
     {:else}
-      <li class="empty">
-        No results found. Did you find a key that is not on the map? Please let
-        me know through <a
-          href="https://discord.gg/vqCwgh8buH"
-          target="_blank"
-          rel="noreferrer">Discord</a
-        >!
-      </li>
+      {#if !$favorites.length && !$searchTerm}
+        <li class="empty">
+          You have no favorites. Add a favorite by clicking the star button on
+          the right side of the key info box!
+        </li>
+      {:else}
+        <li class="empty">
+          No results found. Did you find a key that is not on the map? Please
+          let me know through <a
+            href="https://discord.gg/vqCwgh8buH"
+            target="_blank"
+            rel="noreferrer">Discord</a
+          >!
+        </li>
+      {/if}
     {/each}
   {/if}
 </ul>
