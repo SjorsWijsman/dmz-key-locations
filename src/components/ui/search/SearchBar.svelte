@@ -41,20 +41,22 @@
       />
     {/if}
   </button>
-  <input
-    type="text"
-    required
-    bind:value={$searchTerm}
-    on:click={() => {
-      $selectedMarker = { title: "" };
-    }}
-    placeholder={$selectedMarker?.title || "Search for a key"}
-  />
-  {#if $searchTerm}
-    <button class="clear" on:click={() => ($searchTerm = "")}>
-      <img src="./icons/xmark.svg" alt="Clear Search" />
-    </button>
-  {/if}
+  <div class="search-box">
+    <input
+      type="text"
+      required
+      bind:value={$searchTerm}
+      on:click={() => {
+        $selectedMarker = { title: "" };
+      }}
+      placeholder={$selectedMarker?.title || "Search for a key"}
+    />
+    {#if $searchTerm}
+      <button class="clear" on:click={() => ($searchTerm = "")}>
+        <img src="./icons/xmark.svg" alt="Clear Search" />
+      </button>
+    {/if}
+  </div>
   {#if openFilter}
     <SearchFilter bind:openFilter />
   {/if}
@@ -72,18 +74,6 @@
     width: 100%;
     padding: 1rem;
     box-shadow: 0 0 1rem var(--color-black-dark);
-  }
-
-  input {
-    width: 100%;
-    padding: 0.6rem;
-    padding-right: 2.5rem;
-    background-color: var(--color-black-dark);
-    border: none;
-    border-radius: 0 0.3rem 0.3rem 0;
-    max-width: 25rem;
-    min-height: 2.5rem;
-    height: 2.5rem;
   }
 
   @media only screen and (max-width: 30rem) {
@@ -137,17 +127,34 @@
     opacity: 1;
   }
 
+  .search-box {
+    position: relative;
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.6rem;
+    padding-right: 2.5rem;
+    background-color: var(--color-black-dark);
+    border: none;
+    border-radius: 0 0.3rem 0.3rem 0;
+    max-width: 25rem;
+    min-height: 2.5rem;
+    height: 2.5rem;
+  }
+
   button.clear {
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translate(calc(-50% + -0.7rem), -50%);
+    transform: translate(0, -50%);
     background-color: transparent;
     opacity: 0.6;
-    padding: 0;
     height: unset;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
     border: 0;
     cursor: pointer;
   }
