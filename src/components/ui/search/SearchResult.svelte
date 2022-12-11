@@ -137,7 +137,7 @@
     margin: 0;
     transition: all 0.1s ease-out;
     cursor: pointer;
-    min-height: 4.3rem;
+    min-height: 4.2rem;
     scroll-margin-top: 4.5rem;
   }
 
@@ -161,6 +161,7 @@
     font-weight: normal;
     margin: 0;
     margin-top: 1rem;
+    margin-right: 2.5ch;
     transition: all 0.05s ease-out;
   }
 
@@ -168,6 +169,7 @@
   li.isOpen h2 {
     font-weight: 550;
     font-size: 1.1rem;
+    margin-right: 0;
   }
 
   button {
@@ -215,8 +217,8 @@
     position: absolute;
     bottom: 0rem;
     left: 50%;
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1rem;
+    height: 1rem;
     opacity: 0;
     transition: all 0.2s ease-out;
   }

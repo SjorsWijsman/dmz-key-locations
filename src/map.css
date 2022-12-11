@@ -56,7 +56,7 @@ a.leaflet-control-zoom-out[aria-disabled="true"] {
 a.leaflet-control-zoom-in span,
 a.leaflet-control-zoom-out span {
   color: var(--color-white) !important;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 /* POI labels */

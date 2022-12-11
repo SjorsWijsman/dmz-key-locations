@@ -33,8 +33,6 @@
     keys.forEach((key) => {
       if (!key.location || !filterKey(key)) return;
 
-      console.log(key);
-
       let isFavorite = $favorites.includes(key.title);
       iconSettings.iconUrl = "icons/location-dot.svg";
 

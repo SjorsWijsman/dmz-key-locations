@@ -47,17 +47,16 @@
     bind:value={$searchTerm}
     on:click={() => {
       $selectedMarker = { title: "" };
-      openFilter = false;
     }}
     placeholder={$selectedMarker?.title || "Search for a key"}
   />
   {#if $searchTerm}
-    <button class="close" on:click={() => ($searchTerm = "")}>
+    <button class="clear" on:click={() => ($searchTerm = "")}>
       <img src="./icons/xmark.svg" alt="Clear Search" />
     </button>
   {/if}
   {#if openFilter}
-    <SearchFilter />
+    <SearchFilter bind:openFilter />
   {/if}
 </nav>
 
@@ -65,6 +64,7 @@
   nav {
     display: flex;
     flex-direction: row;
+    align-items: center;
     position: sticky;
     z-index: 1;
     top: 0;
@@ -82,11 +82,13 @@
     border: none;
     border-radius: 0 0.3rem 0.3rem 0;
     max-width: 25rem;
+    min-height: 2.5rem;
+    height: 2.5rem;
   }
 
   @media only screen and (max-width: 30rem) {
     nav {
-      width: calc(100% - 4rem);
+      padding-right: 5rem;
     }
   }
 
@@ -96,11 +98,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0;
   }
 
   button.filter {
+    min-width: 2.5rem;
     width: 2.5rem;
+    min-height: 2.5rem;
     height: 2.5rem;
+    padding: 0.6rem;
     background-color: var(--color-black-dark);
     border: none;
     border-radius: 0.3rem 0 0 0.3rem;
@@ -114,9 +120,6 @@
 
   button.filter img {
     opacity: 0.6;
-    max-height: 1.6rem;
-    max-width: 2rem;
-    padding: 0.1rem;
     user-select: none;
   }
 
@@ -132,7 +135,7 @@
     opacity: 1;
   }
 
-  button.close {
+  button.clear {
     position: absolute;
     right: 0;
     top: 50%;
@@ -147,7 +150,7 @@
     cursor: pointer;
   }
 
-  button.close:hover {
+  button.clear:hover {
     opacity: 0.9;
   }
 
