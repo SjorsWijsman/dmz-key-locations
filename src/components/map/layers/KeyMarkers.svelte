@@ -11,6 +11,7 @@
     openKeyInfo,
     showVideo,
     filter,
+    activeLayers,
   } from "$store";
   import { keys } from "$data/key-data";
   import { isTouchDevice } from "$scripts/platform-check";
@@ -170,10 +171,19 @@
         }
       }
     }
+
+    // Prevents first time subscription trigger
+    let initialised = false;
+
+    // Rerender key markers on showVideo preference update
+    showVideo.subscribe(() => {
+      if (initialised) placeKeyMarkers();
+    });
+
+    filter.subscribe(() => {
+      if (initialised) placeKeyMarkers();
+    });
+
+    initialised = true;
   });
-
-  // Rerender key markers on showVideo preference update
-  showVideo.subscribe(() => placeKeyMarkers());
-
-  filter.subscribe(() => placeKeyMarkers());
 </script>

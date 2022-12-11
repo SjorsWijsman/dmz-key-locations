@@ -1,7 +1,7 @@
 <script>
   import L from "leaflet";
   import { onMount } from "svelte";
-  import { layers } from "$store";
+  import { layers, map, activeLayers } from "$store";
   import { deaddrops } from "$data/map-data";
 
   let deaddropLayer = [];
@@ -38,7 +38,8 @@
     deaddropLayer = L.layerGroup(deaddropMarkers);
 
     // Add layer to map
-    // $map.addLayer(deaddropLayer);
+    if ($activeLayers.includes("Show Dead Drop Locations"))
+      $map.addLayer(deaddropLayer);
 
     // Add to layers store
     $layers = { ...$layers, "Show Dead Drop Locations": deaddropLayer };
