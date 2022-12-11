@@ -58,19 +58,24 @@
     width: 3.75rem;
   }
 
-  button.closed:hover,
-  button.closed:focus {
-    width: 4.5rem;
+  @media (hover: hover) {
+    button.closed:hover,
+    button.closed:focus {
+      width: 4.5rem;
+    }
   }
 
-  button:hover,
-  button:focus {
-    background-color: var(--color-black-light);
+  @media (hover: hover) {
+    button:hover,
+    button:focus {
+      background-color: var(--color-black-light);
+    }
   }
 
   button :global(img) {
     max-width: 100%;
     max-height: 100%;
+    width: 2rem;
   }
 
   @media only screen and (max-width: 30rem) {
@@ -85,8 +90,10 @@
       right: 2rem;
     }
 
-    button:hover:not(.closed) {
-      background-color: var(--color-black-dark);
+    @media (hover: hover) {
+      button:hover:not(.closed) {
+        background-color: var(--color-black-dark);
+      }
     }
   }
 </style>

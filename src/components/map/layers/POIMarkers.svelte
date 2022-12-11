@@ -1,7 +1,7 @@
 <script>
   import L from "leaflet";
   import { onMount } from "svelte";
-  import { map, layers } from "$store";
+  import { map, layers, activeLayers } from "$store";
   import { POIs } from "$data/map-data";
 
   function placePOIMarkers() {
@@ -31,8 +31,8 @@
     // Add markers to layerGroup
     poiLayer = L.layerGroup(markers);
 
-    // Add layer to map (commented out to default to off)
-    // $map.addLayer(poiLayer);
+    // Add layer to map
+    if ($activeLayers.includes("Show POI Labels")) $map.addLayer(poiLayer);
 
     // Add to layers store
     $layers = { ...$layers, "Show POI Labels": poiLayer };

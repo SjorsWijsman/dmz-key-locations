@@ -1,7 +1,7 @@
 <script>
   import L from "leaflet";
   import { onMount } from "svelte";
-  import { map, layers, selectedSector } from "$store";
+  import { map, layers, activeLayers, selectedSector } from "$store";
 
   const tiles = 10;
   const tileSize = 415;
@@ -13,11 +13,14 @@
     // Create grid lines
     const lines = drawLines();
     const labels = drawLabels();
+
     // Add lines to layerGroup
     const gridLayer = L.layerGroup([...labels, ...lines]);
-    // Add layer to map
-    $map.addLayer(gridLayer);
 
+    // Add layer to map
+    if ($activeLayers.includes("Show Sector Grid")) $map.addLayer(gridLayer);
+
+    // Add to layers store
     $layers = { ...$layers, "Show Sector Grid": gridLayer };
   }
 

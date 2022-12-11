@@ -137,13 +137,18 @@
     margin: 0;
     transition: all 0.1s ease-out;
     cursor: pointer;
-    min-height: 4.3rem;
+    min-height: 4.2rem;
     scroll-margin-top: 4.5rem;
   }
 
-  li:hover,
   li.isOpen {
     background-color: var(--color-black-dark);
+  }
+
+  @media (hover: hover) {
+    li:hover {
+      background-color: var(--color-black-dark);
+    }
   }
 
   li.isOpen {
@@ -161,13 +166,22 @@
     font-weight: normal;
     margin: 0;
     margin-top: 1rem;
+    margin-right: 2.5ch;
     transition: all 0.05s ease-out;
   }
 
-  li:hover h2,
   li.isOpen h2 {
     font-weight: 550;
     font-size: 1.1rem;
+    margin-right: 0;
+  }
+
+  @media (hover: hover) {
+    li:hover h2 {
+      font-weight: 550;
+      font-size: 1.1rem;
+      margin-right: 0;
+    }
   }
 
   button {
@@ -187,9 +201,11 @@
     height: 3rem;
   }
 
-  button:hover:not(:disabled) {
-    background-color: var(--color-main);
-    transform: scale(1.2);
+  @media (hover: hover) {
+    button:hover:not(:disabled) {
+      background-color: var(--color-main);
+      transform: scale(1.2);
+    }
   }
 
   button:disabled {
@@ -202,28 +218,37 @@
     height: 1.6rem;
   }
 
-  li:hover button,
   li.isOpen button {
     background-color: var(--color-black);
   }
 
-  li.isFavorite button:hover:not(:disabled, .favorite-button) img {
-    filter: brightness(10);
+  @media (hover: hover) {
+    li:hover button {
+      background-color: var(--color-black);
+    }
+  }
+
+  @media (hover: hover) {
+    li.isFavorite button:hover:not(:disabled, .favorite-button) img {
+      filter: brightness(10);
+    }
   }
 
   li > article > img {
     position: absolute;
     bottom: 0rem;
     left: 50%;
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1rem;
+    height: 1rem;
     opacity: 0;
     transition: all 0.2s ease-out;
   }
 
-  li:hover > article > img {
-    opacity: 0.8;
-    bottom: 0.3rem;
+  @media (hover: hover) {
+    li:hover > article > img {
+      opacity: 0.8;
+      bottom: 0.3rem;
+    }
   }
 
   li.isOpen > article > img {
@@ -235,8 +260,10 @@
     margin-top: 1.5rem;
   }
 
-  .favorite-button:hover:not(:disabled) {
-    background-color: var(--color-favorite-light);
+  @media (hover: hover) {
+    .favorite-button:hover:not(:disabled) {
+      background-color: var(--color-favorite-light);
+    }
   }
 
   li.isFavorite .favorite-button {
