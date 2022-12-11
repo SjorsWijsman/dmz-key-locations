@@ -107,8 +107,10 @@
     padding: 0.25rem;
   }
 
-  button.close:hover {
-    background-color: var(--color-black-light);
+  @media (hover: hover) {
+    button.close:hover {
+      background-color: var(--color-black-light);
+    }
   }
 
   button.close img {

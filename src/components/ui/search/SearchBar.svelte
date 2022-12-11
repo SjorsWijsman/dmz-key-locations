@@ -123,8 +123,10 @@
     user-select: none;
   }
 
-  button.filter:hover img {
-    opacity: 0.9;
+  @media (hover: hover) {
+    button.filter:hover img {
+      opacity: 0.9;
+    }
   }
 
   button.filter.openFilter {
@@ -150,8 +152,10 @@
     cursor: pointer;
   }
 
-  button.clear:hover {
-    opacity: 0.9;
+  @media (hover: hover) {
+    button.clear:hover {
+      opacity: 0.9;
+    }
   }
 
   img {
