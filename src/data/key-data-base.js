@@ -318,7 +318,7 @@ export const keys = [
       y: 1643,
     },
     description: [
-      "Required for Unearthed, White Lotus tier 2.",
+      "Required for Unearthed, White Lotus tier 3.",
       "The Crane Control Room is easy to spot as it's directly underneath a large crane at the Al-Safwa Quarry.",
       "The key can be acquired by completing Quick and Dirty, Black Mous tier 3",
     ],
