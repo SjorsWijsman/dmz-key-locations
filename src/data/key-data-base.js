@@ -146,6 +146,7 @@ export const keys = [
     },
     description: [
       "In the north of the large airport building there is a room behind the Border Control desks. The toolbox is located in this room near the conveyor belts.",
+      "The key can be acquired by completing Tactical Extraction, Legion tier 3",
     ],
     video: "ARSEpO4vBcE",
   },
@@ -223,6 +224,7 @@ export const keys = [
     },
     description: [
       "This small shack can be found next to the docks in the west side of the underground cave system. You can enter this cave by boat or through the various entrances around the mountain. Note that there are usually a lot of guards around, happy to defend their little pirate cove.",
+      "The key can be acquired by completing Big Spender, Legion tier 2",
     ],
     video: "o3JWaK8UPIA",
   },
@@ -291,6 +293,7 @@ export const keys = [
     },
     description: [
       "The clock tower is easy to spot from a distance. Taking the ladder inside the building takes you to the roof. From the roof you can climb another ladder to the top of the tower where the toolbox is located.",
+      "The key can be acquired by completing Custom Hardware, Black Mous tier 2",
     ],
     video: "wUa_RhgDWoo",
   },
@@ -303,6 +306,7 @@ export const keys = [
     description: [
       "Required for Flight Plans, Black Mous tier 5.",
       "The Control Tower fortress is marked by a large icon on the map. There are many entrances to get into the building, and plenty of angry airplane enthousiasts to fight around the area.",
+      "The key can be acquired by completing Contractual Obligations, Legion tier 5",
     ],
     video: "s71OBNU5YL4",
     tags: ["fortress", "mission"],
@@ -316,6 +320,7 @@ export const keys = [
     description: [
       "Required for Unearthed, White Lotus tier 2.",
       "The Crane Control Room is easy to spot as it's directly underneath a large crane at the Al-Safwa Quarry.",
+      "The key can be acquired by completing Quick and Dirty, Black Mous tier 3",
     ],
     video: "0cHsa4jf3GQ",
     tags: ["mission"],
@@ -328,6 +333,7 @@ export const keys = [
     },
     description: [
       "Getting to the toolbox requires swimming underneath the shipwreck. Dive from the northwest side through the underwater doorway next to the staircase, into the shipwreck. Then take the first left into the main corridor and keep swimming forward until you get to the toolbox.",
+      "The key can be acquired by completing One Man Army, Black Mous tier 1",
     ],
     video: "EKw3PoOo99c",
   },
@@ -418,6 +424,7 @@ export const keys = [
     },
     description: [
       "This computer can be found in the red power house in the center of the hydroelectric facility. The computer is located in the small room on the ground floor.",
+      "The key can be acquired by completing Intelligence Control, Legion tier 4",
     ],
     video: "-g5M4VcuLtE",
   },
@@ -451,6 +458,7 @@ export const keys = [
     },
     description: [
       "The Kushaak Construction Warehouse is a fortress right in the middle of Al-Safwa Quarry. Don't forget your hardhat.",
+      "The key can be acquired by completing Convenience, White Lotus tier 1 or Unearthed, White Lotus tier 3",
     ],
     video: "cggyMST0Hb8",
     tags: ["fortress"],
@@ -508,6 +516,7 @@ export const keys = [
     },
     description: [
       "The Mawizeh Resort Main Building is marked on the map with a large icon, because it's a fortress. The complex consists of both of the large buildings on the Mawizeh Marshlands island.",
+      "The key can be acquired by completing Harmful Waves, Black Mous tier 4",
     ],
     video: "JMAehvF_uIM",
     tags: ["fortress"],
@@ -575,6 +584,7 @@ export const keys = [
     },
     description: [
       "The Police Academy is marked by a large icon in the east of the map. As this is a fortress it contains a lot of enemies. Note that the Academy has a lot of doors on both the inside and outside, recommended to prioritize opening the inside doors.",
+      "The key can be acquired by completing The Golden Rule, Black Mous tier 4",
     ],
     video: "ce19mYClMao",
     tags: ["fortress"],
@@ -692,6 +702,7 @@ export const keys = [
     },
     description: [
       "The Lost Toolbox is located underwater in the north of the Al-Safwa Quarry.",
+      "The key can be acquired by completing Bombing Run, White Lotus tier 2",
     ],
     video: "_alliZFxcZI",
   },
@@ -703,6 +714,7 @@ export const keys = [
     },
     description: [
       "Next to the T-shaped dock on the south of Hafid Port is a small building. This is the Special Ops Relay Station.",
+      "The key can be acquired by completing Battle Rivals, Legion tier 5",
     ],
     video: "bYneoNHg5bU",
   },
@@ -792,6 +804,7 @@ export const keys = [
     description: [
       "Required for Espionage, Black Mous tier 2.",
       "The Sattiq Poppy Farm House is a small building in the north of the circular road at the Sattiq mountains. Note that you need to enter the room twice to complete the mission.",
+      "The key can be acquired by completing Robin Hoofd, White Lotus tier 3",
     ],
     video: "uaw5eT_RAC4",
     tags: ["mission"],
@@ -828,6 +841,7 @@ export const keys = [
     },
     description: [
       "The door is located on the top floor of the hotel, right next to Sawah Hotel Room 302. Entry without key is possible through the skylights when the hotel is not a fortress.",
+      "The key can be acquired by completing Cover No Concealment, White Lotus tier 4",
     ],
     video: "g6UGMlEvhMM",
   },
@@ -937,6 +951,7 @@ export const keys = [
     },
     description: [
       "The Traveller's Luggage is a duffel bag located in the small waiting area overlooking the Al Malik Airport.",
+      "The key can be acquired by completing Dead Drop, Legion tier 3",
     ],
     video: "q8DSYEJS6u4",
   },
@@ -959,6 +974,7 @@ export const keys = [
     },
     description: [
       "The U.S. Embassy is a large building marked by an icon on the map inside of Al-Mazrah City. There are multiple entrances around the building. Expect a lot of enemies as this is a fortress.",
+      "The key can be acquired by completing The Client Is King, Black Mous tier 5",
     ],
     video: "4fl5saUVHKA",
     tags: ["fortress"],
