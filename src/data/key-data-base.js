@@ -266,9 +266,11 @@ export const keys = [
       y: 1222,
     },
     description: [
+      "Required for Flight Plans, Black Mous tier 5.",
       "Taking the elevator in the south corner up to the top floor, you will see the door right across the hall.",
     ],
     video: "bVLUp0c7W5Q",
+    tags: ["mission"],
   },
   {
     title: "Ch 7 Secure Records Room",
@@ -299,10 +301,11 @@ export const keys = [
       y: 3134,
     },
     description: [
+      "Required for Flight Plans, Black Mous tier 5.",
       "The Control Tower fortress is marked by a large icon on the map. There are many entrances to get into the building, and plenty of angry airplane enthousiasts to fight around the area.",
     ],
     video: "s71OBNU5YL4",
-    tags: ["fortress"],
+    tags: ["fortress", "mission"],
   },
   {
     title: "Crane Control Room",
