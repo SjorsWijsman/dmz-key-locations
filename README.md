@@ -6,6 +6,7 @@ Interactive map for DMZ key unlock locations.
 
 ## How to run the map locally
 - Download Node from [nodejs.org](https://nodejs.org/en/).
+- Clone this project to your local environment.
 - Open a terminal in the root folder of the project (`/dmz-key-locations`).
 - Run `npm install` from this terminal to install the project dependencies.
 - When this has completed, run `npm run dev -- --open` to start the local server. This page will automatically update on changes.
