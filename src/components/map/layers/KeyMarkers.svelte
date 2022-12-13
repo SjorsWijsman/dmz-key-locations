@@ -9,11 +9,14 @@
     searchTerm,
     favorites,
     openKeyInfo,
+    showVideo,
+    filter,
+    activeLayers,
   } from "$store";
   import { keys } from "$data/key-data";
   import { isTouchDevice } from "$scripts/platform-check";
 
-  let keyLayer = [];
+  let keyLayer = L.layerGroup();
 
   const iconSettings = {
     iconUrl: "icons/location-dot.svg",
@@ -23,30 +26,34 @@
   };
 
   function placeKeyMarkers() {
+    // Empty key markers first -> Allows for reloading key markers
+    $keyMarkers = [];
+    $map.removeLayer(keyLayer);
+
+    // Create new markers
     keys.forEach((key) => {
-      if (key.location) {
-        let isFavorite = $favorites.includes(key.title);
-        iconSettings.iconUrl = "icons/location-dot.svg";
+      if (!key.location || !filterKey(key)) return;
 
-        if (key.missionRequirement)
-          iconSettings.iconUrl = "icons/location-dot-mission.svg";
+      let isFavorite = $favorites.includes(key.title);
+      iconSettings.iconUrl = "icons/location-dot.svg";
 
-        if (isFavorite)
-          iconSettings.iconUrl = "icons/location-dot-favorite.svg";
+      if (key.tags?.includes("mission"))
+        iconSettings.iconUrl = "icons/location-dot-mission.svg";
 
-        const icon = L.icon(iconSettings);
+      if (isFavorite) iconSettings.iconUrl = "icons/location-dot-favorite.svg";
 
-        let marker = L.marker([4150 - key.location.y, key.location.x], {
-          title: key.title,
-          icon,
-        })
-          .bindPopup(setPopupContent(key))
-          .on("click", () => setSelectedMarker(key, marker))
-          .on("popupopen", () => openPopup(key, marker))
-          .on("popupclose", () => closePopup(key, marker));
+      const icon = L.icon(iconSettings);
 
-        $keyMarkers = [...$keyMarkers, marker];
-      }
+      let marker = L.marker([4150 - key.location.y, key.location.x], {
+        title: key.title,
+        icon,
+      })
+        .bindPopup(setPopupContent(key))
+        .on("click", () => setSelectedMarker(key, marker))
+        .on("popupopen", () => openPopup(key, marker))
+        .on("popupclose", () => closePopup(key, marker));
+
+      $keyMarkers = [...$keyMarkers, marker];
     });
 
     // Add markers to layerGroup
@@ -57,6 +64,19 @@
 
     // Add to layers store
     $layers = { ...$layers, "Show Key Locations": keyLayer };
+  }
+
+  function filterKey(key) {
+    if ($filter === "all") {
+      return true;
+    } else if ($filter === "favorite" && $favorites.includes(key.title)) {
+      return true;
+    } else if ($filter === "mission" && key.tags?.includes("mission")) {
+      return true;
+    } else if ($filter === "fortress" && key.tags?.includes("fortress")) {
+      return true;
+    }
+    return false;
   }
 
   function openPopup(key, marker) {
@@ -94,7 +114,7 @@
   // Replaces map marker with favorite marker / back to original marker
   function favoriteMarker(favoriteList) {
     const missionRequiredMarkers = keys
-      .filter((key) => key.missionRequirement)
+      .filter((key) => key.tags?.includes("mission"))
       .map((key) => key.title);
     for (const marker of $keyMarkers) {
       if (favoriteList.includes(marker.options.title)) {
@@ -124,7 +144,7 @@
     let popup = L.popup({
       className: key.video ? "has-video" : "",
     });
-    if (key.video) {
+    if (key.video && $showVideo) {
       popup.setContent(`
         <iframe src="https://www.youtube.com/embed/${key.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <p>${key.title}</p>
@@ -140,15 +160,30 @@
   onMount(() => {
     placeKeyMarkers();
 
+    // Opens the marker if window location has a hash
     if (window.location.hash) {
+      const title = keys.filter(
+        (key) => key.id === window.location.hash.replace("#", "")
+      )[0].title;
       for (const marker of $keyMarkers) {
-        const title = keys.filter(
-          (key) => key.id === window.location.hash.replace("#", "")
-        )[0].title;
         if (marker.options.title === title) {
           marker.openPopup();
         }
       }
     }
+
+    // Prevents first time subscription trigger
+    let initialised = false;
+
+    // Rerender key markers on showVideo preference update
+    showVideo.subscribe(() => {
+      if (initialised) placeKeyMarkers();
+    });
+
+    filter.subscribe(() => {
+      if (initialised) placeKeyMarkers();
+    });
+
+    initialised = true;
   });
 </script>

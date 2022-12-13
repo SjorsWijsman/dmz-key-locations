@@ -4,7 +4,7 @@
   export let panelTitle;
   export let closed = false;
 
-  let flash = false;
+  let highlight = false;
 
   function openCloseSearchPanel() {
     if ($activePanel === panelTitle) {
@@ -16,7 +16,9 @@
 
   selectedMarker.subscribe((marker) => {
     if (panelTitle === "search") {
-      marker?.title && $activePanel === null ? (flash = true) : (flash = false);
+      marker?.title && $activePanel === null
+        ? (highlight = true)
+        : (highlight = false);
     }
   });
 </script>
@@ -24,7 +26,7 @@
 <button
   on:click={openCloseSearchPanel}
   class:closed
-  class:flash
+  class:highlight
   class:scrollbar={!iOS()}
 >
   <slot />
@@ -47,7 +49,7 @@
     pointer-events: all;
   }
 
-  button.closed.flash {
+  button.closed.highlight {
     background-color: var(--color-main);
   }
 
@@ -56,19 +58,24 @@
     width: 3.75rem;
   }
 
-  button.closed:hover,
-  button.closed:focus {
-    width: 4.5rem;
+  @media (hover: hover) {
+    button.closed:hover,
+    button.closed:focus {
+      width: 4.5rem;
+    }
   }
 
-  button:hover,
-  button:focus {
-    background-color: var(--color-black-light);
+  @media (hover: hover) {
+    button:hover,
+    button:focus {
+      background-color: var(--color-black-light);
+    }
   }
 
   button :global(img) {
     max-width: 100%;
     max-height: 100%;
+    width: 2rem;
   }
 
   @media only screen and (max-width: 30rem) {
@@ -83,8 +90,10 @@
       right: 2rem;
     }
 
-    button:hover:not(.closed) {
-      background-color: var(--color-black-dark);
+    @media (hover: hover) {
+      button:hover:not(.closed) {
+        background-color: var(--color-black-dark);
+      }
     }
   }
 </style>

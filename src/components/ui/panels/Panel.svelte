@@ -47,7 +47,7 @@
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
     margin-left: 10px;
-    opacity: 0.9;
+    opacity: 0.95;
     resize: vertical;
     width: 23rem;
     min-height: 10rem;

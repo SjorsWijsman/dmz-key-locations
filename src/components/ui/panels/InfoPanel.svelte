@@ -47,7 +47,6 @@
         Activision Publishing, Inc.
       </a>
     </p>
-    <p style:opacity={0.5} />
   </header>
   <footer class:scrollbar={!iOS()}>
     <a href="https://discord.gg/vqCwgh8buH" target="_blank" rel="noreferrer">
@@ -72,8 +71,18 @@
 </Panel>
 
 <style>
+  h2 {
+    margin: 0.5rem 0;
+  }
+
+  p {
+    opacity: 0.9;
+    line-height: 1.3rem;
+  }
+
   header {
     padding: 1rem;
+    padding-bottom: 3rem;
   }
 
   footer {
@@ -101,15 +110,6 @@
     }
   }
 
-  h2 {
-    margin: 0.5rem 0;
-  }
-
-  p {
-    opacity: 0.9;
-    line-height: 1.3rem;
-  }
-
   footer > a {
     display: block;
     display: flex;
@@ -125,9 +125,11 @@
     transition: all 0.1s ease-out;
   }
 
-  footer > a:hover {
-    background-color: var(--color-main);
-    transform: scale(1.2);
+  @media (hover: hover) {
+    footer > a:hover {
+      background-color: var(--color-main);
+      transform: scale(1.2);
+    }
   }
 
   footer > a img {
@@ -145,8 +147,10 @@
     font-size: 1.2rem;
   }
 
-  footer > a:last-of-type:hover {
-    background-color: var(--color-contrast-light);
+  @media (hover: hover) {
+    footer > a:last-of-type:hover {
+      background-color: var(--color-contrast-light);
+    }
   }
 
   footer > a:last-of-type img {

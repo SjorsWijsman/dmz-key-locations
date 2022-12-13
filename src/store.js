@@ -23,11 +23,24 @@ export const openKeyInfo = writable(
 );
 
 // Persists in localStorage
+// Active sidebar panel
 export const activePanel = persistStore("dmzkeys-user-activePanel", "search");
+// Active map layers
+export const activeLayers = persistStore("dmzkeys-user-activeLayers", [
+  "Show Dead Drop Locations",
+  "Show Key Locations",
+  "Show Sector Grid",
+]);
+// Search term input
 export const searchTerm = persistStore("dmzkeys-user-searchTerm", "");
+// Favorite markers
 export const favorites = persistStore("dmzkeys-user-favorites", []);
-export const customMarkers = persistStore("dmzkeys-custom-markers", []);
-export const showVideo = persistStore("dmzkeys-user-showVideo", false);
+// Custom markers
+export const customMarkers = persistStore("dmzkeys-user-customMarkers", []);
+// Display video above marker
+export const showVideo = persistStore("dmzkeys-user-showVideo", true);
+// Selected filter
+export const filter = persistStore("dmzkeys-user-filter", "all");
 
 function getHashKey() {
   return keys.filter(

@@ -1,17 +1,17 @@
 <script>
   import L from "leaflet";
   import { onMount } from "svelte";
-  import Grid from "./Grid.svelte";
-  import KeyMarkers from "./KeyMarkers.svelte";
-  import DeaddropMarkers from "./DeaddropMarkers.svelte";
-  import POIMarkers from "./POIMarkers.svelte";
+  import Grid from "./layers/Grid.svelte";
+  import KeyMarkers from "./layers/KeyMarkers.svelte";
+  import DeaddropMarkers from "./layers/DeaddropMarkers.svelte";
+  import POIMarkers from "./layers/POIMarkers.svelte";
   import LocationMarker from "./LocationMarker.svelte";
   import CustomMarker from "./CustomMarker.svelte";
   import MousePos from "./MousePos.svelte";
   import WaypointPos from "./WaypointPos.svelte";
   import mapImage from "$assets/map.jpg";
   import mapImageHighRes from "$assets/map-high-res.png";
-  import { map, layers } from "$store";
+  import { map, layers, activeLayers } from "$store";
   import { isTouchDevice } from "$scripts/platform-check";
 
   let mapContainer;
@@ -56,6 +56,10 @@
       [-3000, -3000],
       [7150, 7150],
     ]);
+
+    $map.on("overlayadd", (e) => persistAddLayer(e));
+
+    $map.on("overlayremove", (e) => persistRemoveLayer(e));
   }
 
   layers.subscribe((layerObj) => {
@@ -73,6 +77,16 @@
         .addTo($map);
     }
   });
+
+  function persistAddLayer(e) {
+    $activeLayers = $activeLayers.includes(e.name)
+      ? [...$activeLayers]
+      : [...$activeLayers, e.name];
+  }
+
+  function persistRemoveLayer(e) {
+    $activeLayers = $activeLayers.filter((layer) => layer !== e.name);
+  }
 
   onMount(createMap);
 </script>
