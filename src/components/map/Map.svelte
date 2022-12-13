@@ -6,6 +6,7 @@
   import DeaddropMarkers from "./layers/DeaddropMarkers.svelte";
   import POIMarkers from "./layers/POIMarkers.svelte";
   import LocationMarker from "./LocationMarker.svelte";
+  import CustomMarker from "./CustomMarker.svelte";
   import MousePos from "./MousePos.svelte";
   import WaypointPos from "./WaypointPos.svelte";
   import mapImage from "$assets/map.jpg";
@@ -95,6 +96,7 @@
   <DeaddropMarkers />
   <POIMarkers />
   <LocationMarker />
+  <CustomMarker />
   {#if !isTouchDevice()}
     <MousePos />
   {/if}

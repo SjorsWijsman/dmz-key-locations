@@ -35,6 +35,8 @@ export const activeLayers = persistStore("dmzkeys-user-activeLayers", [
 export const searchTerm = persistStore("dmzkeys-user-searchTerm", "");
 // Favorite markers
 export const favorites = persistStore("dmzkeys-user-favorites", []);
+// Custom markers
+export const customMarkers = persistStore("dmzkeys-user-customMarkers", []);
 // Display video above marker
 export const showVideo = persistStore("dmzkeys-user-showVideo", true);
 // Selected filter
