@@ -164,3 +164,20 @@ export const deaddrops = [
     },
   },
 ];
+
+export const spawns = [
+  {
+    title: "A",
+    location: {
+      x: 3030,
+      y: 1544
+    }
+  },
+  {
+    title: "B",
+    location: {
+      x: 3040,
+      y: 1554,
+    }
+  }
+]
