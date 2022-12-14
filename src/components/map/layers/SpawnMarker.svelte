@@ -8,7 +8,7 @@
     let spawnMarkers = [];
   
     const iconSettings = {
-      iconUrl: "icons/flag-magenta.svg",
+      iconUrl: "icons/flag.svg",
       iconSize: [20, 20], // size of the icon
       iconAnchor: [10, 20], // point of the icon which will correspond to marker's location
       popupAnchor: [0, -15], // point from which the popup should open relative to the iconAnchor
@@ -26,7 +26,7 @@
               icon,
             }
           )
-            .bindPopup(`<p>Dead Drop - ${spawn.title}</p>`)
+            .bindPopup(`<p>Spawn - ${spawn.title}</p>`)
             .on("popupopen", () => openPopup(marker))
             .on("popupclose", () => closePopup(marker));
   
