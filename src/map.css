@@ -269,6 +269,15 @@ a.leaflet-control-zoom-out span {
   margin-right: 0;
 }
 
+.waypoint-position:hover {
+  background-color: var(--color-main);
+  cursor: pointer;
+}
+
+.waypoint-position:hover > input:last-of-type {
+  transform: scale(1.1);
+}
+
 /* Fix for mobile devices */
 .leaflet-bottom,
 .leaflet-top {

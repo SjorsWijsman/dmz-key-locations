@@ -80,7 +80,7 @@
         {#if $favorites.includes(title)}
           <img
             transition:fadeSlide|local
-            src="./icons/location-dot-favorite.svg"
+            src="./icons/location-favorite.svg"
             alt=""
           />
         {:else}

@@ -9,8 +9,11 @@
 
   const iconSettings = {
     iconUrl: "icons/location-deaddrop.svg",
+    shadowUrl: "icons/location-black-background.svg",
     iconSize: [20, 20], // size of the icon
+    shadowSize: [20, 20],
     iconAnchor: [10, 20], // point of the icon which will correspond to marker's location
+    shadowAnchor: [10, 20],
     popupAnchor: [0, -15], // point from which the popup should open relative to the iconAnchor
   };
 
@@ -47,11 +50,17 @@
 
   function openPopup(marker) {
     L.DomUtil.addClass(marker._icon, "active-marker");
+    // Go to location
+    $map.setView([marker.lat, marker.lng], 0, {
+      animate: true,
+      pan: {
+        duration: 0.3,
+      },
+    });
   }
 
   function closePopup(marker) {
     if (marker._icon) L.DomUtil.removeClass(marker._icon, "active-marker");
   }
-
   onMount(placeDeaddropMarkers);
 </script>

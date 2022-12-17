@@ -60,12 +60,12 @@
       <SearchResult {...key} />
     {:else}
       {#if !$favorites.length && !$searchTerm}
-        <li class="empty">
+        <li>
           You have no favorites. Add a favorite by clicking the star button on
           the right side of the key info box!
         </li>
       {:else}
-        <li class="empty">
+        <li>
           No results found. Did you find a key that is not on the map? Please
           let me know through <a
             href="https://discord.gg/vqCwgh8buH"
@@ -89,9 +89,6 @@
     padding: 1rem;
     opacity: 0.4;
     text-align: center;
-  }
-
-  li.empty {
     padding-top: 2rem;
   }
 </style>

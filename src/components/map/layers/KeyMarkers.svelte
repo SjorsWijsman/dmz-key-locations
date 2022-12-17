@@ -11,7 +11,6 @@
     openKeyInfo,
     showVideo,
     filter,
-    activeLayers,
   } from "$store";
   import { keys } from "$data/key-data";
   import { isTouchDevice } from "$scripts/platform-check";
@@ -20,8 +19,11 @@
 
   const iconSettings = {
     iconUrl: "icons/location-dot.svg",
+    shadowUrl: "icons/location-black-background.svg",
     iconSize: [20, 20], // size of the icon
+    shadowSize: [20, 20],
     iconAnchor: [10, 20], // point of the icon which will correspond to marker's location
+    shadowAnchor: [10, 20],
     popupAnchor: [0, -15], // point from which the popup should open relative to the iconAnchor
   };
 
@@ -38,9 +40,9 @@
       iconSettings.iconUrl = "icons/location-dot.svg";
 
       if (key.tags?.includes("mission"))
-        iconSettings.iconUrl = "icons/location-dot-mission.svg";
+        iconSettings.iconUrl = "icons/location-mission.svg";
 
-      if (isFavorite) iconSettings.iconUrl = "icons/location-dot-favorite.svg";
+      if (isFavorite) iconSettings.iconUrl = "icons/location-favorite.svg";
 
       const icon = L.icon(iconSettings);
 
@@ -121,7 +123,7 @@
         marker.setIcon(
           L.icon({
             ...iconSettings,
-            iconUrl: "icons/location-dot-favorite.svg",
+            iconUrl: "icons/location-favorite.svg",
           })
         );
       } else {
@@ -129,7 +131,7 @@
           L.icon({
             ...iconSettings,
             iconUrl: missionRequiredMarkers.includes(marker.options.title)
-              ? "icons/location-dot-mission.svg"
+              ? "icons/location-mission.svg"
               : "icons/location-dot.svg",
           })
         );

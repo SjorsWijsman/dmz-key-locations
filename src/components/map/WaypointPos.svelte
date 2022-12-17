@@ -3,12 +3,6 @@
   import { map, waypoint, customMarkers } from "$store";
 
   // @ts-ignore
-
-  function saveCustomMarker(x, y) {
-    let marker = {id: `${x}${y}`, lat: x, lng: y}
-    $customMarkers = [...$customMarkers, marker]
-  };
-
   const WaypointCoordinates = L.Control.extend({
     onAdd: ($map) => {
       const container = L.DomUtil.create("div");
@@ -22,23 +16,23 @@
           const y = 4150 - Math.round(clamp(lat, 0, 4150));
           const x = Math.round(clamp(lng, 0, 4150));
 
-          let span = L.DomUtil.create('span', 'mouse-position');
+          const span = L.DomUtil.create("span", "mouse-position");
+          span.classList.add("waypoint-position");
 
-          let locationIcon = L.DomUtil.create('img');
-          locationIcon.setAttribute('src', './icons/location-crosshairs.svg');
+          const locationIcon = L.DomUtil.create("img");
+          locationIcon.setAttribute("src", "./icons/location-crosshairs.svg");
 
-          let sectorSpan = L.DomUtil.create('span');
+          const sectorSpan = L.DomUtil.create("span");
           sectorSpan.innerHTML = `${sector?.join("")}`;
 
-          let xSpan = L.DomUtil.create('span')
+          const xSpan = L.DomUtil.create("span");
           xSpan.innerHTML = `x:${x}m`;
-          let ySpan = L.DomUtil.create('span')
+          const ySpan = L.DomUtil.create("span");
           ySpan.innerHTML = `y:${y}m`;
 
-          let customMarker = L.DomUtil.create('input');
-          customMarker.setAttribute('type', 'image');
-          customMarker.onclick = () => {saveCustomMarker(lat, lng)}
-          customMarker.setAttribute('src', './icons/flag.svg');
+          const customMarker = L.DomUtil.create("input");
+          customMarker.setAttribute("type", "image");
+          customMarker.setAttribute("src", "./icons/flag.svg");
 
           span.appendChild(locationIcon);
           span.appendChild(sectorSpan);
@@ -46,8 +40,11 @@
           span.appendChild(ySpan);
           span.appendChild(customMarker);
 
-          container.appendChild(span);
+          container.onclick = (e) => {
+            saveCustomMarker(e, { lat, lng });
+          };
 
+          container.appendChild(span);
         } else {
           container.innerHTML = "";
         }
@@ -57,6 +54,17 @@
     },
   });
 
-  $map.addControl(new WaypointCoordinates({ position: "bottomleft" }));
+  function saveCustomMarker(e, coordinates) {
+    e.stopPropagation();
+    const marker = {
+      id: self.crypto.randomUUID(),
+      lat: coordinates.lat,
+      lng: coordinates.lng,
+      title: "Custom Marker",
+    };
+    $waypoint = null;
+    $customMarkers = [...$customMarkers, marker];
+  }
 
+  $map.addControl(new WaypointCoordinates({ position: "bottomleft" }));
 </script>
