@@ -4,6 +4,7 @@
   import Grid from "./layers/Grid.svelte";
   import KeyMarkers from "./layers/KeyMarkers.svelte";
   import DeaddropMarkers from "./layers/DeaddropMarkers.svelte";
+  import SpawnMarker from "./layers/SpawnMarker.svelte";
   import POIMarkers from "./layers/POIMarkers.svelte";
   import CustomMarkers from "./layers/CustomMarkers.svelte";
   import LocationMarker from "./LocationMarker.svelte";
@@ -94,6 +95,7 @@
 {#if $map}
   <KeyMarkers />
   <DeaddropMarkers />
+  <SpawnMarker/>
   <POIMarkers />
   <LocationMarker />
   <CustomMarkers />
