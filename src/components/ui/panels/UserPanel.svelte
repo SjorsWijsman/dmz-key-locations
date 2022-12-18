@@ -113,7 +113,6 @@
     padding: 0.4rem 1rem;
     margin: 0;
     transition: all 0.1s ease-out;
-    min-height: 4.2rem;
     scroll-margin-top: 4.5rem;
   }
 
@@ -131,6 +130,10 @@
   li.empty {
     padding: 0 1rem;
     opacity: 0.4;
+  }
+
+  li.empty p {
+    margin: 0;
   }
 
   button {
