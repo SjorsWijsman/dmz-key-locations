@@ -1,66 +1,19 @@
 <script>
-  import L from "leaflet";
   import { onMount } from "svelte";
-  import { layers, map, activeLayers } from "$store";
   import { deaddrops } from "$data/map-data";
+  import Markers from "../Markers.svelte";
 
-  let deaddropLayer = [];
-  let deaddropMarkers = [];
+  let placeMarkers;
 
-  const iconSettings = {
-    iconUrl: "icons/location-deaddrop.svg",
-    shadowUrl: "icons/location-black-background.svg",
-    iconSize: [20, 20], // size of the icon
-    shadowSize: [20, 20],
-    iconAnchor: [10, 20], // point of the icon which will correspond to marker's location
-    shadowAnchor: [10, 20],
-    popupAnchor: [0, -15], // point from which the popup should open relative to the iconAnchor
-  };
+  deaddrops.forEach((marker) => {
+    marker.popupContent = `<p>Dead Drop - ${marker.title}</p>`;
+  });
 
-  function placeDeaddropMarkers() {
-    deaddrops.forEach((deaddrop) => {
-      if (deaddrop.location) {
-        const icon = L.icon(iconSettings);
-
-        let marker = L.marker(
-          [4150 - deaddrop.location.y, deaddrop.location.x],
-          {
-            title: deaddrop.title,
-            icon,
-          }
-        )
-          .bindPopup(`<p>Dead Drop - ${deaddrop.title}</p>`)
-          .on("popupopen", () => openPopup(marker))
-          .on("popupclose", () => closePopup(marker));
-
-        deaddropMarkers = [...deaddropMarkers, marker];
-      }
-    });
-
-    // Add markers to layerGroup
-    deaddropLayer = L.layerGroup(deaddropMarkers);
-
-    // Add layer to map
-    if ($activeLayers.includes("Show Dead Drop Locations"))
-      $map.addLayer(deaddropLayer);
-
-    // Add to layers store
-    $layers = { ...$layers, "Show Dead Drop Locations": deaddropLayer };
-  }
-
-  function openPopup(marker) {
-    L.DomUtil.addClass(marker._icon, "active-marker");
-    // Go to location
-    $map.setView([marker.lat, marker.lng], 0, {
-      animate: true,
-      pan: {
-        duration: 0.3,
-      },
-    });
-  }
-
-  function closePopup(marker) {
-    if (marker._icon) L.DomUtil.removeClass(marker._icon, "active-marker");
-  }
-  onMount(placeDeaddropMarkers);
+  onMount(() => placeMarkers(deaddrops));
 </script>
+
+<Markers
+  bind:placeMarkers
+  title={"Show Dead Drop Locations"}
+  iconUrl={"icons/location-deaddrop.svg"}
+/>

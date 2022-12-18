@@ -15,6 +15,8 @@
   import { keys } from "$data/key-data";
   import { isTouchDevice } from "$scripts/platform-check";
 
+  const title = "Show Key Locations";
+
   let keyLayer = L.layerGroup();
 
   const iconSettings = {
@@ -27,13 +29,15 @@
     popupAnchor: [0, -15], // point from which the popup should open relative to the iconAnchor
   };
 
-  function placeKeyMarkers() {
+  function placeKeyMarkers(reload = false) {
     // Empty key markers first -> Allows for reloading key markers
     $keyMarkers = [];
-    $map.removeLayer(keyLayer);
+
+    keyLayer.clearLayers();
 
     // Create new markers
     keys.forEach((key) => {
+      // Return early if it does not have a location or does not pass the current filter
       if (!key.location || !filterKey(key)) return;
 
       let isFavorite = $favorites.includes(key.title);
@@ -56,16 +60,23 @@
         .on("popupclose", () => closePopup(key, marker));
 
       $keyMarkers = [...$keyMarkers, marker];
+
+      marker.addTo(keyLayer);
     });
 
-    // Add markers to layerGroup
-    keyLayer = L.layerGroup($keyMarkers);
+    // Add to layers store if it has not been added yet
+    if (!$layers.map((item) => item.title).includes(title)) {
+      $layers = [...$layers, { title, layer: keyLayer }];
+    }
 
-    // Add layer to map
-    $map.addLayer(keyLayer);
-
-    // Add to layers store
-    $layers = { ...$layers, "Show Key Locations": keyLayer };
+    if (reload) {
+      $layers = $layers.map((layer) => {
+        if (layer.title === title) {
+          layer.on = true;
+        }
+        return layer;
+      });
+    }
   }
 
   function filterKey(key) {
@@ -79,6 +90,23 @@
       return true;
     }
     return false;
+  }
+
+  function setPopupContent(key) {
+    let popup = L.popup({
+      className: key.video ? "has-video" : "",
+    });
+    if (key.video && $showVideo) {
+      popup.setContent(`
+      <iframe src="https://www.youtube.com/embed/${key.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p>${key.title}</p>
+    `);
+    } else {
+      popup.setContent(`
+      <p>${key.title}</p>
+    `);
+    }
+    return popup;
   }
 
   function openPopup(key, marker) {
@@ -118,7 +146,9 @@
     const missionRequiredMarkers = keys
       .filter((key) => key.tags?.includes("mission"))
       .map((key) => key.title);
+
     for (const marker of $keyMarkers) {
+      // Set icon to favorite
       if (favoriteList.includes(marker.options.title)) {
         marker.setIcon(
           L.icon({
@@ -136,27 +166,11 @@
           })
         );
       }
+      // Set marker as active again
       if ($selectedMarker.title === marker.options.title) {
         L.DomUtil.addClass(marker._icon, "active-marker");
       }
     }
-  }
-
-  function setPopupContent(key) {
-    let popup = L.popup({
-      className: key.video ? "has-video" : "",
-    });
-    if (key.video && $showVideo) {
-      popup.setContent(`
-        <iframe src="https://www.youtube.com/embed/${key.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p>${key.title}</p>
-      `);
-    } else {
-      popup.setContent(`
-        <p>${key.title}</p>
-      `);
-    }
-    return popup;
   }
 
   onMount(() => {
@@ -179,11 +193,11 @@
 
     // Rerender key markers on showVideo preference update
     showVideo.subscribe(() => {
-      if (initialised) placeKeyMarkers();
+      if (initialised) placeKeyMarkers(true);
     });
 
     filter.subscribe(() => {
-      if (initialised) placeKeyMarkers();
+      if (initialised) placeKeyMarkers(true);
     });
 
     initialised = true;

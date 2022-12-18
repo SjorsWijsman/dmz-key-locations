@@ -5,7 +5,7 @@ import { keys } from "./data/key-data";
 // Leaflet map, for global reference
 export const map = writable(null);
 // Map layers (bottom right)
-export const layers = writable({});
+export const layers = writable([]);
 
 // Waypoint when user clicks a location that is not a marker
 export const waypoint = writable(null);

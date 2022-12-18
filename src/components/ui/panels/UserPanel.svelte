@@ -1,11 +1,10 @@
 <script>
   import Panel from "./Panel.svelte";
   import { map, showVideo, customMarkers } from "$store";
-  import { isTouchDevice } from "$scripts/platform-check";
 
   function setSelectedMarker(marker) {
     // Go to location
-    $map.setView([marker.lat + (isTouchDevice() ? 100 : 0), marker.lng], 0, {
+    $map.setView([4150 - marker.location?.y, marker.location?.x], 0, {
       animate: true,
       pan: {
         duration: 0.3,
@@ -15,16 +14,6 @@
 
   function removeMarker(marker) {
     $customMarkers = $customMarkers.filter((item) => item.id !== marker.id);
-    $map.eachLayer((layer) => {
-      if (layer.hasOwnProperty("options")) {
-        let options = layer.options;
-        if (options.hasOwnProperty("icon")) {
-          if (layer.options.icon.options.id === marker.id) {
-            $map.removeLayer(layer);
-          }
-        }
-      }
-    });
   }
 </script>
 
@@ -54,10 +43,10 @@
           <article>
             <h3>{marker.title}</h3>
             <p>
-              x:{marker.lat}m y:{marker.lng}m
+              x:{marker.location?.x}m y:{marker.location?.y}m
             </p>
           </article>
-          <button on:click={() => removeMarker(marker)}>
+          <button on:click|stopPropagation={() => removeMarker(marker)}>
             <img src="./icons/trash.svg" alt="remove" />
           </button>
         </li>
@@ -141,6 +130,7 @@
 
   li.empty {
     padding: 0 1rem;
+    opacity: 0.4;
   }
 
   button {
