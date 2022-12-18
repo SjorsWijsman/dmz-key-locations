@@ -1,6 +1,6 @@
 <script>
-  import { spawns } from "$data/map-data";
   import { onMount } from "svelte";
+  import { spawns } from "$data/map-data";
   import Markers from "../Markers.svelte";
 
   let placeMarkers;
@@ -15,5 +15,5 @@
 <Markers
   bind:placeMarkers
   title={"Show Spawn Locations"}
-  iconUrl={"icons/flag.svg"}
+  iconUrl={"icons/location-spawn.svg"}
 />

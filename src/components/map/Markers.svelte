@@ -1,6 +1,5 @@
 <script>
   import L from "leaflet";
-  import { onMount } from "svelte";
   import { layers, map } from "$store";
 
   export let openPopupFunction = (marker) => {
