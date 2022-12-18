@@ -7,21 +7,21 @@
 
 {#if $openKeyInfo === title}
   <section transition:fadeSlide|local={{ duration: 200 }}>
-    {#if $favorites.includes(title)}
+    {#if $favorites?.includes(title)}
       <span class="favorite" transition:fadeSlide|local={{ duration: 100 }}>
         <img src="./icons/star-favorite.svg" alt="" />
         Favorite
       </span>
     {/if}
 
-    {#if tags.includes("mission")}
+    {#if tags?.includes("mission")}
       <span class="mission">
         <img src="./icons/circle-exclamation.svg" alt="" />
         Mission Requirement
       </span>
     {/if}
 
-    {#if tags.includes("fortress")}
+    {#if tags?.includes("fortress")}
       <span class="fortress">
         <img src="./icons/fortress.svg" alt="" />
         Fortress
