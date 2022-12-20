@@ -5,12 +5,14 @@ import { keys } from "./data/key-data";
 // Leaflet map, for global reference
 export const map = writable(null);
 // Map layers (bottom right)
-export const layers = writable({});
+export const layers = writable([]);
 
 // Waypoint when user clicks a location that is not a marker
 export const waypoint = writable(null);
 // List of all key location markers
 export const keyMarkers = writable([]);
+// List of all key location markers
+export const customMarkers = writable([]);
 // Sector user is currently hovering over
 export const selectedSector = writable(["A", "0"]);
 // Marker user currently has selected
@@ -35,6 +37,11 @@ export const activeLayers = persistStore("dmzkeys-user-activeLayers", [
 export const searchTerm = persistStore("dmzkeys-user-searchTerm", "");
 // Favorite markers
 export const favorites = persistStore("dmzkeys-user-favorites", []);
+// Custom markers
+export const customMarkerData = persistStore(
+  "dmzkeys-user-customMarkerData",
+  []
+);
 // Display video above marker
 export const showVideo = persistStore("dmzkeys-user-showVideo", true);
 // Selected filter

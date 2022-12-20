@@ -1,6 +1,7 @@
 <script>
   import { activePanel, selectedMarker } from "$store";
   import { iOS } from "$scripts/platform-check";
+
   export let panelTitle;
   export let closed = false;
 
