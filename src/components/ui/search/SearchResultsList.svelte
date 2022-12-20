@@ -87,7 +87,7 @@
 
   li {
     padding: 1rem;
-    opacity: 0.4;
+    opacity: 0.5;
     text-align: center;
     padding-top: 2rem;
   }

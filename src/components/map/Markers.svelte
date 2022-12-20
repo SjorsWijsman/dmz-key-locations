@@ -14,9 +14,9 @@
 
   export let title;
   export let iconUrl;
+  export let markerKey = "title";
 
   let layer = L.layerGroup();
-  let markers = [];
 
   const iconSettings = {
     iconUrl,
@@ -29,6 +29,8 @@
   };
 
   export function placeMarkers(markerLocations) {
+    let markers = [];
+
     layer.clearLayers();
 
     // Add markers to layer
@@ -39,7 +41,7 @@
         let marker = L.marker(
           [4150 - markerLocation.location?.y, markerLocation.location?.x],
           {
-            title: markerLocation.title,
+            title: markerLocation[markerKey],
             icon,
           }
         )
@@ -58,6 +60,8 @@
     if (!$layers.map((item) => item.title).includes(title)) {
       $layers = [...$layers, { title, layer }];
     }
+
+    return markers;
   }
 
   function openPopup(marker) {

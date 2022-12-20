@@ -53,7 +53,7 @@
   <CustomMarkers />
   <KeyMarkers />
   <DeaddropMarkers />
-  <SpawnMarkers />
+  <!-- <SpawnMarkers /> -->
 
   <POILabels />
   <Grid />

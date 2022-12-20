@@ -1,6 +1,6 @@
 <script>
   import L from "leaflet";
-  import { map, waypoint, customMarkers } from "$store";
+  import { map, waypoint, customMarkerData, customMarkers } from "$store";
 
   // @ts-ignore
   const WaypointCoordinates = L.Control.extend({
@@ -64,7 +64,15 @@
       },
       title: "Custom Marker",
     };
-    $customMarkers = [...$customMarkers, marker];
+
+    const sameLocation = $customMarkers.filter((item) => {
+      const { lat, lng } = item.getLatLng();
+      return lng === coordinates.lng && lat === coordinates.lat;
+    })[0];
+
+    sameLocation
+      ? sameLocation.openPopup()
+      : ($customMarkerData = [...$customMarkerData, marker]);
   }
 
   $map.addControl(new WaypointCoordinates({ position: "bottomleft" }));

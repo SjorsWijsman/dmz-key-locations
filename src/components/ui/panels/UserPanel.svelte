@@ -1,19 +1,17 @@
 <script>
   import Panel from "./Panel.svelte";
-  import { map, showVideo, customMarkers } from "$store";
+  import { showVideo, customMarkerData, customMarkers } from "$store";
 
   function setSelectedMarker(marker) {
-    // Go to location
-    $map.setView([4150 - marker.location?.y, marker.location?.x], 0, {
-      animate: true,
-      pan: {
-        duration: 0.3,
-      },
-    });
+    $customMarkers
+      .filter((customMarker) => customMarker.options.title === marker.id)[0]
+      ?.openPopup();
   }
 
   function removeMarker(marker) {
-    $customMarkers = $customMarkers.filter((item) => item.id !== marker.id);
+    $customMarkerData = $customMarkerData.filter(
+      (item) => item.id !== marker.id
+    );
   }
 </script>
 
@@ -34,8 +32,9 @@
   </section>
   <section>
     <h2>Custom Markers</h2>
+    <p>Note: Custom Markers are still WIP</p>
     <ul>
-      {#each $customMarkers as marker}
+      {#each $customMarkerData as marker}
         <li
           on:click|stopPropagation={() => setSelectedMarker(marker)}
           on:keypress={() => setSelectedMarker(marker)}
@@ -69,6 +68,11 @@
 
   h2 {
     margin: 0.5rem 1rem;
+  }
+
+  p {
+    margin: 0 1rem;
+    margin-bottom: 1rem;
   }
 
   h3 {
@@ -129,7 +133,7 @@
 
   li.empty {
     padding: 0 1rem;
-    opacity: 0.4;
+    opacity: 0.5;
   }
 
   li.empty p {
