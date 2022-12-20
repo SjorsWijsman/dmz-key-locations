@@ -1048,7 +1048,8 @@ export const keys = [
         },
         "description": [
             "The Tower Conference Room is located inside the Control Tower fortress, so you need the respective key to get to this room. The room itself is in the northeast corner of the first floor, just to the right of the top of the escalators."
-        ]
+        ],
+        "video": "p0-HK4yHmZg"
     },
     {
         "id": "travellers-luggage",
