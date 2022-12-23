@@ -344,10 +344,11 @@ export const keys = [
       y: 1733,
     },
     description: [
+      "Required for Clean House, White Lotus tier 5.",
       "The Downtown Post Office is a fortress in Al-Mazrah City, as such it is marked by a large icon on the map. The building has lots of easy to find entrances. Enter to find out about the meaning of going postal.",
     ],
     video: "VTJJAmnRdnE",
-    tags: ["fortress"],
+    tags: ["fortress", "mission"],
   },
   {
     title: "Downtown Post Office Secure Room",
@@ -457,11 +458,12 @@ export const keys = [
       y: 1735,
     },
     description: [
+      "Required for Clean House, White Lotus tier 5.",
       "The Kushaak Construction Warehouse is a fortress right in the middle of Al-Safwa Quarry. Don't forget your hardhat.",
       "The key can be acquired by completing Convenience, White Lotus tier 1 or Unearthed, White Lotus tier 3",
     ],
     video: "cggyMST0Hb8",
-    tags: ["fortress"],
+    tags: ["fortress", "mission"],
   },
   {
     title: "Longshoreman's Duffel Bag",
@@ -974,11 +976,12 @@ export const keys = [
       y: 1315,
     },
     description: [
+      "Required for Clean House, White Lotus tier 5.",
       "The U.S. Embassy is a large building marked by an icon on the map inside of Al-Mazrah City. There are multiple entrances around the building. Expect a lot of enemies as this is a fortress.",
       "The key can be acquired by completing The Client Is King, Black Mous tier 5",
     ],
     video: "4fl5saUVHKA",
-    tags: ["fortress"],
+    tags: ["fortress", "mission"],
   },
   {
     title: "Weapons Repair Kit",
