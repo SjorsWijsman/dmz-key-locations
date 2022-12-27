@@ -67,12 +67,16 @@
   function openPopup(marker) {
     L.DomUtil.addClass(marker._icon, "active-marker");
     // Go to location
-    $map.setView([marker.getLatLng()?.lat, marker.getLatLng()?.lng], 0, {
-      animate: true,
-      pan: {
-        duration: 0.3,
-      },
-    });
+    $map.setView(
+      [marker.getLatLng()?.lat, marker.getLatLng()?.lng],
+      Math.max(0, $map.getZoom()),
+      {
+        animate: true,
+        pan: {
+          duration: 0.3,
+        },
+      }
+    );
     openPopupFunction(marker);
   }
 
