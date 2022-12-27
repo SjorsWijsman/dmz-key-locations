@@ -1,5 +1,11 @@
 <script>
-  import { keyMarkers, selectedMarker, openKeyInfo, favorites } from "$store";
+  import {
+    keyMarkers,
+    selectedMarker,
+    openKeyInfo,
+    favorites,
+    layers,
+  } from "$store";
   import { fadeSlide } from "$scripts/fade-slide";
   import SearchResultInfo from "./SearchResultInfo.svelte";
 
@@ -17,6 +23,10 @@
   $: video;
 
   function openMarkerPopup() {
+    $layers = $layers.map((item) => {
+      if (item.title === "Show Key Locations") item.on = true;
+      return item;
+    });
     for (const marker of $keyMarkers) {
       if (marker.options.title === title) {
         // Reopen popup
