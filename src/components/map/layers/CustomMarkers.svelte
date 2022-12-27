@@ -21,8 +21,6 @@
         };
       });
 
-      console.log(markers);
-
       $customMarkers = placeMarkers(markerData);
     });
   });
@@ -31,6 +29,6 @@
 <Markers
   bind:placeMarkers
   {title}
-  markerKey={"id"}
+  markerId={"id"}
   iconUrl={"icons/location-user.svg"}
 />

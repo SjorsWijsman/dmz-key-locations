@@ -2,23 +2,20 @@
   import L from "leaflet";
   import { layers, map } from "$store";
 
-  export let openPopupFunction = (marker) => {
-    return marker;
+  export let openPopupFunction = (markerLocation, marker) => {
+    return this;
   };
-  export let closePopupFunction = (marker) => {
-    return marker;
-  };
-  export let onClickFunction = (marker) => {
-    return marker;
+  export let closePopupFunction = (markerLocation, marker) => {
+    return this;
   };
 
   export let title;
-  export let iconUrl;
-  export let markerKey = "title";
+  export let iconUrl = "icons/location-dot.svg";
+  export let markerId = "title";
 
   let layer = L.layerGroup();
 
-  const iconSettings = {
+  export const iconSettings = {
     iconUrl,
     shadowUrl: "icons/location-black-background.svg",
     iconSize: [20, 20], // size of the icon
@@ -36,19 +33,25 @@
     // Add markers to layer
     markerLocations.forEach((markerLocation) => {
       if (markerLocation.location) {
+        // If the marker contains an iconUrl: overwrite the iconUrl, else use the global iconUrl
+        markerLocation.iconUrl
+          ? (iconSettings.iconUrl = markerLocation.iconUrl)
+          : (iconSettings.iconUrl = iconUrl);
+
         const icon = L.icon(iconSettings);
 
         let marker = L.marker(
           [4150 - markerLocation.location?.y, markerLocation.location?.x],
           {
-            title: markerLocation[markerKey],
+            title: markerLocation[markerId],
             icon,
           }
         )
-          .bindPopup(markerLocation.popupContent)
-          .on("click", () => onClickFunction(marker))
-          .on("popupopen", () => openPopup(marker))
-          .on("popupclose", () => closePopup(marker));
+          .bindPopup(
+            markerLocation.popupContent ?? `<p>${markerLocation.title}</p>`
+          )
+          .on("popupopen", () => openPopup(markerLocation, marker))
+          .on("popupclose", () => closePopup(markerLocation, marker));
 
         markers = [...markers, marker];
 
@@ -64,7 +67,7 @@
     return markers;
   }
 
-  function openPopup(marker) {
+  function openPopup(markerLocation, marker) {
     L.DomUtil.addClass(marker._icon, "active-marker");
     // Go to location
     $map.setView(
@@ -77,11 +80,11 @@
         },
       }
     );
-    openPopupFunction(marker);
+    openPopupFunction(markerLocation, marker);
   }
 
-  function closePopup(marker) {
+  function closePopup(markerLocation, marker) {
     if (marker._icon) L.DomUtil.removeClass(marker._icon, "active-marker");
-    closePopupFunction(marker);
+    closePopupFunction(markerLocation, marker);
   }
 </script>
