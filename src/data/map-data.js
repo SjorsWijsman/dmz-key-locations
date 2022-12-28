@@ -167,179 +167,192 @@ export const deaddrops = [
 
 export const spawns = [
   {
-    title: "s1",
+    title: "H7",
     location: {
       x: 3030,
-      y: 2915
-    }
+      y: 2915,
+    },
   },
   {
-    title: "s2",
+    title: "G7",
     location: {
       x: 2700,
       y: 3200,
-    }
+    },
   },
   {
-    title: "s3",
+    title: "F8",
     location: {
       x: 2132,
       y: 3376,
-    }
+    },
   },
   {
-    title: "s4",
+    title: "E8",
     location: {
       x: 1712,
       y: 3415,
-    }
+    },
   },
   {
-    title: "s5",
+    title: "D8",
     location: {
       x: 1456,
       y: 3495,
-    }
+    },
   },
   {
-    title: "w1",
+    title: "C7",
     location: {
       x: 1092,
       y: 3088,
-    }
+    },
   },
   {
-    title: "w2",
+    title: "C6",
     location: {
-      x: 1078,
-      y: 2766,
-    }
+      x: 1061,
+      y: 2788,
+    },
   },
   {
-    title: "w3",
+    title: "B5 (2)",
     location: {
-      x: 718,
-      y: 2350,
-    }
-  },  {
-    title: "w4",
-    location: {
-      x: 942,
-      y: 2290,
-    }
+      x: 691,
+      y: 2431,
+    },
   },
   {
-    title: "w5",
+    title: "B3",
     location: {
       x: 716,
       y: 1652,
-    }
-  },  {
-    title: "w7",
-    location: {
-      x: 1130,
-      y: 1748,
-    }
+    },
   },
   {
-    title: "w6",
+    title: "C4",
+    location: {
+      x: 1186,
+      y: 1763,
+    },
+  },
+  {
+    title: "C3",
     location: {
       x: 1124,
       y: 1482,
-    }
+    },
   },
   {
-    title: "c1",
+    title: "E4",
     location: {
       x: 2046,
       y: 1700,
-    }
+    },
   },
   {
-    title: "c2",
+    title: "E2",
     location: {
-      x: 2004,
-      y: 1194,
-    }
+      x: 1966,
+      y: 1202,
+    },
   },
   {
-    title: "c3",
+    title: "D4",
     location: {
-      x: 1592,
-      y: 1742,
-    }
+      x: 1581,
+      y: 1778,
+    },
   },
   {
-    title: "c4",
+    title: "F3",
     location: {
       x: 2315,
       y: 1367,
-    }
+    },
   },
   {
-    title: "n1",
+    title: "E1",
     location: {
       x: 1952,
       y: 754,
-    }
-  },  {
-    title: "w8",
+    },
+  },
+  {
+    title: "D2",
     location: {
       x: 1444,
       y: 1212,
-    }
+    },
   },
   {
-    title: "n3",
+    title: "F2 (2)",
     location: {
-      x: 2350,
-      y: 958,
-    }
+      x: 2390,
+      y: 969,
+    },
   },
   {
-    title: "n2",
+    title: "F2 (1)",
     location: {
-      x: 2160,
-      y: 782,
-    }
-  },  {
-    title: "e1",
+      x: 2130,
+      y: 906,
+    },
+  },
+  {
+    title: "G2",
     location: {
       x: 2722,
       y: 1148,
-    }
+    },
   },
   {
-    title: "e2",
+    title: "H3",
     location: {
       x: 2930,
       y: 1518,
-    }
-  },  {
-    title: "e3",
+    },
+  },
+  {
+    title: "H4",
     location: {
       x: 2930,
       y: 1793,
-    }
+    },
   },
   {
-    title: "e4",
+    title: "G4",
     location: {
       x: 2718,
       y: 1980,
-    }
-  },  {
-    title: "e5",
-    location: {
-      x: 3264,
-      y: 2175,
-    }
+    },
   },
   {
-    title: "e6",
+    title: "H5",
+    location: {
+      x: 3251,
+      y: 2221,
+    },
+  },
+  {
+    title: "H6",
     location: {
       x: 3048,
       y: 2495,
-    }
+    },
   },
-]
+  {
+    title: "F4",
+    location: {
+      x: 2222,
+      y: 1925,
+    },
+  },
+  {
+    title: "B5 (1)",
+    location: {
+      x: 740,
+      y: 2081,
+    },
+  },
+];

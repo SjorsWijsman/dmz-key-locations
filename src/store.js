@@ -23,6 +23,8 @@ export const selectedMarker = writable(
 export const openKeyInfo = writable(
   window.location.hash ? getHashKey().title : ""
 );
+// Search term input
+export const searchTerm = writable("");
 
 // Persists in localStorage
 // Active sidebar panel
@@ -33,8 +35,6 @@ export const activeLayers = persistStore("dmzkeys-user-activeLayers", [
   "Show Key Locations",
   "Show Sector Grid",
 ]);
-// Search term input
-export const searchTerm = persistStore("dmzkeys-user-searchTerm", "");
 // Favorite markers
 export const favorites = persistStore("dmzkeys-user-favorites", []);
 // Custom markers
