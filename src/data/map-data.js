@@ -355,4 +355,18 @@ export const spawns = [
       y: 2081,
     },
   },
+  {
+    title: "B6",
+    location: {
+      x: 677,
+      y: 2705,
+    },
+  },
+  {
+    title: "D6",
+    location: {
+      x: 1333,
+      y: 2765,
+    },
+  },
 ];
