@@ -4,7 +4,7 @@
   import Panel from "./Panel.svelte";
 </script>
 
-<Panel panelTitle={"search"} openIcon={"./icons/key.svg"}>
+<Panel panelTitle={"search"} icon={"./icons/key.svg"}>
   <SearchBar />
   <SearchResultsList />
 </Panel>

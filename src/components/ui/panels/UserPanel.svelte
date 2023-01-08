@@ -15,7 +15,7 @@
   }
 </script>
 
-<Panel panelTitle={"user"} openIcon={"./icons/user.svg"} closeIconOffset={4}>
+<Panel panelTitle={"user"} icon={"./icons/user.svg"} openIconOffset={1}>
   <section>
     <h2>User Preferences</h2>
     <form action="" on:submit|preventDefault>

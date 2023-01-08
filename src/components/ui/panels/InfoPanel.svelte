@@ -3,7 +3,7 @@
   import { iOS } from "$scripts/platform-check";
 </script>
 
-<Panel panelTitle={"info"} openIcon={"./icons/heart.svg"} closeIconOffset={8}>
+<Panel panelTitle={"info"} icon={"./icons/heart.svg"} openIconOffset={2}>
   <header>
     <h2>DMZ Key Locations</h2>
     <p>

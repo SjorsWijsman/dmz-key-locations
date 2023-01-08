@@ -4,9 +4,8 @@
   import OpenClosePanel from "./OpenClosePanel.svelte";
 
   export let panelTitle = "";
-  export let openIcon = "./icons/heart.svg";
-  export let closeIcon = "./icons/xmark.svg";
-  export let closeIconOffset = 0;
+  export let icon = "./icons/heart.svg";
+  export let openIconOffset = 0;
 </script>
 
 {#if $activePanel === panelTitle}
@@ -16,16 +15,16 @@
     </section>
 
     <OpenClosePanel {panelTitle}>
-      <img src={closeIcon} alt="Close {panelTitle} panel" />
+      <img src={"./icons/xmark.svg"} alt="Close {panelTitle} panel" />
     </OpenClosePanel>
   </div>
 {:else if $activePanel === null}
   <div
     transition:fly={{ x: -50, delay: 1 }}
-    style:top={`${closeIconOffset}rem`}
+    style:top={`${openIconOffset * 4}rem`}
   >
     <OpenClosePanel {panelTitle} closed={true}>
-      <img src={openIcon} alt="Open {panelTitle} panel" />
+      <img src={icon} alt="Open {panelTitle} panel" />
     </OpenClosePanel>
   </div>
 {/if}
@@ -51,7 +50,7 @@
     resize: vertical;
     width: 23rem;
     min-height: 10rem;
-    max-height: 50vh;
+    max-height: calc(100vh - 4rem);
     height: 30rem;
     overflow-y: scroll;
     pointer-events: all;
