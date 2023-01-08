@@ -1,6 +1,7 @@
 <script>
   import { fadeSlide } from "$scripts/fade-slide";
   import { favorites, openKeyInfo } from "$store";
+  import Icon from "../Icon.svelte";
 
   export let title, description, loot, tags;
 </script>
@@ -9,21 +10,25 @@
   <section transition:fadeSlide|local={{ duration: 200 }}>
     {#if $favorites?.includes(title)}
       <span class="favorite" transition:fadeSlide|local={{ duration: 100 }}>
-        <img src="./icons/star-favorite.svg" alt="" />
+        <Icon icon={"star"} color={"var(--color-favorite-light)"} size={1.5} />
         Favorite
       </span>
     {/if}
 
     {#if tags?.includes("mission")}
       <span class="mission">
-        <img src="./icons/circle-exclamation.svg" alt="" />
+        <Icon
+          icon={"exclamation-circle"}
+          color={"var(--color-mission)"}
+          size={1.5}
+        />
         Mission Requirement
       </span>
     {/if}
 
     {#if tags?.includes("fortress")}
       <span class="fortress">
-        <img src="./icons/fortress.svg" alt="" />
+        <Icon icon={"fortress"} size={1.5} />
         Fortress
       </span>
     {/if}
@@ -70,6 +75,8 @@
   span {
     display: flex;
     align-items: center;
+    /* Offset for icon padding */
+    margin-left: -0.225rem;
   }
 
   span.mission,
@@ -92,10 +99,8 @@
     opacity: 0.75;
   }
 
-  span img {
-    width: 1rem;
-    height: 1rem;
-    margin-right: 0.3rem;
+  span :global(.icon) {
+    margin-right: 0.2rem;
   }
 
   p:last-child {

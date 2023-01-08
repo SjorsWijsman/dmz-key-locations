@@ -15,5 +15,5 @@
 <Markers
   bind:placeMarkers
   title={"Show Dead Drop Locations"}
-  iconUrl={"icons/location-deaddrop.svg"}
+  iconUrl={"icons/markers/location-deaddrop.svg"}
 />

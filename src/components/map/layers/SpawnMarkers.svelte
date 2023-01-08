@@ -15,5 +15,5 @@
 <Markers
   bind:placeMarkers
   title={"Show Spawn Locations"}
-  iconUrl={"icons/location-spawn.svg"}
+  iconUrl={"icons/markers/location-spawn.svg"}
 />

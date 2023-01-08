@@ -30,5 +30,5 @@
   bind:placeMarkers
   {title}
   markerId={"id"}
-  iconUrl={"icons/location-user.svg"}
+  iconUrl={"icons/markers/location-user.svg"}
 />

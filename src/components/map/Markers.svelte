@@ -10,14 +10,14 @@
   };
 
   export let title;
-  export let iconUrl = "icons/location-dot.svg";
+  export let iconUrl = "icons/markers/location-dot.svg";
   export let markerId = "title";
 
   let layer = L.layerGroup();
 
   export const iconSettings = {
     iconUrl,
-    shadowUrl: "icons/location-black-background.svg",
+    shadowUrl: "icons/markers/location-black-background.svg",
     iconSize: [20, 20], // size of the icon
     shadowSize: [20, 20],
     iconAnchor: [10, 20], // point of the icon which will correspond to marker's location

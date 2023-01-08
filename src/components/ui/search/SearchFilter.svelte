@@ -2,6 +2,7 @@
   import { fadeSlide } from "$scripts/fade-slide";
   import { clickOutside } from "$scripts/click-outside";
   import { filter } from "$store";
+  import Icon from "../Icon.svelte";
 
   export let openFilter;
 
@@ -23,7 +24,7 @@
     on:click={() => ($filter = "all")}
     class:off={$filter !== "all"}
   >
-    <img src="./icons/key.svg" alt="" />
+    <Icon icon="filter" />
     All
   </button>
   <button
@@ -31,7 +32,7 @@
     on:click={() => ($filter = "favorite")}
     class:off={$filter !== "favorite"}
   >
-    <img src="./icons/star-favorite.svg" alt="" />
+    <Icon icon="star" color="var(--color-favorite-light)" />
     Favorite
   </button>
   <button
@@ -39,7 +40,7 @@
     on:click={() => ($filter = "mission")}
     class:off={$filter !== "mission"}
   >
-    <img src="./icons/circle-exclamation.svg" alt="" />
+    <Icon icon="exclamation-circle" color="var(--color-mission)" />
     Mission Requirement
   </button>
   <button
@@ -47,12 +48,12 @@
     on:click={() => ($filter = "fortress")}
     class:off={$filter !== "fortress"}
   >
-    <img src="./icons/fortress.svg" alt="" />
+    <Icon icon="fortress" />
     Fortress
   </button>
 
   <button class="close" on:click={() => (openFilter = false)}>
-    <img src="./icons/chevron-down.svg" alt="Close Filter Menu" />
+    <Icon icon="chevron-down" size={1.5} />
   </button>
 </div>
 
@@ -113,16 +114,12 @@
     }
   }
 
-  button.close img {
+  button.close :global(.icon) {
     opacity: 0.8;
-    height: 1rem;
     transform: rotate(180deg);
   }
 
-  img {
-    display: inline-block;
-    height: 100%;
-    width: 2rem;
+  div :global(.icon) {
     margin-right: 0.5rem;
   }
 </style>

@@ -2,9 +2,10 @@
   import { fly } from "svelte/transition";
   import { activePanel } from "$store";
   import OpenClosePanel from "./OpenClosePanel.svelte";
+  import Icon from "../Icon.svelte";
 
   export let panelTitle = "";
-  export let icon = "./icons/heart.svg";
+  export let icon = "heart";
   export let openIconOffset = 0;
 </script>
 
@@ -15,7 +16,7 @@
     </section>
 
     <OpenClosePanel {panelTitle}>
-      <img src={"./icons/xmark.svg"} alt="Close {panelTitle} panel" />
+      <Icon icon={"xmark"} size={2.5} />
     </OpenClosePanel>
   </div>
 {:else if $activePanel === null}
@@ -24,7 +25,7 @@
     style:top={`${openIconOffset * 4}rem`}
   >
     <OpenClosePanel {panelTitle} closed={true}>
-      <img src={icon} alt="Open {panelTitle} panel" />
+      <Icon {icon} size={2.5} />
     </OpenClosePanel>
   </div>
 {/if}

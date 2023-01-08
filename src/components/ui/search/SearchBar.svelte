@@ -1,11 +1,32 @@
 <script>
-  import { fadeSlide } from "$scripts/fade-slide";
   import { searchTerm, selectedMarker, filter, openKeyInfo } from "$store";
+  import Icon from "../Icon.svelte";
   import SearchFilter from "./SearchFilter.svelte";
 
   let openFilter = false;
 
+  let filterIcon = "filter";
+  let filterColor = "#fff";
+
   openKeyInfo.subscribe(() => (openFilter = false));
+
+  filter.subscribe((value) => {
+    filterIcon = "filter";
+    filterColor = "#fff";
+    switch (value) {
+      case "favorite":
+        filterIcon = "star";
+        filterColor = "var(--color-favorite-light)";
+        break;
+      case "mission":
+        filterIcon = "exclamation-circle";
+        filterColor = "var(--color-mission)";
+        break;
+      case "fortress":
+        filterIcon = "fortress";
+        break;
+    }
+  });
 </script>
 
 <nav>
@@ -15,31 +36,7 @@
     class:active={$filter !== "all"}
     on:click={() => (openFilter = !openFilter)}
   >
-    {#if $filter === "all"}
-      <img
-        src="./icons/filter.svg"
-        alt="Filter Keys"
-        transition:fadeSlide|local={{ duration: 200 }}
-      />
-    {:else if $filter === "favorite"}
-      <img
-        src="./icons/star-favorite.svg"
-        alt="Filtered Keys By Favorite"
-        transition:fadeSlide|local={{ duration: 200 }}
-      />
-    {:else if $filter === "mission"}
-      <img
-        src="./icons/circle-exclamation.svg"
-        alt="Filtered Keys By Mission"
-        transition:fadeSlide|local={{ duration: 200 }}
-      />
-    {:else if $filter === "fortress"}
-      <img
-        src="./icons/fortress.svg"
-        alt="Filtered Keys By Fortress"
-        transition:fadeSlide|local={{ duration: 200 }}
-      />
-    {/if}
+    <Icon icon={filterIcon} color={filterColor} />
   </button>
   <div class="search-box">
     <input
@@ -53,7 +50,7 @@
     />
     {#if $searchTerm}
       <button class="clear" on:click={() => ($searchTerm = "")}>
-        <img src="./icons/xmark.svg" alt="Clear Search" />
+        <Icon icon="x-mark" />
       </button>
     {/if}
   </div>
@@ -96,7 +93,6 @@
     width: 2.5rem;
     min-height: 2.5rem;
     height: 2.5rem;
-    padding: 0.6rem;
     background-color: var(--color-black-dark);
     border: none;
     border-radius: 0.3rem 0 0 0.3rem;
@@ -104,17 +100,17 @@
     cursor: pointer;
   }
 
-  button.filter.active img {
+  button.filter.active {
     opacity: 1;
   }
 
-  button.filter img {
+  button.filter {
     opacity: 0.6;
     user-select: none;
   }
 
   @media (hover: hover) {
-    button.filter:hover img {
+    button.filter:hover {
       opacity: 0.9;
     }
   }
@@ -123,7 +119,7 @@
     background-color: var(--color-black-light);
   }
 
-  button.filter.openFilter img {
+  button.filter.openFilter {
     opacity: 1;
   }
 
@@ -154,7 +150,6 @@
     height: unset;
     width: 2.5rem;
     height: 2.5rem;
-    padding: 0.5rem;
     border: 0;
     cursor: pointer;
   }
@@ -163,11 +158,5 @@
     button.clear:hover {
       opacity: 0.9;
     }
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    user-select: none;
   }
 </style>
