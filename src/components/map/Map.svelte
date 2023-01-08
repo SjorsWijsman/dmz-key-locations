@@ -44,6 +44,7 @@
       [-3000, -3000],
       [7150, 7150],
     ]);
+    $map.setZoom(-1);
   }
 
   onMount(createMap);
