@@ -1,9 +1,10 @@
 <script>
   import Panel from "./Panel.svelte";
   import { iOS } from "$scripts/platform-check";
+  import Icon from "../Icon.svelte";
 </script>
 
-<Panel panelTitle={"info"} openIcon={"./icons/heart.svg"} closeIconOffset={8}>
+<Panel panelTitle={"info"} icon={"heart"} openIconOffset={2}>
   <header>
     <h2>DMZ Key Locations</h2>
     <p>
@@ -50,21 +51,24 @@
   </header>
   <footer class:scrollbar={!iOS()}>
     <a href="https://discord.gg/vqCwgh8buH" target="_blank" rel="noreferrer">
-      <img src="./icons/discord.svg" alt="Discord" />
+      <Icon icon={"discord"} size={3} />
+    </a>
+    <a href="https://twitter.com/DmzKeys" target="_blank" rel="noreferrer">
+      <Icon icon={"twitter"} size={3} />
     </a>
     <a
       href="https://github.com/SjorsWijsman/dmz-key-locations"
       target="_blank"
       rel="noreferrer"
     >
-      <img src="./icons/github.svg" alt="Github" />
+      <Icon icon={"github"} size={3} />
     </a>
     <a
       href="https://www.paypal.com/donate/?hosted_button_id=L599J6499CT5W"
       target="_blank"
       rel="noreferrer"
     >
-      <img src="./icons/heart.svg" alt="Github" />
+      <Icon icon={"heart"} size={3} />
       <span>Donate</span>
     </a>
   </footer>
@@ -91,6 +95,7 @@
     background-color: var(--color-black);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0.5rem 1rem;
     margin-top: 1rem;
     box-shadow: 0 0 1rem var(--color-black-dark);
@@ -119,7 +124,6 @@
     margin-right: 1rem;
     background-color: var(--color-black-dark);
     border-radius: 0.5rem;
-    padding: 0.3rem;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.1s ease-out;
@@ -132,16 +136,10 @@
     }
   }
 
-  footer > a img {
-    max-height: 2.5rem;
-    max-width: 2.5rem;
-  }
-
   footer > a:last-of-type {
-    margin-right: 0;
-    margin-left: auto;
     width: 9rem;
     padding: 0.3rem 1rem;
+    padding-left: 0.4rem;
     background-color: var(--color-contrast);
     font-weight: bold;
     font-size: 1.2rem;
@@ -151,12 +149,5 @@
     footer > a:last-of-type:hover {
       background-color: var(--color-contrast-light);
     }
-  }
-
-  footer > a:last-of-type img {
-    max-height: 2rem;
-    max-width: 2rem;
-    margin: 0;
-    margin-right: 0.7rem;
   }
 </style>

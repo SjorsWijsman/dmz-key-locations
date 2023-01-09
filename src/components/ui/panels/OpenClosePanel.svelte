@@ -38,6 +38,7 @@
     display: flex;
     justify-content: center;
     position: relative;
+    align-items: center;
     height: 3rem;
     width: 3rem;
     margin-top: 0.75rem;

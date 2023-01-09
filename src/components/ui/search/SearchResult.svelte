@@ -7,7 +7,8 @@
     layers,
   } from "$store";
   import { fadeSlide } from "$scripts/fade-slide";
-  import SearchResultInfo from "./SearchResultInfo.svelte";
+  import SearchResultContent from "./SearchResultContent.svelte";
+  import Icon from "../Icon.svelte";
 
   export let id = "untitled-location",
     title = "Untitled Location",
@@ -78,8 +79,8 @@
     <h2>
       {title}
     </h2>
-    <SearchResultInfo {...{ title, description, loot, tags }} />
-    <img src="./icons/chevron-down.svg" alt="" />
+    <SearchResultContent {...{ title, description, loot, tags }} />
+    <Icon icon="chevron-down" size={1.5} />
   </article>
   <div class="button-box">
     <button
@@ -87,21 +88,14 @@
       disabled={!location?.x || !location?.y}
     >
       {#if location?.x && location?.y}
-        {#if $favorites.includes(title)}
-          <img
-            transition:fadeSlide|local
-            src="./icons/location-favorite.svg"
-            alt=""
-          />
-        {:else}
-          <img
-            transition:fadeSlide|local
-            src="./icons/location-dot.svg"
-            alt=""
-          />
-        {/if}
+        <Icon
+          src={$favorites.includes(title)
+            ? "icons/markers/location-favorite.svg"
+            : "icons/markers/location-dot.svg"}
+          size={2.5}
+        />
       {:else}
-        <img src="./icons/question.svg" alt="" />
+        <Icon icon="question-mark" size={2.5} />
       {/if}
     </button>
     {#if $openKeyInfo === title}
@@ -111,26 +105,14 @@
         disabled={!location}
         transition:fadeSlide|local={{ duration: 200 }}
       >
-        <img src="./icons/star.svg" alt="" />
+        <Icon icon="star" size={2.25} />
       </button>
       <button
         on:click|stopPropagation={copyToClipboard}
         class="link-button"
         transition:fadeSlide|local={{ duration: 200 }}
       >
-        {#if copied}
-          <img
-            transition:fadeSlide|local
-            src="./icons/check.svg"
-            alt="Copy to clipboard"
-          />
-        {:else}
-          <img
-            transition:fadeSlide|local
-            src="./icons/link.svg"
-            alt="Copy to clipboard"
-          />
-        {/if}
+        <Icon icon={copied ? "check" : "link"} size={2.25} />
       </button>
     {/if}
   </div>
@@ -223,11 +205,6 @@
     cursor: default;
   }
 
-  button img {
-    width: 1.6rem;
-    height: 1.6rem;
-  }
-
   li.isOpen button {
     background-color: var(--color-black);
   }
@@ -237,31 +214,29 @@
       background-color: var(--color-black);
     }
   }
-
   @media (hover: hover) {
-    li.isFavorite button:hover:not(:disabled, .favorite-button) img {
-      filter: brightness(10);
+    li.isFavorite button:hover:not(:disabled, .favorite-button) :global(.icon) {
+      filter: brightness(100);
     }
   }
 
-  li > article > img {
+  li > article > :global(.icon) {
     position: absolute;
-    bottom: 0rem;
     left: 50%;
-    width: 1rem;
-    height: 1rem;
+    bottom: 0.5rem;
+    transform: translateX(-50%);
     opacity: 0;
     transition: all 0.2s ease-out;
   }
 
   @media (hover: hover) {
-    li:hover > article > img {
+    li:hover > article > :global(.icon) {
       opacity: 0.8;
-      bottom: 0.3rem;
+      bottom: 0rem;
     }
   }
 
-  li.isOpen > article > img {
+  li.isOpen > article > :global(.icon) {
     transform: rotate(-180deg);
   }
 

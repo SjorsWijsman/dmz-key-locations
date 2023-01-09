@@ -1,6 +1,7 @@
 <script>
   import Panel from "./Panel.svelte";
   import { showVideo, customMarkerData, customMarkers } from "$store";
+  import Icon from "../Icon.svelte";
 
   function setSelectedMarker(marker) {
     $customMarkers
@@ -15,7 +16,7 @@
   }
 </script>
 
-<Panel panelTitle={"user"} openIcon={"./icons/user.svg"} closeIconOffset={4}>
+<Panel panelTitle={"user"} icon={"user"} openIconOffset={1}>
   <section>
     <h2>User Preferences</h2>
     <form action="" on:submit|preventDefault>
@@ -46,7 +47,7 @@
             </p>
           </article>
           <button on:click|stopPropagation={() => removeMarker(marker)}>
-            <img src="./icons/trash.svg" alt="remove" />
+            <Icon icon={"trash"} />
           </button>
         </li>
       {:else}
@@ -168,10 +169,5 @@
     margin: 0;
     opacity: 0.4;
     font-family: var(--font-mono);
-  }
-
-  button img {
-    width: 1.6rem;
-    height: 1.6rem;
   }
 </style>

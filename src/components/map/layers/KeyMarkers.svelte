@@ -2,7 +2,6 @@
   import L from "leaflet";
   import { onMount } from "svelte";
   import {
-    map,
     favorites,
     keyMarkers,
     filter,
@@ -22,9 +21,9 @@
       let isFavorite = $favorites.includes(key.title);
       let isMission = key.tags?.includes("mission");
 
-      let iconUrl = "icons/location-dot.svg";
-      if (isFavorite) iconUrl = "icons/location-favorite.svg";
-      if (isMission) iconUrl = "icons/location-mission.svg";
+      let iconUrl = "icons/markers/location-dot.svg";
+      if (isFavorite) iconUrl = "icons/markers/location-favorite.svg";
+      if (isMission) iconUrl = "icons/markers/location-mission.svg";
 
       const popupContent = setPopupContent(key);
 
@@ -82,7 +81,7 @@
         marker.setIcon(
           L.icon({
             ...iconSettings,
-            iconUrl: "icons/location-favorite.svg",
+            iconUrl: "icons/markers/location-favorite.svg",
           })
         );
       } else {
@@ -90,8 +89,8 @@
           L.icon({
             ...iconSettings,
             iconUrl: missionRequiredMarkers.includes(marker.options.title)
-              ? "icons/location-mission.svg"
-              : "icons/location-dot.svg",
+              ? "icons/markers/location-mission.svg"
+              : "icons/markers/location-dot.svg",
           })
         );
       }

@@ -33,6 +33,7 @@
 <section
   on:mouseenter={() => (isOpen = true)}
   on:mouseleave={() => (isOpen = false)}
+  class:isOpen
 >
   {#if !isOpen}
     <img src="./icons/leaflet/layers.png" alt="" />
@@ -50,7 +51,7 @@
 
 <style>
   section {
-    position: absolute;
+    position: fixed;
     z-index: 2000;
     right: 0;
     bottom: 0;
@@ -62,6 +63,13 @@
     opacity: 0.9;
     text-shadow: 0 0 2rem rgba(0, 0, 50, 20%);
     padding: 0.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  section.isOpen {
+    width: unset;
+    height: unset;
   }
 
   form {
@@ -87,8 +95,7 @@
   }
 
   img {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 100%;
     padding: 0.1rem;
   }
 </style>

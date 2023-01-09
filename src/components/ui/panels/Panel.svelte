@@ -1,31 +1,34 @@
 <script>
   import { fly } from "svelte/transition";
-  import { activePanel } from "$store";
+  import { activePanel, panelHeight } from "$store";
   import OpenClosePanel from "./OpenClosePanel.svelte";
+  import Icon from "../Icon.svelte";
 
   export let panelTitle = "";
-  export let openIcon = "./icons/heart.svg";
-  export let closeIcon = "./icons/xmark.svg";
-  export let closeIconOffset = 0;
+  export let icon = "heart";
+  export let openIconOffset = 0;
 </script>
 
 {#if $activePanel === panelTitle}
   <div transition:fly={{ x: -200 }}>
-    <section>
+    <section
+      bind:clientHeight={$panelHeight}
+      style:height={`${$panelHeight}px`}
+    >
       <slot />
     </section>
 
     <OpenClosePanel {panelTitle}>
-      <img src={closeIcon} alt="Close {panelTitle} panel" />
+      <Icon icon={"xmark"} size={2.5} />
     </OpenClosePanel>
   </div>
 {:else if $activePanel === null}
   <div
     transition:fly={{ x: -50, delay: 1 }}
-    style:top={`${closeIconOffset}rem`}
+    style:top={`${openIconOffset * 4}rem`}
   >
     <OpenClosePanel {panelTitle} closed={true}>
-      <img src={openIcon} alt="Open {panelTitle} panel" />
+      <Icon {icon} size={2.5} />
     </OpenClosePanel>
   </div>
 {/if}
@@ -51,7 +54,7 @@
     resize: vertical;
     width: 23rem;
     min-height: 10rem;
-    max-height: 50vh;
+    max-height: calc(100vh - 4rem);
     height: 30rem;
     overflow-y: scroll;
     pointer-events: all;

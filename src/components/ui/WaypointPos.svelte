@@ -20,7 +20,7 @@
           span.classList.add("waypoint-position");
 
           const locationIcon = L.DomUtil.create("img");
-          locationIcon.setAttribute("src", "./icons/location-crosshairs.svg");
+          locationIcon.setAttribute("src", "./icons/crosshairs.svg");
 
           const sectorSpan = L.DomUtil.create("span");
           sectorSpan.innerHTML = `${sector?.join("")}`;
