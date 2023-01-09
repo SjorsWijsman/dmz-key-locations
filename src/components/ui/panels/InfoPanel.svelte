@@ -139,6 +139,7 @@
   footer > a:last-of-type {
     width: 9rem;
     padding: 0.3rem 1rem;
+    padding-left: 0.4rem;
     background-color: var(--color-contrast);
     font-weight: bold;
     font-size: 1.2rem;

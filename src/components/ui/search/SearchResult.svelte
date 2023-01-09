@@ -89,12 +89,13 @@
     >
       {#if location?.x && location?.y}
         <Icon
-          icon={$favorites.includes(title) ? "pin" : "pin"}
-          color={$favorites.includes(title) ? "var(--color-favorite)" : "#fff"}
-          size={2.25}
+          src={$favorites.includes(title)
+            ? "icons/markers/location-favorite.svg"
+            : "icons/markers/location-dot.svg"}
+          size={2.5}
         />
       {:else}
-        <Icon icon="question-mark" size={2.25} />
+        <Icon icon="question-mark" size={2.5} />
       {/if}
     </button>
     {#if $openKeyInfo === title}
