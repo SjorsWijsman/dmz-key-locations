@@ -51,7 +51,7 @@
 
 <style>
   section {
-    position: absolute;
+    position: fixed;
     z-index: 2000;
     right: 0;
     bottom: 0;

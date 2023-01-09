@@ -25,6 +25,8 @@ export const openKeyInfo = writable(
 );
 // Search term input
 export const searchTerm = writable("");
+// Set panel height
+export const panelHeight = writable(null);
 
 // Persists in localStorage
 // Active sidebar panel

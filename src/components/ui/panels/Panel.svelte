@@ -1,6 +1,6 @@
 <script>
   import { fly } from "svelte/transition";
-  import { activePanel } from "$store";
+  import { activePanel, panelHeight } from "$store";
   import OpenClosePanel from "./OpenClosePanel.svelte";
   import Icon from "../Icon.svelte";
 
@@ -11,7 +11,10 @@
 
 {#if $activePanel === panelTitle}
   <div transition:fly={{ x: -200 }}>
-    <section>
+    <section
+      bind:clientHeight={$panelHeight}
+      style:height={`${$panelHeight}px`}
+    >
       <slot />
     </section>
 
