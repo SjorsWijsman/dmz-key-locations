@@ -22,4 +22,4 @@ Interactive map for DMZ key unlock locations.
   - `description` - **List of Strings** - _Every list item is a paragraph, supports html tags._
   - `video` - **String** - _Link to a video on YouTube, only uses the video id, e.g. `https://www.youtube.com/watch?v=xvFZjo5PgG0` = `xvFZjo5PgG0`_
   - `tags` - **List of Strings** - _Accepted values: `"mission"`, `"fortress"`_
-- Regenerate the `key-data.js` file by running `npm run generate-ids`. This automatically generates ids for every key location, used as a unique identifier in the application.
+- Regenerate the `keys.js` file by running `npm run generate-ids`. This automatically generates ids for every key location, used as a unique identifier in the application.
