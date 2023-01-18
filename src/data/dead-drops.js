@@ -1,4 +1,4 @@
-export const dead_drops = [
+export const deadDrops = [
   {
     title: "C3",
     location: {
