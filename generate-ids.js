@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { keys } from './src/data/key-data-base.js';
 
-var writeStream = fs.createWriteStream("./src/data/key-data.js");
+var writeStream = fs.createWriteStream("./src/data/keys.js");
 let keys_ids = [];
 
 keys.forEach((key) => {

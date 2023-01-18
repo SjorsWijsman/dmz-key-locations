@@ -1,6 +1,6 @@
 <script>
   import SearchResult from "./SearchResult.svelte";
-  import { keys } from "$data/key-data";
+  import { keys } from "$data/keys";
   import { searchTerm, selectedMarker, favorites, filter } from "$store";
 
   let filteredKeys = keys;

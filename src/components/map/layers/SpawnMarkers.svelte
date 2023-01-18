@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { spawns } from "$data/map-data";
+  import { spawns } from "$data/spawns";
   import Markers from "../Markers.svelte";
 
   let placeMarkers;

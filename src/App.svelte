@@ -5,7 +5,7 @@
   import SearchPanel from "$components/ui/panels/SearchPanel.svelte";
   import UserPanel from "$components/ui/panels/UserPanel.svelte";
   import InfoPanel from "$components/ui/panels/InfoPanel.svelte";
-  import { keys } from "$data/key-data";
+  import { keys } from "$data/keys";
   import { showVideo } from "$store";
 
   console.log("Keys in total: " + keys.length);
