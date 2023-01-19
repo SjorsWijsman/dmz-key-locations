@@ -92,8 +92,4 @@
   input {
     margin-right: 0.5rem;
   }
-
-  section :global(.icon) {
-    opacity: 0.9;
-  }
 </style>

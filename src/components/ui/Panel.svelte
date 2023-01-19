@@ -1,22 +1,13 @@
 <script>
   import { fly } from "svelte/transition";
   import { activePanel, panelHeight } from "$store";
+  import { mobileSize } from "$scripts/media-queries";
   import OpenClosePanel from "./OpenClosePanel.svelte";
   import Icon from "./Icon.svelte";
 
   export let panelTitle = "";
   export let icon = "heart";
   export let openIconOffset = 0;
-
-  function remToPixels(rem) {
-    return (
-      rem * parseFloat(getComputedStyle(document.documentElement).fontSize)
-    );
-  }
-
-  function mobileSize(width) {
-    return width < remToPixels(37);
-  }
 
   let outerWidth;
 </script>

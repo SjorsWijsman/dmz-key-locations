@@ -1,9 +1,11 @@
 <script>
-  import { map } from "$store";
+  import { mobileSize } from "$scripts/media-queries";
+  import { map, activePanel } from "$store";
   import { onMount } from "svelte";
   import Icon from "../Icon.svelte";
 
   let minZoom, zoom, maxZoom;
+  let outerWidth;
 
   function zoomIn() {
     zoom += 1;
@@ -17,6 +19,8 @@
 
   $map.on("zoomend", () => (zoom = $map.getZoom()));
 
+  $: console.log($activePanel);
+
   onMount(() => {
     zoom = $map.getZoom();
     maxZoom = $map.getMaxZoom();
@@ -24,7 +28,9 @@
   });
 </script>
 
-<section>
+<svelte:window bind:outerWidth />
+
+<section class:hide={$activePanel !== null && mobileSize(outerWidth)}>
   <button on:click={zoomIn} disabled={zoom >= maxZoom}>
     <Icon icon={"plus"} size={1.75} />
   </button>
@@ -47,10 +53,11 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    transition: transform 0.3s ease-out;
   }
 
-  section :global(.icon) {
-    opacity: 0.9;
+  section.hide {
+    transform: translateX(150%);
   }
 
   section button {
