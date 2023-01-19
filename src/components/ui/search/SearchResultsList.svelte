@@ -8,10 +8,12 @@
 
   // Filter keys with search result
   function filterKeys() {
+    const sanitizedSearchString = sanitize(searchString);
     return keys
       .filter((key) => {
         // Filter by search
-        if (sanitize(key.title).includes(sanitize(searchString))) return key;
+        if (sanitize(key.title).includes(sanitizedSearchString)) return key;
+        if (sanitize(key.keyName).includes(sanitizedSearchString)) return key;
       })
       .filter((key) => {
         // Filter by selected filter

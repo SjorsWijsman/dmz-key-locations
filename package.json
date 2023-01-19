@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node generate-ids.js",
+    "prebuild": "node generate-key-data.js",
     "build": "vite build",
     "preview": "vite preview",
-    "generate-ids": "node generate-ids.js"
+    "generate-key-data": "node generate-key-data.js"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.1.0",

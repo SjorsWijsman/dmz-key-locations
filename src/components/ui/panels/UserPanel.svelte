@@ -1,5 +1,5 @@
 <script>
-  import Panel from "./Panel.svelte";
+  import Panel from "../Panel.svelte";
   import { showVideo, customMarkerData, customMarkers } from "$store";
   import Icon from "../Icon.svelte";
 
@@ -68,7 +68,8 @@
   }
 
   h2 {
-    margin: 0.5rem 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   p {

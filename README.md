@@ -15,11 +15,12 @@ Interactive map for DMZ key unlock locations.
 
 ## How to add new key locations
 
-- All the data for the keys is found in the `dmz-key-locations/src/data/key-data-base.js` file.
+- All the data for the keys is found in the `dmz-key-locations/src/data/key-data.js` file.
 - Add a new key entry by using the following variables:
   - `title` - **String** - Required - _Has to be unique; recommended to add the sector if there are conflicts e.g. [A0]._
+  - `keyName` - **String** - _When the name of the key isn't "<title> Key" you aa custom key name is added._
   - `location` - **Object with x & y coordinates** - Required - _Map coordinates are shown in the bottom left._
   - `description` - **List of Strings** - _Every list item is a paragraph, supports html tags._
   - `video` - **String** - _Link to a video on YouTube, only uses the video id, e.g. `https://www.youtube.com/watch?v=xvFZjo5PgG0` = `xvFZjo5PgG0`_
   - `tags` - **List of Strings** - _Accepted values: `"mission"`, `"fortress"`_
-- Regenerate the `keys.js` file by running `npm run generate-ids`. This automatically generates ids for every key location, used as a unique identifier in the application.
+- Regenerate the `keys.js` file by running `npm run generate-key-data`. This automatically generates ids for every key location, used as a unique identifier in the application.

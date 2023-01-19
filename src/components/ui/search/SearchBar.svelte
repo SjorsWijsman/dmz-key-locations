@@ -50,7 +50,7 @@
     />
     {#if $searchTerm}
       <button class="clear" on:click={() => ($searchTerm = "")}>
-        <Icon icon="x-mark" />
+        <Icon icon={"xmark"} size={2} />
       </button>
     {/if}
   </div>
@@ -64,19 +64,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    position: sticky;
-    z-index: 1;
-    top: 0;
-    background-color: var(--color-black);
     width: 100%;
-    padding: 1rem;
-    box-shadow: 0 0 1rem var(--color-black-dark);
-  }
-
-  @media only screen and (max-width: 30rem) {
-    nav {
-      padding-right: 5rem;
-    }
   }
 
   button {
@@ -86,6 +74,7 @@
     align-items: center;
     flex-direction: column;
     padding: 0;
+    border: 0px solid transparent;
   }
 
   button.filter {
@@ -100,17 +89,17 @@
     cursor: pointer;
   }
 
-  button.filter.active {
+  button.filter.active :global(.icon) {
     opacity: 1;
   }
 
-  button.filter {
+  button.filter :global(.icon) {
     opacity: 0.6;
     user-select: none;
   }
 
   @media (hover: hover) {
-    button.filter:hover {
+    button.filter:hover :global(.icon) {
       opacity: 0.9;
     }
   }
@@ -135,22 +124,16 @@
     background-color: var(--color-black-dark);
     border: none;
     border-radius: 0 0.3rem 0.3rem 0;
-    max-width: 25rem;
-    min-height: 2.5rem;
     height: 2.5rem;
   }
 
   button.clear {
     position: absolute;
-    right: 0;
+    right: 0.25rem;
     top: 50%;
     transform: translate(0, -50%);
     background-color: transparent;
     opacity: 0.6;
-    height: unset;
-    width: 2.5rem;
-    height: 2.5rem;
-    border: 0;
     cursor: pointer;
   }
 
