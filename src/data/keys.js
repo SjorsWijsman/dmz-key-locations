@@ -726,7 +726,7 @@ export const keys = [
         },
         "description": [
             "One of three locations for the Police Armory Key.",
-            "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains 8 Police Lockers which require a <a href='#police-locker-f2'>Police Locker Master Key</a> to open, this key has a chance to spawn inside the room."
+            "The Police Armory is located inside the police building, up the stairs on the left. This room itself contains 8 Police Lockers which require a Police Locker Master Key to open, this key has a chance to spawn inside the room."
         ],
         "video": "32_9NKyg44g"
     },

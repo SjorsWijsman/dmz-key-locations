@@ -1,6 +1,5 @@
 <script>
   import { fadeSlide } from "$scripts/fade-slide";
-
   export let color;
   export let viewBox = "0 0 512 512";
   export let d;
@@ -9,7 +8,7 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   {viewBox}
-  transition:fadeSlide|local={{ duration: 300 }}
+  transition:fadeSlide|local={{ duration: 250 }}
 >
   {#if Array.isArray(color)}
     <defs>
