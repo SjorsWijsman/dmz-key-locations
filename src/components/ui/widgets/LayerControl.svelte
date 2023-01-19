@@ -31,7 +31,9 @@
   });
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <section
+  on:click={() => (isOpen = true)}
   on:mouseenter={() => (isOpen = true)}
   on:mouseleave={() => (isOpen = false)}
   class:isOpen
@@ -63,6 +65,7 @@
     opacity: 0.9;
     text-shadow: 0 0 2rem rgba(0, 0, 50, 20%);
     padding: 0.25rem;
+    touch-action: manipulation;
   }
 
   section.isOpen {

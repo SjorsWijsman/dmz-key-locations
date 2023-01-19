@@ -54,6 +54,7 @@
     flex-direction: column;
     overflow: hidden;
     transition: transform 0.3s ease-out;
+    touch-action: manipulation;
   }
 
   section.hide {
@@ -64,6 +65,7 @@
     background-color: var(--color-black);
     border: none;
     padding: 0.3rem;
+    margin: 0;
     cursor: pointer;
     transition: all 0.2s ease-out;
   }
