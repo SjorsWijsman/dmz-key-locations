@@ -1,6 +1,7 @@
 <script>
   import { map, layers, activeLayers } from "$store";
   import { onMount } from "svelte";
+  import Icon from "./Icon.svelte";
 
   let isOpen = false;
 
@@ -36,7 +37,7 @@
   class:isOpen
 >
   {#if !isOpen}
-    <img src="./icons/leaflet/layers.png" alt="" />
+    <Icon icon={"layer-group"} size={3} />
   {:else}
     <form>
       {#each $layers as layer}
@@ -62,14 +63,12 @@
     border-radius: 0.5rem;
     opacity: 0.9;
     text-shadow: 0 0 2rem rgba(0, 0, 50, 20%);
-    padding: 0.5rem;
-    width: 3.5rem;
-    height: 3.5rem;
   }
 
   section.isOpen {
     width: unset;
     height: unset;
+    padding: 0.5rem;
   }
 
   form {
@@ -92,10 +91,5 @@
 
   input {
     margin-right: 0.5rem;
-  }
-
-  img {
-    width: 100%;
-    padding: 0.1rem;
   }
 </style>
