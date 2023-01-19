@@ -86,6 +86,7 @@
     padding-bottom: 6rem;
     resize: vertical;
     overflow-y: scroll;
+    overflow-x: hidden;
     pointer-events: all;
   }
 
