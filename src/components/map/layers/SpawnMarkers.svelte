@@ -1,19 +1,19 @@
 <script>
-  import { onMount } from "svelte";
-  import { spawns } from "$data/al-mazrah/locations/spawns";
-  import Markers from "../Markers.svelte";
+	import { onMount } from "svelte";
+	import { spawns } from "$data/al-mazrah/locations/spawns";
+	import Markers from "../Markers.svelte";
 
-  let placeMarkers;
+	let placeMarkers;
 
-  spawns.forEach((marker) => {
-    marker.popupContent = `<p>Spawn - ${marker.title}</p>`;
-  });
+	spawns.forEach((marker) => {
+		marker.popupContent = `<p>Spawn - ${marker.title}</p>`;
+	});
 
-  onMount(() => placeMarkers(spawns));
+	onMount(() => placeMarkers(spawns));
 </script>
 
 <Markers
-  bind:placeMarkers
-  title={"Show Spawn Locations"}
-  iconUrl={"icons/markers/location-spawn.svg"}
+	bind:placeMarkers
+	title={"Show Spawn Locations"}
+	iconUrl={"icons/markers/location-spawn.svg"}
 />
