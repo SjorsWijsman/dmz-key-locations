@@ -2,7 +2,7 @@
 
 Interactive map for DMZ key unlock locations.
 
-![Banner](https://github.com/SjorsWijsman/dmz-key-locations/blob/main/public/banner.jpg?raw=true)
+![Banner](https://github.com/SjorsWijsman/dmz-key-locations/blob/main/static/banner.jpg?raw=true)
 
 ## How to run the map locally
 
@@ -15,7 +15,7 @@ Interactive map for DMZ key unlock locations.
 
 ## How to add new key locations
 
-- All the data for the keys is found in the `dmz-key-locations/src/data/key-data.js` file.
+- All the data for the keys is found in the `dmz-key-locations/src/data/al-mazrah/locations/key-data.js` file.
 - Add a new key entry by using the following variables:
   - `title` - **String** - Required - _Has to be unique; recommended to add the sector if there are conflicts e.g. [A0]._
   - `keyName` - **String** - _When the name of the key isn't "<title> Key" you aa custom key name is added._
