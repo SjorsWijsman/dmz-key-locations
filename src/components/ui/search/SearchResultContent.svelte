@@ -3,7 +3,7 @@
   import { favorites, openKeyInfo, keyMarkers, layers } from "$store";
   import Icon from "../Icon.svelte";
 
-  export let id, title, location, description, loot, tags;
+  export let id, title, location, description, tags;
 
   let copied = false;
 
@@ -72,15 +72,11 @@
       {/if}
 
       <h3>Loot</h3>
-      {#if loot?.length > 0}
-        {#each loot as item}
-          <p>
-            {item}
-          </p>
-        {/each}
-      {:else}
-        <p>WIP</p>
-      {/if}
+      <ol class="loot">
+        <li>
+          <Icon icon={"question-mark"} />
+        </li>
+      </ol>
     </div>
     <aside>
       <button
@@ -173,6 +169,25 @@
   .tag :global(.icon) {
     margin-right: 0.2rem;
   }
+
+  .loot {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .loot li {
+    background-color: var(--color-black);
+    padding: 0.2rem;
+    margin-right: 0.3rem;
+    border-radius: 0.3rem;
+    opacity: 0.5;
+  }
+
+  /* .loot li.active {
+    background-color: var(--color-black-light);
+    opacity: 1;
+  } */
 
   button {
     display: flex;

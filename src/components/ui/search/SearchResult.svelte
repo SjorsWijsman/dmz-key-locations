@@ -8,12 +8,12 @@
     keyName = "",
     location = {},
     description = [],
-    loot = [],
+    loot = null,
     video = "",
     tags = [];
 
   // Prevent unused variable warning - Remove when video gets used in searchresult.
-  $: video;
+  $: loot, video;
 
   let icon = "key";
   $: icon = $favorites.includes(title)
@@ -61,7 +61,7 @@
     </span>
     <Icon icon="chevron-down" size={1.5} />
   </div>
-  <SearchResultContent {...{ id, title, location, description, loot, tags }} />
+  <SearchResultContent {...{ id, title, location, description, tags }} />
 </li>
 
 <style>

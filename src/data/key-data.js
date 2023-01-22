@@ -789,7 +789,7 @@ export const keys = [
     title: "Sunken Ship Thief's Cache",
     location: { x: 1791, y: 3580 },
     description: [
-      "The Thief's Cache is inside an underwater part of the sunken ship. Entering the hull from the front of the ship you will find the duffel bag on your immediate right.",
+      "The Thief's Cache is inside an underwater part of the sunken ship. Entering the hull from the front of the ship you will find the duffel bag on your immediate right. Contains the $25,000 Golden Skull of Al Bagra Minor.",
     ],
     video: "Rx4L86BCsX8",
   },

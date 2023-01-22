@@ -19,8 +19,6 @@
 
   $map.on("zoomend", () => (zoom = $map.getZoom()));
 
-  $: console.log($activePanel);
-
   onMount(() => {
     zoom = $map.getZoom();
     maxZoom = $map.getMaxZoom();
