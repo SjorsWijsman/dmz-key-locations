@@ -936,8 +936,8 @@ export const keys = [
         "id": "rohan-utility-tunnel-locker",
         "title": "Rohan Utility Tunnel Locker",
         "location": {
-            "x": 1463,
-            "y": 1324
+            "x": 1483,
+            "y": 1401
         },
         "description": [
             "This locker is underground, with the entrance in the marked building just north of the train tracks."
