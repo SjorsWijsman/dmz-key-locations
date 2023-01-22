@@ -1,9 +1,9 @@
 # dmz-key-locations
+![Powered by Vercel](https://github.com/SjorsWijsman/dmz-key-locations/blob/main/src/assets/powered-by-vercel.svg?raw=true)
 
 Interactive map for DMZ key unlock locations.
 
 ![Banner](https://github.com/SjorsWijsman/dmz-key-locations/blob/main/static/banner.jpg?raw=true)
-![Powered by Vercel](https://github.com/SjorsWijsman/dmz-key-locations/blob/main/src/assets/powered-by-vercel.svg?raw=true)
 
 ## How to run the map locally
 
