@@ -1,7 +1,9 @@
 import fs from "fs";
-import { keys } from "./src/data/key-data.js";
+import { keys } from "./src/data/al-mazrah/locations/key-data.js";
 
-var writeStream = fs.createWriteStream("./src/data/keys.js");
+var writeStream = fs.createWriteStream(
+  "./src/data/al-mazrah/locations/keys.js"
+);
 let keys_ids = [];
 
 keys.forEach((key) => {

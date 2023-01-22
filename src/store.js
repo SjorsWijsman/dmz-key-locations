@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
 import { persistStore } from "./scripts/persist-store";
-import { keys } from "./data/keys";
+import { keys } from "./data/al-mazrah/locations/keys";
 
 // Leaflet map, for global reference
 export const map = writable(null);

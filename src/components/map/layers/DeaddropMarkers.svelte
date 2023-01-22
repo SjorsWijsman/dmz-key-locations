@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { deadDrops } from "$data/dead-drops";
+  import { deadDrops } from "$data/al-mazrah/locations/dead-drops";
   import Markers from "../Markers.svelte";
 
   let placeMarkers;
