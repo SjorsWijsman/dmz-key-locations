@@ -7,8 +7,8 @@ let keys_ids = [];
 keys.forEach((key) => {
 	let entry = {
 		id: key.title
-			.replace(/[\s+\,\!\;\?\/\\\:]/g, "-")
-			.replace(/[\[\]\.\']/g, "")
+			.replace(/[\s+,!;?/\\:]/g, "-")
+			.replace(/[[\].']/g, "")
 			.toLowerCase(),
 		...key,
 	};
