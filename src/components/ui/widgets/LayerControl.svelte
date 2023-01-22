@@ -1,6 +1,7 @@
 <script>
   import { map, layers, activeLayers } from "$store";
   import { onMount } from "svelte";
+  import Icon from "../Icon.svelte";
 
   let isOpen = false;
 
@@ -30,13 +31,15 @@
   });
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <section
+  on:click={() => (isOpen = true)}
   on:mouseenter={() => (isOpen = true)}
   on:mouseleave={() => (isOpen = false)}
   class:isOpen
 >
   {#if !isOpen}
-    <img src="./icons/leaflet/layers.png" alt="" />
+    <Icon icon={"layer-group"} size={3} />
   {:else}
     <form>
       {#each $layers as layer}
@@ -55,21 +58,20 @@
     z-index: 2000;
     right: 0;
     bottom: 0;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
     background-color: var(--color-black);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
     opacity: 0.9;
     text-shadow: 0 0 2rem rgba(0, 0, 50, 20%);
-    padding: 0.5rem;
-    width: 3.5rem;
-    height: 3.5rem;
+    padding: 0.25rem;
+    touch-action: manipulation;
   }
 
   section.isOpen {
     width: unset;
     height: unset;
+    padding: 0.5rem;
   }
 
   form {
@@ -92,10 +94,5 @@
 
   input {
     margin-right: 0.5rem;
-  }
-
-  img {
-    width: 100%;
-    padding: 0.1rem;
   }
 </style>

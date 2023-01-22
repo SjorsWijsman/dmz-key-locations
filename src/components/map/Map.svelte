@@ -8,12 +8,13 @@
   import POILabels from "$components/map/layers/POILabels.svelte";
   import Grid from "$components/map/layers/Grid.svelte";
   import LocationMarker from "$components/map/LocationMarker.svelte";
-  import MousePos from "$components/ui/MousePos.svelte";
-  import WaypointPos from "$components/ui/WaypointPos.svelte";
-  import LayerControl from "$components/ui/LayerControl.svelte";
+  import MousePos from "$components/ui/widgets/MousePos.svelte";
+  import WaypointPos from "$components/ui/widgets/WaypointPos.svelte";
+  import LayerControl from "$components/ui/widgets/LayerControl.svelte";
   import mapImage from "$assets/map.jpg";
   import { map } from "$store";
   import { isTouchDevice } from "$scripts/platform-check";
+  import ZoomControl from "$components/ui/widgets/ZoomControl.svelte";
 
   let mapContainer;
 
@@ -30,12 +31,6 @@
       minZoom: -4,
       zoomControl: false,
     });
-
-    L.control
-      .zoom({
-        position: "topright",
-      })
-      .addTo($map);
 
     image.addTo($map);
 
@@ -65,6 +60,7 @@
     <MousePos />
   {/if}
   <WaypointPos />
+  <ZoomControl />
   <LayerControl />
 {/if}
 <section bind:this={mapContainer} />

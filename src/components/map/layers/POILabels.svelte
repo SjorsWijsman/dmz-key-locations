@@ -2,7 +2,7 @@
   import L from "leaflet";
   import { onMount } from "svelte";
   import { map, layers } from "$store";
-  import { POIs } from "$data/map-data";
+  import { POIs } from "$data/al-mazrah/locations/pois";
 
   function placePOILabels() {
     let poiLayer = [];

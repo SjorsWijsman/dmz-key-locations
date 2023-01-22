@@ -1,11 +1,10 @@
 <script>
-  import Panel from "./Panel.svelte";
-  import { iOS } from "$scripts/platform-check";
+  import Panel from "../Panel.svelte";
   import Icon from "../Icon.svelte";
 </script>
 
 <Panel panelTitle={"info"} icon={"heart"} openIconOffset={2}>
-  <header>
+  <div>
     <h2>DMZ Key Locations</h2>
     <p>
       Thanks for using my map! Please contact me through the Discord server
@@ -48,18 +47,29 @@
         Activision Publishing, Inc.
       </a>
     </p>
-  </header>
-  <footer class:scrollbar={!iOS()}>
-    <a href="https://discord.gg/vqCwgh8buH" target="_blank" rel="noreferrer">
+  </div>
+  <svelte:fragment slot="footer">
+    <a
+      href="https://discord.gg/vqCwgh8buH"
+      target="_blank"
+      rel="noreferrer"
+      class="button"
+    >
       <Icon icon={"discord"} size={3} />
     </a>
-    <a href="https://twitter.com/DmzKeys" target="_blank" rel="noreferrer">
+    <a
+      href="https://twitter.com/DmzKeys"
+      target="_blank"
+      rel="noreferrer"
+      class="button"
+    >
       <Icon icon={"twitter"} size={3} />
     </a>
     <a
       href="https://github.com/SjorsWijsman/dmz-key-locations"
       target="_blank"
       rel="noreferrer"
+      class="button"
     >
       <Icon icon={"github"} size={3} />
     </a>
@@ -67,55 +77,25 @@
       href="https://www.paypal.com/donate/?hosted_button_id=L599J6499CT5W"
       target="_blank"
       rel="noreferrer"
+      class="button"
     >
       <Icon icon={"heart"} size={3} />
       <span>Donate</span>
     </a>
-  </footer>
+  </svelte:fragment>
 </Panel>
 
 <style>
-  h2 {
-    margin: 0.5rem 0;
+  div {
+    padding: 1rem;
   }
 
-  p {
+  div > p {
     opacity: 0.9;
     line-height: 1.3rem;
   }
 
-  header {
-    padding: 1rem;
-    padding-bottom: 3rem;
-  }
-
-  footer {
-    position: absolute;
-    width: 22rem;
-    background-color: var(--color-black);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
-    box-shadow: 0 0 1rem var(--color-black-dark);
-    bottom: 0;
-    border-radius: 0 0 0.5rem 0.5rem;
-  }
-
-  @media only screen and (max-width: 30rem) {
-    footer {
-      width: calc(100% - 10px - 1rem);
-      border-radius: 0;
-      border-bottom-left-radius: 0.5rem;
-    }
-
-    footer:not(.scrollbar) {
-      width: calc(100% - 10px);
-    }
-  }
-
-  footer > a {
+  a.button {
     display: block;
     display: flex;
     align-items: center;
@@ -130,13 +110,13 @@
   }
 
   @media (hover: hover) {
-    footer > a:hover {
+    a.button:hover {
       background-color: var(--color-main);
       transform: scale(1.2);
     }
   }
 
-  footer > a:last-of-type {
+  a.button:last-of-type {
     width: 9rem;
     padding: 0.3rem 1rem;
     padding-left: 0.4rem;
@@ -146,7 +126,7 @@
   }
 
   @media (hover: hover) {
-    footer > a:last-of-type:hover {
+    a.button:last-of-type:hover {
       background-color: var(--color-contrast-light);
     }
   }

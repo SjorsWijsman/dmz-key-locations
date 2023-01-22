@@ -11,7 +11,7 @@
     searchTerm,
     activePanel,
   } from "$store";
-  import { keys } from "$data/key-data";
+  import { keys } from "$data/al-mazrah/locations/keys";
   import Markers from "../Markers.svelte";
 
   let placeMarkers, iconSettings;

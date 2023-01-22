@@ -1,15 +1,15 @@
 <script>
   import { onMount } from "svelte";
-  import { deaddrops } from "$data/map-data";
+  import { deadDrops } from "$data/al-mazrah/locations/dead-drops";
   import Markers from "../Markers.svelte";
 
   let placeMarkers;
 
-  deaddrops.forEach((marker) => {
+  deadDrops.forEach((marker) => {
     marker.popupContent = `<p>Dead Drop - ${marker.title}</p>`;
   });
 
-  onMount(() => placeMarkers(deaddrops));
+  onMount(() => placeMarkers(deadDrops));
 </script>
 
 <Markers

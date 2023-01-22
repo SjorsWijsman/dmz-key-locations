@@ -37,7 +37,6 @@
   button {
     display: flex;
     justify-content: center;
-    position: relative;
     align-items: center;
     height: 3rem;
     width: 3rem;
@@ -82,14 +81,11 @@
 
   @media only screen and (max-width: 30rem) {
     button:not(.closed) {
-      position: absolute;
-      right: 1rem;
+      position: relative;
       border-radius: 0.5rem;
       background-color: var(--color-black-light);
-    }
-
-    button:not(.closed).scrollbar {
-      right: 2rem;
+      margin: 0;
+      margin-left: 1rem;
     }
 
     @media (hover: hover) {
