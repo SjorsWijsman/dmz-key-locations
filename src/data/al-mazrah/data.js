@@ -1,18 +1,20 @@
-import mapImage from "$assets/map.jpg";
-import { POIs } from "./locations/pois";
+import image from "$assets/map.jpg";
+import { pois } from "./locations/pois";
 import { keys } from "./locations/keys";
 import { deadDrops } from "./locations/dead-drops";
 import { spawns } from "./locations/spawns";
 
 export const data = {
-	mapImage,
-	bounds: [
-		[0, 0],
-		[4150, 4150],
-	],
+	image,
+	width: 4150,
+	height: 4150,
 	options: {
-		POIs,
-		gridSize: 415,
+		pois,
+		grid: {
+			xTiles: 10,
+			yTiles: 10,
+			labels: true,
+		},
 	},
 	locations: {
 		keys,

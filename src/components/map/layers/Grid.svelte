@@ -3,16 +3,18 @@
 	import { onMount } from "svelte";
 	import { layers, selectedSector } from "$store";
 
-	const tiles = 10;
-	const tileSize = 415;
+	export let mapHeight, mapWidth, grid;
 
-	const xTiles = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
-	const yTiles = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+	const xTiles = grid.xTiles;
+	const yTiles = grid.yTiles;
+
+	const xTileSize = mapWidth / xTiles;
+	const yTileSize = mapHeight / yTiles;
 
 	function drawGrid() {
 		// Create grid lines
 		const lines = drawLines();
-		const labels = drawLabels();
+		const labels = grid.labels ? drawLabels() : [];
 
 		// Add lines to layerGroup
 		const gridLayer = L.layerGroup([...labels, ...lines]);
@@ -32,25 +34,22 @@
 			opacity: 0.05,
 			weight: 2,
 		};
-		xTiles.forEach((xTile, x) => {
-			yTiles.forEach((yTile, y) => {
+		for (let x = 0; x < xTiles; x++) {
+			for (let y = 0; y < yTiles; y++) {
 				// Draw rectangle for each grid section starting from top left
 				lines.push(
 					L.rectangle(
 						[
-							[tileSize * (tiles - y), tileSize * x],
-							[tileSize * (tiles - y - 1), tileSize * (x + 1)],
+							[mapHeight - yTileSize * y, x * xTileSize],
+							[mapHeight - (y + 1) * yTileSize, (x + 1) * xTileSize],
 						],
 						gridStyle
 					).on("mouseover", (e) => {
-						$selectedSector = [xTile, yTile];
+						$selectedSector = [x, numberToLetters(y)];
 					})
-					// .on("mouseout", (e) => {
-					//   $selectedSector = [];
-					// })
 				);
-			});
-		});
+			}
+		}
 		return lines;
 	}
 
@@ -61,21 +60,33 @@
 			permanent: true,
 			className: "sector-label",
 		};
-		xTiles.forEach((xTile, x) => {
+		for (let x = 0; x < xTiles; x++) {
 			labels.push(
 				L.tooltip(labelSettings)
-					.setLatLng([tileSize * tiles + 100, tileSize * x + tileSize / 2])
-					.setContent(xTile)
+					.setLatLng([xTileSize * xTiles + 100, xTileSize * x + xTileSize / 2])
+					.setContent(`${x}`)
 			);
-		});
-		yTiles.forEach((yTile, y) => {
+		}
+		for (let y = 0; y < yTiles; y++) {
 			labels.push(
 				L.tooltip(labelSettings)
-					.setLatLng([tileSize * tiles - tileSize * y - tileSize / 2, -100])
-					.setContent(yTile)
+					.setLatLng([yTileSize * yTiles - yTileSize * y - yTileSize / 2, -100])
+					.setContent(`${numberToLetters(y)}`)
 			);
-		});
+		}
 		return labels;
+	}
+
+	const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	function numberToLetters(num) {
+		var base = "A".charCodeAt(0);
+		var str = "";
+		while (num >= 0) {
+			var r = num % 26;
+			str = String.fromCharCode(base + r) + str;
+			num = Math.floor(num / 26) - 1;
+		}
+		return str;
 	}
 
 	onMount(drawGrid);

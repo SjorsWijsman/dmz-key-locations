@@ -12,18 +12,19 @@
 	import WaypointPos from "$components/ui/widgets/WaypointPos.svelte";
 	import LayerControl from "$components/ui/widgets/LayerControl.svelte";
 	import ZoomControl from "$components/ui/widgets/ZoomControl.svelte";
-	import mapImage from "$assets/map.jpg";
 	import { map } from "$store";
 	import { isTouchDevice } from "$scripts/platform-check";
+
+	export let mapData;
 
 	let mapContainer;
 
 	onMount(() => {
 		const bounds = [
 			[0, 0],
-			[4150, 4150],
+			[mapData.height, mapData.width],
 		];
-		const image = L.imageOverlay(mapImage, bounds);
+		const image = L.imageOverlay(mapData.image, bounds);
 
 		$map = L.map(mapContainer, {
 			crs: L.CRS.Simple,
@@ -49,8 +50,12 @@
 	<DeaddropMarkers />
 	<SpawnMarkers />
 
-	<POILabels />
-	<Grid />
+	{#if mapData?.options?.pois}
+		<POILabels pois={mapData.options.pois} />
+	{/if}
+	{#if mapData?.options?.grid}
+		<Grid mapHeight={mapData.height} mapWidth={mapData.width} grid={mapData.options.grid} />
+	{/if}
 
 	<LocationMarker />
 

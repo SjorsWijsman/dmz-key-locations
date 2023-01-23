@@ -2,7 +2,8 @@
 	import L from "leaflet";
 	import { onMount } from "svelte";
 	import { map, layers } from "$store";
-	import { POIs } from "$data/al-mazrah/locations/pois";
+
+	export let pois;
 
 	function placePOILabels() {
 		let poiLayer = [];
@@ -20,7 +21,7 @@
 		$map.getPane("locations").style.zIndex = 650;
 		$map.getPane("locations").style.pointerEvents = "none";
 
-		POIs.forEach((poi) => {
+		pois.forEach((poi) => {
 			markers.push(
 				L.tooltip(labelSettings)
 					.setLatLng([4150 - poi.location.y, poi.location.x])
