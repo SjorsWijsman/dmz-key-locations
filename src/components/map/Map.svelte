@@ -38,7 +38,7 @@
 		$map.fitBounds(bounds);
 		$map.setMaxBounds([
 			[-3000, -3000],
-			[7150, 7150],
+			[mapData.height + 3000, mapData.width + 3000],
 		]);
 		$map.setZoom(-1);
 	});

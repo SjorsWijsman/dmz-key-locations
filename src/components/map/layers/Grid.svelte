@@ -45,7 +45,7 @@
 						],
 						gridStyle
 					).on("mouseover", (e) => {
-						$selectedSector = [x, numberToLetters(y)];
+						$selectedSector = [numberToLetters(y), x];
 					})
 				);
 			}
