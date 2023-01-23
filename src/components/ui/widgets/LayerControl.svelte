@@ -20,7 +20,7 @@
 				if (layer.on) {
 					// Add layer to map & sync with activeLayers store
 					$map.addLayer(layer.layer);
-					$activeLayers = [...$activeLayers, layer.title];
+					if (!$activeLayers.includes(layer.title)) $activeLayers = [...$activeLayers, layer.title];
 				} else {
 					// Remove layer from map & sync with activeLayers store
 					$map.removeLayer(layer.layer);
