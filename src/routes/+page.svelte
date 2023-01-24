@@ -8,8 +8,6 @@
 
 	// This will go via slug parameters in the future when there are multiple maps
 	const mapData = maps["al-mazrah"].data;
-
-	console.log(mapData);
 </script>
 
 <main class:video-disabled={!$showVideo}>

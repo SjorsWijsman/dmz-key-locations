@@ -1,4 +1,4 @@
-import image from "$assets/map.jpg";
+import image from "$assets/al-mazrah.jpg";
 import { pois } from "./locations/pois";
 import { keys } from "./locations/keys";
 import { deadDrops } from "./locations/dead-drops";
@@ -19,8 +19,8 @@ export const data = {
 	locations: {
 		keys,
 		misc: [
-			{ title: "Dead Drops", deadDrops },
-			{ title: "Spawns", spawns },
+			{ title: "Dead Drop", iconUrl: "icons/markers/location-deaddrop.svg", data: deadDrops },
+			{ title: "Spawn", iconUrl: "icons/markers/location-spawn.svg", data: spawns },
 		],
 	},
 };

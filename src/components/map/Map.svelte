@@ -3,8 +3,7 @@
 	import { onMount } from "svelte";
 	import CustomMarkers from "$components/map/layers/CustomMarkers.svelte";
 	import KeyMarkers from "$components/map/layers/KeyMarkers.svelte";
-	import DeaddropMarkers from "$components/map/layers/DeaddropMarkers.svelte";
-	import SpawnMarkers from "$components/map/layers/SpawnMarkers.svelte";
+	import MiscMarkers from "$components/map/layers/MiscMarkers.svelte";
 	import POILabels from "$components/map/layers/POILabels.svelte";
 	import Grid from "$components/map/layers/Grid.svelte";
 	import LocationMarker from "$components/map/LocationMarker.svelte";
@@ -46,9 +45,14 @@
 
 {#if $map}
 	<CustomMarkers />
-	<KeyMarkers />
-	<DeaddropMarkers />
-	<SpawnMarkers />
+
+	{#if mapData?.locations?.keys}
+		<KeyMarkers keys={mapData.locations.keys} />
+	{/if}
+
+	{#each mapData?.locations?.misc as misc}
+		<MiscMarkers {...misc} />
+	{/each}
 
 	{#if mapData?.options?.pois}
 		<POILabels pois={mapData.options.pois} />
