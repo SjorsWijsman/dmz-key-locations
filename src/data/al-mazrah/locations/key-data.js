@@ -287,6 +287,7 @@ export const keys = [
 	},
 	{
 		title: "Groundskeepers Building",
+		keyName: "Seaside Resort Groundskeepers Shack Key",
 		location: { x: 1952, y: 3266 },
 		description: ["Small building in the west of Sarrif Bay. Entry from the far side of the road."],
 		video: "mjYdGa0glRQ",
