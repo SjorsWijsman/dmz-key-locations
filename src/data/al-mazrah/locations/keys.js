@@ -1275,6 +1275,18 @@ export const keys = [
         "keyName": "Sunken Ship Thief's Cache Key"
     },
     {
+        "id": "the-architects-toolbox",
+        "title": "The Architect's Toolbox",
+        "location": {
+            "x": 1938,
+            "y": 1582
+        },
+        "description": [
+            "A small toolbox found in the underground tunnels. An entrance to the tunnels can be found slightly to the south west of the marked location."
+        ],
+        "keyName": "The Architect's Toolbox Key"
+    },
+    {
         "id": "control-room",
         "title": "Control Room",
         "description": [

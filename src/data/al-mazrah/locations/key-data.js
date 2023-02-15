@@ -785,6 +785,13 @@ export const keys = [
 		video: "Rx4L86BCsX8",
 	},
 	{
+		title: "The Architect's Toolbox",
+		location: { x: 1938, y: 1582 },
+		description: [
+			"A small toolbox found in the underground tunnels. An entrance to the tunnels can be found slightly to the south west of the marked location.",
+		],
+	},
+	{
 		title: "Control Room",
 		description: [
 			"If you find the location for this key, please contact me in Discord and I will add it to the map.",
