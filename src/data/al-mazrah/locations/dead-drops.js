@@ -30,8 +30,8 @@ export const deadDrops = [
 	{
 		title: "E7",
 		location: {
-			x: 1684,
-			y: 2953,
+			x: 1695,
+			y: 2955,
 		},
 	},
 	{
