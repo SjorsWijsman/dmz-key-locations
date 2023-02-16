@@ -1,10 +1,9 @@
 <script>
 	import { fadeSlide } from "$scripts/fade-slide";
 	import { favorites, openKeyInfo, keyMarkers, layers } from "$store";
-	import { maps } from "$data/maps";
 	import Icon from "../Icon.svelte";
 
-	export let id, map, title, location, description, tags;
+	export let id, title, location, description, tags;
 
 	let copied = false;
 
@@ -43,10 +42,10 @@
 {#if $openKeyInfo === title}
 	<section transition:fadeSlide|local={{ duration: 200 }}>
 		<div>
-			<a href="/{map}" class="tag">
+			<!-- <a href="/{map}" class="tag">
 				<Icon src={"icons/markers/location-dot.svg"} size={1.5} />
 				{maps[map].title}
-			</a>
+			</a> -->
 
 			{#if tags?.includes("mission")}
 				<span class="tag mission">
@@ -138,6 +137,10 @@
 		margin-top: 1.5rem;
 	}
 
+	h3:first-child {
+		margin-top: 0;
+	}
+
 	p {
 		margin: 0;
 		margin-bottom: 1rem;
@@ -145,13 +148,13 @@
 		opacity: 0.85;
 	}
 
-	a.tag {
+	/* a.tag {
 		text-decoration: none;
 	}
 
 	a.tag:hover {
 		text-decoration: underline;
-	}
+	} */
 
 	.tag {
 		display: flex;

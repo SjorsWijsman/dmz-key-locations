@@ -14,7 +14,7 @@
 		tags = [];
 
 	// Prevent unused variable warning.
-	$: loot, video;
+	$: map, loot, video;
 
 	let icon = "key";
 	$: icon = $favorites.includes(title)
@@ -57,7 +57,7 @@
 		</span>
 		<Icon icon="chevron-down" size={1.5} />
 	</div>
-	<SearchResultContent {...{ id, map, title, location, description, tags }} />
+	<SearchResultContent {...{ id, title, location, description, tags }} />
 </li>
 
 <style>
