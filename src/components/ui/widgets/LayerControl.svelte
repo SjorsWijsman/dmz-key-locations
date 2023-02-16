@@ -6,26 +6,27 @@
 	let isOpen = false;
 
 	onMount(() => {
-		// Turn layers in activeLayers on
-		// This is done to persist layer selection between sessions
-		$layers.forEach((layer) => {
-			if ($activeLayers.includes(layer.title)) {
-				layer.on = true;
-			}
-		});
-
 		// Add/remove layers from map on layer.on Boolean update
 		layers.subscribe((layerList) => {
 			layerList.forEach((layer) => {
-				if (!layer.layer) return;
-				if (layer.on) {
-					// Add layer to map & sync with activeLayers store
-					$map.addLayer(layer.layer);
-					if (!$activeLayers.includes(layer.title)) $activeLayers = [...$activeLayers, layer.title];
-				} else {
-					// Remove layer from map & sync with activeLayers store
-					$map.removeLayer(layer.layer);
-					$activeLayers = $activeLayers.filter((item) => item !== layer.title);
+				// Initialise layer toggle boolean
+				if (layer.on === undefined) {
+					if ($activeLayers.includes(layer.title)) {
+						layer.on = true;
+					}
+				}
+
+				if (layer.layer) {
+					if (layer.on) {
+						// Add layer to map & sync to activeLayers store
+						$map.addLayer(layer.layer);
+						if (!$activeLayers.includes(layer.title))
+							$activeLayers = [...$activeLayers, layer.title];
+					} else {
+						// Remove layer from map & sync to activeLayers store
+						$map.removeLayer(layer.layer);
+						$activeLayers = $activeLayers.filter((item) => item !== layer.title);
+					}
 				}
 			});
 		});

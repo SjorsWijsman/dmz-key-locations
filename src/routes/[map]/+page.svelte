@@ -6,7 +6,8 @@
 	import SearchPanel from "$components/ui/panels/SearchPanel.svelte";
 	import UserPanel from "$components/ui/panels/UserPanel.svelte";
 	import InfoPanel from "$components/ui/panels/InfoPanel.svelte";
-	import { mapData, showVideo } from "$store";
+	import { mapData, showVideo, activePanel } from "$store";
+	import { mobileSize } from "$scripts/media-queries";
 	import { maps } from "$data/maps";
 	import { page } from "$app/stores";
 	import { goto } from "$app/navigation";
@@ -17,20 +18,30 @@
 		$mapData = maps[map];
 		if (!$mapData) goto("/");
 	}
+
+	let outerWidth;
+
+	function showMapToggle(panelIsOpen, outerWidth) {
+		if (panelIsOpen && mobileSize(outerWidth)) {
+			return false;
+		}
+		if (Object.keys(maps).length > 1) return true;
+		return false;
+	}
 </script>
 
-{#if Object.keys(maps).length > 1}
-	<header>
-		<nav transition:fly={{ y: -40 }}>
-			<ul>
-				{#each Object.keys(maps) as map}
-					<li class:active={map === $page?.params?.map}>
-						<a href={map}>{maps[map].title}</a>
-					</li>
-				{/each}
-			</ul>
-		</nav>
-	</header>
+<svelte:window bind:outerWidth />
+
+{#if showMapToggle($activePanel, outerWidth)}
+	<nav transition:fly={{ y: -40 }}>
+		<ul>
+			{#each Object.keys(maps) as map}
+				<li class:active={map === $page?.params?.map}>
+					<a href={map}>{maps[map].title}</a>
+				</li>
+			{/each}
+		</ul>
+	</nav>
 {/if}
 <main class:video-disabled={!$showVideo}>
 	<SearchPanel />
@@ -48,6 +59,7 @@
 		transform: translate(-50%);
 		border-radius: 0.5rem;
 		background-color: var(--color-black);
+		box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 		opacity: 0.9;
 		overflow: hidden;
 	}
@@ -57,6 +69,8 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		text-align: center;
+		width: 100%;
 	}
 
 	a {
