@@ -13,7 +13,7 @@
 	} from "$store";
 	import Markers from "../Markers.svelte";
 
-	export let keys;
+	export let keys = [];
 
 	let placeMarkers, iconSettings;
 

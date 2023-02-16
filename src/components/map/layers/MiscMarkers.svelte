@@ -2,7 +2,9 @@
 	import { onMount } from "svelte";
 	import Markers from "../Markers.svelte";
 
-	export let title, iconUrl, data;
+	export let title,
+		iconUrl,
+		data = [];
 
 	let placeMarkers;
 

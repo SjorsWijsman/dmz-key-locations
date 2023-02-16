@@ -4,6 +4,7 @@
 	import Icon from "../Icon.svelte";
 
 	export let id = "untitled-location",
+		map = "al-mazrah",
 		title = "Untitled Location",
 		keyName = "",
 		location = {},
@@ -12,8 +13,8 @@
 		video = "",
 		tags = [];
 
-	// Prevent unused variable warning - Remove when video gets used in searchresult.
-	$: loot, video;
+	// Prevent unused variable warning.
+	$: map, loot, video;
 
 	let icon = "key";
 	$: icon = $favorites.includes(title)

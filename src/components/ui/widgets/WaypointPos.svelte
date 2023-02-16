@@ -2,6 +2,8 @@
 	import L from "leaflet";
 	import { map, waypoint, customMarkerData, customMarkers } from "$store";
 
+	export let yMax, xMax;
+
 	const WaypointCoordinates = L.Control.extend({
 		onAdd: ($map) => {
 			const container = L.DomUtil.create("div");
@@ -12,8 +14,8 @@
 					let lat = $waypoint?.lat;
 					let lng = $waypoint?.lng;
 					const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
-					const y = 4150 - Math.round(clamp(lat, 0, 4150));
-					const x = Math.round(clamp(lng, 0, 4150));
+					const y = yMax - Math.round(clamp(lat, 0, yMax));
+					const x = Math.round(clamp(lng, 0, xMax));
 
 					const span = L.DomUtil.create("span", "mouse-position");
 					span.classList.add("waypoint-position");
@@ -59,7 +61,7 @@
 			id: self.crypto.randomUUID(),
 			location: {
 				x: coordinates.lng,
-				y: 4150 - coordinates.lat,
+				y: yMax - coordinates.lat,
 			},
 			title: "Custom Marker",
 		};

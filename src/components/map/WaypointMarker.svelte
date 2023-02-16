@@ -2,11 +2,13 @@
 	import L from "leaflet";
 	import { map, selectedSector, waypoint } from "$store";
 
-	let locationMarker;
+	let waypointMarker;
 
-	$map.on("click", setLocationMarker);
+	export let yMax, xMax;
 
-	function setLocationMarker(e) {
+	$map.on("click", setWaypointMarker);
+
+	function setWaypointMarker(e) {
 		const icon = L.icon({
 			iconUrl: "./icons/crosshairs.svg",
 
@@ -14,21 +16,21 @@
 			iconAnchor: [8, 8], // point of the icon which will correspond to marker's location
 		});
 
-		if (locationMarker) {
-			locationMarker.remove($map);
+		if (waypointMarker) {
+			waypointMarker.remove($map);
 			$waypoint = null;
 		}
 
 		let { lat, lng } = e.latlng;
 
-		if (lat >= 0 && lng >= 0 && lat <= 4150 && lng <= 4150) {
+		if (lat >= 0 && lng >= 0 && lat <= yMax && lng <= xMax) {
 			const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
-			lat = Math.round(clamp(lat, 0, 4150));
-			lng = Math.round(clamp(lng, 0, 4150));
+			lat = Math.round(clamp(lat, 0, yMax));
+			lng = Math.round(clamp(lng, 0, xMax));
 
-			locationMarker = L.marker({ lat, lng }, { icon });
-			locationMarker.addTo($map).on("click", () => {
-				locationMarker.remove($map);
+			waypointMarker = L.marker({ lat, lng }, { icon });
+			waypointMarker.addTo($map).on("click", () => {
+				waypointMarker.remove($map);
 				$waypoint = null;
 			});
 

@@ -3,7 +3,7 @@
 	import { onMount } from "svelte";
 	import { map, layers } from "$store";
 
-	export let pois;
+	export let pois = [];
 
 	function placePOILabels() {
 		let poiLayer = [];

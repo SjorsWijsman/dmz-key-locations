@@ -4,6 +4,7 @@
 	"version": "1.3.0",
 	"type": "module",
 	"scripts": {
+		"predev": "npm run generate-key-data",
 		"dev": "vite dev",
 		"prebuild": "npm run generate-key-data",
 		"build": "vite build",

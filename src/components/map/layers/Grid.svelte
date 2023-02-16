@@ -63,21 +63,20 @@
 		for (let x = 0; x < xTiles; x++) {
 			labels.push(
 				L.tooltip(labelSettings)
-					.setLatLng([xTileSize * xTiles + 100, xTileSize * x + xTileSize / 2])
+					.setLatLng([xTileSize * xTiles + xTileSize / 3, xTileSize * x + xTileSize / 2])
 					.setContent(`${x}`)
 			);
 		}
 		for (let y = 0; y < yTiles; y++) {
 			labels.push(
 				L.tooltip(labelSettings)
-					.setLatLng([yTileSize * yTiles - yTileSize * y - yTileSize / 2, -100])
+					.setLatLng([yTileSize * yTiles - yTileSize * y - yTileSize / 2, -xTileSize / 3])
 					.setContent(`${numberToLetters(y)}`)
 			);
 		}
 		return labels;
 	}
 
-	const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	function numberToLetters(num) {
 		var base = "A".charCodeAt(0);
 		var str = "";
