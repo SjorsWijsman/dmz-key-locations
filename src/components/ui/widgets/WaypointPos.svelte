@@ -1,8 +1,6 @@
 <script>
 	import L from "leaflet";
-	import { map, waypoint, customMarkerData, customMarkers } from "$store";
-
-	export let yMax, xMax;
+	import { map, mapData, waypoint, customMarkerData, customMarkers } from "$store";
 
 	const WaypointCoordinates = L.Control.extend({
 		onAdd: ($map) => {
@@ -14,8 +12,8 @@
 					let lat = $waypoint?.lat;
 					let lng = $waypoint?.lng;
 					const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
-					const y = yMax - Math.round(clamp(lat, 0, yMax));
-					const x = Math.round(clamp(lng, 0, xMax));
+					const y = $mapData.height - Math.round(clamp(lat, 0, $mapData.height));
+					const x = Math.round(clamp(lng, 0, $mapData.width));
 
 					const span = L.DomUtil.create("span", "mouse-position");
 					span.classList.add("waypoint-position");

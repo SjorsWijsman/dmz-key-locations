@@ -11,24 +11,19 @@
 	import WaypointPos from "$components/ui/widgets/WaypointPos.svelte";
 	import LayerControl from "$components/ui/widgets/LayerControl.svelte";
 	import ZoomControl from "$components/ui/widgets/ZoomControl.svelte";
-	import { map } from "$store";
+	import { map, mapData } from "$store";
 	import { isTouchDevice } from "$scripts/platform-check";
 
 	export let mapName;
-	export let mapData;
 	export let keys;
-
-	let yMax = mapData.height;
-	let xMax = mapData.width;
 
 	let mapContainer;
 
-	onMount(() => {
-		setupMap(mapData);
-	});
+	onMount(() => setupMap());
+	mapData.subscribe(() => setupMap());
 
-	function setupMap(mapData) {
-		if (!mapData || !mapContainer) return;
+	function setupMap() {
+		if (!$mapData || !mapContainer) return;
 
 		$map?.remove();
 
@@ -41,40 +36,38 @@
 
 		const bounds = [
 			[0, 0],
-			[mapData.height, mapData.width],
+			[$mapData.height, $mapData.width],
 		];
 
-		const image = L.imageOverlay(mapData.image, bounds);
+		const image = L.imageOverlay($mapData.image, bounds);
 		image.addTo($map);
 
 		$map.fitBounds(bounds);
 		$map.setMaxBounds([
 			[-3000, -3000],
-			[mapData.height + 3000, mapData.width + 3000],
+			[$mapData.height + 3000, $mapData.width + 3000],
 		]);
 		$map.setZoom(-1);
 	}
-
-	$: setupMap(mapData);
 </script>
 
-{#key mapData}
+{#key $mapData}
 	{#if $map}
 		<CustomMarkers />
 		<KeyMarkers keys={keys.filter((key) => key.map === mapName)} />
-		{#each mapData?.locations?.misc ?? [] as misc}
+		{#each $mapData?.locations?.misc ?? [] as misc}
 			<MiscMarkers {...misc} />
 		{/each}
 
-		<POILabels pois={mapData.options.pois} {yMax} />
-		<Grid mapHeight={mapData.height} mapWidth={mapData.width} grid={mapData.options.grid} />
+		<POILabels pois={$mapData.options.pois} />
+		<Grid grid={$mapData.options.grid} />
 
-		<WaypointMarker {xMax} {yMax} />
+		<WaypointMarker />
 
 		{#if !isTouchDevice()}
-			<MousePos {xMax} {yMax} />
+			<MousePos />
 		{/if}
-		<WaypointPos {xMax} {yMax} />
+		<WaypointPos />
 		<ZoomControl />
 		<LayerControl />
 	{/if}

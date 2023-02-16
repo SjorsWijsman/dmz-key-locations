@@ -6,7 +6,7 @@
 	<nav>
 		<ul>
 			{#each Object.keys(maps) as map}
-				<li style:background-image={`url(${maps[map].data.image})`}>
+				<li style:background-image={`url(${maps[map].image})`}>
 					<a href="/{map}">
 						<div>{maps[map].title}</div>
 					</a>

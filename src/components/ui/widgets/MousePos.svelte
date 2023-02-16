@@ -1,8 +1,6 @@
 <script>
 	import L from "leaflet";
-	import { map, selectedSector } from "$store";
-
-	export let yMax, xMax;
+	import { map, mapData, selectedSector } from "$store";
 
 	const MouseCoordinates = L.Control.extend({
 		onAdd: ($map) => {
@@ -15,8 +13,8 @@
 				let { lat, lng } = e.latlng;
 
 				const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
-				const y = yMax - Math.round(clamp(lat, 0, yMax));
-				const x = Math.round(clamp(lng, 0, xMax));
+				const y = $mapData.height - Math.round(clamp(lat, 0, $mapData.height));
+				const x = Math.round(clamp(lng, 0, $mapData.width));
 
 				if (lat !== previousLat || lng !== previousLng) {
 					container.innerHTML = `

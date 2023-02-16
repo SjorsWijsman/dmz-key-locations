@@ -1,10 +1,8 @@
 <script>
 	import L from "leaflet";
-	import { map, selectedSector, waypoint } from "$store";
+	import { map, mapData, selectedSector, waypoint } from "$store";
 
 	let waypointMarker;
-
-	export let yMax, xMax;
 
 	$map.on("click", setWaypointMarker);
 
@@ -23,10 +21,10 @@
 
 		let { lat, lng } = e.latlng;
 
-		if (lat >= 0 && lng >= 0 && lat <= yMax && lng <= xMax) {
+		if (lat >= 0 && lng >= 0 && lat <= $mapData.height && lng <= $mapData.width) {
 			const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
-			lat = Math.round(clamp(lat, 0, yMax));
-			lng = Math.round(clamp(lng, 0, xMax));
+			lat = Math.round(clamp(lat, 0, $mapData.height));
+			lng = Math.round(clamp(lng, 0, $mapData.width));
 
 			waypointMarker = L.marker({ lat, lng }, { icon });
 			waypointMarker.addTo($map).on("click", () => {

@@ -815,4 +815,17 @@ export const keys = [
 			"If you find the location for this key, please contact me in Discord and I will add it to the map.",
 		],
 	},
+	{
+		title: "Crash Site Weapon Case",
+		location: { x: 1443, y: 2287 },
+		description: [""],
+		video: "XEKT37W3gyU",
+		tags: ["mission"],
+	},
+	{
+		title: "SC Special Forces Footlocker",
+		location: { x: 1434, y: 2285 },
+		description: [""],
+		video: "OtxN6_9WA6s",
+	},
 ];

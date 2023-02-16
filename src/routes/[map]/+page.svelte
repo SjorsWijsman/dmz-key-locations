@@ -6,19 +6,17 @@
 	import SearchPanel from "$components/ui/panels/SearchPanel.svelte";
 	import UserPanel from "$components/ui/panels/UserPanel.svelte";
 	import InfoPanel from "$components/ui/panels/InfoPanel.svelte";
-	import { showVideo } from "$store";
+	import { mapData, showVideo } from "$store";
 	import { maps } from "$data/maps";
 	import { keys } from "$data/keys";
 	import { page } from "$app/stores";
 	import { goto } from "$app/navigation";
 
-	let mapData;
-
 	$: setMapData($page.params?.map);
 
 	function setMapData(map) {
-		mapData = maps[map]?.data;
-		if (!mapData) goto("/");
+		$mapData = maps[map];
+		if (!$mapData) goto("/");
 	}
 </script>
 
@@ -39,7 +37,7 @@
 	<SearchPanel />
 	<UserPanel />
 	<InfoPanel />
-	<Map mapName={$page.params?.map} {mapData} {keys} />
+	<Map mapName={$page.params?.map} {keys} />
 </main>
 
 <style>

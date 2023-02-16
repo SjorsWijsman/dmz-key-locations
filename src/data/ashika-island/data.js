@@ -5,6 +5,7 @@ import { deadDrops } from "./locations/dead-drops";
 import { spawns } from "./locations/spawns";
 
 export const data = {
+	title: "Ashika Island",
 	image,
 	width: 1210,
 	height: 1210,

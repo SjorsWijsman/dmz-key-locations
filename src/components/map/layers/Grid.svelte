@@ -1,15 +1,15 @@
 <script>
 	import L from "leaflet";
 	import { onMount } from "svelte";
-	import { layers, selectedSector } from "$store";
+	import { mapData, layers, selectedSector } from "$store";
 
-	export let mapHeight, mapWidth, grid;
+	export let grid;
 
 	const xTiles = grid.xTiles;
 	const yTiles = grid.yTiles;
 
-	const xTileSize = mapWidth / xTiles;
-	const yTileSize = mapHeight / yTiles;
+	const xTileSize = $mapData.width / xTiles;
+	const yTileSize = $mapData.height / yTiles;
 
 	function drawGrid() {
 		// Create grid lines
@@ -40,8 +40,8 @@
 				lines.push(
 					L.rectangle(
 						[
-							[mapHeight - yTileSize * y, x * xTileSize],
-							[mapHeight - (y + 1) * yTileSize, (x + 1) * xTileSize],
+							[$mapData.height - yTileSize * y, x * xTileSize],
+							[$mapData.height - (y + 1) * yTileSize, (x + 1) * xTileSize],
 						],
 						gridStyle
 					).on("mouseover", (e) => {

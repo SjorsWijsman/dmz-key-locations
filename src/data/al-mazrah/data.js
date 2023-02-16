@@ -5,6 +5,7 @@ import { deadDrops } from "./locations/dead-drops";
 import { spawns } from "./locations/spawns";
 
 export const data = {
+	title: "Al Mazrah",
 	image,
 	width: 4150,
 	height: 4150,

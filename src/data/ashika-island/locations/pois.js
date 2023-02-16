@@ -14,7 +14,7 @@ export const pois = [
 		},
 	},
 	{
-		title: "Post Ashika",
+		title: "Port Ashika",
 		location: {
 			x: 840,
 			y: 856,

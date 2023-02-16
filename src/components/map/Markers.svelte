@@ -1,6 +1,6 @@
 <script>
 	import L from "leaflet";
-	import { layers, map } from "$store";
+	import { map, mapData, layers } from "$store";
 
 	export let openPopupFunction = (markerLocation, marker) => {
 		return this;
@@ -40,10 +40,13 @@
 
 				const icon = L.icon(iconSettings);
 
-				let marker = L.marker([4150 - markerLocation.location?.y, markerLocation.location?.x], {
-					title: markerLocation[markerId],
-					icon,
-				})
+				let marker = L.marker(
+					[$mapData.height - markerLocation.location?.y, markerLocation.location?.x],
+					{
+						title: markerLocation[markerId],
+						icon,
+					}
+				)
 					.bindPopup(markerLocation.popupContent ?? `<p>${markerLocation.title}</p>`)
 					.on("popupopen", () => openPopup(markerLocation, marker))
 					.on("popupclose", () => closePopup(markerLocation, marker));

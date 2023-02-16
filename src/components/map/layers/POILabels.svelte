@@ -1,10 +1,9 @@
 <script>
 	import L from "leaflet";
 	import { onMount } from "svelte";
-	import { map, layers } from "$store";
+	import { map, mapData, layers } from "$store";
 
 	export let pois = [];
-	export let yMax;
 
 	function placePOILabels() {
 		let poiLayer = [];
@@ -25,7 +24,7 @@
 		pois.forEach((poi) => {
 			markers.push(
 				L.tooltip(labelSettings)
-					.setLatLng([yMax - poi.location.y, poi.location.x])
+					.setLatLng([$mapData.height - poi.location.y, poi.location.x])
 					.setContent(poi.title)
 			);
 		});

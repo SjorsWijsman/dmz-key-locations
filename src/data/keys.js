@@ -1418,9 +1418,44 @@ export const keys = [
         "keyName": "Stronghold Interior Key"
     },
     {
+        "id": "crash-site-weapon-case",
+        "map": "al-mazrah",
+        "title": "Crash Site Weapon Case",
+        "location": {
+            "x": 1443,
+            "y": 2287
+        },
+        "description": [
+            ""
+        ],
+        "video": "XEKT37W3gyU",
+        "tags": [
+            "mission"
+        ],
+        "keyName": "Crash Site Weapon Case Key"
+    },
+    {
+        "id": "sc-special-forces-footlocker",
+        "map": "al-mazrah",
+        "title": "SC Special Forces Footlocker",
+        "location": {
+            "x": 1434,
+            "y": 2285
+        },
+        "description": [
+            ""
+        ],
+        "video": "OtxN6_9WA6s",
+        "keyName": "SC Special Forces Footlocker Key"
+    },
+    {
         "id": "tsuki-castle",
         "map": "ashika-island",
         "title": "Tsuki Castle",
+        "location": {
+            "x": 746,
+            "y": 673
+        },
         "description": [
             ""
         ],
@@ -1434,6 +1469,10 @@ export const keys = [
         "id": "tsuki-castle-weapons-locker",
         "map": "ashika-island",
         "title": "Tsuki Castle Weapons Locker",
+        "location": {
+            "x": 729,
+            "y": 647
+        },
         "description": [
             ""
         ],
@@ -1441,21 +1480,188 @@ export const keys = [
         "keyName": "Tsuki Castle Weapons Locker Key"
     },
     {
+        "id": "lost-managers-office",
+        "map": "ashika-island",
+        "title": "Lost Manager's Office",
+        "location": {
+            "x": 784,
+            "y": 810
+        },
+        "description": [
+            ""
+        ],
+        "video": "fAEBFxIvvds",
+        "keyName": "Lost Manager's Office Key"
+    },
+    {
+        "id": "research-center-room",
+        "map": "ashika-island",
+        "title": "Research Center Room",
+        "location": {
+            "x": 597,
+            "y": 634
+        },
+        "description": [
+            ""
+        ],
+        "video": "RE4_vSLgQxY",
+        "keyName": "Research Center Room Key"
+    },
+    {
+        "id": "water-pump-control",
+        "map": "ashika-island",
+        "title": "Water Pump Control",
+        "location": {
+            "x": 673,
+            "y": 448
+        },
+        "description": [
+            ""
+        ],
+        "video": "fxsifEBXVNs",
+        "keyName": "Water Pump Control Key"
+    },
+    {
+        "id": "city-hall",
+        "map": "ashika-island",
+        "title": "City Hall",
+        "keyName": "City Hall Hideout Key",
+        "location": {
+            "x": 615,
+            "y": 800
+        },
+        "description": [
+            ""
+        ],
+        "video": "DSDMYoYRwWU",
+        "tags": [
+            "fortress"
+        ]
+    },
+    {
+        "id": "hms-shipwreck-cache",
+        "map": "ashika-island",
+        "title": "H.M.S. Shipwreck Cache",
+        "location": {
+            "x": 1003,
+            "y": 858
+        },
+        "description": [
+            ""
+        ],
+        "video": "4Wupt48SbdY",
+        "keyName": "H.M.S. Shipwreck Cache Key"
+    },
+    {
+        "id": "lost-room-403",
+        "map": "ashika-island",
+        "title": "Lost Room 403",
+        "location": {
+            "x": 608,
+            "y": 734
+        },
+        "description": [
+            ""
+        ],
+        "video": "7aEi7_nR_AI",
+        "keyName": "Lost Room 403 Key"
+    },
+    {
+        "id": "main-harbor-control",
+        "map": "ashika-island",
+        "title": "Main Harbor Control",
+        "location": {
+            "x": 867,
+            "y": 808
+        },
+        "description": [
+            ""
+        ],
+        "video": "meBYe-apTwM",
+        "keyName": "Main Harbor Control Key"
+    },
+    {
+        "id": "ashika-island-information-booth",
+        "map": "ashika-island",
+        "title": "Ashika Island Information Booth",
+        "location": {
+            "x": 424,
+            "y": 624
+        },
+        "description": [
+            ""
+        ],
+        "video": "Ul-qZ3z7ASA",
+        "keyName": "Ashika Island Information Booth Key"
+    },
+    {
         "id": "beach-club-bathhouse",
         "map": "ashika-island",
         "title": "Beach Club Bathhouse",
+        "location": {
+            "x": 562,
+            "y": 931
+        },
         "description": [
             ""
         ],
+        "video": "op1WsZDP8bI",
         "keyName": "Beach Club Bathhouse Key"
     },
     {
-        "id": "main-harbor-control-key",
+        "id": "",
         "map": "ashika-island",
-        "title": "Main Harbor Control Key",
+        "title": "",
+        "location": {
+            "x": 0,
+            "y": 0
+        },
         "description": [
             ""
         ],
-        "keyName": "Main Harbor Control Key Key"
+        "video": "",
+        "keyName": " Key"
+    },
+    {
+        "id": "",
+        "map": "ashika-island",
+        "title": "",
+        "location": {
+            "x": 0,
+            "y": 0
+        },
+        "description": [
+            ""
+        ],
+        "video": "",
+        "keyName": " Key"
+    },
+    {
+        "id": "",
+        "map": "ashika-island",
+        "title": "",
+        "location": {
+            "x": 0,
+            "y": 0
+        },
+        "description": [
+            ""
+        ],
+        "video": "",
+        "keyName": " Key"
+    },
+    {
+        "id": "",
+        "map": "ashika-island",
+        "title": "",
+        "location": {
+            "x": 0,
+            "y": 0
+        },
+        "description": [
+            ""
+        ],
+        "video": "",
+        "keyName": " Key"
     }
 ]
