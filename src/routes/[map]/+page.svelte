@@ -6,7 +6,7 @@
 	import SearchPanel from "$components/ui/panels/SearchPanel.svelte";
 	import UserPanel from "$components/ui/panels/UserPanel.svelte";
 	import InfoPanel from "$components/ui/panels/InfoPanel.svelte";
-	import { mapData, showVideo } from "$store";
+	import { mapData, showVideo, layers } from "$store";
 	import { maps } from "$data/maps";
 	import { keys } from "$data/keys";
 	import { page } from "$app/stores";

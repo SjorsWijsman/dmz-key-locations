@@ -11,7 +11,7 @@
 	import WaypointPos from "$components/ui/widgets/WaypointPos.svelte";
 	import LayerControl from "$components/ui/widgets/LayerControl.svelte";
 	import ZoomControl from "$components/ui/widgets/ZoomControl.svelte";
-	import { map, mapData } from "$store";
+	import { map, mapData, layers } from "$store";
 	import { isTouchDevice } from "$scripts/platform-check";
 
 	export let mapName;
@@ -25,7 +25,12 @@
 	function setupMap() {
 		if (!$mapData || !mapContainer) return;
 
+		// Clear map
 		$map?.remove();
+		$layers.map((item) => {
+			delete item.layer;
+			return item;
+		});
 
 		$map = L.map(mapContainer, {
 			crs: L.CRS.Simple,
@@ -47,7 +52,7 @@
 			[-3000, -3000],
 			[$mapData.height + 3000, $mapData.width + 3000],
 		]);
-		$map.setZoom(-1);
+		$map.setZoom($mapData.options?.defaultZoom ?? -1);
 	}
 </script>
 
@@ -69,9 +74,9 @@
 		{/if}
 		<WaypointPos />
 		<ZoomControl />
-		<LayerControl />
 	{/if}
 {/key}
+<LayerControl />
 <section bind:this={mapContainer} />
 
 <style>

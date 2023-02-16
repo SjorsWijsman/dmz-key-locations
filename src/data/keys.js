@@ -1418,6 +1418,20 @@ export const keys = [
         "keyName": "Stronghold Interior Key"
     },
     {
+        "id": "the-architects-toolbox",
+        "map": "al-mazrah",
+        "title": "The Architect's Toolbox",
+        "location": {
+            "x": 1938,
+            "y": 1582
+        },
+        "description": [
+            "A small toolbox found in the underground tunnels. An entrance to the tunnels can be found slightly to the south west of the marked location."
+        ],
+        "video": "owIMpzwuuJw",
+        "keyName": "The Architect's Toolbox Key"
+    },
+    {
         "id": "crash-site-weapon-case",
         "map": "al-mazrah",
         "title": "Crash Site Weapon Case",
@@ -1544,7 +1558,7 @@ export const keys = [
         "title": "H.M.S. Shipwreck Cache",
         "location": {
             "x": 1003,
-            "y": 858
+            "y": 658
         },
         "description": [
             ""
@@ -1607,61 +1621,5 @@ export const keys = [
         ],
         "video": "op1WsZDP8bI",
         "keyName": "Beach Club Bathhouse Key"
-    },
-    {
-        "id": "",
-        "map": "ashika-island",
-        "title": "",
-        "location": {
-            "x": 0,
-            "y": 0
-        },
-        "description": [
-            ""
-        ],
-        "video": "",
-        "keyName": " Key"
-    },
-    {
-        "id": "",
-        "map": "ashika-island",
-        "title": "",
-        "location": {
-            "x": 0,
-            "y": 0
-        },
-        "description": [
-            ""
-        ],
-        "video": "",
-        "keyName": " Key"
-    },
-    {
-        "id": "",
-        "map": "ashika-island",
-        "title": "",
-        "location": {
-            "x": 0,
-            "y": 0
-        },
-        "description": [
-            ""
-        ],
-        "video": "",
-        "keyName": " Key"
-    },
-    {
-        "id": "",
-        "map": "ashika-island",
-        "title": "",
-        "location": {
-            "x": 0,
-            "y": 0
-        },
-        "description": [
-            ""
-        ],
-        "video": "",
-        "keyName": " Key"
     }
 ]

@@ -138,10 +138,6 @@
 		margin-top: 1.5rem;
 	}
 
-	h3:first-of-type {
-		margin-top: 0;
-	}
-
 	p {
 		margin: 0;
 		margin-bottom: 1rem;
@@ -163,10 +159,6 @@
 		/* Offset for icon padding */
 		margin-left: -0.225rem;
 		position: relative;
-	}
-
-	.tag:last-of-type {
-		margin-bottom: 1.5rem;
 	}
 
 	.tag.mission {

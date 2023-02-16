@@ -5,6 +5,8 @@
 
 	export let pois = [];
 
+	const title = "Show POI Labels";
+
 	function placePOILabels() {
 		let poiLayer = [];
 
@@ -33,8 +35,13 @@
 		poiLayer = L.layerGroup(markers);
 
 		// Add to layers store if it has not been added yet
-		if (!$layers.map((item) => item.title).includes("Show POI Labels")) {
-			$layers = [...$layers, { title: "Show POI Labels", layer: poiLayer }];
+		if ($layers.map((item) => item.title).includes(title)) {
+			$layers = $layers.map((item) => {
+				if (item.title === title) return { ...item, layer: poiLayer };
+				return item;
+			});
+		} else {
+			$layers = [...$layers, { title, layer: poiLayer }];
 		}
 	}
 

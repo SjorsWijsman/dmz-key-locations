@@ -40,7 +40,7 @@ export const keys = [
 	},
 	{
 		title: "H.M.S. Shipwreck Cache",
-		location: { x: 1003, y: 858 },
+		location: { x: 1003, y: 658 },
 		description: [""],
 		video: "4Wupt48SbdY",
 	},
@@ -67,29 +67,5 @@ export const keys = [
 		location: { x: 562, y: 931 },
 		description: [""],
 		video: "op1WsZDP8bI",
-	},
-	{
-		title: "",
-		location: { x: 0, y: 0 },
-		description: [""],
-		video: "",
-	},
-	{
-		title: "",
-		location: { x: 0, y: 0 },
-		description: [""],
-		video: "",
-	},
-	{
-		title: "",
-		location: { x: 0, y: 0 },
-		description: [""],
-		video: "",
-	},
-	{
-		title: "",
-		location: { x: 0, y: 0 },
-		description: [""],
-		video: "",
 	},
 ];

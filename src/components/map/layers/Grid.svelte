@@ -5,6 +5,8 @@
 
 	export let grid;
 
+	const title = "Show Sector Grid";
+
 	const xTiles = grid.xTiles;
 	const yTiles = grid.yTiles;
 
@@ -20,8 +22,13 @@
 		const gridLayer = L.layerGroup([...labels, ...lines]);
 
 		// Add to layers store if it has not been added yet
-		if (!$layers.map((item) => item.title).includes("Show Sector Grid")) {
-			$layers = [...$layers, { title: "Show Sector Grid", layer: gridLayer }];
+		if ($layers.map((item) => item.title).includes(title)) {
+			$layers = $layers.map((item) => {
+				if (item.title === title) return { ...item, layer: gridLayer };
+				return item;
+			});
+		} else {
+			$layers = [...$layers, { title, layer: gridLayer }];
 		}
 	}
 

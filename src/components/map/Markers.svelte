@@ -58,7 +58,12 @@
 		});
 
 		// Add to layers store if it has not been added yet
-		if (!$layers.map((item) => item.title).includes(title)) {
+		if ($layers.map((item) => item.title).includes(title)) {
+			$layers = $layers.map((item) => {
+				if (item.title === title) return { ...item, layer };
+				return item;
+			});
+		} else {
 			$layers = [...$layers, { title, layer }];
 		}
 

@@ -16,6 +16,7 @@ export const data = {
 			yTiles: 10,
 			labels: true,
 		},
+		defaultZoom: -1,
 	},
 	locations: {
 		keys,

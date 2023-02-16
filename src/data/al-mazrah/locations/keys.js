@@ -816,6 +816,14 @@ export const keys = [
 		],
 	},
 	{
+		title: "The Architect's Toolbox",
+		location: { x: 1938, y: 1582 },
+		description: [
+			"A small toolbox found in the underground tunnels. An entrance to the tunnels can be found slightly to the south west of the marked location.",
+		],
+		video: "owIMpzwuuJw",
+	},
+	{
 		title: "Crash Site Weapon Case",
 		location: { x: 1443, y: 2287 },
 		description: [""],

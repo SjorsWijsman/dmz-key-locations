@@ -17,6 +17,7 @@
 		// Add/remove layers from map on layer.on Boolean update
 		layers.subscribe((layerList) => {
 			layerList.forEach((layer) => {
+				if (!layer.layer) return;
 				if (layer.on) {
 					// Add layer to map & sync with activeLayers store
 					$map.addLayer(layer.layer);
