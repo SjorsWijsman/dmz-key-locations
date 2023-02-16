@@ -18,6 +18,9 @@
 	export let mapData;
 	export let keys;
 
+	let yMax = mapData.height;
+	let xMax = mapData.width;
+
 	let mapContainer;
 
 	onMount(() => {
@@ -63,15 +66,15 @@
 			<MiscMarkers {...misc} />
 		{/each}
 
-		<POILabels pois={mapData.options.pois} />
+		<POILabels pois={mapData.options.pois} {yMax} />
 		<Grid mapHeight={mapData.height} mapWidth={mapData.width} grid={mapData.options.grid} />
 
-		<WaypointMarker xMax={mapData.width} yMax={mapData.height} />
+		<WaypointMarker {xMax} {yMax} />
 
 		{#if !isTouchDevice()}
-			<MousePos xMax={mapData.width} yMax={mapData.height} />
+			<MousePos {xMax} {yMax} />
 		{/if}
-		<WaypointPos xMax={mapData.width} yMax={mapData.height} />
+		<WaypointPos {xMax} {yMax} />
 		<ZoomControl />
 		<LayerControl />
 	{/if}

@@ -1418,17 +1418,44 @@ export const keys = [
         "keyName": "Stronghold Interior Key"
     },
     {
-        "id": "ashika-island-test-location",
+        "id": "tsuki-castle",
         "map": "ashika-island",
-        "title": "Ashika Island Test Location",
-        "location": {
-            "x": 234,
-            "y": 3453
-        },
+        "title": "Tsuki Castle",
         "description": [
-            "Easy to find, this is the office room inside of the grocery store."
+            ""
         ],
-        "video": "xfyHNVdPqQs",
-        "keyName": "Ashika Island Test Location Key"
+        "video": "pmlZu6GtZxg",
+        "tags": [
+            "fortress"
+        ],
+        "keyName": "Tsuki Castle Key"
+    },
+    {
+        "id": "tsuki-castle-weapons-locker",
+        "map": "ashika-island",
+        "title": "Tsuki Castle Weapons Locker",
+        "description": [
+            ""
+        ],
+        "video": "wP2LHs0LAQg",
+        "keyName": "Tsuki Castle Weapons Locker Key"
+    },
+    {
+        "id": "beach-club-bathhouse",
+        "map": "ashika-island",
+        "title": "Beach Club Bathhouse",
+        "description": [
+            ""
+        ],
+        "keyName": "Beach Club Bathhouse Key"
+    },
+    {
+        "id": "main-harbor-control-key",
+        "map": "ashika-island",
+        "title": "Main Harbor Control Key",
+        "description": [
+            ""
+        ],
+        "keyName": "Main Harbor Control Key Key"
     }
 ]

@@ -4,6 +4,7 @@
 	import { map, layers } from "$store";
 
 	export let pois = [];
+	export let yMax;
 
 	function placePOILabels() {
 		let poiLayer = [];
@@ -24,7 +25,7 @@
 		pois.forEach((poi) => {
 			markers.push(
 				L.tooltip(labelSettings)
-					.setLatLng([4150 - poi.location.y, poi.location.x])
+					.setLatLng([yMax - poi.location.y, poi.location.x])
 					.setContent(poi.title)
 			);
 		});
