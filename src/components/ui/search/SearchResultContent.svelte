@@ -1,24 +1,16 @@
 <script>
 	import { fadeSlide } from "$scripts/fade-slide";
-	import { favorites, openKeyInfo, keyMarkers, layers } from "$store";
+	import { favorites, openKeyInfo, keyMarkers, layers, filterKeysByMap } from "$store";
+	import { maps } from "$data/maps";
+	import { page } from "$app/stores";
 	import Icon from "../Icon.svelte";
 
-	export let id, title, location, description, tags;
+	export let id, title, location, description, tags, map;
 
 	let copied = false;
 
 	function openMarkerPopup() {
-		$layers = $layers.map((item) => {
-			if (item.title === "Show Key Locations") item.on = true;
-			return item;
-		});
-		for (const marker of $keyMarkers) {
-			if (marker.options.title === title) {
-				// Reopen popup
-				marker.closePopup();
-				marker.openPopup();
-			}
-		}
+		// Open key locations layer to make sure the popup can be opened
 	}
 
 	function toggleFavorite() {
@@ -31,8 +23,7 @@
 
 	function copyToClipboard() {
 		copied = true;
-		const url = window.location.href.split("#")[0];
-		navigator.clipboard.writeText(url.concat("#").concat(id));
+		navigator.clipboard.writeText(`${window.location.origin}/${map}/${id}`);
 		setTimeout(() => {
 			copied = false;
 		}, 2000);
@@ -42,10 +33,12 @@
 {#if $openKeyInfo === title}
 	<section transition:fadeSlide|local={{ duration: 200 }}>
 		<div>
-			<!-- <a href="/{map}" class="tag">
-				<Icon src={"icons/markers/location-dot.svg"} size={1.5} />
-				{maps[map].title}
-			</a> -->
+			{#if !$filterKeysByMap}
+				<span class="tag">
+					<Icon src={"/icons/markers/location-dot.svg"} size={1.5} />
+					{maps[map].title}
+				</span>
+			{/if}
 
 			{#if tags?.includes("mission")}
 				<span class="tag mission">
@@ -80,20 +73,22 @@
 			</ol>
 		</div>
 		<aside>
-			<button on:click|stopPropagation={openMarkerPopup} disabled={!location?.x || !location?.y}>
+			<!-- Location Button -->
+			<a class="button" href="/{map}/{id}" class:disabled={!location?.x || !location?.y}>
 				{#if location?.x && location?.y}
 					{#if $favorites.includes(title)}
-						<Icon src={"icons/markers/location-favorite.svg"} size={2.5} />
+						<Icon src={"/icons/markers/location-favorite.svg"} size={2.5} />
 					{:else if tags?.includes("mission")}
-						<Icon src={"icons/markers/location-mission.svg"} size={2.5} />
+						<Icon src={"/icons/markers/location-mission.svg"} size={2.5} />
 					{:else}
-						<Icon src={"icons/markers/location-dot.svg"} size={2.5} />
+						<Icon src={"/icons/markers/location-dot.svg"} size={2.5} />
 					{/if}
 				{:else}
 					<Icon icon="question-mark" size={2.5} />
 				{/if}
-			</button>
+			</a>
 			{#if $openKeyInfo === title}
+				<!-- Favorite Button -->
 				<button
 					on:click|stopPropagation={toggleFavorite}
 					class="favorite-button"
@@ -102,6 +97,7 @@
 				>
 					<Icon icon="star" size={2.25} />
 				</button>
+				<!-- Link Button -->
 				<button
 					on:click|stopPropagation={copyToClipboard}
 					class="link-button"
@@ -148,14 +144,6 @@
 		opacity: 0.85;
 	}
 
-	/* a.tag {
-		text-decoration: none;
-	}
-
-	a.tag:hover {
-		text-decoration: underline;
-	} */
-
 	.tag {
 		display: flex;
 		align-items: center;
@@ -195,7 +183,8 @@
     opacity: 1;
   } */
 
-	button {
+	button,
+	a.button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -214,17 +203,20 @@
 	}
 
 	@media (hover: hover) {
-		button:hover:not(:disabled) {
+		button:hover:not(:disabled),
+		a.button:hover:not(.disabled) {
 			background-color: var(--color-main);
 			transform: scale(1.2);
 		}
 
-		button:hover:not(:disabled) > :global(.icon) {
+		button:hover:not(:disabled) > :global(.icon),
+		a.button:hover:not(.disabled) > :global(.icon) {
 			filter: brightness(1000);
 		}
 	}
 
-	button:disabled {
+	button:disabled,
+	a.button.disabled {
 		opacity: 0.2;
 		cursor: default;
 	}
@@ -235,7 +227,8 @@
 		}
 	}
 
-	:global(li.isOpen) button {
+	:global(li.isOpen) button,
+	:global(li.isOpen) a.button {
 		background-color: var(--color-black);
 	}
 

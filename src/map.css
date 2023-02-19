@@ -160,7 +160,7 @@
 	font-family: var(--font-mono);
 	display: flex;
 	align-items: center;
-	color: white !important;
+	color: var(--color-main) !important;
 	font-size: 1rem;
 	background-color: var(--color-black);
 	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
@@ -172,8 +172,8 @@
 
 .mouse-position > span {
 	font-family: var(--font-mono);
-	font-weight: bold;
 	color: white !important;
+	font-weight: bold;
 	margin-right: 0.5rem;
 }
 
@@ -196,6 +196,7 @@
 
 .waypoint-position:hover {
 	background-color: var(--color-main);
+	color: white !important;
 	cursor: pointer;
 }
 

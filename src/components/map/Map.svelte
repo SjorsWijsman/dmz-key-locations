@@ -22,7 +22,7 @@
 	mapData.subscribe(() => setupMap());
 
 	function setupMap() {
-		if (!$mapData || !mapContainer) return;
+		if (!Object.keys($mapData).length || !mapContainer) return;
 
 		// Clear map
 		$map?.remove();
@@ -48,15 +48,15 @@
 
 		$map.fitBounds(bounds);
 		$map.setMaxBounds([
-			[-3000, -3000],
-			[$mapData.height + 3000, $mapData.width + 3000],
+			[-$mapData.height * 0.5, -$mapData.width * 0.5],
+			[$mapData.height * 1.5, $mapData.width * 1.5],
 		]);
 		$map.setZoom($mapData.options?.defaultZoom ?? -1);
 	}
 </script>
 
 {#key $mapData}
-	{#if $map}
+	{#if $map && Object.keys($mapData).length}
 		<CustomMarkers />
 		<KeyMarkers keys={keys.filter((key) => key.map === $page.params?.map)} />
 		{#each $mapData?.locations?.misc ?? [] as misc}

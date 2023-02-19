@@ -1,7 +1,7 @@
 <script>
 	import SearchResult from "./SearchResult.svelte";
 	import { keys } from "$data/keys";
-	import { searchTerm, selectedMarker, favorites, filter, mapData } from "$store";
+	import { searchTerm, selectedMarker, favorites, filter, mapData, filterKeysByMap } from "$store";
 	import { page } from "$app/stores";
 
 	let filteredKeys = keys;
@@ -11,7 +11,7 @@
 	function filterKeys() {
 		const sanitizedSearchString = sanitize(searchString);
 		return keys
-			.filter((key) => key.map === $page.params?.map)
+			.filter((key) => ($filterKeysByMap ? key.map === $page.params?.map : true))
 			.filter((key) => {
 				// Filter by search
 				if (sanitize(key.title).includes(sanitizedSearchString)) return key;

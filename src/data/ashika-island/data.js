@@ -21,8 +21,8 @@ export const data = {
 	locations: {
 		keys,
 		misc: [
-			{ title: "Dead Drop", iconUrl: "icons/markers/location-deaddrop.svg", data: deadDrops },
-			{ title: "Spawn", iconUrl: "icons/markers/location-spawn.svg", data: spawns },
+			{ title: "Dead Drop", iconUrl: "../icons/markers/location-deaddrop.svg", data: deadDrops },
+			{ title: "Spawn", iconUrl: "../icons/markers/location-spawn.svg", data: spawns },
 		],
 	},
 };

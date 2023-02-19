@@ -15,35 +15,22 @@
 					const y = $mapData.height - Math.round(clamp(lat, 0, $mapData.height));
 					const x = Math.round(clamp(lng, 0, $mapData.width));
 
-					const span = L.DomUtil.create("span", "mouse-position");
-					span.classList.add("waypoint-position");
-
-					const locationIcon = L.DomUtil.create("img");
-					locationIcon.setAttribute("src", "./icons/crosshairs.svg");
-
-					const sectorSpan = L.DomUtil.create("span");
-					sectorSpan.innerHTML = `${sector?.join("")}`;
-
-					const xSpan = L.DomUtil.create("span");
-					xSpan.innerHTML = `x:${x}m`;
-					const ySpan = L.DomUtil.create("span");
-					ySpan.innerHTML = `y:${y}m`;
-
-					const customMarker = L.DomUtil.create("input");
-					customMarker.setAttribute("type", "image");
-					customMarker.setAttribute("src", "./icons/flag.svg");
-
-					span.appendChild(locationIcon);
-					span.appendChild(sectorSpan);
-					span.appendChild(xSpan);
-					span.appendChild(ySpan);
-					span.appendChild(customMarker);
-
 					container.onclick = (e) => {
 						saveCustomMarker(e, { lat, lng });
 					};
 
-					container.appendChild(span);
+					container.innerHTML = `
+						<span class="mouse-position waypoint-position">
+							<span>
+								${sector?.join("")}
+							</span>
+							x: <span>${x}m</span>
+							y: <span>${y}m</span>
+							<input type="image" src="/icons/flag.svg">
+
+							</input>
+						</span>
+					`;
 				} else {
 					container.innerHTML = "";
 				}

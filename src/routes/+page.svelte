@@ -1,5 +1,15 @@
 <script>
+	import { keys } from "$data/keys";
 	import { maps } from "$data/maps";
+	import { goto } from "$app/navigation";
+
+	// Opens the marker if window location has a hash
+	// This used to be how opening/linking marker locations worked
+	// Now it redirects to the correct route instead
+	if (window.location.hash) {
+		const hashedKey = keys.filter((key) => key.id === window.location.hash.replace("#", ""))[0];
+		if (hashedKey) goto(`/${hashedKey.map}/${hashedKey.id}`);
+	}
 </script>
 
 <main>

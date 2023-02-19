@@ -1,6 +1,6 @@
 <script>
 	import Panel from "../Panel.svelte";
-	import { showVideo, customMarkerData, customMarkers } from "$store";
+	import { showVideo, filterKeysByMap, customMarkerData, customMarkers } from "$store";
 	import Icon from "../Icon.svelte";
 
 	function setSelectedMarker(marker) {
@@ -18,8 +18,19 @@
 	<section>
 		<h2>User Preferences</h2>
 		<form action="" on:submit|preventDefault>
-			<input type="checkbox" name="showVideo" id="showVideo" bind:checked={$showVideo} />
-			<label for="showVideo"> Display video above key marker (if available) </label>
+			<div>
+				<input type="checkbox" name="showVideo" id="showVideo" bind:checked={$showVideo} />
+				<label for="showVideo"> Display video above key marker (if available) </label>
+			</div>
+			<div>
+				<input
+					type="checkbox"
+					name="filterKeysByMap"
+					id="filterKeysByMap"
+					bind:checked={$filterKeysByMap}
+				/>
+				<label for="filterKeysByMap"> Filter key list by currently active map </label>
+			</div>
 		</form>
 	</section>
 	<section>
@@ -73,9 +84,14 @@
 	}
 
 	form {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 2rem;
+	}
+
+	form > div {
 		display: grid;
 		grid-template-columns: 3rem 6fr;
-		padding-bottom: 2rem;
 		margin: 0 1rem;
 		margin-top: 1rem;
 	}

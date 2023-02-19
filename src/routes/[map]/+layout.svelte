@@ -12,13 +12,6 @@
 	import { page } from "$app/stores";
 	import { goto } from "$app/navigation";
 
-	$: setMapData($page.params?.map);
-
-	function setMapData(map) {
-		$mapData = maps[map];
-		if (!$mapData) goto("/");
-	}
-
 	let outerWidth;
 
 	function showMapToggle(panelIsOpen, outerWidth) {
@@ -27,6 +20,13 @@
 		}
 		if (Object.keys(maps).length > 1) return true;
 		return false;
+	}
+
+	$: setMapData($page.params?.map);
+
+	function setMapData(map) {
+		if (!maps[map]) goto("../");
+		else if ($mapData?.title !== maps[map]?.title) $mapData = maps[map];
 	}
 </script>
 
@@ -37,7 +37,7 @@
 		<ul>
 			{#each Object.keys(maps) as map}
 				<li class:active={map === $page?.params?.map}>
-					<a href={map}>{maps[map].title}</a>
+					<a href="../{map}">{maps[map]?.title}</a>
 				</li>
 			{/each}
 		</ul>
@@ -48,6 +48,7 @@
 	<UserPanel />
 	<InfoPanel />
 	<Map />
+	<slot />
 </main>
 
 <style>

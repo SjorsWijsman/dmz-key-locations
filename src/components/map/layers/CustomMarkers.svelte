@@ -26,4 +26,4 @@
 	});
 </script>
 
-<Markers bind:placeMarkers {title} markerId={"id"} iconUrl={"icons/markers/location-user.svg"} />
+<Markers bind:placeMarkers {title} markerId={"id"} iconUrl={"/icons/markers/location-user.svg"} />

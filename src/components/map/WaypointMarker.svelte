@@ -8,7 +8,7 @@
 
 	function setWaypointMarker(e) {
 		const icon = L.icon({
-			iconUrl: "./icons/crosshairs.svg",
+			iconUrl: "/icons/crosshairs.svg",
 
 			iconSize: [16, 16], // size of the icon
 			iconAnchor: [8, 8], // point of the icon which will correspond to marker's location

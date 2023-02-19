@@ -25,14 +25,14 @@
 				Activision Publishing, Inc.
 			</a>
 		</p>
-		<a
+		<!-- <a
 			href="https://vercel.com/?utm_source=dmz-keys&utm_campaign=oss"
 			target="_blank"
 			rel="noreferrer"
 			class="button vercel"
 		>
 			<img src={poweredByVercel} alt="Powered by Vercel" />
-		</a>
+		</a> -->
 	</div>
 	<svelte:fragment slot="footer">
 		<a href="https://discord.gg/vqCwgh8buH" target="_blank" rel="noreferrer" class="button">
@@ -110,7 +110,7 @@
 		}
 	}
 
-	a.button.vercel {
+	/* a.button.vercel {
 		height: 3.2rem;
 		width: unset;
 		padding: 0;
@@ -128,5 +128,5 @@
 			background-color: var(--color-main);
 			transform: scale(1.05);
 		}
-	}
+	} */
 </style>

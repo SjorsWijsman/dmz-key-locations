@@ -42,6 +42,8 @@ export const favorites = persistStore("dmzkeys-user-favorites", []);
 export const customMarkerData = persistStore("dmzkeys-user-customMarkerData", []);
 // Display video above marker
 export const showVideo = persistStore("dmzkeys-user-showVideo", true);
+// Filter keys by selected map
+export const filterKeysByMap = persistStore("dmzkeys-user-filterKeysByMap", true);
 // Selected filter
 export const filter = persistStore("dmzkeys-user-filter", "all");
 
