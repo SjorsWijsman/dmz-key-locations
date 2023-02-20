@@ -6,7 +6,7 @@
 	import SearchPanel from "$components/ui/panels/SearchPanel.svelte";
 	import UserPanel from "$components/ui/panels/UserPanel.svelte";
 	import InfoPanel from "$components/ui/panels/InfoPanel.svelte";
-	import { mapData, showVideo, activePanel } from "$store";
+	import { mapData, showVideo, activePanel, waypoint } from "$store";
 	import { mobileSize } from "$scripts/media-queries";
 	import { maps } from "$data/maps";
 	import { page } from "$app/stores";
@@ -26,7 +26,11 @@
 
 	function setMapData(map) {
 		if (!maps[map]) goto("../");
-		else if ($mapData?.title !== maps[map]?.title) $mapData = maps[map];
+		else if ($mapData?.title !== maps[map]?.title) {
+			// Change map data
+			$mapData = maps[map];
+			$waypoint = null;
+		}
 	}
 </script>
 

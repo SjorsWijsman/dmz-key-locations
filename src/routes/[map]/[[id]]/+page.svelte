@@ -1,5 +1,5 @@
 <script>
-	import { layers, activePanel, keyMarkers } from "$store";
+	import { layers, keyMarkers } from "$store";
 	import { keys } from "$data/keys";
 	import { page } from "$app/stores";
 	import { onMount } from "svelte";
