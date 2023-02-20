@@ -1,7 +1,8 @@
 <script>
 	import Panel from "../Panel.svelte";
-	import { showVideo, filterKeysByMap, customMarkerData, customMarkers } from "$store";
 	import Icon from "../Icon.svelte";
+	import { showVideo, filterKeysByMap, customMarkerData, customMarkers } from "$store";
+	import { page } from "$app/stores";
 
 	function setSelectedMarker(marker) {
 		$customMarkers
@@ -11,6 +12,12 @@
 
 	function removeMarker(marker) {
 		$customMarkerData = $customMarkerData.filter((item) => item.id !== marker.id);
+	}
+
+	function filterCustomMarkers(marker) {
+		if (marker.map === $page.params?.map) return true;
+		if (marker.map === undefined && $page.params?.map === "al-mazrah") return true;
+		return false;
 	}
 </script>
 
@@ -37,7 +44,7 @@
 		<h2>Custom Markers</h2>
 		<p>Note: Custom Markers are still WIP</p>
 		<ul>
-			{#each $customMarkerData as marker}
+			{#each $customMarkerData.filter((marker) => filterCustomMarkers(marker)) as marker}
 				<li
 					on:click|stopPropagation={() => setSelectedMarker(marker)}
 					on:keypress={() => setSelectedMarker(marker)}

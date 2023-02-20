@@ -1,6 +1,7 @@
 <script>
 	import L from "leaflet";
 	import { map, mapData, waypoint, customMarkerData, customMarkers } from "$store";
+	import { page } from "$app/stores";
 
 	const WaypointCoordinates = L.Control.extend({
 		onAdd: ($map) => {
@@ -46,9 +47,10 @@
 			id: self.crypto.randomUUID(),
 			location: {
 				x: coordinates.lng,
-				y: yMax - coordinates.lat,
+				y: $mapData.height - coordinates.lat,
 			},
 			title: "Custom Marker",
+			map: $page.params?.map,
 		};
 
 		const sameLocation = $customMarkers.filter((item) => {
