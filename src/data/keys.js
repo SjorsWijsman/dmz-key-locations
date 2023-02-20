@@ -1439,9 +1439,6 @@ export const keys = [
             "x": 1443,
             "y": 2287
         },
-        "description": [
-            ""
-        ],
         "video": "XEKT37W3gyU",
         "tags": [
             "mission"
@@ -1456,9 +1453,6 @@ export const keys = [
             "x": 1474,
             "y": 2125
         },
-        "description": [
-            ""
-        ],
         "video": "h70Pvm1LFpM",
         "tags": [
             "mission"
@@ -1473,9 +1467,6 @@ export const keys = [
             "x": 1434,
             "y": 2285
         },
-        "description": [
-            ""
-        ],
         "video": "OtxN6_9WA6s",
         "keyName": "SC Special Forces Footlocker Key"
     },
@@ -1487,11 +1478,24 @@ export const keys = [
             "x": 1427,
             "y": 2076
         },
-        "description": [
-            ""
-        ],
         "video": "za699WARSXA",
         "keyName": "Captain Silver's Briefcase Key"
+    },
+    {
+        "id": "the-lieutenants-briefcase",
+        "map": "al-mazrah",
+        "title": "The Lieutenant's Briefcase",
+        "location": {
+            "x": 1935,
+            "y": 1543
+        },
+        "keyName": "The Lieutenant's Briefcase Key"
+    },
+    {
+        "id": "bomb-makers-supply-cache",
+        "map": "al-mazrah",
+        "title": "Bomb Maker's Supply Cache",
+        "keyName": "Bomb Maker's Supply Cache Key"
     },
     {
         "id": "tsuki-castle",
@@ -1501,9 +1505,6 @@ export const keys = [
             "x": 746,
             "y": 673
         },
-        "description": [
-            ""
-        ],
         "video": "pmlZu6GtZxg",
         "tags": [
             "fortress"
@@ -1518,9 +1519,6 @@ export const keys = [
             "x": 729,
             "y": 647
         },
-        "description": [
-            ""
-        ],
         "video": "wP2LHs0LAQg",
         "keyName": "Tsuki Castle Weapons Locker Key"
     },
@@ -1532,9 +1530,6 @@ export const keys = [
             "x": 784,
             "y": 810
         },
-        "description": [
-            ""
-        ],
         "video": "fAEBFxIvvds",
         "keyName": "Lost Manager's Office Key"
     },
@@ -1546,9 +1541,6 @@ export const keys = [
             "x": 597,
             "y": 634
         },
-        "description": [
-            ""
-        ],
         "video": "RE4_vSLgQxY",
         "keyName": "Research Center Room Key"
     },
@@ -1560,9 +1552,6 @@ export const keys = [
             "x": 673,
             "y": 448
         },
-        "description": [
-            ""
-        ],
         "video": "fxsifEBXVNs",
         "keyName": "Water Pump Control Key"
     },
@@ -1575,9 +1564,6 @@ export const keys = [
             "x": 615,
             "y": 800
         },
-        "description": [
-            ""
-        ],
         "video": "DSDMYoYRwWU",
         "tags": [
             "fortress"
@@ -1591,9 +1577,6 @@ export const keys = [
             "x": 1003,
             "y": 658
         },
-        "description": [
-            ""
-        ],
         "video": "4Wupt48SbdY",
         "keyName": "H.M.S. Shipwreck Cache Key"
     },
@@ -1605,9 +1588,6 @@ export const keys = [
             "x": 608,
             "y": 734
         },
-        "description": [
-            ""
-        ],
         "video": "7aEi7_nR_AI",
         "keyName": "Lost Room 403 Key"
     },
@@ -1619,9 +1599,6 @@ export const keys = [
             "x": 867,
             "y": 808
         },
-        "description": [
-            ""
-        ],
         "video": "meBYe-apTwM",
         "keyName": "Main Harbor Control Key"
     },
@@ -1633,9 +1610,6 @@ export const keys = [
             "x": 424,
             "y": 624
         },
-        "description": [
-            ""
-        ],
         "video": "Ul-qZ3z7ASA",
         "keyName": "Ashika Island Information Booth Key"
     },
@@ -1647,9 +1621,6 @@ export const keys = [
             "x": 562,
             "y": 931
         },
-        "description": [
-            ""
-        ],
         "video": "op1WsZDP8bI",
         "keyName": "Beach Club Bathhouse Key"
     },
@@ -1661,9 +1632,6 @@ export const keys = [
             "x": 481,
             "y": 531
         },
-        "description": [
-            ""
-        ],
         "video": "qy4B_hLYInc",
         "keyName": "Farmer's Lunchbox Key"
     },
@@ -1675,9 +1643,6 @@ export const keys = [
             "x": 592,
             "y": 688
         },
-        "description": [
-            ""
-        ],
         "video": "JPI9BL_7kjg",
         "keyName": "Floatsam Cargo Cache Key"
     },
@@ -1689,9 +1654,6 @@ export const keys = [
             "x": 783,
             "y": 610
         },
-        "description": [
-            ""
-        ],
         "video": "AebOHgw96Hg",
         "keyName": "Mud Covered Cache Key"
     },
@@ -1703,9 +1665,6 @@ export const keys = [
             "x": 676,
             "y": 1023
         },
-        "description": [
-            ""
-        ],
         "video": "gq6wEXCcH44",
         "keyName": "Rusted Fridge Key"
     },
@@ -1717,9 +1676,6 @@ export const keys = [
             "x": 603,
             "y": 505
         },
-        "description": [
-            ""
-        ],
         "video": "wGQ6BwBdKPU",
         "keyName": "Waterlogged Bag Key"
     },
@@ -1731,9 +1687,6 @@ export const keys = [
             "x": 722,
             "y": 547
         },
-        "description": [
-            ""
-        ],
         "video": "IdxkjCVvjAg",
         "keyName": "Combat Engineer Toolkit Key"
     }
