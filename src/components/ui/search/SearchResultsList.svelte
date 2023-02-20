@@ -5,13 +5,15 @@
 	import { page } from "$app/stores";
 
 	let filteredKeys = keys;
-	let searchString = "";
 
 	// Filter keys with search result
 	function filterKeys() {
-		const sanitizedSearchString = sanitize(searchString);
+		const sanitizedSearchString = sanitize($searchTerm);
 		return keys
-			.filter((key) => ($filterKeysByMap ? key.map === $page.params?.map : true))
+			.filter((key) => {
+				// Filter keys by map
+				return $filterKeysByMap ? key.map === $page.params?.map : true;
+			})
 			.filter((key) => {
 				// Filter by search
 				if (sanitize(key.title).includes(sanitizedSearchString)) return key;
@@ -36,9 +38,7 @@
 			});
 	}
 
-	searchTerm.subscribe((value) => {
-		searchString = value;
-		// Empty to clear result list - prevents some rendering issues
+	searchTerm.subscribe(() => {
 		filteredKeys = [...filterKeys()];
 	});
 

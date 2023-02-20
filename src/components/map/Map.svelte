@@ -18,9 +18,6 @@
 
 	let mapContainer;
 
-	onMount(() => setupMap());
-	mapData.subscribe(() => setupMap());
-
 	function setupMap() {
 		if (!Object.keys($mapData).length || !mapContainer) return;
 
@@ -53,6 +50,9 @@
 		]);
 		$map.setZoom($mapData.options?.defaultZoom ?? -1);
 	}
+
+	mapData.subscribe(() => setupMap());
+	onMount(() => setupMap());
 </script>
 
 {#key $mapData}

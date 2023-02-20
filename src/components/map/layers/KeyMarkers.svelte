@@ -1,14 +1,12 @@
 <script>
 	import L from "leaflet";
-	import { onMount } from "svelte";
+	import { onDestroy, onMount } from "svelte";
 	import {
 		favorites,
 		keyMarkers,
 		filter,
 		showVideo,
 		selectedMarker,
-		layers,
-		activePanel,
 		searchTerm,
 		openKeyInfo,
 	} from "$store";
@@ -17,6 +15,8 @@
 	import Markers from "../Markers.svelte";
 
 	export let keys = [];
+
+	let unsubShowVideo, unsubFilter;
 
 	let placeMarkers, iconSettings;
 
@@ -128,15 +128,20 @@
 		let initialised = false;
 
 		// Rerender key markers on showVideo preference update
-		showVideo.subscribe(() => {
+		unsubShowVideo = showVideo.subscribe(() => {
 			if (initialised) placeKeyMarkers();
 		});
 
-		filter.subscribe(() => {
+		unsubFilter = filter.subscribe(() => {
 			if (initialised) placeKeyMarkers();
 		});
 
 		initialised = true;
+	});
+
+	onDestroy(() => {
+		unsubShowVideo();
+		unsubFilter();
 	});
 </script>
 
