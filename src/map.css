@@ -170,6 +170,10 @@
 	padding: 0.2rem 0.5rem;
 }
 
+.mouse-position.waypoint-position {
+	color: var(--color-mission) !important;
+}
+
 .mouse-position > span {
 	font-family: var(--font-mono);
 	color: white !important;
@@ -194,7 +198,7 @@
 }
 
 .waypoint-position:hover {
-	background-color: var(--color-main);
+	background-color: var(--color-mission);
 	color: white !important;
 	cursor: pointer;
 }
