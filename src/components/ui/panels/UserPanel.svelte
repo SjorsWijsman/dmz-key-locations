@@ -40,35 +40,37 @@
 			</div>
 		</form>
 	</section>
-	<section>
-		<h2>Custom Markers</h2>
-		<p>Note: Custom Markers are still WIP</p>
-		<ul>
-			{#each $customMarkerData.filter((marker) => filterCustomMarkers(marker)) as marker}
-				<li
-					on:click|stopPropagation={() => setSelectedMarker(marker)}
-					on:keypress={() => setSelectedMarker(marker)}
-				>
-					<article>
-						<h3>{marker.title}</h3>
+	{#key $page.params?.map}
+		<section>
+			<h2>Custom Markers</h2>
+			<p>Note: Custom Markers are still WIP</p>
+			<ul>
+				{#each $customMarkerData.filter((marker) => filterCustomMarkers(marker)) as marker}
+					<li
+						on:click|stopPropagation={() => setSelectedMarker(marker)}
+						on:keypress={() => setSelectedMarker(marker)}
+					>
+						<article>
+							<h3>{marker.title}</h3>
+							<p>
+								x:{marker.location?.x}m y:{marker.location?.y}m
+							</p>
+						</article>
+						<button on:click|stopPropagation={() => removeMarker(marker)}>
+							<Icon icon={"trash"} />
+						</button>
+					</li>
+				{:else}
+					<li class="empty">
 						<p>
-							x:{marker.location?.x}m y:{marker.location?.y}m
+							Add a custom marker by selecting a location on the map and clicking on the coordinate
+							bar in the bottom left.
 						</p>
-					</article>
-					<button on:click|stopPropagation={() => removeMarker(marker)}>
-						<Icon icon={"trash"} />
-					</button>
-				</li>
-			{:else}
-				<li class="empty">
-					<p>
-						Add a custom marker by selecting a location on the map and clicking on the coordinate
-						bar in the bottom left.
-					</p>
-				</li>
-			{/each}
-		</ul>
-	</section>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/key}
 </Panel>
 
 <style>
