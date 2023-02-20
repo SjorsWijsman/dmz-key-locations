@@ -3,6 +3,7 @@
 	import { keys } from "$data/keys";
 	import { searchTerm, selectedMarker, favorites, filter, mapData, filterKeysByMap } from "$store";
 	import { page } from "$app/stores";
+	import Icon from "../Icon.svelte";
 
 	let filteredKeys = keys;
 
@@ -67,18 +68,15 @@
 		{#each filteredKeys as key (key.title)}
 			<SearchResult {...key} />
 		{:else}
-			{#if !$favorites.length && !$searchTerm}
+			{#if !$favorites.length && $filter === "favorite"}
 				<li>
 					You have no favorites. Add a favorite by clicking the star button on the right side of the
 					key info box!
 				</li>
 			{:else}
 				<li>
-					No results found. Did you find a key that is not on the map? Please let me know through <a
-						href="https://discord.gg/vqCwgh8buH"
-						target="_blank"
-						rel="noreferrer">Discord</a
-					>!
+					No results found. Did you find a key that is not on the map? Please let me know through
+					<a href="https://discord.gg/vqCwgh8buH" target="_blank" rel="noreferrer">Discord</a>!
 				</li>
 			{/if}
 		{/each}
