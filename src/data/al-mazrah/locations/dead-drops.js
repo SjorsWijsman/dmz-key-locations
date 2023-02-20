@@ -1,44 +1,44 @@
 export const deadDrops = [
 	{
-		title: "C3",
+		title: "Zarqwa Hydroelectric",
 		location: {
-			x: 1203,
-			y: 1544,
+			x: 1846,
+			y: 1954,
 		},
 	},
 	{
-		title: "F3",
+		title: "Sattiq Cave Complex",
 		location: {
-			x: 2328,
-			y: 1539,
+			x: 1386,
+			y: 2023,
 		},
 	},
 	{
-		title: "F4",
+		title: "Zaya Observatory",
 		location: {
-			x: 2329,
-			y: 1905,
+			x: 2182,
+			y: 2371,
 		},
 	},
 	{
-		title: "G6",
+		title: "Al Sharim Pass",
 		location: {
-			x: 2789,
-			y: 2507,
+			x: 2630,
+			y: 2493,
 		},
 	},
 	{
-		title: "E7",
+		title: "Ahkdar Village",
 		location: {
-			x: 1695,
-			y: 2955,
+			x: 2372,
+			y: 2715,
 		},
 	},
 	{
-		title: "D6",
+		title: "Ahkdar Village",
 		location: {
-			x: 1467,
-			y: 2563,
+			x: 2650,
+			y: 3480,
 		},
 	},
 ];

@@ -3,27 +3,30 @@
 	import { onMount } from "svelte";
 	import CustomMarkers from "$components/map/layers/CustomMarkers.svelte";
 	import KeyMarkers from "$components/map/layers/KeyMarkers.svelte";
-	import DeaddropMarkers from "$components/map/layers/DeaddropMarkers.svelte";
-	import SpawnMarkers from "$components/map/layers/SpawnMarkers.svelte";
+	import MiscMarkers from "$components/map/layers/MiscMarkers.svelte";
 	import POILabels from "$components/map/layers/POILabels.svelte";
 	import Grid from "$components/map/layers/Grid.svelte";
-	import LocationMarker from "$components/map/LocationMarker.svelte";
+	import WaypointMarker from "$components/map/WaypointMarker.svelte";
 	import MousePos from "$components/ui/widgets/MousePos.svelte";
 	import WaypointPos from "$components/ui/widgets/WaypointPos.svelte";
 	import LayerControl from "$components/ui/widgets/LayerControl.svelte";
 	import ZoomControl from "$components/ui/widgets/ZoomControl.svelte";
-	import mapImage from "$assets/map.jpg";
-	import { map } from "$store";
+	import { map, mapData, layers } from "$store";
+	import { keys } from "$data/keys";
 	import { isTouchDevice } from "$scripts/platform-check";
+	import { page } from "$app/stores";
 
 	let mapContainer;
 
-	onMount(() => {
-		const bounds = [
-			[0, 0],
-			[4150, 4150],
-		];
-		const image = L.imageOverlay(mapImage, bounds);
+	function setupMap() {
+		if (!Object.keys($mapData).length || !mapContainer) return;
+
+		// Clear map
+		$map?.remove();
+		$layers.map((item) => {
+			delete item.layer;
+			return item;
+		});
 
 		$map = L.map(mapContainer, {
 			crs: L.CRS.Simple,
@@ -32,35 +35,47 @@
 			zoomControl: false,
 		});
 
+		const bounds = [
+			[0, 0],
+			[$mapData.height, $mapData.width],
+		];
+
+		const image = L.imageOverlay($mapData.image, bounds);
 		image.addTo($map);
 
 		$map.fitBounds(bounds);
 		$map.setMaxBounds([
-			[-3000, -3000],
-			[7150, 7150],
+			[-$mapData.height * 0.5, -$mapData.width * 0.5],
+			[$mapData.height * 1.5, $mapData.width * 1.5],
 		]);
-		$map.setZoom(-1);
-	});
+		$map.setZoom($mapData.options?.defaultZoom ?? -1);
+	}
+
+	mapData.subscribe(() => setupMap());
+	onMount(() => setupMap());
 </script>
 
-{#if $map}
-	<CustomMarkers />
-	<KeyMarkers />
-	<DeaddropMarkers />
-	<SpawnMarkers />
+{#key $mapData}
+	{#if $map && Object.keys($mapData).length}
+		<CustomMarkers />
+		<KeyMarkers keys={keys.filter((key) => key.map === $page.params?.map)} />
+		{#each $mapData?.locations?.misc ?? [] as misc}
+			<MiscMarkers {...misc} />
+		{/each}
 
-	<POILabels />
-	<Grid />
+		<POILabels pois={$mapData.options.pois} />
+		<Grid grid={$mapData.options.grid} />
 
-	<LocationMarker />
+		<WaypointMarker />
 
-	{#if !isTouchDevice()}
-		<MousePos />
+		{#if !isTouchDevice()}
+			<MousePos />
+		{/if}
+		<WaypointPos />
+		<ZoomControl />
 	{/if}
-	<WaypointPos />
-	<ZoomControl />
-	<LayerControl />
-{/if}
+{/key}
+<LayerControl />
 <section bind:this={mapContainer} />
 
 <style>

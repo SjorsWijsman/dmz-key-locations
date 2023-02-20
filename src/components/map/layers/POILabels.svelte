@@ -1,8 +1,11 @@
 <script>
 	import L from "leaflet";
 	import { onMount } from "svelte";
-	import { map, layers } from "$store";
-	import { POIs } from "$data/al-mazrah/locations/pois";
+	import { map, mapData, layers } from "$store";
+
+	export let pois = [];
+
+	const title = "Show POI Labels";
 
 	function placePOILabels() {
 		let poiLayer = [];
@@ -20,10 +23,10 @@
 		$map.getPane("locations").style.zIndex = 650;
 		$map.getPane("locations").style.pointerEvents = "none";
 
-		POIs.forEach((poi) => {
+		pois.forEach((poi) => {
 			markers.push(
 				L.tooltip(labelSettings)
-					.setLatLng([4150 - poi.location.y, poi.location.x])
+					.setLatLng([$mapData.height - poi.location.y, poi.location.x])
 					.setContent(poi.title)
 			);
 		});
@@ -32,8 +35,13 @@
 		poiLayer = L.layerGroup(markers);
 
 		// Add to layers store if it has not been added yet
-		if (!$layers.map((item) => item.title).includes("Show POI Labels")) {
-			$layers = [...$layers, { title: "Show POI Labels", layer: poiLayer }];
+		if ($layers.map((item) => item.title).includes(title)) {
+			$layers = $layers.map((item) => {
+				if (item.title === title) return { ...item, layer: poiLayer };
+				return item;
+			});
+		} else {
+			$layers = [...$layers, { title, layer: poiLayer }];
 		}
 	}
 

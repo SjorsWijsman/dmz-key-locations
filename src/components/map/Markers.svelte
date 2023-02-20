@@ -1,6 +1,6 @@
 <script>
 	import L from "leaflet";
-	import { layers, map } from "$store";
+	import { map, mapData, layers } from "$store";
 
 	export let openPopupFunction = (markerLocation, marker) => {
 		return this;
@@ -10,14 +10,14 @@
 	};
 
 	export let title;
-	export let iconUrl = "icons/markers/location-dot.svg";
+	export let iconUrl = "/icons/markers/location-dot.svg";
 	export let markerId = "title";
 
 	let layer = L.layerGroup();
 
 	export const iconSettings = {
 		iconUrl,
-		shadowUrl: "icons/markers/location-black-background.svg",
+		shadowUrl: "/icons/markers/location-black-background.svg",
 		iconSize: [20, 20], // size of the icon
 		shadowSize: [20, 20],
 		iconAnchor: [10, 20], // point of the icon which will correspond to marker's location
@@ -40,10 +40,13 @@
 
 				const icon = L.icon(iconSettings);
 
-				let marker = L.marker([4150 - markerLocation.location?.y, markerLocation.location?.x], {
-					title: markerLocation[markerId],
-					icon,
-				})
+				let marker = L.marker(
+					[$mapData.height - markerLocation.location?.y, markerLocation.location?.x],
+					{
+						title: markerLocation[markerId],
+						icon,
+					}
+				)
 					.bindPopup(markerLocation.popupContent ?? `<p>${markerLocation.title}</p>`)
 					.on("popupopen", () => openPopup(markerLocation, marker))
 					.on("popupclose", () => closePopup(markerLocation, marker));
@@ -55,7 +58,12 @@
 		});
 
 		// Add to layers store if it has not been added yet
-		if (!$layers.map((item) => item.title).includes(title)) {
+		if ($layers.map((item) => item.title).includes(title)) {
+			$layers = $layers.map((item) => {
+				if (item.title === title) return { ...item, layer };
+				return item;
+			});
+		} else {
 			$layers = [...$layers, { title, layer }];
 		}
 

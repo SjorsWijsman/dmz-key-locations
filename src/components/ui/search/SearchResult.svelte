@@ -3,7 +3,8 @@
 	import SearchResultContent from "./SearchResultContent.svelte";
 	import Icon from "../Icon.svelte";
 
-	export let id = "untitled-location",
+	export let id,
+		map = "al-mazrah",
 		title = "Untitled Location",
 		keyName = "",
 		location = {},
@@ -12,7 +13,7 @@
 		video = "",
 		tags = [];
 
-	// Prevent unused variable warning - Remove when video gets used in searchresult.
+	// Prevent unused variable warning.
 	$: loot, video;
 
 	let icon = "key";
@@ -56,7 +57,7 @@
 		</span>
 		<Icon icon="chevron-down" size={1.5} />
 	</div>
-	<SearchResultContent {...{ id, title, location, description, tags }} />
+	<SearchResultContent {...{ id, map, title, location, description, tags }} />
 </li>
 
 <style>

@@ -1,7 +1,7 @@
 <script>
 	import { searchTerm, selectedMarker, filter, openKeyInfo } from "$store";
 	import Icon from "../Icon.svelte";
-	import SearchFilter from "./SearchFilter.svelte";
+	import SearchFilters from "./SearchFilters.svelte";
 
 	let openFilter = false;
 
@@ -55,7 +55,7 @@
 		{/if}
 	</div>
 	{#if openFilter}
-		<SearchFilter bind:openFilter />
+		<SearchFilters bind:openFilter />
 	{/if}
 </nav>
 

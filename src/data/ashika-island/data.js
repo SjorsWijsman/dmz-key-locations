@@ -1,14 +1,14 @@
-import image from "$assets/maps/al-mazrah.jpg";
+import image from "$assets/maps/ashika-island.jpg";
 import { pois } from "./locations/pois";
 import { keys } from "./locations/keys";
 import { deadDrops } from "./locations/dead-drops";
 import { spawns } from "./locations/spawns";
 
 export const data = {
-	title: "Al Mazrah",
+	title: "Ashika Island",
 	image,
-	width: 4150,
-	height: 4150,
+	width: 1210,
+	height: 1210,
 	options: {
 		pois,
 		grid: {
@@ -16,6 +16,7 @@ export const data = {
 			yTiles: 10,
 			labels: true,
 		},
+		defaultZoom: -1,
 	},
 	locations: {
 		keys,

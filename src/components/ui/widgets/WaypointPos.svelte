@@ -1,6 +1,7 @@
 <script>
 	import L from "leaflet";
-	import { map, waypoint, customMarkerData, customMarkers } from "$store";
+	import { map, mapData, waypoint, customMarkerData, customMarkers } from "$store";
+	import { page } from "$app/stores";
 
 	const WaypointCoordinates = L.Control.extend({
 		onAdd: ($map) => {
@@ -12,38 +13,24 @@
 					let lat = $waypoint?.lat;
 					let lng = $waypoint?.lng;
 					const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
-					const y = 4150 - Math.round(clamp(lat, 0, 4150));
-					const x = Math.round(clamp(lng, 0, 4150));
-
-					const span = L.DomUtil.create("span", "mouse-position");
-					span.classList.add("waypoint-position");
-
-					const locationIcon = L.DomUtil.create("img");
-					locationIcon.setAttribute("src", "./icons/crosshairs.svg");
-
-					const sectorSpan = L.DomUtil.create("span");
-					sectorSpan.innerHTML = `${sector?.join("")}`;
-
-					const xSpan = L.DomUtil.create("span");
-					xSpan.innerHTML = `x:${x}m`;
-					const ySpan = L.DomUtil.create("span");
-					ySpan.innerHTML = `y:${y}m`;
-
-					const customMarker = L.DomUtil.create("input");
-					customMarker.setAttribute("type", "image");
-					customMarker.setAttribute("src", "./icons/flag.svg");
-
-					span.appendChild(locationIcon);
-					span.appendChild(sectorSpan);
-					span.appendChild(xSpan);
-					span.appendChild(ySpan);
-					span.appendChild(customMarker);
+					const y = $mapData.height - Math.round(clamp(lat, 0, $mapData.height));
+					const x = Math.round(clamp(lng, 0, $mapData.width));
 
 					container.onclick = (e) => {
 						saveCustomMarker(e, { lat, lng });
 					};
 
-					container.appendChild(span);
+					container.innerHTML = `
+						<span class="mouse-position waypoint-position">
+							<img src="/icons/crosshairs.svg"></img>
+							<span>
+								${sector?.join("")}
+							</span>
+							x: <span>${x}m</span>
+							y: <span>${y}m</span>
+							<img src="/icons/flag.svg"></img>
+						</span>
+					`;
 				} else {
 					container.innerHTML = "";
 				}
@@ -59,9 +46,10 @@
 			id: self.crypto.randomUUID(),
 			location: {
 				x: coordinates.lng,
-				y: 4150 - coordinates.lat,
+				y: $mapData.height - coordinates.lat,
 			},
 			title: "Custom Marker",
+			map: $page.params?.map,
 		};
 
 		const sameLocation = $customMarkers.filter((item) => {

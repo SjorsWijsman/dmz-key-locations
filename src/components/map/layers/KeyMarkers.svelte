@@ -1,18 +1,22 @@
 <script>
 	import L from "leaflet";
-	import { onMount } from "svelte";
+	import { onDestroy, onMount } from "svelte";
 	import {
 		favorites,
 		keyMarkers,
 		filter,
 		showVideo,
 		selectedMarker,
-		openKeyInfo,
 		searchTerm,
-		activePanel,
+		openKeyInfo,
 	} from "$store";
-	import { keys } from "$data/al-mazrah/locations/keys";
+	import { page } from "$app/stores";
+	import { goto } from "$app/navigation";
 	import Markers from "../Markers.svelte";
+
+	export let keys = [];
+
+	let unsubShowVideo, unsubFilter;
 
 	let placeMarkers, iconSettings;
 
@@ -21,9 +25,9 @@
 			let isFavorite = $favorites.includes(key.title);
 			let isMission = key.tags?.includes("mission");
 
-			let iconUrl = "icons/markers/location-dot.svg";
-			if (isFavorite) iconUrl = "icons/markers/location-favorite.svg";
-			if (isMission) iconUrl = "icons/markers/location-mission.svg";
+			let iconUrl = "/icons/markers/location-dot.svg";
+			if (isFavorite) iconUrl = "/icons/markers/location-favorite.svg";
+			if (isMission) iconUrl = "/icons/markers/location-mission.svg";
 
 			const popupContent = setPopupContent(key);
 
@@ -81,7 +85,7 @@
 				marker.setIcon(
 					L.icon({
 						...iconSettings,
-						iconUrl: "icons/markers/location-favorite.svg",
+						iconUrl: "/icons/markers/location-favorite.svg",
 					})
 				);
 			} else {
@@ -89,8 +93,8 @@
 					L.icon({
 						...iconSettings,
 						iconUrl: missionRequiredMarkers.includes(marker.options.title)
-							? "icons/markers/location-mission.svg"
-							: "icons/markers/location-dot.svg",
+							? "/icons/markers/location-mission.svg"
+							: "/icons/markers/location-dot.svg",
 					})
 				);
 			}
@@ -103,7 +107,7 @@
 
 	function openPopup(key, marker) {
 		L.DomUtil.addClass(marker._icon, "active-marker");
-		window.location.hash = key.id;
+		goto(`/${$page.params?.map}/${key.id}`);
 		delete key.iconUrl;
 		delete key.popupContent;
 		$selectedMarker = key;
@@ -111,7 +115,7 @@
 
 	function closePopup(key, marker) {
 		if (marker._icon) L.DomUtil.removeClass(marker._icon, "active-marker");
-		window.location.hash = "";
+		goto(`/${$page.params?.map}`);
 		$searchTerm = "";
 		$selectedMarker = { title: "" };
 		$openKeyInfo = "";
@@ -120,32 +124,24 @@
 	onMount(() => {
 		placeKeyMarkers();
 
-		// Opens the marker if window location has a hash
-		if (window.location.hash) {
-			$activePanel = "search";
-			const title = keys.filter((key) => key.id === window.location.hash.replace("#", ""))[0].title;
-			for (const marker of $keyMarkers) {
-				if (marker.options.title === title) {
-					setTimeout(() => {
-						marker.openPopup();
-					}, 500);
-				}
-			}
-		}
-
 		// Prevents first time subscription trigger
 		let initialised = false;
 
 		// Rerender key markers on showVideo preference update
-		showVideo.subscribe(() => {
+		unsubShowVideo = showVideo.subscribe(() => {
 			if (initialised) placeKeyMarkers();
 		});
 
-		filter.subscribe(() => {
+		unsubFilter = filter.subscribe(() => {
 			if (initialised) placeKeyMarkers();
 		});
 
 		initialised = true;
+	});
+
+	onDestroy(() => {
+		unsubShowVideo();
+		unsubFilter();
 	});
 </script>
 

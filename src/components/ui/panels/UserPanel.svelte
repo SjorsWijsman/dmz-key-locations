@@ -1,7 +1,8 @@
 <script>
 	import Panel from "../Panel.svelte";
-	import { showVideo, customMarkerData, customMarkers } from "$store";
 	import Icon from "../Icon.svelte";
+	import { showVideo, filterKeysByMap, customMarkerData, customMarkers } from "$store";
+	import { page } from "$app/stores";
 
 	function setSelectedMarker(marker) {
 		$customMarkers
@@ -12,45 +13,64 @@
 	function removeMarker(marker) {
 		$customMarkerData = $customMarkerData.filter((item) => item.id !== marker.id);
 	}
+
+	function filterCustomMarkers(marker) {
+		if (marker.map === $page.params?.map) return true;
+		if (marker.map === undefined && $page.params?.map === "al-mazrah") return true;
+		return false;
+	}
 </script>
 
 <Panel panelTitle={"user"} icon={"user"} openIconOffset={1}>
 	<section>
 		<h2>User Preferences</h2>
 		<form action="" on:submit|preventDefault>
-			<input type="checkbox" name="showVideo" id="showVideo" bind:checked={$showVideo} />
-			<label for="showVideo"> Display video above key marker (if available) </label>
+			<div>
+				<input type="checkbox" name="showVideo" id="showVideo" bind:checked={$showVideo} />
+				<label for="showVideo"> Display video above key marker (if available) </label>
+			</div>
+			<div>
+				<input
+					type="checkbox"
+					name="filterKeysByMap"
+					id="filterKeysByMap"
+					bind:checked={$filterKeysByMap}
+				/>
+				<label for="filterKeysByMap"> Filter key list by currently active map </label>
+			</div>
 		</form>
 	</section>
-	<section>
-		<h2>Custom Markers</h2>
-		<p>Note: Custom Markers are still WIP</p>
-		<ul>
-			{#each $customMarkerData as marker}
-				<li
-					on:click|stopPropagation={() => setSelectedMarker(marker)}
-					on:keypress={() => setSelectedMarker(marker)}
-				>
-					<article>
-						<h3>{marker.title}</h3>
+	{#key $page.params?.map}
+		<section>
+			<h2>Custom Markers</h2>
+			<p>Note: Custom Markers are still WIP</p>
+			<ul>
+				{#each $customMarkerData.filter((marker) => filterCustomMarkers(marker)) as marker}
+					<li
+						on:click|stopPropagation={() => setSelectedMarker(marker)}
+						on:keypress={() => setSelectedMarker(marker)}
+					>
+						<article>
+							<h3>{marker.title}</h3>
+							<p>
+								x:{marker.location?.x}m y:{marker.location?.y}m
+							</p>
+						</article>
+						<button on:click|stopPropagation={() => removeMarker(marker)}>
+							<Icon icon={"trash"} />
+						</button>
+					</li>
+				{:else}
+					<li class="empty">
 						<p>
-							x:{marker.location?.x}m y:{marker.location?.y}m
+							Add a custom marker by selecting a location on the map and clicking on the coordinate
+							bar in the bottom left.
 						</p>
-					</article>
-					<button on:click|stopPropagation={() => removeMarker(marker)}>
-						<Icon icon={"trash"} />
-					</button>
-				</li>
-			{:else}
-				<li class="empty">
-					<p>
-						Add a custom marker by selecting a location on the map and clicking on the coordinate
-						bar in the bottom left.
-					</p>
-				</li>
-			{/each}
-		</ul>
-	</section>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/key}
 </Panel>
 
 <style>
@@ -73,9 +93,14 @@
 	}
 
 	form {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 2rem;
+	}
+
+	form > div {
 		display: grid;
 		grid-template-columns: 3rem 6fr;
-		padding-bottom: 2rem;
 		margin: 0 1rem;
 		margin-top: 1rem;
 	}

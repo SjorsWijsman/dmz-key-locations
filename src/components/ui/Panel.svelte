@@ -60,7 +60,7 @@
 	div {
 		position: fixed;
 		display: flex;
-		z-index: 10000;
+		z-index: 9999999;
 		margin: 10px;
 		margin-left: 0;
 		pointer-events: none;

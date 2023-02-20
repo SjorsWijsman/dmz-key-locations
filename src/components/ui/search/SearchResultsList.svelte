@@ -1,15 +1,20 @@
 <script>
 	import SearchResult from "./SearchResult.svelte";
-	import { keys } from "$data/al-mazrah/locations/keys";
-	import { searchTerm, selectedMarker, favorites, filter } from "$store";
+	import { keys } from "$data/keys";
+	import { searchTerm, selectedMarker, favorites, filter, mapData, filterKeysByMap } from "$store";
+	import { page } from "$app/stores";
+	import Icon from "../Icon.svelte";
 
 	let filteredKeys = keys;
-	let searchString = "";
 
 	// Filter keys with search result
 	function filterKeys() {
-		const sanitizedSearchString = sanitize(searchString);
+		const sanitizedSearchString = sanitize($searchTerm);
 		return keys
+			.filter((key) => {
+				// Filter keys by map
+				return $filterKeysByMap ? key.map === $page.params?.map : true;
+			})
 			.filter((key) => {
 				// Filter by search
 				if (sanitize(key.title).includes(sanitizedSearchString)) return key;
@@ -34,13 +39,15 @@
 			});
 	}
 
-	searchTerm.subscribe((value) => {
-		searchString = value;
-		// Empty to clear result list - prevents some rendering issues
+	searchTerm.subscribe(() => {
 		filteredKeys = [...filterKeys()];
 	});
 
 	filter.subscribe(() => {
+		filteredKeys = [...filterKeys()];
+	});
+
+	mapData.subscribe(() => {
 		filteredKeys = [...filterKeys()];
 	});
 
@@ -61,18 +68,15 @@
 		{#each filteredKeys as key (key.title)}
 			<SearchResult {...key} />
 		{:else}
-			{#if !$favorites.length && !$searchTerm}
+			{#if !$favorites.length && $filter === "favorite"}
 				<li>
 					You have no favorites. Add a favorite by clicking the star button on the right side of the
 					key info box!
 				</li>
 			{:else}
 				<li>
-					No results found. Did you find a key that is not on the map? Please let me know through <a
-						href="https://discord.gg/vqCwgh8buH"
-						target="_blank"
-						rel="noreferrer">Discord</a
-					>!
+					No results found. Did you find a key that is not on the map? Please let me know through
+					<a href="https://discord.gg/vqCwgh8buH" target="_blank" rel="noreferrer">Discord</a>!
 				</li>
 			{/if}
 		{/each}
