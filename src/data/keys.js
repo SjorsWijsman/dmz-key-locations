@@ -1432,9 +1432,9 @@ export const keys = [
         "keyName": "The Architect's Toolbox Key"
     },
     {
-        "id": "crash-site-weapon-case",
+        "id": "crash-site-weapon-case-under-pipeline",
         "map": "al-mazrah",
-        "title": "Crash Site Weapon Case",
+        "title": "Crash Site Weapon Case [Under Pipeline]",
         "location": {
             "x": 1443,
             "y": 2287
@@ -1446,7 +1446,24 @@ export const keys = [
         "tags": [
             "mission"
         ],
-        "keyName": "Crash Site Weapon Case Key"
+        "keyName": "Crash Site Weapon Case [Under Pipeline] Key"
+    },
+    {
+        "id": "crash-site-weapon-case-airplane",
+        "map": "al-mazrah",
+        "title": "Crash Site Weapon Case [Airplane]",
+        "location": {
+            "x": 1474,
+            "y": 2125
+        },
+        "description": [
+            ""
+        ],
+        "video": "h70Pvm1LFpM",
+        "tags": [
+            "mission"
+        ],
+        "keyName": "Crash Site Weapon Case [Airplane] Key"
     },
     {
         "id": "sc-special-forces-footlocker",
@@ -1461,6 +1478,20 @@ export const keys = [
         ],
         "video": "OtxN6_9WA6s",
         "keyName": "SC Special Forces Footlocker Key"
+    },
+    {
+        "id": "captain-silvers-briefcase",
+        "map": "al-mazrah",
+        "title": "Captain Silver's Briefcase",
+        "location": {
+            "x": 1427,
+            "y": 2076
+        },
+        "description": [
+            ""
+        ],
+        "video": "za699WARSXA",
+        "keyName": "Captain Silver's Briefcase Key"
     },
     {
         "id": "tsuki-castle",
@@ -1621,5 +1652,89 @@ export const keys = [
         ],
         "video": "op1WsZDP8bI",
         "keyName": "Beach Club Bathhouse Key"
+    },
+    {
+        "id": "farmers-lunchbox",
+        "map": "ashika-island",
+        "title": "Farmer's Lunchbox",
+        "location": {
+            "x": 481,
+            "y": 531
+        },
+        "description": [
+            ""
+        ],
+        "video": "qy4B_hLYInc",
+        "keyName": "Farmer's Lunchbox Key"
+    },
+    {
+        "id": "floatsam-cargo-cache",
+        "map": "ashika-island",
+        "title": "Floatsam Cargo Cache",
+        "location": {
+            "x": 592,
+            "y": 688
+        },
+        "description": [
+            ""
+        ],
+        "video": "JPI9BL_7kjg",
+        "keyName": "Floatsam Cargo Cache Key"
+    },
+    {
+        "id": "mud-covered-cache",
+        "map": "ashika-island",
+        "title": "Mud Covered Cache",
+        "location": {
+            "x": 783,
+            "y": 610
+        },
+        "description": [
+            ""
+        ],
+        "video": "AebOHgw96Hg",
+        "keyName": "Mud Covered Cache Key"
+    },
+    {
+        "id": "rusted-fridge",
+        "map": "ashika-island",
+        "title": "Rusted Fridge",
+        "location": {
+            "x": 676,
+            "y": 1023
+        },
+        "description": [
+            ""
+        ],
+        "video": "gq6wEXCcH44",
+        "keyName": "Rusted Fridge Key"
+    },
+    {
+        "id": "waterlogged-bag",
+        "map": "ashika-island",
+        "title": "Waterlogged Bag",
+        "location": {
+            "x": 603,
+            "y": 505
+        },
+        "description": [
+            ""
+        ],
+        "video": "wGQ6BwBdKPU",
+        "keyName": "Waterlogged Bag Key"
+    },
+    {
+        "id": "combat-engineer-toolkit",
+        "map": "ashika-island",
+        "title": "Combat Engineer Toolkit",
+        "location": {
+            "x": 722,
+            "y": 547
+        },
+        "description": [
+            ""
+        ],
+        "video": "IdxkjCVvjAg",
+        "keyName": "Combat Engineer Toolkit Key"
     }
 ]

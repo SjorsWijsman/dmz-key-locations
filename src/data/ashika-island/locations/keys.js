@@ -68,4 +68,40 @@ export const keys = [
 		description: [""],
 		video: "op1WsZDP8bI",
 	},
+	{
+		title: "Farmer's Lunchbox",
+		location: { x: 481, y: 531 },
+		description: [""],
+		video: "qy4B_hLYInc",
+	},
+	{
+		title: "Floatsam Cargo Cache",
+		location: { x: 592, y: 688 },
+		description: [""],
+		video: "JPI9BL_7kjg",
+	},
+	{
+		title: "Mud Covered Cache",
+		location: { x: 783, y: 610 },
+		description: [""],
+		video: "AebOHgw96Hg",
+	},
+	{
+		title: "Rusted Fridge",
+		location: { x: 676, y: 1023 },
+		description: [""],
+		video: "gq6wEXCcH44",
+	},
+	{
+		title: "Waterlogged Bag",
+		location: { x: 603, y: 505 },
+		description: [""],
+		video: "wGQ6BwBdKPU",
+	},
+	{
+		title: "Combat Engineer Toolkit",
+		location: { x: 722, y: 547 },
+		description: [""],
+		video: "IdxkjCVvjAg",
+	},
 ];

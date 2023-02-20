@@ -824,10 +824,17 @@ export const keys = [
 		video: "owIMpzwuuJw",
 	},
 	{
-		title: "Crash Site Weapon Case",
+		title: "Crash Site Weapon Case [Under Pipeline]",
 		location: { x: 1443, y: 2287 },
 		description: [""],
 		video: "XEKT37W3gyU",
+		tags: ["mission"],
+	},
+	{
+		title: "Crash Site Weapon Case [Airplane]",
+		location: { x: 1474, y: 2125 },
+		description: [""],
+		video: "h70Pvm1LFpM",
 		tags: ["mission"],
 	},
 	{
@@ -835,5 +842,11 @@ export const keys = [
 		location: { x: 1434, y: 2285 },
 		description: [""],
 		video: "OtxN6_9WA6s",
+	},
+	{
+		title: "Captain Silver's Briefcase",
+		location: { x: 1427, y: 2076 },
+		description: [""],
+		video: "za699WARSXA",
 	},
 ];

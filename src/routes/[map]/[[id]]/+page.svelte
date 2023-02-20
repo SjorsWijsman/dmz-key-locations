@@ -5,10 +5,6 @@
 	import { onMount } from "svelte";
 	import { goto } from "$app/navigation";
 
-	$: if ($page.params?.id) {
-		// id changes
-	}
-
 	onMount(() => {
 		// Open currently selected key from page params
 		const keyTitle = keys.filter((key) => key.id === $page.params?.id)[0]?.title;
