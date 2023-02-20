@@ -22,14 +22,13 @@
 
 					container.innerHTML = `
 						<span class="mouse-position waypoint-position">
+							<img src="/icons/crosshairs.svg"></img>
 							<span>
 								${sector?.join("")}
 							</span>
 							x: <span>${x}m</span>
 							y: <span>${y}m</span>
-							<input type="image" src="/icons/flag.svg">
-
-							</input>
+							<img src="/icons/flag.svg"></img>
 						</span>
 					`;
 				} else {
