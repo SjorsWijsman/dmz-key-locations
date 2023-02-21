@@ -825,12 +825,14 @@ export const keys = [
 	},
 	{
 		title: "Crash Site Weapon Case [Under Pipeline]",
+		keyName: "Crash Site Weapon Case Key",
 		location: { x: 1443, y: 2287 },
 		video: "XEKT37W3gyU",
 		tags: ["mission"],
 	},
 	{
 		title: "Crash Site Weapon Case [Airplane]",
+		keyName: "Crash Site Weapon Case Key",
 		location: { x: 1474, y: 2125 },
 		video: "h70Pvm1LFpM",
 		tags: ["mission"],
