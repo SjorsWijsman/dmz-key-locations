@@ -1689,5 +1689,38 @@ export const keys = [
         },
         "video": "IdxkjCVvjAg",
         "keyName": "Combat Engineer Toolkit Key"
+    },
+    {
+        "id": "drifting-supply-bag",
+        "map": "ashika-island",
+        "title": "Drifting Supply Bag",
+        "location": {
+            "x": 475,
+            "y": 299
+        },
+        "video": "LFFEWVL9Xcg",
+        "keyName": "Drifting Supply Bag Key"
+    },
+    {
+        "id": "waterway-maintenance",
+        "map": "ashika-island",
+        "title": "Waterway Maintenance",
+        "location": {
+            "x": 694,
+            "y": 624
+        },
+        "video": "",
+        "keyName": "Waterway Maintenance Key"
+    },
+    {
+        "id": "hotel-employee-fridge",
+        "map": "ashika-island",
+        "title": "Hotel Employee Fridge",
+        "location": {
+            "x": 608,
+            "y": 726
+        },
+        "video": "",
+        "keyName": "Hotel Employee Fridge Key"
     }
 ]
