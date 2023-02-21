@@ -87,4 +87,19 @@ export const keys = [
 		location: { x: 722, y: 547 },
 		video: "IdxkjCVvjAg",
 	},
+	{
+		title: "Drifting Supply Bag",
+		location: { x: 475, y: 299 },
+		video: "LFFEWVL9Xcg",
+	},
+	{
+		title: "Waterway Maintenance",
+		location: { x: 694, y: 624 },
+		video: "",
+	},
+	{
+		title: "Hotel Employee Fridge",
+		location: { x: 608, y: 726 },
+		video: "",
+	},
 ];
