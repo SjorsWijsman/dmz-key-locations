@@ -1573,7 +1573,13 @@ export const keys = [
             "x": 608,
             "y": 734
         },
+        "description": [
+            "Required for Intel Exchange, Crown tier 2."
+        ],
         "video": "7aEi7_nR_AI",
+        "tags": [
+            "mission"
+        ],
         "keyName": "Lost Room 403 Key"
     },
     {
