@@ -1040,10 +1040,14 @@ export const keys = [
             "y": 1968
         },
         "description": [
+            "Required for Return to Sender, Black mous tier 2.",
             "The Sattiq Poppy Farm House is a small building in the north of the circular road at the Sattiq mountains. Note that you need to enter the room twice to complete the mission.",
             "The key can be acquired by completing Non-Discriminatory, Crown tier 1"
         ],
         "video": "uaw5eT_RAC4",
+        "tags": [
+            "mission"
+        ],
         "keyName": "Sattiq Poppy Farm House Key"
     },
     {
