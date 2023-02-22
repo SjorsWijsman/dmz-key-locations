@@ -608,9 +608,11 @@ export const keys = [
 		title: "Sawah Hotel Room 302",
 		location: { x: 1370, y: 3295 },
 		description: [
+			"Required for Good Fortune, Legion tier 3.",
 			"The door is located on the top floor of the hotel, right next to Sawah Hotel Room 303.",
 		],
 		video: "g6UGMlEvhMM",
+		tags: ["mission"],
 	},
 	{
 		title: "Sawah Hotel Room 303",
