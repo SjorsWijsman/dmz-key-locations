@@ -2,7 +2,6 @@
 	import { fadeSlide } from "$scripts/fade-slide";
 	import { favorites, openKeyInfo, keyMarkers, layers, filterKeysByMap } from "$store";
 	import { maps } from "$data/maps";
-	import { page } from "$app/stores";
 	import Icon from "../Icon.svelte";
 
 	export let id, title, location, description, tags, map;
@@ -11,6 +10,17 @@
 
 	function openMarkerPopup() {
 		// Open key locations layer to make sure the popup can be opened
+		$layers = $layers.map((item) => {
+			if (item.title === "Show Key Locations") item.on = true;
+			return item;
+		});
+		for (const marker of $keyMarkers) {
+			if (marker.options.title === title) {
+				// Reopen popup
+				marker.closePopup();
+				marker.openPopup();
+			}
+		}
 	}
 
 	function toggleFavorite() {
@@ -74,7 +84,7 @@
 		</div>
 		<aside>
 			<!-- Location Button -->
-			<a class="button" href="/{map}/{id}" class:disabled={!location?.x || !location?.y}>
+			<button on:click|stopPropagation={openMarkerPopup} disabled={!location?.x || !location?.y}>
 				{#if location?.x && location?.y}
 					{#if $favorites.includes(title)}
 						<Icon src={"/icons/markers/location-favorite.svg"} size={2.5} />
@@ -86,7 +96,7 @@
 				{:else}
 					<Icon icon="question-mark" size={2.5} />
 				{/if}
-			</a>
+			</button>
 			{#if $openKeyInfo === title}
 				<!-- Favorite Button -->
 				<button
@@ -183,8 +193,7 @@
     opacity: 1;
   } */
 
-	button,
-	a.button {
+	button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -203,20 +212,17 @@
 	}
 
 	@media (hover: hover) {
-		button:hover:not(:disabled),
-		a.button:hover:not(.disabled) {
+		button:hover:not(:disabled) {
 			background-color: var(--color-main);
 			transform: scale(1.2);
 		}
 
-		button:hover:not(:disabled) > :global(.icon),
-		a.button:hover:not(.disabled) > :global(.icon) {
+		button:hover:not(:disabled) > :global(.icon) {
 			filter: brightness(1000);
 		}
 	}
 
-	button:disabled,
-	a.button.disabled {
+	button:disabled {
 		opacity: 0.2;
 		cursor: default;
 	}
@@ -227,8 +233,7 @@
 		}
 	}
 
-	:global(li.isOpen) button,
-	:global(li.isOpen) a.button {
+	:global(li.isOpen) button {
 		background-color: var(--color-black);
 	}
 
