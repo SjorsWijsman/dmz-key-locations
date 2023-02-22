@@ -1,4 +1,4 @@
-import image from "$assets/maps/ashika-island.jpg";
+// import image from "$assets/maps/ashika-island.jpg";
 import { pois } from "./locations/pois";
 import { keys } from "./locations/keys";
 import { deadDrops } from "./locations/dead-drops";
@@ -6,7 +6,8 @@ import { spawns } from "./locations/spawns";
 
 export const data = {
 	title: "Ashika Island",
-	image,
+	image:
+		"https://raw.githubusercontent.com/SjorsWijsman/dmz-key-locations/main/src/assets/maps/ashika-island.jpg",
 	width: 1210,
 	height: 1210,
 	options: {
