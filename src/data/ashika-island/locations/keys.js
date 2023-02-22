@@ -23,12 +23,14 @@ export const keys = [
 	{
 		title: "Water Pump Control",
 		location: { x: 673, y: 448 },
+		description: ["The key can be acquired by completing Return to Sender, Black Mous tier 2"],
 		video: "fxsifEBXVNs",
 	},
 	{
 		title: "City Hall",
 		keyName: "City Hall Hideout Key",
 		location: { x: 615, y: 800 },
+		description: ["The key can be acquired by completing Health Conscious, Legion tier 1"],
 		video: "DSDMYoYRwWU",
 		tags: ["fortress"],
 	},
@@ -93,13 +95,13 @@ export const keys = [
 		video: "LFFEWVL9Xcg",
 	},
 	{
-		title: "Waterway Maintenance",
+		title: "Waterway Maintenance Kit",
 		location: { x: 694, y: 624 },
-		video: "",
+		video: "RO-6yked-5g",
 	},
 	{
 		title: "Hotel Employee Fridge",
 		location: { x: 608, y: 726 },
-		video: "",
+		video: "vK10qqsIKxA",
 	},
 ];

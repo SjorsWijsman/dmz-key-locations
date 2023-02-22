@@ -53,12 +53,9 @@ export const keys = [
 	{
 		title: "Al Bagra Underground",
 		location: { x: 2548, y: 3520 },
-		description: [
-			"Required for Breaking and Entering, Black Mous tier 4.",
-			"Entrance from the road down on the south side of the fortress.",
-		],
+		description: ["Entrance from the road down on the south side of the fortress."],
 		video: "qi_OlMLmp_A",
-		tags: ["fortress", "mission"],
+		tags: ["fortress"],
 	},
 	{
 		title: "Algae Covered Toolbox",
@@ -107,7 +104,6 @@ export const keys = [
 		location: { x: 2836, y: 2854 },
 		description: [
 			"In the north of the large airport building there is a room behind the Border Control desks. The toolbox is located in this room near the conveyor belts.",
-			"The key can be acquired by completing Tactical Extraction, Legion tier 3",
 		],
 		video: "ARSEpO4vBcE",
 	},
@@ -164,7 +160,6 @@ export const keys = [
 		location: { x: 1485, y: 2200 },
 		description: [
 			"This small shack can be found next to the docks in the west side of the underground cave system. You can enter this cave by boat or through the various entrances around the mountain. Note that there are usually a lot of guards around, happy to defend their little pirate cove.",
-			"The key can be acquired by completing Big Spender, Legion tier 2",
 		],
 		video: "o3JWaK8UPIA",
 	},
@@ -196,11 +191,9 @@ export const keys = [
 		title: "Ch 7 Editorial Department",
 		location: { x: 2418, y: 1222 },
 		description: [
-			"Required for Flight Plans, Black Mous tier 5.",
 			"Taking the elevator in the south corner up to the top floor, you will see the door right across the hall.",
 		],
 		video: "bVLUp0c7W5Q",
-		tags: ["mission"],
 	},
 	{
 		title: "Ch 7 Secure Records Room",
@@ -215,7 +208,6 @@ export const keys = [
 		location: { x: 2186, y: 3046 },
 		description: [
 			"The clock tower is easy to spot from a distance. Taking the ladder inside the building takes you to the roof. From the roof you can climb another ladder to the top of the tower where the toolbox is located.",
-			"The key can be acquired by completing Custom Hardware, Black Mous tier 2",
 		],
 		video: "wUa_RhgDWoo",
 	},
@@ -223,12 +215,10 @@ export const keys = [
 		title: "Control Tower",
 		location: { x: 2840, y: 3134 },
 		description: [
-			"Required for Flight Plans, Black Mous tier 5.",
 			"The Control Tower fortress is marked by a large icon on the map. There are many entrances to get into the building, and plenty of angry airplane enthousiasts to fight around the area.",
-			"The key can be acquired by completing Contractual Obligations, Legion tier 5",
 		],
 		video: "s71OBNU5YL4",
-		tags: ["fortress", "mission"],
+		tags: ["fortress"],
 	},
 	{
 		title: "Crane Control Room",
@@ -236,7 +226,7 @@ export const keys = [
 		description: [
 			"Required for Unearthed, White Lotus tier 3.",
 			"The Crane Control Room is easy to spot as it's directly underneath a large crane at the Al-Safwa Quarry.",
-			"The key can be acquired by completing Quick and Dirty, Black Mous tier 3",
+			"The key can be acquired by completing Sample Platter, Crown tier 2",
 		],
 		video: "0cHsa4jf3GQ",
 		tags: ["mission"],
@@ -246,7 +236,7 @@ export const keys = [
 		location: { x: 1825, y: 3562 },
 		description: [
 			"Getting to the toolbox requires swimming underneath the shipwreck. Dive from the northwest side through the underwater doorway next to the staircase, into the shipwreck. Then take the first left into the main corridor and keep swimming forward until you get to the toolbox.",
-			"The key can be acquired by completing One Man Army, Black Mous tier 1",
+			"The key can be acquired by completing Into the Deep, Legion tier 2",
 		],
 		video: "EKw3PoOo99c",
 	},
@@ -254,11 +244,10 @@ export const keys = [
 		title: "Downtown Post Office",
 		location: { x: 2342, y: 1733 },
 		description: [
-			"Required for Clean House, White Lotus tier 5.",
 			"The Downtown Post Office is a fortress in Al-Mazrah City, as such it is marked by a large icon on the map. The building has lots of easy to find entrances. Enter to find out about the meaning of going postal.",
 		],
 		video: "VTJJAmnRdnE",
-		tags: ["fortress", "mission"],
+		tags: ["fortress"],
 	},
 	{
 		title: "Downtown Post Office Secure Room",
@@ -334,12 +323,10 @@ export const keys = [
 		title: "Kushaak Construction Warehouse",
 		location: { x: 826, y: 1735 },
 		description: [
-			"Required for Clean House, White Lotus tier 5.",
 			"The Kushaak Construction Warehouse is a fortress right in the middle of Al-Safwa Quarry. Don't forget your hardhat.",
-			"The key can be acquired by completing Convenience, White Lotus tier 1 or Unearthed, White Lotus tier 3",
 		],
 		video: "cggyMST0Hb8",
-		tags: ["fortress", "mission"],
+		tags: ["fortress"],
 	},
 	{
 		title: "Longshoreman's Duffel Bag",
@@ -379,7 +366,7 @@ export const keys = [
 		location: { x: 2525, y: 2095 },
 		description: [
 			"The Mawizeh Resort Main Building is marked on the map with a large icon, because it's a fortress. The complex consists of both of the large buildings on the Mawizeh Marshlands island.",
-			"The key can be acquired by completing Harmful Waves, Black Mous tier 4",
+			"The key can be acquired by completing Exposé, Crown tier 3",
 		],
 		video: "JMAehvF_uIM",
 		tags: ["fortress"],
@@ -421,6 +408,7 @@ export const keys = [
 		location: { x: 1251, y: 3243 },
 		description: [
 			"Omar's Auto Repair is located inside of Sawah Village. Note that the village usually contains a lot of AI. The door is located in the back of the car garage building.",
+			"The key can be acquired by completing Vehicular Homicide, Black Mous tier 1",
 		],
 		video: "Zf2Z614ZEtw",
 	},
@@ -429,18 +417,19 @@ export const keys = [
 		location: { x: 2848, y: 1605 },
 		description: [
 			"The Police Academy is marked by a large icon in the east of the map. As this is a fortress it contains a lot of enemies. Note that the Academy has a lot of doors on both the inside and outside, recommended to prioritize opening the inside doors.",
-			"The key can be acquired by completing The Golden Rule, Black Mous tier 4",
+			"The key can be acquired by completing Flyboy, Crown tier 4",
 		],
 		video: "ce19mYClMao",
 		tags: ["fortress"],
 	},
 	{
 		title: "Police Armory [F2]",
-		keyName: "Police Armory Key",
+		keyName: "Al Mazrah Police Station Armory Key",
 		location: { x: 2204, y: 1233 },
 		description: [
-			"One of three locations for the Police Armory Key.",
+			"One of three locations for the Al Mazrah Police Station Armory Key.",
 			"The Police Armory is located inside the police building, up the stairs on the left. This room itself contains 8 Police Lockers which require a Police Locker Master Key to open, this key has a chance to spawn inside the room.",
+			"The key can be acquired by completing Convenience, White Lotus tier 1",
 		],
 		video: "32_9NKyg44g",
 	},
@@ -450,17 +439,18 @@ export const keys = [
 		location: { x: 2194, y: 1227 },
 		description: [
 			"One of three locations for the Police Locker Master Key.",
-			"Inside of the Police Armory. Key required for the room to get to the lockers.",
+			"Inside of the Police Armory. The Al Mazrah Police Station Armory Key is required for the room to get to the lockers.",
 		],
 		video: "s0nVFQfdRUw",
 	},
 	{
 		title: "Police Armory [G5]",
-		keyName: "Police Armory Key",
+		keyName: "Al Mazrah Police Station Armory Key",
 		location: { x: 2824, y: 2086 },
 		description: [
-			"One of three locations for the Police Armory Key.",
+			"One of three locations for the Al Mazrah Police Station Armory Key.",
 			"The Police Armory is located inside the police building, up the stairs on the left. This room itself contains 8 Police Lockers which require a Police Locker Master Key to open, this key has a chance to spawn inside the room.",
+			"The key can be acquired by completing Convenience, White Lotus tier 1",
 		],
 		video: "tNtirUj6nIQ",
 	},
@@ -470,17 +460,18 @@ export const keys = [
 		location: { x: 2818, y: 2099 },
 		description: [
 			"One of four locations for the Police Locker Master Key.",
-			"Inside of the Police Armory. Key required for the room to get to the lockers.",
+			"Inside of the Police Armory. The Al Mazrah Police Station Armory Key is required for the room to get to the lockers.",
 		],
 		video: "Sl1bFtO9yFI",
 	},
 	{
 		title: "Police Armory [D6]",
-		keyName: "Police Armory Key",
+		keyName: "Al Mazrah Police Station Armory Key",
 		location: { x: 1477, y: 2693 },
 		description: [
-			"One of four locations for the Police Armory Key.",
+			"One of four locations for the Al Mazrah Police Station Armory Key.",
 			"The Police Armory is located inside the police building, up the stairs on the left. This room itself contains 8 Police Lockers which require a Police Locker Master Key to open, this key has a chance to spawn inside the room.",
+			"The key can be acquired by completing Convenience, White Lotus tier 1",
 		],
 		video: "bx3v2ZeghSc",
 	},
@@ -490,7 +481,7 @@ export const keys = [
 		location: { x: 1491, y: 2693 },
 		description: [
 			"One of four locations for the Police Locker Master Key.",
-			"Inside of the Police Armory. Key required for the room to get to the lockers.",
+			"Inside of the Police Armory. The Al Mazrah Police Station Armory Key is for the room to get to the lockers.",
 		],
 		video: "72bSwO7tkG0",
 	},
@@ -508,7 +499,7 @@ export const keys = [
 		location: { x: 2885, y: 1712 },
 		description: [
 			"One of four locations for the Police Locker Master Key.",
-			"Inside of the Police Academy Private Locker Room. Key required for the room to get to the lockers.",
+			"Inside of the Police Academy Private Locker Room. The Al Mazrah Police Station Armory Key is for the room to get to the lockers.",
 		],
 	},
 	{
@@ -532,7 +523,7 @@ export const keys = [
 		location: { x: 768, y: 1703 },
 		description: [
 			"The Lost Toolbox is located underwater in the north of the Al-Safwa Quarry.",
-			"The key can be acquired by completing Bombing Run, White Lotus tier 2",
+			"The key can be acquired by completing Paperweights, Black Mous tier 3",
 		],
 		video: "_alliZFxcZI",
 	},
@@ -541,7 +532,6 @@ export const keys = [
 		location: { x: 809, y: 2720 },
 		description: [
 			"Next to the T-shaped dock on the south of Hafid Port is a small building. This is the Special Ops Relay Station.",
-			"The key can be acquired by completing Battle Rivals, Legion tier 5",
 		],
 		video: "bYneoNHg5bU",
 	},
@@ -601,12 +591,10 @@ export const keys = [
 		title: "Sattiq Poppy Farm House",
 		location: { x: 1218, y: 1968 },
 		description: [
-			"Required for Espionage, Black Mous tier 2.",
 			"The Sattiq Poppy Farm House is a small building in the north of the circular road at the Sattiq mountains. Note that you need to enter the room twice to complete the mission.",
-			"The key can be acquired by completing Robin Hoofd, White Lotus tier 3",
+			"The key can be acquired by completing Non-Discriminatory, Crown tier 1",
 		],
 		video: "uaw5eT_RAC4",
-		tags: ["mission"],
 	},
 	{
 		title: "Sawah Crypto Mining Farm Key",
@@ -620,18 +608,16 @@ export const keys = [
 		title: "Sawah Hotel Room 302",
 		location: { x: 1370, y: 3295 },
 		description: [
-			"Required for Good Fortune, Legion Tier 3.",
-			"The door is located on the top floor of the hotel, right next to Sawah Hotel Room 303. Entry without key is possible through the skylights when the hotel is not a fortress.",
+			"The door is located on the top floor of the hotel, right next to Sawah Hotel Room 303.",
 		],
 		video: "g6UGMlEvhMM",
-		tags: ["mission"],
 	},
 	{
 		title: "Sawah Hotel Room 303",
 		location: { x: 1374, y: 3314 },
 		description: [
-			"The door is located on the top floor of the hotel, right next to Sawah Hotel Room 302. Entry without key is possible through the skylights when the hotel is not a fortress.",
-			"The key can be acquired by completing Cover No Concealment, White Lotus tier 4",
+			"The door is located on the top floor of the hotel, right next to Sawah Hotel Room 302.",
+			"The key can be acquired by completing Cargo Keeper, Black Mous tier 1",
 		],
 		video: "g6UGMlEvhMM",
 	},
@@ -712,7 +698,6 @@ export const keys = [
 		location: { x: 2836, y: 2925 },
 		description: [
 			"The Traveller's Luggage is a duffel bag located in the small waiting area overlooking the Al Malik Airport.",
-			"The key can be acquired by completing Dead Drop, Legion tier 3",
 		],
 		video: "q8DSYEJS6u4",
 	},
@@ -728,12 +713,10 @@ export const keys = [
 		title: "U.S. Embassy",
 		location: { x: 2475, y: 1315 },
 		description: [
-			"Required for Clean House, White Lotus tier 5.",
 			"The U.S. Embassy is a large building marked by an icon on the map inside of Al-Mazrah City. There are multiple entrances around the building. Expect a lot of enemies as this is a fortress.",
-			"The key can be acquired by completing The Client Is King, Black Mous tier 5",
 		],
 		video: "4fl5saUVHKA",
-		tags: ["fortress", "mission"],
+		tags: ["fortress"],
 	},
 	{
 		title: "Weapons Repair Kit",
@@ -756,6 +739,7 @@ export const keys = [
 		location: { x: 1875, y: 1918 },
 		description: [
 			"The Market Storage is a small building next to the river running through the Zarqwa village. It's located inside of a small covered market area.",
+			"The key can be acquired by completing Nail in the Coffin, Legion tier 4",
 		],
 		video: "90Rh-WTItAI",
 	},
@@ -827,15 +811,15 @@ export const keys = [
 		title: "Crash Site Weapon Case [Under Pipeline]",
 		keyName: "Crash Site Weapon Case Key",
 		location: { x: 1443, y: 2287 },
+		description: ["The key can be acquired by completing Make Contact, White Lotus tier 1"],
 		video: "XEKT37W3gyU",
-		tags: ["mission"],
 	},
 	{
 		title: "Crash Site Weapon Case [Airplane]",
 		keyName: "Crash Site Weapon Case Key",
 		location: { x: 1474, y: 2125 },
+		description: ["The key can be acquired by completing Make Contact, White Lotus tier 1"],
 		video: "h70Pvm1LFpM",
-		tags: ["mission"],
 	},
 	{
 		title: "SC Special Forces Footlocker",
