@@ -365,11 +365,12 @@ export const keys = [
 		title: "Mawizeh Resort Main Building",
 		location: { x: 2525, y: 2095 },
 		description: [
+			"Required for Clean House, White Lotus tier 5.",
 			"The Mawizeh Resort Main Building is marked on the map with a large icon, because it's a fortress. The complex consists of both of the large buildings on the Mawizeh Marshlands island.",
 			"The key can be acquired by completing Exposé, Crown tier 3",
 		],
 		video: "JMAehvF_uIM",
-		tags: ["fortress"],
+		tags: ["mission"],
 	},
 	{
 		title: "Mawizah Slum Discarded Cache",
@@ -416,11 +417,12 @@ export const keys = [
 		title: "Police Academy",
 		location: { x: 2848, y: 1605 },
 		description: [
+			"Required for Clean House, White Lotus tier 5.",
 			"The Police Academy is marked by a large icon in the east of the map. As this is a fortress it contains a lot of enemies. Note that the Academy has a lot of doors on both the inside and outside, recommended to prioritize opening the inside doors.",
 			"The key can be acquired by completing Flyboy, Crown tier 4",
 		],
 		video: "ce19mYClMao",
-		tags: ["fortress"],
+		tags: ["fortress", "mission"],
 	},
 	{
 		title: "Police Armory [F2]",

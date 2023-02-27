@@ -657,12 +657,13 @@ export const keys = [
             "y": 2095
         },
         "description": [
+            "Required for Clean House, White Lotus tier 5.",
             "The Mawizeh Resort Main Building is marked on the map with a large icon, because it's a fortress. The complex consists of both of the large buildings on the Mawizeh Marshlands island.",
             "The key can be acquired by completing Exposé, Crown tier 3"
         ],
         "video": "JMAehvF_uIM",
         "tags": [
-            "fortress"
+            "mission"
         ],
         "keyName": "Mawizeh Resort Main Building Key"
     },
@@ -746,12 +747,14 @@ export const keys = [
             "y": 1605
         },
         "description": [
+            "Required for Clean House, White Lotus tier 5.",
             "The Police Academy is marked by a large icon in the east of the map. As this is a fortress it contains a lot of enemies. Note that the Academy has a lot of doors on both the inside and outside, recommended to prioritize opening the inside doors.",
             "The key can be acquired by completing Flyboy, Crown tier 4"
         ],
         "video": "ce19mYClMao",
         "tags": [
-            "fortress"
+            "fortress",
+            "mission"
         ],
         "keyName": "Police Academy Key"
     },
@@ -1524,7 +1527,13 @@ export const keys = [
             "x": 597,
             "y": 634
         },
+        "description": [
+            "Required for Toxin Research, White Lotus tier 4."
+        ],
         "video": "RE4_vSLgQxY",
+        "tags": [
+            "mission"
+        ],
         "keyName": "Research Center Room Key"
     },
     {
@@ -1551,11 +1560,13 @@ export const keys = [
             "y": 800
         },
         "description": [
+            "Required for Whistleblower, Crown tier 1.",
             "The key can be acquired by completing Health Conscious, Legion tier 1"
         ],
         "video": "DSDMYoYRwWU",
         "tags": [
-            "fortress"
+            "fortress",
+            "mission"
         ]
     },
     {

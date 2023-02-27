@@ -18,7 +18,9 @@ export const keys = [
 	{
 		title: "Research Center Room",
 		location: { x: 597, y: 634 },
+		description: ["Required for Toxin Research, White Lotus tier 4."],
 		video: "RE4_vSLgQxY",
+		tags: ["mission"],
 	},
 	{
 		title: "Water Pump Control",
@@ -30,9 +32,12 @@ export const keys = [
 		title: "City Hall",
 		keyName: "City Hall Hideout Key",
 		location: { x: 615, y: 800 },
-		description: ["The key can be acquired by completing Health Conscious, Legion tier 1"],
+		description: [
+			"Required for Whistleblower, Crown tier 1.",
+			"The key can be acquired by completing Health Conscious, Legion tier 1",
+		],
 		video: "DSDMYoYRwWU",
-		tags: ["fortress"],
+		tags: ["fortress", "mission"],
 	},
 	{
 		title: "H.M.S. Shipwreck Cache",
