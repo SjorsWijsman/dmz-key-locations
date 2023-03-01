@@ -33,22 +33,15 @@ export const keys = [
 	{
 		id: "research-center-room",
 		title: "Research Center Room",
-		location: {
-			x: 597,
-			y: 634,
-		},
+		location: { x: 597, y: 634 },
 		description: ["Required for Toxin Research, White Lotus tier 4."],
 		video: "RE4_vSLgQxY",
 		tags: ["mission"],
-		keyName: "Research Center Room Key",
 	},
 	{
 		id: "water-pump-control",
 		title: "Water Pump Control",
-		location: {
-			x: 673,
-			y: 448,
-		},
+		location: { x: 673, y: 448 },
 		description: ["The key can be acquired by completing Return to Sender, Black Mous tier 2"],
 		video: "fxsifEBXVNs",
 		keyName: "Water Pump Control Key",
@@ -57,16 +50,13 @@ export const keys = [
 		id: "city-hall",
 		title: "City Hall",
 		keyName: "City Hall Hideout Key",
-		location: {
-			x: 615,
-			y: 800,
-		},
+		location: { x: 615, y: 800 },
 		description: [
 			"Required for Whistleblower, Crown tier 1.",
 			"The key can be acquired by completing Health Conscious, Legion tier 1",
 		],
 		video: "DSDMYoYRwWU",
-		tags: ["fortress"],
+		tags: ["fortress", "mission"],
 	},
 	{
 		id: "hms-shipwreck-cache",
@@ -81,14 +71,10 @@ export const keys = [
 	{
 		id: "lost-room-403",
 		title: "Lost Room 403",
-		location: {
-			x: 608,
-			y: 734,
-		},
+		location: { x: 608, y: 734 },
 		description: ["Required for Intel Exchange, Crown tier 2."],
 		video: "7aEi7_nR_AI",
 		tags: ["mission"],
-		keyName: "Lost Room 403 Key",
 	},
 	{
 		id: "main-harbor-control",
@@ -209,5 +195,35 @@ export const keys = [
 		},
 		video: "vK10qqsIKxA",
 		keyName: "Hotel Employee Fridge Key",
+	},
+	{
+		title: "Drifting Supply Bag",
+		location: { x: 475, y: 299 },
+		video: "LFFEWVL9Xcg",
+	},
+	{
+		title: "Waterway Maintenance Kit",
+		location: { x: 694, y: 624 },
+		video: "RO-6yked-5g",
+	},
+	{
+		title: "Hotel Employee Fridge",
+		location: { x: 608, y: 726 },
+		video: "vK10qqsIKxA",
+	},
+	{
+		title: "Drifting Supply Bag",
+		location: { x: 475, y: 299 },
+		video: "LFFEWVL9Xcg",
+	},
+	{
+		title: "Waterway Maintenance Kit",
+		location: { x: 694, y: 624 },
+		video: "RO-6yked-5g",
+	},
+	{
+		title: "Hotel Employee Fridge",
+		location: { x: 608, y: 726 },
+		video: "vK10qqsIKxA",
 	},
 ];

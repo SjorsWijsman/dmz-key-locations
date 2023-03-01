@@ -23,8 +23,8 @@ export const deadDrops = [
 	{
 		title: "Beach Club",
 		location: {
-			x: 538,
-			y: 886,
+			x: 552,
+			y: 795,
 		},
 	},
 ];
