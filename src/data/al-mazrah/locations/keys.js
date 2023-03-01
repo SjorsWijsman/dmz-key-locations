@@ -21,7 +21,6 @@ export const keys = [
 			"The Airport Maintenance is a room on the northeast side of the Al Malik Airport. There are multiple entrances on the ground floor on the inside and outside and another on top of the roof.",
 		],
 		video: "zu5eO6MpaOE",
-		keyName: "Airport Maintenance Key",
 	},
 	{
 		id: "abf-antiquities-office",
@@ -34,7 +33,6 @@ export const keys = [
 			"Inside the large hall in the middle of the fortress. Entrance is up the indoor balcony staircase on the west side of the hall.",
 		],
 		video: "qTZby0PqlEw",
-		keyName: "A.B.F. Antiquities Office Key",
 	},
 	{
 		id: "al-bagra-barrack",
@@ -47,7 +45,6 @@ export const keys = [
 			"Access to both doors from the ground floor on the east side of the fortress. Each room can be opened separately (multiple key uses).",
 		],
 		video: "-eeyyCbW6j8",
-		keyName: "Al Bagra Barrack Key",
 	},
 	{
 		id: "al-bagra-munitions-storeroom",
@@ -60,7 +57,6 @@ export const keys = [
 			"Inside a possible stronghold location, so a keycard might be needed. Bottom floor has two rooms with metal bars that can each be opened separately (multiple key uses).",
 		],
 		video: "mJCOg4vLYwE",
-		keyName: "Al Bagra Munitions Storeroom Key",
 	},
 	{
 		id: "al-bagra-officers-quarters",
@@ -73,7 +69,6 @@ export const keys = [
 			"Located on the top floor of the eastern wing of the fortress. Includes two rooms that can each be opened separately (multiple key uses).",
 		],
 		video: "viPRIk2N3xw",
-		keyName: "Al Bagra Officers Quarters Key",
 	},
 	{
 		id: "al-bagra-underground",
@@ -94,7 +89,6 @@ export const keys = [
 			"This toolbox can be found underwater between two bridges spanning over the canal in Al-Mazrah City. ",
 		],
 		video: "dyKZnctOtvA",
-		keyName: "Algae Covered Toolbox Key",
 	},
 	{
 		id: "al-said-shopping-centre",
@@ -108,7 +102,6 @@ export const keys = [
 		],
 		video: "YmLZEqov-iE",
 		tags: ["fortress"],
-		keyName: "Al Sa'id Shopping Centre Key",
 	},
 	{
 		id: "al-sharim-pass-elders-room",
@@ -121,7 +114,6 @@ export const keys = [
 			"The locked room is located on the roof of the building on top of the mountain at Al Sharim Pass.",
 		],
 		video: "PoJimZ73oZA",
-		keyName: "Al Sharim Pass Elders Room Key",
 	},
 	{
 		id: "al-safwa-stone-block-office",
@@ -134,7 +126,6 @@ export const keys = [
 			"The Stone Block Office is located to the southeast of Al-Safwa Quarry. There are doors on both sides of the small building.",
 		],
 		video: "IjbsN4v810U",
-		keyName: "Al-Safwa Stone Block Office Key",
 	},
 	{
 		id: "art-museum",
@@ -148,7 +139,6 @@ export const keys = [
 		],
 		video: "U0QfE_-KQJA",
 		tags: ["fortress"],
-		keyName: "Art Museum Key",
 	},
 	{
 		id: "bc-toolbox",
@@ -161,7 +151,6 @@ export const keys = [
 			"In the north of the large airport building there is a room behind the Border Control desks. The toolbox is located in this room near the conveyor belts.",
 		],
 		video: "ARSEpO4vBcE",
-		keyName: "B.C. Toolbox Key",
 	},
 	{
 		id: "bank-of-adal-top-story-office",
@@ -174,7 +163,6 @@ export const keys = [
 			"Found on the top floor inside the bank in Sawah Village. The room is located in the southeast corner of the floor.",
 		],
 		video: "ikdMfq1syeY",
-		keyName: "Bank of Adal Top Story Office Key",
 	},
 	{
 		id: "bank-of-adal-2nd-story-office",
@@ -187,7 +175,6 @@ export const keys = [
 			"This locked door is located on the 2nd story of the Bank of Adal in Sawah Village. Going up the stairs you will find the door on your right.",
 		],
 		video: "WkT4jwhecYU",
-		keyName: "Bank of Adal 2nd Story Office Key",
 	},
 	{
 		id: "canal-apartment-103",
@@ -200,7 +187,6 @@ export const keys = [
 			"Access to the apartment building can be found from the side of the road. The room is located on the west side of the ground floor.",
 		],
 		video: "at0B9x2A4w4",
-		keyName: "Canal Apartment 103 Key",
 	},
 	{
 		id: "captains-cache",
@@ -213,7 +199,6 @@ export const keys = [
 			"Climbing up the shipwreck you will find a cabin. The cache is inside this cabin on the west side, just above the water that's flooded the cabin.",
 		],
 		video: "hyUB1Aq3R1I",
-		keyName: "Captain's Cache Key",
 	},
 	{
 		id: "caretakers-house",
@@ -226,7 +211,6 @@ export const keys = [
 			"The Caretakers House is located to the far south east of the Al Samman Cemetery.",
 		],
 		video: "L1SIzWnabRU",
-		keyName: "Caretaker's House Key",
 	},
 	{
 		id: "caretakers-toolbox",
@@ -239,7 +223,6 @@ export const keys = [
 			"This toolbox can be a bit difficult to find. It is located between the graves in the Al Samman Cemetery, about 5-6 rows in from the north wall.",
 		],
 		video: "pgUwvHx8S90",
-		keyName: "Caretaker's Toolbox Key",
 	},
 	{
 		id: "cavern-boat-dock-shack",
@@ -252,7 +235,6 @@ export const keys = [
 			"This small shack can be found next to the docks in the west side of the underground cave system. You can enter this cave by boat or through the various entrances around the mountain. Note that there are usually a lot of guards around, happy to defend their little pirate cove.",
 		],
 		video: "o3JWaK8UPIA",
-		keyName: "Cavern Boat Dock Shack Key",
 	},
 	{
 		id: "central-said-top-floor-apartment",
@@ -265,7 +247,6 @@ export const keys = [
 			"The apartment is on the top floor of the second building from the southwest in Sa'id City.",
 		],
 		video: "LfLFurevylc",
-		keyName: "Central Sa'id Top Floor Apartment Key",
 	},
 	{
 		id: "central-zaya-meeting-room",
@@ -278,7 +259,6 @@ export const keys = [
 			"The building is located at the Zaya Observatory, it can spawn as a stronghold so a keycard might be needed. The Meeting Room is on the first floor right in front of the top of the staircase.",
 		],
 		video: "FlR0jpT5uS8",
-		keyName: "Central Zaya Meeting Room Key",
 	},
 	{
 		id: "chemical-storage-warehouse",
@@ -291,7 +271,6 @@ export const keys = [
 			"The West Al-Safwa Chemical Storage Warehouse is found to the far west of the map, just outside of Al-Safwa Quarry. This location usually contains a lot of high value loot.",
 		],
 		video: "gxg4wNbfa8w",
-		keyName: "Chemical Storage Warehouse Key",
 	},
 	{
 		id: "ch-7-editorial-department",
@@ -316,7 +295,6 @@ export const keys = [
 			"Entering the building from the south you will find the room right across the entrance.",
 		],
 		video: "xieE3FJY838",
-		keyName: "Ch 7 Secure Records Room Key",
 	},
 	{
 		id: "clock-repair-tools",
@@ -329,7 +307,6 @@ export const keys = [
 			"The clock tower is easy to spot from a distance. Taking the ladder inside the building takes you to the roof. From the roof you can climb another ladder to the top of the tower where the toolbox is located.",
 		],
 		video: "wUa_RhgDWoo",
-		keyName: "Clock Repair Tools Key",
 	},
 	{
 		id: "control-tower",
@@ -358,7 +335,6 @@ export const keys = [
 		],
 		video: "0cHsa4jf3GQ",
 		tags: ["mission"],
-		keyName: "Crane Control Room Key",
 	},
 	{
 		id: "deckhands-toolbox",
@@ -372,7 +348,6 @@ export const keys = [
 			"The key can be acquired by completing Into the Deep, Legion tier 2",
 		],
 		video: "EKw3PoOo99c",
-		keyName: "Deckhand's Toolbox Key",
 	},
 	{
 		id: "downtown-post-office",
@@ -398,7 +373,6 @@ export const keys = [
 			"The Secure Room can be found on the top floor of the Downtown Post Office. As this location is a fortress, a separate key is needed to get to the door. The room will be the first door to your left exiting the southwest staircase.",
 		],
 		video: "QmiU_Lpus0I",
-		keyName: "Downtown Post Office Secure Room Key",
 	},
 	{
 		id: "enfer-back-room",
@@ -412,7 +386,6 @@ export const keys = [
 			"The Enfer Back Room is located inside the Sa'id City mall. Entrance into the mall through the roof is possible to bypass the extra key requirement.",
 		],
 		video: "f5qbD-snl38",
-		keyName: "Enfer Back Room Key",
 	},
 	{
 		id: "far-south-eastern-storage-closet",
@@ -425,7 +398,6 @@ export const keys = [
 			"On the ground floor of the north side of the marked building you will find the Far South Eastern Storage Closet.",
 		],
 		video: "yz-PSu27vYs",
-		keyName: "Far South Eastern Storage Closet Key",
 	},
 	{
 		id: "groundskeepers-building",
@@ -436,7 +408,6 @@ export const keys = [
 		},
 		description: ["Small building in the west of Sarrif Bay. Entry from the far side of the road."],
 		video: "mjYdGa0glRQ",
-		keyName: "Groundskeepers Building Key",
 	},
 	{
 		id: "hafid-ship-bridge-cache",
@@ -449,7 +420,6 @@ export const keys = [
 			"Climb up three staircases from the deck of the Hafid Ship to get to the fourth floor overlooking the deck. You will find the toolbox on your right.",
 		],
 		video: "VvQP9wCP7Zw",
-		keyName: "Hafid Ship Bridge Cache Key",
 	},
 	{
 		id: "hafid-ship-first-mate-cache",
@@ -462,7 +432,6 @@ export const keys = [
 			"The Hafid Ship First Mate Cache can be found in the small room in the back of the third floor of the Hafid Ship.",
 		],
 		video: "V20sBkaZ-hg",
-		keyName: "Hafid Ship First Mate Cache Key",
 	},
 	{
 		id: "zarqwa-hydro-island-computer",
@@ -476,7 +445,6 @@ export const keys = [
 			"The key can be acquired by completing Intelligence Control, Legion tier 4",
 		],
 		video: "-g5M4VcuLtE",
-		keyName: "Zarqwa Hydro Island Computer Key",
 	},
 	{
 		id: "west-zarqwa-safe-house",
@@ -487,7 +455,6 @@ export const keys = [
 		},
 		description: ["The locked door is on the second floor of the marked building."],
 		video: "c6kZZpUnSF8",
-		keyName: "West Zarqwa Safe House Key",
 	},
 	{
 		id: "ihtaq-warehouse-supply-room",
@@ -500,7 +467,6 @@ export const keys = [
 			"This is a small room upstairs in one of the offices in the south side of the large hangar in Hafid Port.",
 		],
 		video: "Txook-IBuXo",
-		keyName: "IHTAQ Warehouse Supply Room Key",
 	},
 	{
 		id: "kushaak-construction-warehouse",
@@ -526,7 +492,6 @@ export const keys = [
 			"The Duffel Bag is located at the very end of the large (broken) pier in Hafid Port pointing south.",
 		],
 		video: "ycwVZcG2LsI",
-		keyName: "Longshoreman's Duffel Bag Key",
 	},
 	{
 		id: "mawizeh-cell-shop",
@@ -540,7 +505,6 @@ export const keys = [
 		],
 		video: "QkKEd-BgRFU",
 		tags: ["fortress"],
-		keyName: "Mawizeh Cell Shop Key",
 	},
 	{
 		id: "mawizeh-power-control-substation",
@@ -553,7 +517,6 @@ export const keys = [
 			"The Mawizeh Power Control Substation is located across the Mashlands from the Mawizeh Resort. It's the small building next to the large white watertower.",
 		],
 		video: "BNxTrs1CjEE",
-		keyName: "Mawizeh Power Control Substation Key",
 	},
 	{
 		id: "mawizeh-resort-bungalow-room",
@@ -566,7 +529,6 @@ export const keys = [
 			"The Bungalow Room is the third bungalow counting from the west of the large Mawizeh Marshland island.",
 		],
 		video: "bbGPxQVEu9g",
-		keyName: "Mawizeh Resort Bungalow Room Key",
 	},
 	{
 		id: "mawizeh-resort-main-building",
@@ -594,7 +556,6 @@ export const keys = [
 			"The Discarded Cache is located underneath the large bridge on the south side of the river, where it's laying on the ground next to a burned out car.",
 		],
 		video: "j3qq7WN7-HA",
-		keyName: "Mawizah Slum Discarded Cache Key",
 	},
 	{
 		id: "mountaintop-spotter-shack",
@@ -607,7 +568,6 @@ export const keys = [
 			"The Mountaintop, as the name implies, is located on top of the mountain at Al Sharim Pass. It's a small building at the northeastern edge of the mountain.",
 		],
 		video: "5zhNOSGTuiY",
-		keyName: "Mountaintop Spotter Shack Key",
 	},
 	{
 		id: "north-canals-info-booth",
@@ -620,7 +580,6 @@ export const keys = [
 			"Along the canal running through Al-Mazrah City are multiple booths to the west. This booth (as the name implies) is the northernmost one.",
 		],
 		video: "n8TU8OBDeHk",
-		keyName: "North Canals Info Booth Key",
 	},
 	{
 		id: "old-lighthouse-citadel-room",
@@ -633,7 +592,6 @@ export const keys = [
 			"At the end of the island at Sarrif Bay is a small lighthouse. Going inside you will quickly find the door right in front of you.",
 		],
 		video: "MdYb5uV5aw0",
-		keyName: "Old Lighthouse Citadel Room Key",
 	},
 	{
 		id: "omars-auto-repair",
@@ -647,7 +605,6 @@ export const keys = [
 			"The key can be acquired by completing Vehicular Homicide, Black Mous tier 1",
 		],
 		video: "Zf2Z614ZEtw",
-		keyName: "Omar's Auto Repair Key",
 	},
 	{
 		id: "police-academy",
@@ -753,7 +710,6 @@ export const keys = [
 			"The Police Academy Private Locker Room is located downstairs inside the building to the south of the Police Academy parking lot.",
 		],
 		video: "CA5ibOFOCCg",
-		keyName: "Police Academy Private Locker Room Key",
 	},
 	{
 		id: "police-locker-g4",
@@ -779,7 +735,6 @@ export const keys = [
 			"To the south of the large parking lot at the Police Academy is a smaller building. The room is on the ground floor in the north of the building.",
 		],
 		video: "OrK3UZ-b3wk",
-		keyName: "Police Academy Server Admin Key",
 	},
 	{
 		id: "power-substation-toolbox",
@@ -792,7 +747,6 @@ export const keys = [
 			"To the south of the Al Samman Cemetery is a small Power Substation. Climbing over the fence, the toolbox is located right in the middle of the station.",
 		],
 		video: "XFnwZRN84ng",
-		keyName: "Power Substation Toolbox Key",
 	},
 	{
 		id: "quarry-workers-lost-toolbox",
@@ -806,7 +760,6 @@ export const keys = [
 			"The key can be acquired by completing Paperweights, Black Mous tier 3",
 		],
 		video: "_alliZFxcZI",
-		keyName: "Quarry Worker's Lost Toolbox Key",
 	},
 	{
 		id: "special-ops-relay-station",
@@ -819,7 +772,6 @@ export const keys = [
 			"Next to the T-shaped dock on the south of Hafid Port is a small building. This is the Special Ops Relay Station.",
 		],
 		video: "bYneoNHg5bU",
-		keyName: "Special Ops Relay Station Key",
 	},
 	{
 		id: "retro-runway-fridge",
@@ -832,7 +784,6 @@ export const keys = [
 			"The Retro Runway Fridge is a medium sized white box commonly used for cooling, located inside the crater at the eastern end of the Al Malik Airport runway.",
 		],
 		video: "0DvogRQ46h4",
-		keyName: "Retro Runway Fridge Key",
 	},
 	{
 		id: "rohan-control-room-locker",
@@ -845,7 +796,6 @@ export const keys = [
 			"The Rohan Control Room Locker is a locker underground in the Rohan Oil Tunnels. There are multiple entrances to these tunnels around the facility.",
 		],
 		video: "SIJvnqZF5tA",
-		keyName: "Rohan Control Room Locker Key",
 	},
 	{
 		id: "rohan-oil-north-guard-shack",
@@ -856,7 +806,6 @@ export const keys = [
 		},
 		description: ["This small guard shack is located next to the south gate at Rohan Oil."],
 		video: "Dc4zL9fBv4U",
-		keyName: "Rohan Oil North Guard Shack Key",
 	},
 	{
 		id: "rohan-oil-south-guard-shack",
@@ -867,7 +816,6 @@ export const keys = [
 		},
 		description: ["This small guard shack is located next to the south gate at Rohan Oil."],
 		video: "JEbusK_AiFE",
-		keyName: "Rohan Oil South Guard Shack Key",
 	},
 	{
 		id: "rohan-utility-tunnel-locker",
@@ -880,7 +828,6 @@ export const keys = [
 			"This locker is underground, with the entrance in the marked building just north of the train tracks.",
 		],
 		video: "L4HcdGP1q4A",
-		keyName: "Rohan Utility Tunnel Locker Key",
 	},
 	{
 		id: "said-mall-security-room",
@@ -893,7 +840,6 @@ export const keys = [
 			"The Security Room is inside of the Sa'id Mall in the east of the map. The room itself is located upstairs on the right side of the mall at the end of the hallway.",
 		],
 		video: "myYuLlmhSm8",
-		keyName: "Sa'id Mall Security Room Key",
 	},
 	{
 		id: "sattiq-guest-quarters",
@@ -906,7 +852,6 @@ export const keys = [
 			"This building is a little hard to find, as it's not marked on the map. It's a small door above ground in the side of a hill.",
 		],
 		video: "fn9ytgMuMP8",
-		keyName: "Sattiq Guest Quarters Key",
 	},
 	{
 		id: "sattiq-poppy-farm-house",
@@ -922,7 +867,6 @@ export const keys = [
 		],
 		video: "uaw5eT_RAC4",
 		tags: ["mission"],
-		keyName: "Sattiq Poppy Farm House Key",
 	},
 	{
 		id: "sawah-crypto-mining-farm-key",
@@ -935,7 +879,6 @@ export const keys = [
 			"To the west of the Sawah Village square is a large building. Going up the large stairs and taking an immediate right in the hallway leaves you at the door.",
 		],
 		video: "By_6_Y4WAWs",
-		keyName: "Sawah Crypto Mining Farm Key Key",
 	},
 	{
 		id: "sawah-hotel-room-302",
@@ -950,7 +893,6 @@ export const keys = [
 		],
 		video: "g6UGMlEvhMM",
 		tags: ["mission"],
-		keyName: "Sawah Hotel Room 302 Key",
 	},
 	{
 		id: "sawah-hotel-room-303",
@@ -964,7 +906,6 @@ export const keys = [
 			"The key can be acquired by completing Cargo Keeper, Black Mous tier 1",
 		],
 		video: "g6UGMlEvhMM",
-		keyName: "Sawah Hotel Room 303 Key",
 	},
 	{
 		id: "scientists-locker",
@@ -977,7 +918,6 @@ export const keys = [
 			"The Scientist's Locker is located at the Zaya Observatory, inside the bunker to the north of the complex. Following the tunnel east you will find the locker on your right about halfway through.",
 		],
 		video: "iPEj1jqQMWM",
-		keyName: "Scientist's Locker Key",
 	},
 	{
 		id: "south-al-bagra-top-floor-bedroom",
@@ -990,7 +930,6 @@ export const keys = [
 			"Unsurprisingly found on the top floor of the building, in the southwest corner of the floor.",
 		],
 		video: "s3rW3NX1HqM",
-		keyName: "South Al Bagra Top Floor Bedroom Key",
 	},
 	{
 		id: "south-bank-apartment",
@@ -1003,7 +942,6 @@ export const keys = [
 			"On the other side of the river under Sa'id City is a small town. Entering the marked building from the roof, you will immediately find the door on the left.",
 		],
 		video: "Jn3ihx9ArLE",
-		keyName: "South Bank Apartment Key",
 	},
 	{
 		id: "south-zaya-scientist-apartment",
@@ -1016,7 +954,6 @@ export const keys = [
 			"The Scientist Apartment is located in the south of the Zaya Observatory. Going up the central stairs in the marked building and taking a left there is a single door to the apartment.",
 		],
 		video: "ISyC9NQPJEg",
-		keyName: "South Zaya Scientist Apartment Key",
 	},
 	{
 		id: "special-forces-dead-drop",
@@ -1029,7 +966,6 @@ export const keys = [
 			"The Special Forces Dead Drop is a lockbox located on the concrete platform underneath the large tower in the northeast of the map.",
 		],
 		video: "bcImnQY-ks8",
-		keyName: "Special Forces Dead Drop Key",
 	},
 	{
 		id: "taraq-river-supply-shack",
@@ -1042,7 +978,6 @@ export const keys = [
 			"The Taraq River Supply Shack is located next to the river to the east of Taraq Village. The small building is not outlined on the map but easy to find as it stands out next to the river.",
 		],
 		video: "VPZIVFIWvyk",
-		keyName: "Taraq River Supply Shack Key",
 	},
 	{
 		id: "taraq-smugglers-office",
@@ -1055,7 +990,6 @@ export const keys = [
 			"Crossing the bridge heading to Taraq Village are three buildings on the right of the road. The Smuggler's Office is located inside the middle building on the ground floor.",
 		],
 		video: "WUUxiX0pMpQ",
-		keyName: "Taraq Smuggler's Office Key",
 	},
 	{
 		id: "taraq-tunnels-workbench-cache",
@@ -1068,7 +1002,6 @@ export const keys = [
 			"To the west of the building next to the marked location is a hole in the ground. Entering this hole and following the tunnel you will find the locked toolbox next to a workbench.",
 		],
 		video: "n2N8ZB6_YFk",
-		keyName: "Taraq Tunnels Workbench Cache Key",
 	},
 	{
 		id: "tower-conference-room",
@@ -1081,7 +1014,6 @@ export const keys = [
 			"The Tower Conference Room is located inside the Control Tower fortress, so you need the respective key to get to this room. The room itself is in the northeast corner of the first floor, just to the right of the top of the escalators.",
 		],
 		video: "p0-HK4yHmZg",
-		keyName: "Tower Conference Room Key",
 	},
 	{
 		id: "travellers-luggage",
@@ -1094,7 +1026,6 @@ export const keys = [
 			"The Traveller's Luggage is a duffel bag located in the small waiting area overlooking the Al Malik Airport.",
 		],
 		video: "q8DSYEJS6u4",
-		keyName: "Traveller's Luggage Key",
 	},
 	{
 		id: "under-freeway-east-warehouse",
@@ -1107,7 +1038,6 @@ export const keys = [
 			"The marked building is located right next to the road going under the highway. The door is on the outside of this building.",
 		],
 		video: "mIXoneswWKQ",
-		keyName: "Under Freeway East Warehouse Key",
 	},
 	{
 		id: "us-embassy",
@@ -1133,7 +1063,6 @@ export const keys = [
 			"The Weapons Repair Kit is located inside of a cave at the Sattiq Cave Complex. The cave entrance is to the north of the marker. Heading inside and going right you will find the toolbox on a table.",
 		],
 		video: "IH39322Yxtg",
-		keyName: "Weapons Repair Kit Key",
 	},
 	{
 		id: "yum-yum-burger-back-room",
@@ -1146,7 +1075,6 @@ export const keys = [
 			"You will find the Back Room door right next to the staircase on the ground floor inside of the Yum Yum Burger building.",
 		],
 		video: "K3xIASt5KwY",
-		keyName: "Yum Yum Burger Back Room Key",
 	},
 	{
 		id: "zarqwa-market-storage",
@@ -1160,7 +1088,6 @@ export const keys = [
 			"The key can be acquired by completing Nail in the Coffin, Legion tier 4",
 		],
 		video: "90Rh-WTItAI",
-		keyName: "Zarqwa Market Storage Key",
 	},
 	{
 		id: "zarqwa-red-village-appartment",
@@ -1173,7 +1100,6 @@ export const keys = [
 			"The Zarqwa Red Village Apartment is a small apartment upstairs in the marked building in Zarqwa village.",
 		],
 		video: "ircnrYJKUfM",
-		keyName: "Zarqwa Red Village Appartment Key",
 	},
 	{
 		id: "zaya-radar-dome",
@@ -1186,7 +1112,6 @@ export const keys = [
 			"The Zaya Radar Dome key leads to one of the large Radar buildings in Zaya Observatory. This one is located to the west of the bunker, with an easy to spot entrace at the ground floor coming from the east.",
 		],
 		video: "LAaajr_4_QQ",
-		keyName: "Zaya Radar Dome Key",
 	},
 	{
 		id: "sunken-ship-thiefs-cache",
@@ -1199,7 +1124,6 @@ export const keys = [
 			"The Thief's Cache is inside an underwater part of the sunken ship. Entering the hull from the front of the ship you will find the duffel bag on your immediate right. Contains the $25,000 Golden Skull of Al Bagra Minor.",
 		],
 		video: "Rx4L86BCsX8",
-		keyName: "Sunken Ship Thief's Cache Key",
 	},
 	{
 		id: "control-room",
@@ -1207,7 +1131,6 @@ export const keys = [
 		description: [
 			"If you find the location for this key, please contact me in Discord and I will add it to the map.",
 		],
-		keyName: "Control Room Key",
 	},
 	{
 		id: "fort-barrack",
@@ -1216,7 +1139,6 @@ export const keys = [
 			"Might work for Al Bagra Barrack location.",
 			"If you find the location for this key, please contact me in Discord and I will add it to the map.",
 		],
-		keyName: "Fort Barrack Key",
 	},
 	{
 		id: "storage",
@@ -1224,7 +1146,6 @@ export const keys = [
 		description: [
 			"If you find the location for this key, please contact me in Discord and I will add it to the map.",
 		],
-		keyName: "Storage Key",
 	},
 	{
 		id: "foremans-office",
@@ -1232,7 +1153,6 @@ export const keys = [
 		description: [
 			"If you find the location for this key, please contact me in Discord and I will add it to the map.",
 		],
-		keyName: "Foreman's Office Key",
 	},
 	{
 		id: "stronghold-interior",
@@ -1241,7 +1161,6 @@ export const keys = [
 			"Sometimes disappears from the inventory on extraction.",
 			"If you find the location for this key, please contact me in Discord and I will add it to the map.",
 		],
-		keyName: "Stronghold Interior Key",
 	},
 	{
 		id: "the-architects-toolbox",
@@ -1254,7 +1173,6 @@ export const keys = [
 			"A small toolbox found in the underground tunnels. An entrance to the tunnels can be found slightly to the south west of the marked location.",
 		],
 		video: "owIMpzwuuJw",
-		keyName: "The Architect's Toolbox Key",
 	},
 	{
 		id: "crash-site-weapon-case-under-pipeline",
@@ -1280,7 +1198,6 @@ export const keys = [
 			y: 2285,
 		},
 		video: "OtxN6_9WA6s",
-		keyName: "SC Special Forces Footlocker Key",
 	},
 	{
 		id: "captain-silvers-briefcase",
@@ -1290,7 +1207,6 @@ export const keys = [
 			y: 2076,
 		},
 		video: "za699WARSXA",
-		keyName: "Captain Silver's Briefcase Key",
 	},
 	{
 		id: "the-lieutenants-briefcase",
@@ -1299,11 +1215,9 @@ export const keys = [
 			x: 1935,
 			y: 1543,
 		},
-		keyName: "The Lieutenant's Briefcase Key",
 	},
 	{
 		id: "bomb-makers-supply-cache",
 		title: "Bomb Maker's Supply Cache",
-		keyName: "Bomb Maker's Supply Cache Key",
 	},
 ];

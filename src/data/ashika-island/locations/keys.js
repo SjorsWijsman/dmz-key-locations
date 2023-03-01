@@ -8,7 +8,6 @@ export const keys = [
 		},
 		video: "pmlZu6GtZxg",
 		tags: ["fortress"],
-		keyName: "Tsuki Castle Key",
 	},
 	{
 		id: "tsuki-castle-weapons-locker",
@@ -18,7 +17,6 @@ export const keys = [
 			y: 647,
 		},
 		video: "wP2LHs0LAQg",
-		keyName: "Tsuki Castle Weapons Locker Key",
 	},
 	{
 		id: "lost-managers-office",
@@ -28,7 +26,6 @@ export const keys = [
 			y: 810,
 		},
 		video: "fAEBFxIvvds",
-		keyName: "Lost Manager's Office Key",
 	},
 	{
 		id: "research-center-room",
@@ -44,7 +41,6 @@ export const keys = [
 		location: { x: 673, y: 448 },
 		description: ["The key can be acquired by completing Return to Sender, Black Mous tier 2"],
 		video: "fxsifEBXVNs",
-		keyName: "Water Pump Control Key",
 	},
 	{
 		id: "city-hall",
@@ -56,7 +52,6 @@ export const keys = [
 			"The key can be acquired by completing Health Conscious, Legion tier 1",
 		],
 		video: "DSDMYoYRwWU",
-		tags: ["fortress", "mission"],
 	},
 	{
 		id: "hms-shipwreck-cache",
@@ -66,7 +61,6 @@ export const keys = [
 			y: 658,
 		},
 		video: "4Wupt48SbdY",
-		keyName: "H.M.S. Shipwreck Cache Key",
 	},
 	{
 		id: "lost-room-403",
@@ -84,7 +78,6 @@ export const keys = [
 			y: 808,
 		},
 		video: "meBYe-apTwM",
-		keyName: "Main Harbor Control Key",
 	},
 	{
 		id: "ashika-island-information-booth",
@@ -94,7 +87,6 @@ export const keys = [
 			y: 624,
 		},
 		video: "Ul-qZ3z7ASA",
-		keyName: "Ashika Island Information Booth Key",
 	},
 	{
 		id: "beach-club-bathhouse",
@@ -104,7 +96,6 @@ export const keys = [
 			y: 931,
 		},
 		video: "op1WsZDP8bI",
-		keyName: "Beach Club Bathhouse Key",
 	},
 	{
 		id: "farmers-lunchbox",
@@ -114,7 +105,6 @@ export const keys = [
 			y: 531,
 		},
 		video: "qy4B_hLYInc",
-		keyName: "Farmer's Lunchbox Key",
 	},
 	{
 		id: "floatsam-cargo-cache",
@@ -124,7 +114,6 @@ export const keys = [
 			y: 688,
 		},
 		video: "JPI9BL_7kjg",
-		keyName: "Floatsam Cargo Cache Key",
 	},
 	{
 		id: "mud-covered-cache",
@@ -134,7 +123,6 @@ export const keys = [
 			y: 610,
 		},
 		video: "AebOHgw96Hg",
-		keyName: "Mud Covered Cache Key",
 	},
 	{
 		id: "rusted-fridge",
@@ -144,7 +132,6 @@ export const keys = [
 			y: 1023,
 		},
 		video: "gq6wEXCcH44",
-		keyName: "Rusted Fridge Key",
 	},
 	{
 		id: "waterlogged-bag",
@@ -154,7 +141,6 @@ export const keys = [
 			y: 505,
 		},
 		video: "wGQ6BwBdKPU",
-		keyName: "Waterlogged Bag Key",
 	},
 	{
 		id: "combat-engineer-toolkit",
@@ -164,7 +150,6 @@ export const keys = [
 			y: 547,
 		},
 		video: "IdxkjCVvjAg",
-		keyName: "Combat Engineer Toolkit Key",
 	},
 	{
 		id: "drifting-supply-bag",
@@ -174,7 +159,6 @@ export const keys = [
 			y: 299,
 		},
 		video: "LFFEWVL9Xcg",
-		keyName: "Drifting Supply Bag Key",
 	},
 	{
 		id: "waterway-maintenance-kit",
@@ -184,7 +168,6 @@ export const keys = [
 			y: 624,
 		},
 		video: "RO-6yked-5g",
-		keyName: "Waterway Maintenance Kit Key",
 	},
 	{
 		id: "hotel-employee-fridge",
@@ -194,7 +177,6 @@ export const keys = [
 			y: 726,
 		},
 		video: "vK10qqsIKxA",
-		keyName: "Hotel Employee Fridge Key",
 	},
 	{
 		title: "Drifting Supply Bag",
