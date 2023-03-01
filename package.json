@@ -11,7 +11,8 @@
 		"preview": "vite preview",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"generate-key-data": "node generate-key-data.js"
+		"generate-key-data": "node generate-key-data.js",
+		"generate-example-translation-file": "node generate-example-translation-file.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^1.0.5",
