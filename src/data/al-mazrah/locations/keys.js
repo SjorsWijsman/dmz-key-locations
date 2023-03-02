@@ -1219,5 +1219,15 @@ export const keys = [
 	{
 		id: "bomb-makers-supply-cache",
 		title: "Bomb Maker's Supply Cache",
+		location: {
+			x: 1449,
+			y: 2348,
+	},
+		{
+		id: "b21-secure-cache",
+		title: "B21 Secure Cache",
+		location: {
+			x: 1417,
+			y: 2218,
 	},
 ];
