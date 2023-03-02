@@ -180,7 +180,10 @@ export const keys = [
 	},
 	{
 		title: "Drifting Supply Bag",
-		location: { x: 475, y: 299 },
+		location: { 
+			x: 435,
+			y: 277,
+		},
 		video: "LFFEWVL9Xcg",
 	},
 	{
