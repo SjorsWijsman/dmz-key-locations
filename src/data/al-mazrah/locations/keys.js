@@ -1222,6 +1222,7 @@ export const keys = [
 		location: {
 			x: 1449,
 			y: 2348,
+		},
 	},
 		{
 		id: "b21-secure-cache",
@@ -1229,5 +1230,6 @@ export const keys = [
 		location: {
 			x: 1417,
 			y: 2218,
+		},
 	},
 ];
