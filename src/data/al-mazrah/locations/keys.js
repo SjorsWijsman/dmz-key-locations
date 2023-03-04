@@ -1224,7 +1224,7 @@ export const keys = [
 			y: 2348,
 		},
 	},
-		{
+	{
 		id: "b21-secure-cache",
 		title: "B21 Secure Cache",
 		location: {
