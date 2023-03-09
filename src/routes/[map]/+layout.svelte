@@ -6,13 +6,14 @@
 	import SearchPanel from "$components/ui/panels/SearchPanel.svelte";
 	import UserPanel from "$components/ui/panels/UserPanel.svelte";
 	import InfoPanel from "$components/ui/panels/InfoPanel.svelte";
-	import { mapData, showVideo, activePanel, waypoint } from "$store";
+	import { mapData, showVideo, activePanel, waypoint, language } from "$store";
 	import { mobileSize } from "$scripts/media-queries";
 	import { maps } from "$data/maps";
+	import { keys } from "$data/keys";
 	import { page } from "$app/stores";
-	import { goto } from "$app/navigation";
 
 	let outerWidth;
+	let translatedKeys = keys;
 
 	function showMapToggle(panelIsOpen, outerWidth) {
 		if (panelIsOpen && mobileSize(outerWidth)) {
@@ -25,13 +26,27 @@
 	$: setMapData($page.params?.map);
 
 	function setMapData(map) {
-		if (!maps[map]) goto("../");
-		else if ($mapData?.title !== maps[map]?.title) {
+		if ($mapData?.title !== maps[map]?.title) {
 			// Change map data
 			$mapData = maps[map];
 			$waypoint = null;
 		}
 	}
+
+	function translateKeys(locale) {
+		if (locale && locale !== "en") {
+			translatedKeys = keys.map((key) => {
+				return {
+					...key,
+					...key.locales[locale],
+				};
+			});
+		} else {
+			translatedKeys = keys;
+		}
+	}
+
+	language.subscribe((locale) => translateKeys(locale));
 </script>
 
 <svelte:window bind:outerWidth />
@@ -48,10 +63,10 @@
 	</nav>
 {/if}
 <main class:video-disabled={!$showVideo}>
-	<SearchPanel />
 	<UserPanel />
 	<InfoPanel />
-	<Map />
+	<SearchPanel keys={translatedKeys} />
+	<Map keys={translatedKeys} />
 	<slot />
 </main>
 

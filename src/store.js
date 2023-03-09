@@ -46,6 +46,8 @@ export const showVideo = persistStore("dmzkeys-user-showVideo", true);
 export const filterKeysByMap = persistStore("dmzkeys-user-filterKeysByMap", true);
 // Selected filter
 export const filter = persistStore("dmzkeys-user-filter", "all");
+// Selected language
+export const language = persistStore("dmzkeys-user-language", null);
 
 function getHashKey() {
 	if (!browser) return;

@@ -11,34 +11,35 @@
 		description = [],
 		loot = null,
 		video = "",
-		tags = [];
+		tags = [],
+		locales = {};
 
 	// Prevent unused variable warning.
-	$: loot, video;
+	$: loot, video, locales;
 
 	let icon = "key";
-	$: icon = $favorites.includes(title)
+	$: icon = $favorites.includes(id)
 		? "star"
 		: !location?.x || !location?.y
 		? "question-mark"
 		: "key";
 
 	function toggleDetails() {
-		if ($openKeyInfo === title) {
+		if ($openKeyInfo === id) {
 			$openKeyInfo = "";
 		} else {
-			$openKeyInfo = title;
+			$openKeyInfo = id;
 		}
 	}
 
 	selectedMarker.subscribe((selection) => {
-		if (selection?.title === title) {
-			$openKeyInfo = title;
+		if (selection?.id === id) {
+			$openKeyInfo = id;
 		}
 	});
 </script>
 
-<li class:isOpen={$openKeyInfo === title} class:isFavorite={$favorites.includes(title)}>
+<li class:isOpen={$openKeyInfo === id} class:isFavorite={$favorites.includes(id)}>
 	<div on:click={toggleDetails} on:keypress={toggleDetails}>
 		<span>
 			<h2>
@@ -48,7 +49,7 @@
 				<h3>
 					<Icon
 						{icon}
-						color={$favorites.includes(title) ? "var(--color-favorite-light)" : "white"}
+						color={$favorites.includes(id) ? "var(--color-favorite-light)" : "white"}
 						size={1.5}
 					/>
 					{keyName}
@@ -57,7 +58,7 @@
 		</span>
 		<Icon icon="chevron-down" size={1.5} />
 	</div>
-	<SearchResultContent {...{ id, map, title, location, description, tags }} />
+	<SearchResultContent {...{ id, map, location, description, tags }} />
 </li>
 
 <style>

@@ -4,7 +4,7 @@
 	import { maps } from "$data/maps";
 	import Icon from "../Icon.svelte";
 
-	export let id, title, location, description, tags, map;
+	export let id, location, description, tags, map;
 
 	let copied = false;
 
@@ -15,7 +15,7 @@
 			return item;
 		});
 		for (const marker of $keyMarkers) {
-			if (marker.options.title === title) {
+			if (marker.options.title === id) {
 				// Reopen popup
 				marker.closePopup();
 				marker.openPopup();
@@ -24,10 +24,10 @@
 	}
 
 	function toggleFavorite() {
-		if ($favorites.includes(title)) {
-			$favorites = $favorites.filter((item) => item !== title);
+		if ($favorites.includes(id)) {
+			$favorites = $favorites.filter((item) => item !== id);
 		} else {
-			$favorites = [...$favorites, title];
+			$favorites = [...$favorites, id];
 		}
 	}
 
@@ -40,7 +40,7 @@
 	}
 </script>
 
-{#if $openKeyInfo === title}
+{#if $openKeyInfo === id}
 	<section transition:fadeSlide|local={{ duration: 200 }}>
 		<div>
 			{#if !$filterKeysByMap}
@@ -86,7 +86,7 @@
 			<!-- Location Button -->
 			<button on:click|stopPropagation={openMarkerPopup} disabled={!location?.x || !location?.y}>
 				{#if location?.x && location?.y}
-					{#if $favorites.includes(title)}
+					{#if $favorites.includes(id)}
 						<Icon src={"/icons/markers/location-favorite.svg"} size={2.5} />
 					{:else if tags?.includes("mission")}
 						<Icon src={"/icons/markers/location-mission.svg"} size={2.5} />
@@ -97,7 +97,7 @@
 					<Icon icon="question-mark" size={2.5} />
 				{/if}
 			</button>
-			{#if $openKeyInfo === title}
+			{#if $openKeyInfo === id}
 				<!-- Favorite Button -->
 				<button
 					on:click|stopPropagation={toggleFavorite}

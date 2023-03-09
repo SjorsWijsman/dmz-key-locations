@@ -178,34 +178,4 @@ export const keys = [
 		},
 		video: "vK10qqsIKxA",
 	},
-	{
-		title: "Drifting Supply Bag",
-		location: { x: 435, y: 277 },
-		video: "LFFEWVL9Xcg",
-	},
-	{
-		title: "Waterway Maintenance Kit",
-		location: { x: 694, y: 624 },
-		video: "RO-6yked-5g",
-	},
-	{
-		title: "Hotel Employee Fridge",
-		location: { x: 608, y: 726 },
-		video: "vK10qqsIKxA",
-	},
-	{
-		title: "Drifting Supply Bag",
-		location: { x: 435, y: 277 },
-		video: "LFFEWVL9Xcg",
-	},
-	{
-		title: "Waterway Maintenance Kit",
-		location: { x: 694, y: 624 },
-		video: "RO-6yked-5g",
-	},
-	{
-		title: "Hotel Employee Fridge",
-		location: { x: 608, y: 726 },
-		video: "vK10qqsIKxA",
-	},
 ];
