@@ -301,7 +301,7 @@ export const keys = {
 		keyName: "墜落現場の武器ケースの鍵",
 	},
 	"sc-special-forces-footlocker": {
-		title: "SC歩兵のトランク",
+		title: "SCのトランク",
 	},
 	"captain-silvers-briefcase": {
 		title: "シルバー大尉のブリーフケース",
