@@ -82,4 +82,7 @@ h3 {
 	border-bottom-right-radius: 0.5rem;
 }
 
-/* Checkboxes */
+input {
+	background-color: black;
+	border: 0px;
+}

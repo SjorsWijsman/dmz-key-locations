@@ -23,8 +23,8 @@ export const deadDrops = [
 	{
 		title: "Al Sharim Pass",
 		location: {
-			x: 2630,
-			y: 2493,
+			x: 2614,
+			y: 2500,
 		},
 	},
 	{

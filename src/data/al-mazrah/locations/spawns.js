@@ -125,6 +125,13 @@ export const spawns = [
 			y: 1617,
 		},
 	},
+	{
+		title: "B3",
+		location: {
+			x: 654,
+			y: 1606,
+		},
+	},
 ];
 
 // Updated after s2

@@ -1,9 +1,9 @@
 <script>
 	import SearchResult from "./SearchResult.svelte";
-	import { keys } from "$data/keys";
 	import { searchTerm, selectedMarker, favorites, filter, mapData, filterKeysByMap } from "$store";
 	import { page } from "$app/stores";
-	import Icon from "../Icon.svelte";
+
+	export let keys;
 
 	let filteredKeys = keys;
 

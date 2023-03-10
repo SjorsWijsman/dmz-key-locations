@@ -25,10 +25,14 @@
 		popupAnchor: [0, -15], // point from which the popup should open relative to the iconAnchor
 	};
 
+	export function removeMarkers() {
+		layer.clearLayers();
+	}
+
 	export function placeMarkers(markerLocations) {
 		let markers = [];
 
-		layer.clearLayers();
+		removeMarkers();
 
 		// Add markers to layer
 		markerLocations.forEach((markerLocation) => {
