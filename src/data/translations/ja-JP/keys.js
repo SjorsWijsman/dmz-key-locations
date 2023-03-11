@@ -301,7 +301,7 @@ export const keys = {
 		keyName: "墜落現場の武器ケースの鍵",
 	},
 	"sc-special-forces-footlocker": {
-		title: "SCのトランク",
+		title: "SC特殊部隊のトランク",
 	},
 	"captain-silvers-briefcase": {
 		title: "シルバー大尉のブリーフケース",
@@ -312,8 +312,14 @@ export const keys = {
 	"bomb-makers-supply-cache": {
 		title: "ボムメーカーのサプライコンテナ",
 	},
-		"b21-secure-cache":	{
+	"b21-secure-cache":	{
 		title: "B21のセキュアコンテナ",
+	},
+	"sc-soldiers-footlocker": {
+		title: "SC兵士のトランク",
+	},
+	"sc-grunts-footlocker": {
+		title: "SC歩兵のトランク",
 	},
 	"tsuki-castle": {
 		title: "ツキ・キャッスル",
