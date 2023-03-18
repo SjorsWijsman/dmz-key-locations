@@ -29,7 +29,16 @@
 <Panel panelTitle={"user"} icon={"user"} openIconOffset={1}>
 	<section>
 		<h2>Language</h2>
-		<p>Note: Language only changes for key information.</p>
+		<p>
+			Note: Language only changes for key information.
+			<a
+				href="https://github.com/SjorsWijsman/dmz-key-locations/tree/main/src/data/translations"
+				target="_blank"
+				rel="noreferrer"
+			>
+				How to add your own language?
+			</a>
+		</p>
 		{#each [["en", "English"], ["ja-JP", "Japanese"]] as [code, title]}
 			<button disabled={$language === code} class="language" on:click={() => setLanguage(code)}>
 				{title}

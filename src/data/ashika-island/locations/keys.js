@@ -155,8 +155,8 @@ export const keys = [
 		id: "drifting-supply-bag",
 		title: "Drifting Supply Bag",
 		location: {
-			x: 435,
-			y: 277,
+			x: 454,
+			y: 266,
 		},
 		video: "LFFEWVL9Xcg",
 	},
