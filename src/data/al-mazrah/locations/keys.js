@@ -1234,4 +1234,20 @@ export const keys = [
 		},
 		video: "3XwoFoZQK2U",
 	},
+	{
+		id: "sc-soldiers-footlocker",
+		title: "SC Soldier's Footlocker",
+		location: {
+			x: 1442,
+			y: 2371,
+		},
+	},
+//	{
+//		id: "sc-grunts-footlocker",
+//		title: "SC Grunt's Footlocker",
+//		location: {
+//			x: ,
+//			y: ,
+//		},
+//	},
 ];
