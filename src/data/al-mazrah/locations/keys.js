@@ -1223,6 +1223,7 @@ export const keys = [
 			x: 1449,
 			y: 2348,
 		},
+		video: "HRHWKUmltfI",
 	},
 	{
 		id: "b21-secure-cache",
@@ -1231,5 +1232,6 @@ export const keys = [
 			x: 1417,
 			y: 2218,
 		},
+		video: "3XwoFoZQK2U",
 	},
 ];
