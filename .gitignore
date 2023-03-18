@@ -29,3 +29,7 @@ vite.config.ts.timestamp-*
 *.njsproj
 *.sln
 *.sw?
+
+# Generated files
+/src/data/keys.js
+/src/data/translations/keys.example.js

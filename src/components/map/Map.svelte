@@ -12,11 +12,12 @@
 	import LayerControl from "$components/ui/widgets/LayerControl.svelte";
 	import ZoomControl from "$components/ui/widgets/ZoomControl.svelte";
 	import { map, mapData, layers } from "$store";
-	import { keys } from "$data/keys";
 	import { isTouchDevice } from "$scripts/platform-check";
 	import { page } from "$app/stores";
 
 	let mapContainer;
+
+	export let keys;
 
 	function setupMap() {
 		if (!Object.keys($mapData).length || !mapContainer) return;
@@ -58,7 +59,9 @@
 {#key $mapData}
 	{#if $map && Object.keys($mapData).length}
 		<CustomMarkers />
-		<KeyMarkers keys={keys.filter((key) => key.map === $page.params?.map)} />
+		{#key keys}
+			<KeyMarkers keys={keys.filter((key) => key.map === $page.params?.map)} />
+		{/key}
 		{#each $mapData?.locations?.misc ?? [] as misc}
 			<MiscMarkers {...misc} />
 		{/each}

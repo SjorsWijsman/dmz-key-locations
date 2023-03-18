@@ -1,8 +1,9 @@
 <script>
 	import Panel from "../Panel.svelte";
 	import Icon from "../Icon.svelte";
-	import { showVideo, filterKeysByMap, customMarkerData, customMarkers } from "$store";
+	import { showVideo, filterKeysByMap, customMarkerData, customMarkers, language } from "$store";
 	import { page } from "$app/stores";
+	import { goto } from "$app/navigation";
 
 	function setSelectedMarker(marker) {
 		$customMarkers
@@ -19,9 +20,22 @@
 		if (marker.map === undefined && $page.params?.map === "al-mazrah") return true;
 		return false;
 	}
+
+	function setLanguage(locale) {
+		$language = locale;
+	}
 </script>
 
 <Panel panelTitle={"user"} icon={"user"} openIconOffset={1}>
+	<section>
+		<h2>Language</h2>
+		<p>Note: Language only changes for key information.</p>
+		{#each [["en", "English"], ["ja-JP", "Japanese"]] as [code, title]}
+			<button disabled={$language === code} class="language" on:click={() => setLanguage(code)}>
+				{title}
+			</button>
+		{/each}
+	</section>
 	<section>
 		<h2>User Preferences</h2>
 		<form action="" on:submit|preventDefault>
@@ -86,6 +100,7 @@
 	p {
 		margin: 0 1rem;
 		margin-bottom: 1rem;
+		opacity: 0.8;
 	}
 
 	h3 {
@@ -186,5 +201,26 @@
 		margin: 0;
 		opacity: 0.4;
 		font-family: var(--font-mono);
+	}
+
+	button.language {
+		width: unset;
+		margin-bottom: 0.5rem;
+		padding: 1rem;
+	}
+
+	@media (hover: hover) {
+		button.language:hover:not(:disabled) {
+			background-color: var(--color-black-light);
+			color: white;
+			font-weight: bold;
+			transform: scale(1);
+		}
+	}
+
+	button.language:disabled {
+		background-color: var(--color-mission);
+		color: black;
+		font-weight: bold;
 	}
 </style>

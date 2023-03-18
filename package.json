@@ -1,7 +1,7 @@
 {
 	"name": "dmz-key-locations",
 	"private": true,
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"type": "module",
 	"scripts": {
 		"predev": "npm run generate-key-data",
@@ -11,7 +11,9 @@
 		"preview": "vite preview",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"generate-key-data": "node generate-key-data.js"
+		"generate-key-data": "node generate-key-data.js",
+		"pregenerate-example-translation-file": "npm run generate-key-data",
+		"generate-example-translation-file": "node generate-example-translation-file.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "^1.0.5",

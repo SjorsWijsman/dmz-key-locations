@@ -44,7 +44,7 @@
 			required
 			bind:value={$searchTerm}
 			on:click={() => {
-				$selectedMarker = { title: "" };
+				$selectedMarker = { id: "" };
 			}}
 			placeholder={$selectedMarker?.title || "Search for a key"}
 		/>

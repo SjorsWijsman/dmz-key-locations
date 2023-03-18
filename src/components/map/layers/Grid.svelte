@@ -52,7 +52,7 @@
 						],
 						gridStyle
 					).on("mouseover", (e) => {
-						$selectedSector = [numberToLetters(y), x];
+						$selectedSector = [numberToLetters(x), y];
 					})
 				);
 			}
@@ -71,14 +71,14 @@
 			labels.push(
 				L.tooltip(labelSettings)
 					.setLatLng([xTileSize * xTiles + xTileSize / 3, xTileSize * x + xTileSize / 2])
-					.setContent(`${x}`)
+					.setContent(`${numberToLetters(x)}`)
 			);
 		}
 		for (let y = 0; y < yTiles; y++) {
 			labels.push(
 				L.tooltip(labelSettings)
 					.setLatLng([yTileSize * yTiles - yTileSize * y - yTileSize / 2, -xTileSize / 3])
-					.setContent(`${numberToLetters(y)}`)
+					.setContent(`${y}`)
 			);
 		}
 		return labels;
