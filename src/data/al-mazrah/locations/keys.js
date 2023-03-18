@@ -1242,12 +1242,8 @@ export const keys = [
 			y: 2371,
 		},
 	},
-//	{
-//		id: "sc-grunts-footlocker",
-//		title: "SC Grunt's Footlocker",
-//		location: {
-//			x: ,
-//			y: ,
-//		},
-//	},
+	{
+		id: "sc-grunts-footlocker",
+		title: "SC Grunt's Footlocker",
+	},
 ];
