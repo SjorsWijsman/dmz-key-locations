@@ -1,343 +1,149 @@
 export const spawns = [
 	{
-		title: "B4",
+		title: "Quarry N - B3",
 		location: {
-			x: 1785,
-			y: 664,
+			x: 824,
+			y: 1443,
 		},
 	},
 	{
-		title: "C5",
+		title: "Quarry E - C4",
 		location: {
-			x: 2382,
-			y: 841,
+			x: 1135,
+			y: 1790,
 		},
 	},
 	{
-		title: "C4",
+		title: "Rohal Oil N - D3",
 		location: {
-			x: 2018,
-			y: 1182,
+			x: 1323,
+			y: 1284,
 		},
 	},
 	{
-		title: "D7",
+		title: "Rohan Oil S - D3",
 		location: {
-			x: 2941,
-			y: 1507,
+			x: 1646,
+			y: 1642,
 		},
 	},
 	{
-		title: "E5",
+		title: "Tarag W - E2",
 		location: {
-			x: 2440,
-			y: 1696,
+			x: 1679,
+			y: 950,
 		},
 	},
 	{
-		title: "E6",
+		title: "Taraq N - E1",
 		location: {
-			x: 2790,
-			y: 1910,
+			x: 1987,
+			y: 693,
 		},
 	},
 	{
-		title: "E7",
+		title: "Mazrah City N - F2",
 		location: {
-			x: 3151,
-			y: 2042,
+			x: 2379,
+			y: 837,
 		},
 	},
 	{
-		title: "F7",
+		title: "	Mazrah City E - G3",
 		location: {
-			x: 2989,
-			y: 2398,
+			x: 2832,
+			y: 1328,
 		},
 	},
 	{
-		title: "G7",
+		title: "Mazrah City E - G3",
 		location: {
-			x: 2940,
-			y: 2778,
+			x: 2697,
+			y: 1512,
 		},
 	},
 	{
-		title: "H6",
+		title: "Mazrah City S Police - H4",
 		location: {
-			x: 2731,
-			y: 3234,
+			x: 2944,
+			y: 1810,
 		},
 	},
 	{
-		title: "H5",
+		title: "Small Town W - G5",
 		location: {
-			x: 2310,
-			y: 2939,
+			x: 2888,
+			y: 2201,
 		},
 	},
 	{
-		title: "I5",
+		title: "Small Town S - H5",
 		location: {
-			x: 2145,
-			y: 3385,
+			x: 3267,
+			y: 2360,
 		},
 	},
 	{
-		title: "I3",
+		title: "Airport E - H6",
 		location: {
-			x: 1574,
-			y: 3454,
+			x: 2944,
+			y: 2790,
 		},
 	},
 	{
-		title: "H2",
+		title: "Airport S - G7",
 		location: {
-			x: 1057,
-			y: 3098,
+			x: 2714,
+			y: 3211,
 		},
 	},
 	{
-		title: "G3",
+		title: "Sarrif Bay S - F7",
 		location: {
-			x: 1354,
-			y: 2758,
+			x: 2217, 
+			y: 3315,
 		},
 	},
 	{
-		title: "G1",
+		title: "Sawah Village E - E8",
 		location: {
-			x: 677,
-			y: 2705,
+			x: 1723,
+			y: 3421,
 		},
 	},
 	{
-		title: "F2",
+		title: "Samman Cemetery SE - E7",
 		location: {
-			x: 880,
-			y: 2262,
+			x: 1715,
+			y: 3142,
 		},
 	},
 	{
-		title: "D3",
+		title: "Sa'id City SE - D6",
 		location: {
-			x: 1370,
-			y: 1617,
+			x: 1577, 
+			y: 2769,
 		},
 	},
 	{
-		title: "B3",
+		title: "Sawah Village NW - C7",
 		location: {
-			x: 654,
-			y: 1606,
+			x: 1146,
+			y: 3092,
 		},
 	},
-];
-
-// Updated after s2
-//
-// export const spawns = [
-// 	{
-// 		title: "H7",
-// 		location: {
-// 			x: 3030,
-// 			y: 2915,
-// 		},
-// 	},
-// 	{
-// 		title: "G7",
-// 		location: {
-// 			x: 2700,
-// 			y: 3200,
-// 		},
-// 	},
-// 	{
-// 		title: "F8",
-// 		location: {
-// 			x: 2132,
-// 			y: 3376,
-// 		},
-// 	},
-// 	{
-// 		title: "E8",
-// 		location: {
-// 			x: 1712,
-// 			y: 3415,
-// 		},
-// 	},
-// 	{
-// 		title: "D8",
-// 		location: {
-// 			x: 1456,
-// 			y: 3495,
-// 		},
-// 	},
-// 	{
-// 		title: "C7",
-// 		location: {
-// 			x: 1092,
-// 			y: 3088,
-// 		},
-// 	},
-// 	{
-// 		title: "C6",
-// 		location: {
-// 			x: 1061,
-// 			y: 2788,
-// 		},
-// 	},
-// 	{
-// 		title: "B5 (2)",
-// 		location: {
-// 			x: 691,
-// 			y: 2431,
-// 		},
-// 	},
-// 	{
-// 		title: "B3",
-// 		location: {
-// 			x: 716,
-// 			y: 1652,
-// 		},
-// 	},
-// 	{
-// 		title: "C4",
-// 		location: {
-// 			x: 1186,
-// 			y: 1763,
-// 		},
-// 	},
-// 	{
-// 		title: "C3",
-// 		location: {
-// 			x: 1124,
-// 			y: 1482,
-// 		},
-// 	},
-// 	{
-// 		title: "E4",
-// 		location: {
-// 			x: 2046,
-// 			y: 1700,
-// 		},
-// 	},
-// 	{
-// 		title: "E2",
-// 		location: {
-// 			x: 1966,
-// 			y: 1202,
-// 		},
-// 	},
-// 	{
-// 		title: "D4",
-// 		location: {
-// 			x: 1581,
-// 			y: 1778,
-// 		},
-// 	},
-// 	{
-// 		title: "F3",
-// 		location: {
-// 			x: 2315,
-// 			y: 1367,
-// 		},
-// 	},
-// 	{
-// 		title: "E1",
-// 		location: {
-// 			x: 1952,
-// 			y: 754,
-// 		},
-// 	},
-// 	{
-// 		title: "D2",
-// 		location: {
-// 			x: 1444,
-// 			y: 1212,
-// 		},
-// 	},
-// 	{
-// 		title: "F2 (2)",
-// 		location: {
-// 			x: 2390,
-// 			y: 969,
-// 		},
-// 	},
-// 	{
-// 		title: "F2 (1)",
-// 		location: {
-// 			x: 2130,
-// 			y: 906,
-// 		},
-// 	},
-// 	{
-// 		title: "G2",
-// 		location: {
-// 			x: 2722,
-// 			y: 1148,
-// 		},
-// 	},
-// 	{
-// 		title: "H3",
-// 		location: {
-// 			x: 2930,
-// 			y: 1518,
-// 		},
-// 	},
-// 	{
-// 		title: "H4",
-// 		location: {
-// 			x: 2930,
-// 			y: 1793,
-// 		},
-// 	},
-// 	{
-// 		title: "G4",
-// 		location: {
-// 			x: 2718,
-// 			y: 1980,
-// 		},
-// 	},
-// 	{
-// 		title: "H5",
-// 		location: {
-// 			x: 3251,
-// 			y: 2221,
-// 		},
-// 	},
-// 	{
-// 		title: "H6",
-// 		location: {
-// 			x: 3048,
-// 			y: 2495,
-// 		},
-// 	},
-// 	{
-// 		title: "F4",
-// 		location: {
-// 			x: 2222,
-// 			y: 1925,
-// 		},
-// 	},
-// 	{
-// 		title: "B5 (1)",
-// 		location: {
-// 			x: 740,
-// 			y: 2081,
-// 		},
-// 	},
-// 	{
-// 		title: "B6",
-// 		location: {
-// 			x: 677,
-// 			y: 2705,
-// 		},
-// 	},
-// 	{
-// 		title: "D6",
-// 		location: {
-// 			x: 1333,
-// 			y: 2765,
-// 		},
-// 	},
-// ];
+	{
+		title: "Hafid Port NW - B5",
+		location: {
+			x: 673,
+			y: 2427,
+		},
+	},
+	{
+		title: "Sa'id City N - C5",
+		location: {
+			x: 1213,
+			y: 2349,
+		},
+	},
+]
