@@ -1246,4 +1246,32 @@ export const keys = [
 		id: "sc-grunts-footlocker",
 		title: "SC Grunt's Footlocker",
 	},
+		{
+		id: "cartel-warehouse",
+		title: "Cartel Warehouse",
+		description: [
+			"This key is required for a mission where you need to grab a laptop and extract with it.",
+			"The laptop can be found on the cabinet. The cartel key can be found in the sunken ship where you need a rebreather to grab the key.",
+		],
+		location: {
+			x: 916,
+			y: 2588,
+		},
+		tags: ["mission"],
+		video: "fKAxuUKjEmk",
+	},
+	{
+		id: "sniper-team-hideout",
+		title: "Sniper Team's Hideout",
+		description: [
+			"The door is located on the top floor that can be reached by climbing via the ladder.",
+			"The key that is required is the new skeleton key that you can barter on each map.",
+		],
+		location: {
+			x: 2263,
+			y: 2717,
+		},
+		tags: ["mission"],
+		video: "gFG-jmyhTm4",
+	},
 ];
