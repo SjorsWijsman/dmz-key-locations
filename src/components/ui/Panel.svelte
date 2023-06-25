@@ -9,10 +9,10 @@
 	export let icon = "heart";
 	export let openIconOffset = 0;
 
-	let outerWidth;
+	let innerWidth;
 </script>
 
-<svelte:window bind:outerWidth />
+<svelte:window bind:innerWidth />
 
 {#if $activePanel === panelTitle}
 	<div transition:fly={{ x: -200 }}>
@@ -21,10 +21,10 @@
 			style:height={`${$panelHeight}px`}
 			class:hasFooter={$$slots.footer}
 		>
-			{#if $$slots.header || mobileSize(outerWidth)}
+			{#if $$slots.header || mobileSize(innerWidth)}
 				<header class:isEmpty={!$$slots.header}>
 					<slot name="header" />
-					{#if mobileSize(outerWidth)}
+					{#if mobileSize(innerWidth)}
 						<OpenClosePanel {panelTitle}>
 							<Icon icon={"xmark"} size={2.5} />
 						</OpenClosePanel>
@@ -42,7 +42,7 @@
 				</footer>
 			{/if}
 		</section>
-		{#if !mobileSize(outerWidth)}
+		{#if !mobileSize(innerWidth)}
 			<OpenClosePanel {panelTitle}>
 				<Icon icon={"xmark"} size={2.5} />
 			</OpenClosePanel>
