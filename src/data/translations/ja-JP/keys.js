@@ -422,7 +422,7 @@ export const keys = {
 		title: "シティホール",
 	},
 	"art-loft": {
-		title: " アートセンターのロフト",
+		title: "アートセンターのロフト",
 	},
 	"buoyant-house": {
 		title: "ブイが付いた家",
