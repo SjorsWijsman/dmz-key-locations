@@ -286,7 +286,7 @@ export const keys = {
 	},
 	"control-room": {},
 	"fort-barrack": {},
-	storage: {},
+	"storage": {},
 	"foremans-office": {},
 	"stronghold-interior": {},
 	"the-architects-toolbox": {
@@ -320,6 +320,13 @@ export const keys = {
 	},
 	"sc-grunts-footlocker": {
 		title: "SC歩兵のトランク",
+	},
+	"cartel-warehouse": {
+		title: "カルテル倉庫",		
+	},
+	"sniper-team-hideout": {
+		title: "スナイパーチームの隠れ家（ガイコツの部屋）",	
+		keyName: "スケルトン・キー",		
 	},
 	"tsuki-castle": {
 		title: "ツキ・キャッスル",
@@ -384,4 +391,67 @@ export const keys = {
 	"hotel-employee-fridge": {
 		title: "ホテル従業員冷蔵庫",
 	},
-};
+	"stage-bag": {
+		title: "機材バッグ",
+	},
+	"bike-parking": {
+		title: "駐輪場",
+	},
+	"windmill-bag": {
+		title: "ウィンドミルバッグ",
+	},
+	"stadium-key": {
+		title: "スタジアム",
+	},
+	"cruise-terminal-office": {
+		title: "クルーズターミナルオフィス",
+	},
+	"cruise-terminal": {
+		title: "クルーズターミナル",
+	},
+	"vondel-museum": {
+		title: "ミュージアム",
+	},
+	"restaurant-briefcase": {
+		title: "レストランのブリーフケース",
+	},
+	"central-station": {
+		title: "セントラル・ステーション",
+	},
+	"vondel-city-hall": {
+		title: "シティホール",
+	},
+	"art-loft": {
+		title: "アートセンターのロフト",
+	},
+	"buoyant-house": {
+		title: "ブイが付いた家",
+	},
+	"fire-dept": {
+		title: "ファイヤー・デパートメント",
+	},
+	"fire-dept-dorm": {
+		title: "ファイヤー・デパートメントの寮",
+	},
+	"bridge-stash": {
+		title: "橋の物資",
+	},
+	"veterinarian-key": {
+		title: "獣医",
+	},
+	"smugglers-drop": {
+		title: "密輸品配達先",
+	},
+	"houseboat": {
+		title: "家船",
+	},
+	"diver-crate": {
+		title: "ダイバークレート",
+	},
+	"baristas-bag": {
+		title: "バリスタのバッグ",
+	},
+	"corner-townhouse": {
+		title: "タウンハウスアパート",
+	}
+}
